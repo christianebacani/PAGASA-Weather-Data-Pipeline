@@ -19,6 +19,25 @@ def create_subdir(
     if not os.path.exists('data/stage/daily_weather_forecast'):
         os.makedirs('data/stage/daily_weather_forecast')
 
+def parse_issued_datetime_to_dataframe(
+        issued_datetime_filepath: str
+) -> pd.DataFrame:
+    '''
+    Parses the issued datetime of the daily
+    weather forecast as a JSON file into
+    a Dataframe object.
+
+    :param issued_datetime_filepath: Relative
+        filepath of the JSON file that contains
+        the issued datetime of the daily weather
+        forecast
+    :type issued_datetime_filepath: str
+
+    :return: Issued datetime of the daily weather
+        forecast as a Dataframe object
+    :rtype: DataFrame
+    '''
+
 def stage_issued_datetime(
         issued_datetime_filepath: str
 ) -> None:
