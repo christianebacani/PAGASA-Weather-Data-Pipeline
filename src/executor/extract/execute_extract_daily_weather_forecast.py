@@ -12,6 +12,7 @@ from etl.extract.extract_daily_weather_forecast import parse_tc_information_to_d
 from etl.extract.extract_daily_weather_forecast import stage_tc_information_dataframe
 from etl.extract.extract_daily_weather_forecast import parse_forecast_weather_conditions_to_dataframe
 from etl.extract.extract_daily_weather_forecast import stage_forecast_weather_conditions_dataframe
+from etl.extract.extract_daily_weather_forecast import parse_forecast_wind_and_coastal_water_conditions_to_dataframe
 
 def extract_daily_weather_forecast(
 ) -> None:
@@ -51,4 +52,8 @@ def extract_daily_weather_forecast(
     )
     stage_forecast_weather_conditions_dataframe(
         forecast_weather_conditions_dataframe
+    )
+
+    forecast_wind_and_coastal_water_conditions_dataframe = parse_forecast_wind_and_coastal_water_conditions_to_dataframe(
+        'data/raw/daily_weather_forecast/forecast_wind_and_coastal_water_conditions.json'
     )
