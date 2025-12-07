@@ -37,9 +37,9 @@ def parse_issued_datetime_to_dataframe(
         forecast as a Dataframe object
     :rtype: DataFrame
     '''
-    issued_datetime_df = pd.read_json(issued_datetime_filepath, typ='series')
-    
-    return issued_datetime_df
+    issued_datetime_dataframe = pd.read_json(issued_datetime_filepath, typ='series')
+
+    return issued_datetime_dataframe
 
 def stage_issued_datetime(
         issued_datetime_filepath: str
