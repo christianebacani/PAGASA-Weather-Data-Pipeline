@@ -253,3 +253,21 @@ def stage_forecast_wind_and_coastal_water_conditions_dataframe(
     # Stage the forecast wind and coastal water conditions DataFrame object to the target filepath
     target_filepath = 'data/stage/daily_weather_forecast/forecast_wind_and_coastal_water_conditions.csv'
     forecast_wind_and_coastal_water_conditions_dataframe.to_csv(target_filepath, index=False)
+
+def parse_temperature_and_relative_humidity(
+        temperature_and_relative_humidity_filepath: str
+) -> pd.DataFrame:
+    '''
+    Parses the temperature and relative humidity from
+    JSON file into a DataFrame object
+
+    :param temperature_and_relative_humidity_filepath:
+        Relative filepath of the JSON file that contains
+        the temperature and relative humidity of the
+        daily weather forecast
+    :type temperature_and_relative_humidity_filepath: str
+
+    :return: Temperature and relative humidity of the
+        daily weather forecast as a DataFrame object
+    :rtype: DataFrame
+    '''
