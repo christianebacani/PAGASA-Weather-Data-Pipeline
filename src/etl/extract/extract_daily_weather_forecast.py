@@ -235,3 +235,18 @@ def parse_forecast_wind_and_coastal_water_conditions_to_dataframe(
     )
 
     return forecast_wind_and_coastal_water_conditions_dataframe
+
+def stage_forecast_wind_and_coastal_water_conditions_dataframe(
+        forecast_wind_and_coastal_water_conditions_dataframe: pd.DataFrame
+) -> None:
+    '''
+    Stages the forecast wind and coastal water conditions of the
+    daily weather forecast as a DataFrame object to the
+    data/stage/daily_weather_forecast subdirectory on the
+    local machine.
+
+    :param forecast_wind_and_coastal_water_conditions_dataframe:
+        Forecast wind and coastal water conditions of the daily
+        weather forecast as a DataFrame object
+    :type forecast_wind_and_coastal_water_conditions_dataframe: pd.DataFrame
+    '''
