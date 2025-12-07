@@ -17,6 +17,8 @@ from executor.ingest.execute_ingest_weather_advisory import ingest_weather_advis
 from executor.ingest.execute_ingest_tropical_cyclone_advisory import ingest_tropical_cyclone_advisory
 from executor.ingest.execute_ingest_tropical_cyclone_associated_rainfall import ingest_tropical_cyclone_associated_rainfall
 
+from executor.extract.execute_extract_daily_weather_forecast import extract_daily_weather_forecast
+
 def generate_logs(
     log_message: str
 ) -> None:
@@ -79,4 +81,9 @@ if __name__ == '__main__':
     ingest_tropical_cyclone_associated_rainfall()
     generate_logs(
         '(DEV): Ingest the data for the tropical cyclone associated rainfall'
+    )
+
+    extract_daily_weather_forecast()
+    generate_logs(
+        '(DEV): Extract the data for the daily weather forecast'
     )
