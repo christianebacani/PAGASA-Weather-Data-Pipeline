@@ -250,3 +250,6 @@ def stage_forecast_wind_and_coastal_water_conditions_dataframe(
         weather forecast as a DataFrame object
     :type forecast_wind_and_coastal_water_conditions_dataframe: pd.DataFrame
     '''
+    # Stage the forecast wind and coastal water conditions DataFrame object to the target filepath
+    target_filepath = 'data/stage/daily_weather_forecast/forecast_wind_and_coastal_water_conditions.csv'
+    forecast_wind_and_coastal_water_conditions_dataframe.to_csv(target_filepath, index=False)
