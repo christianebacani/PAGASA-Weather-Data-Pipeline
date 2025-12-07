@@ -76,3 +76,11 @@ def parse_synopsis_to_dataframe(
         forecast as a Dataframe object
     :rtype: DataFrame
     '''
+    synopsis_raw_dataframe = pd.read_json(synopsis_filepath, typ='series')
+    synopsis_dataframe = pd.DataFrame({
+        'synopsis': [
+            synopsis_raw_dataframe['synopsis']
+        ]
+    })
+
+    return synopsis_dataframe
