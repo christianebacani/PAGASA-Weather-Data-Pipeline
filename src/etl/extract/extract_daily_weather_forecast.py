@@ -154,3 +154,18 @@ def parse_tc_information_to_dataframe(
     })
 
     return tc_information_dataframe
+
+def stage_tc_information_dataframe(
+        tc_information_dataframe: pd.DataFrame
+) -> None:
+    '''
+    Stages the tropical cyclone information of the
+    daily weather forecast as a Dataframe object to
+    the data/stage/daily_weather_forecast
+    subdirectory on the local machine.
+
+    :param tc_information_dataframe: Tropical
+        cyclone information of the daily weather
+        forecast as a DataFrame object.
+    :type tc_information_dataframe: pd.DataFrame
+    '''
