@@ -193,3 +193,18 @@ def parse_forecast_weather_conditions_to_dataframe(
     )
 
     return forecast_weather_conditions_dataframe
+
+def stage_forecast_weather_conditions_dataframe(
+        forecast_weather_conditions_dataframe: pd.DataFrame
+) -> None:
+    '''
+    Stages the forecast weather conditions of the daily
+    weather forecast as a DataFrame object to the
+    data/stage/daily_weather_forecast subdirectory on the
+    local machine.
+
+    :param forecast_weather_conditions_dataframe: Forecast
+        weather conditions of the daily weather forecast
+        as a DataFrame object
+    :type forecast_weather_conditions_dataframe: pd.DataFrame
+    '''
