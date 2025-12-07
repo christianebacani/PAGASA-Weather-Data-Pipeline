@@ -134,22 +134,22 @@ def parse_tc_information_to_dataframe(
     # Parse the Pandas Series as a Dataframe object
     tc_information_dataframe = pd.DataFrame({
         'current_update': [
-            tc_information_dataframe['current_update']
+            tc_information_raw_dataframe['current_update']
         ],
         'tropical_cyclone_name': [
-            tc_information_dataframe['tropical_cyclone_name']
+            tc_information_raw_dataframe['tropical_cyclone_name']
         ],
         'location': [
-            tc_information_dataframe['location']
+            tc_information_raw_dataframe['location']
         ],
         'maximum_sustained_winds': [
-            tc_information_dataframe['maximum_sustained_winds']
+            tc_information_raw_dataframe['maximum_sustained_winds']
         ],
         'gustiness': [
-            tc_information_dataframe['gustiness']
+            tc_information_raw_dataframe['gustiness']
         ],
         'movement': [
-            tc_information_dataframe['movement']
+            tc_information_raw_dataframe['movement']
         ]
     })
 
