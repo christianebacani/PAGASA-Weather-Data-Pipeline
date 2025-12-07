@@ -254,7 +254,7 @@ def stage_forecast_wind_and_coastal_water_conditions_dataframe(
     target_filepath = 'data/stage/daily_weather_forecast/forecast_wind_and_coastal_water_conditions.csv'
     forecast_wind_and_coastal_water_conditions_dataframe.to_csv(target_filepath, index=False)
 
-def parse_temperature_and_relative_humidity(
+def parse_temperature_and_relative_humidity_to_dataframe(
         temperature_and_relative_humidity_filepath: str
 ) -> pd.DataFrame:
     '''
