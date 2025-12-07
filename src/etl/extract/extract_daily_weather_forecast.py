@@ -56,3 +56,5 @@ def stage_issued_datetime_dataframe(
         object
     :type issued_datetime_dataframe: pd.DataFrame
     '''
+    target_filepath = 'data/stage/daily_weather_forecast/issued_datetime.csv'
+    issued_datetime_dataframe.to_csv(target_filepath, index=False)
