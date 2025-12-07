@@ -170,7 +170,7 @@ def stage_tc_information_dataframe(
     target_filepath = 'data/stage/daily_weather_forecast/tropical_cyclone_information.csv'
     tc_information_dataframe.to_csv(target_filepath, index=False)
 
-def extract_forecast_weather_conditions(
+def parse_forecast_weather_conditions_to_dataframe(
         forecast_weather_conditions_filepath: str
 ) -> pd.DataFrame:
     '''
