@@ -63,6 +63,7 @@ def extract_daily_weather_forecast(
         forecast_wind_and_coastal_water_conditions_dataframe
     )
 
-    parse_temperature_and_relative_humidity_to_dataframe(
+    temperature_and_relative_humidity_dataframe = parse_temperature_and_relative_humidity_to_dataframe(
         'data/raw/daily_weather_forecast/temperature_and_relative_humidity.json'
     )
+    
