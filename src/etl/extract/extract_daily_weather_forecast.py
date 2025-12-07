@@ -37,8 +37,14 @@ def parse_issued_datetime_to_dataframe(
         forecast as a Dataframe object
     :rtype: DataFrame
     '''
-    df = pd.read_json(issued_datetime_filepath, typ='series')
-    issued_datetime_dataframe = pd.DataFrame({'issued_datetime': [df['issued_datetime']]})
+    # Read the issued datetime JSON file as a Pandas Series
+    issued_datetime_raw_dataframe = pd.read_json(issued_datetime_filepath, typ='series')
+    # Parse the Pandas Series as a Dataframe object
+    issued_datetime_dataframe = pd.DataFrame({
+        'issued_datetime': [
+            issued_datetime_raw_dataframe['issued_datetime']
+        ]
+    })
 
     return issued_datetime_dataframe
 
@@ -56,6 +62,7 @@ def stage_issued_datetime_dataframe(
         object
     :type issued_datetime_dataframe: pd.DataFrame
     '''
+    # Stage the issued datetime Dataframe object to the target filepath
     target_filepath = 'data/stage/daily_weather_forecast/issued_datetime.csv'
     issued_datetime_dataframe.to_csv(target_filepath, index=False)
 
@@ -76,7 +83,9 @@ def parse_synopsis_to_dataframe(
         forecast as a Dataframe object
     :rtype: DataFrame
     '''
+    # Read the synopsis JSON file as a Pandas Series
     synopsis_raw_dataframe = pd.read_json(synopsis_filepath, typ='series')
+    # Parse the Pandas Series as a Dataframe object
     synopsis_dataframe = pd.DataFrame({
         'synopsis': [
             synopsis_raw_dataframe['synopsis']
