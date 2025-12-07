@@ -41,18 +41,17 @@ def parse_issued_datetime_to_dataframe(
 
     return issued_datetime_dataframe
 
-def stage_issued_datetime(
-        issued_datetime_filepath: str
+def stage_issued_datetime_dataframe(
+        issued_datetime_dataframe: pd.DataFrame
 ) -> None:
     '''
-    Stages the JSON file that contains
-    the issued datetime of the daily weather
-    forecast to the data/stage subdirectory
+    Stages the issued datetime of the daily weather
+    forecast as a Dataframe object to the
+    data/stage/daily_weather_forecast subdirectory
     on the local machine.
 
-    :param issued_datetime_filepath: Relative
-        filepath of the JSON file that contains
-        the issued datetime of the daily weather
-        forecast
-    :type issued_datetime_filepath: str
+    :param issued_datetime_dataframe: Issued datetime
+        of the daily weather forecast as a Dataframe
+        object
+    :type issued_datetime_dataframe: pd.DataFrame
     '''
