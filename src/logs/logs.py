@@ -68,22 +68,22 @@ if __name__ == '__main__':
     # Ingest data for the weather advisory
     ingest_weather_advisory()
     generate_logs(
-        '(DEV): Ingest the data for the weather advisory'
+        '(DEV): Ingest the data for the weather advisory.'
     )
 
     # Ingest data for the tropical cyclone advisory
     ingest_tropical_cyclone_advisory()
     generate_logs(
-        '(DEV): Ingests the data for the tropical cyclone advisory'
+        '(DEV): Ingests the data for the tropical cyclone advisory.'
     )
 
     # Ingest data for the tropical cyclone associated rainfall
     ingest_tropical_cyclone_associated_rainfall()
     generate_logs(
-        '(DEV): Ingest the data for the tropical cyclone associated rainfall'
+        '(DEV): Ingest the data for the tropical cyclone associated rainfall.'
     )
 
     extract_daily_weather_forecast()
     generate_logs(
-        '(DEV): Extract the data for the daily weather forecast'
+        '(DEV): Extract the data for the daily weather forecast.'
     )
