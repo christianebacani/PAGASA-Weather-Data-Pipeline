@@ -187,3 +187,7 @@ def parse_forecast_weather_conditions_to_dataframe(
         weather forecast as a DataFrame object
     :rtype: DataFrame
     '''
+    forecast_weather_conditions_raw_dataframe = pd.read_json(
+        forecast_weather_conditions_filepath
+    )
+    print(forecast_weather_conditions_raw_dataframe)
