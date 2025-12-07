@@ -3,6 +3,7 @@
     from the data/raw subdirectory on the local machine.
 '''
 import pandas as pd
+import os
 
 def create_subdir(
 ) -> None:
@@ -14,6 +15,9 @@ def create_subdir(
         data/stage subirectory on the local
         machine.
     '''
+    # Create the data/stage/daily_weather_forecast/ subdirectory if it doesn't exist
+    if not os.path.exists('data/stage/daily_weather_forecast'):
+        os.makedirs('data/stage/daily_weather_forecast')
 
 def stage_issued_datetime(
         issued_datetime_filepath: str
