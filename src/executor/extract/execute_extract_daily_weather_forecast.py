@@ -9,6 +9,7 @@ from etl.extract.extract_daily_weather_forecast import stage_issued_datetime_dat
 from etl.extract.extract_daily_weather_forecast import parse_synopsis_to_dataframe
 from etl.extract.extract_daily_weather_forecast import stage_synopsis_dataframe
 from etl.extract.extract_daily_weather_forecast import parse_tc_information_to_dataframe
+from etl.extract.extract_daily_weather_forecast import stage_tc_information_dataframe
 
 def extract_daily_weather_forecast(
 ) -> None:
@@ -38,4 +39,7 @@ def extract_daily_weather_forecast(
 
     tc_information_dataframe = parse_tc_information_to_dataframe(
         'data/raw/daily_weather_forecast/tropical_cyclone_information.json'
+    )
+    stage_tc_information_dataframe(
+        tc_information_dataframe
     )
