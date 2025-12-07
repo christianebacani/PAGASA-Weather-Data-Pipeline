@@ -33,12 +33,12 @@ def parse_issued_datetime_to_dataframe(
     :type issued_datetime_filepath: str
 
     :return: Issued datetime of the daily weather
-        forecast as a Dataframe object
+        forecast as a DataFrame object
     :rtype: DataFrame
     '''
     # Read the issued datetime JSON file as a Pandas Series
     issued_datetime_raw_dataframe = pd.read_json(issued_datetime_filepath, typ='series')
-    # Parse the Pandas Series as a Dataframe object
+    # Parse the Pandas Series as a DataFrame object
     issued_datetime_dataframe = pd.DataFrame({
         'issued_datetime': [
             issued_datetime_raw_dataframe['issued_datetime']
@@ -52,16 +52,16 @@ def stage_issued_datetime_dataframe(
 ) -> None:
     '''
     Stages the issued datetime of the daily weather
-    forecast as a Dataframe object to the
+    forecast as a DataFrame object to the
     data/stage/daily_weather_forecast subdirectory
     on the local machine.
 
     :param issued_datetime_dataframe: Issued datetime
-        of the daily weather forecast as a Dataframe
+        of the daily weather forecast as a DataFrame
         object
     :type issued_datetime_dataframe: pd.DataFrame
     '''
-    # Stage the issued datetime Dataframe object to the target filepath
+    # Stage the issued datetime DataFrame object to the target filepath
     target_filepath = 'data/stage/daily_weather_forecast/issued_datetime.csv'
     issued_datetime_dataframe.to_csv(target_filepath, index=False)
 
@@ -78,12 +78,12 @@ def parse_synopsis_to_dataframe(
     :type synopsis_filepath: str
 
     :return: Synopsis of the daily weather
-        forecast as a Dataframe object
+        forecast as a DataFrame object
     :rtype: DataFrame
     '''
     # Read the synopsis JSON file as a Pandas Series
     synopsis_raw_dataframe = pd.read_json(synopsis_filepath, typ='series')
-    # Parse the Pandas Series as a Dataframe object
+    # Parse the Pandas Series as a DataFrame object
     synopsis_dataframe = pd.DataFrame({
         'synopsis': [
             synopsis_raw_dataframe['synopsis']
@@ -97,16 +97,16 @@ def stage_synopsis_dataframe(
 ) -> None:
     '''
     Stages the synopsis of the daily weather
-    forecast as a Dataframe object to the
+    forecast as a DataFrame object to the
     data/stage/daily_weather_forecast subdirectory
     on the local machine.
 
     :param synopsis_dataframe: Synopsis of the
-        daily weather forecast as a Dataframe
+        daily weather forecast as a DataFrame
         object
     :type synopsis_dataframe: pd.DataFrame
     '''
-    # Stage the synopsis Dataframe object to the target filepath
+    # Stage the synopsis DataFrame object to the target filepath
     target_filepath = 'data/stage/daily_weather_forecast/synopsis.csv'
     synopsis_dataframe.to_csv(target_filepath, index=False)
 
@@ -128,7 +128,7 @@ def parse_tc_information_to_dataframe(
     '''
     # Read the tropical cyclone information JSON file as a Pandas Series
     tc_information_raw_dataframe = pd.read_json(tc_information_filepath, typ='series')
-    # Parse the Pandas Series as a Dataframe object
+    # Parse the Pandas Series as a DataFrame object
     tc_information_dataframe = pd.DataFrame({
         'current_update': [
             tc_information_raw_dataframe['current_update']
@@ -157,7 +157,7 @@ def stage_tc_information_dataframe(
 ) -> None:
     '''
     Stages the tropical cyclone information of the
-    daily weather forecast as a Dataframe object to
+    daily weather forecast as a DataFrame object to
     the data/stage/daily_weather_forecast
     subdirectory on the local machine.
 
@@ -166,7 +166,7 @@ def stage_tc_information_dataframe(
         forecast as a DataFrame object
     :type tc_information_dataframe: pd.DataFrame
     '''
-    # Stage the tropical cyclone information Dataframe object to the target filepath
+    # Stage the tropical cyclone information DataFrame object to the target filepath
     target_filepath = 'data/stage/daily_weather_forecast/tropical_cyclone_information.csv'
     tc_information_dataframe.to_csv(target_filepath, index=False)
 
@@ -187,7 +187,9 @@ def parse_forecast_weather_conditions_to_dataframe(
         weather forecast as a DataFrame object
     :rtype: DataFrame
     '''
-    forecast_weather_conditions_raw_dataframe = pd.read_json(
+    # Read the issued datetime JSON file as a DataFrame object
+    forecast_weather_conditions_dataframe = pd.read_json(
         forecast_weather_conditions_filepath
     )
-    print(forecast_weather_conditions_raw_dataframe)
+
+    return forecast_weather_conditions_dataframe
