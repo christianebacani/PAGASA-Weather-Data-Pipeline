@@ -58,3 +58,19 @@ def stage_issued_datetime_dataframe(
     '''
     target_filepath = 'data/stage/daily_weather_forecast/issued_datetime.csv'
     issued_datetime_dataframe.to_csv(target_filepath, index=False)
+
+def parse_synopsis_to_dataframe(
+        synopsis_filepath: str
+) -> pd.DataFrame:
+    '''
+    Docstring for parse_synopsis_to_dataframe
+    
+    :param synopsis_filepath: Relative filepath
+        of the JSON file that contains the
+        synopsis of the daily weather forecast
+    :type synopsis_filepath: str
+
+    :return: Synopsis of the daily weather
+        forecast as a Dataframe object
+    :rtype: DataFrame
+    '''
