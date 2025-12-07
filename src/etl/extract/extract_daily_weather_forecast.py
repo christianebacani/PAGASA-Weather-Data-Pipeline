@@ -111,3 +111,21 @@ def stage_synopsis_dataframe(
     # Stage the synopsis Dataframe object to the target filepath
     target_filepath = 'data/stage/daily_weather_forecast/synopsis.csv'
     synopsis_dataframe.to_csv(target_filepath, index=False)
+
+def parse_tc_information_to_dataframe(
+        tc_information_filepath: str
+) -> pd.DataFrame:
+    '''
+    Parses the tropical cyclone information of the
+    daily weather forecast as a JSON file into a
+    DataFrame object.
+
+    :param tc_information_filepath: Relative filepath
+        of the JSON file that contains the tropical
+        cyclone information of the daily weather forecast.
+    :type tc_information_filepath: str
+
+    :return: Tropical cyclone information of the daily
+        weather forecast as a DataFrame object.
+    :rtype: DataFrame
+    '''
