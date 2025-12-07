@@ -129,3 +129,28 @@ def parse_tc_information_to_dataframe(
         weather forecast as a DataFrame object.
     :rtype: DataFrame
     '''
+    # Read the tropical cyclone information JSON file as a Pandas Series
+    tc_information_raw_dataframe = pd.read_json(tc_information_filepath, typ='series')
+    # Parse the Pandas Series as a Dataframe object
+    tc_information_dataframe = pd.DataFrame({
+        'current_update': [
+            tc_information_dataframe['current_update']
+        ],
+        'tropical_cyclone_name': [
+            tc_information_dataframe['tropical_cyclone_name']
+        ],
+        'location': [
+            tc_information_dataframe['location']
+        ],
+        'maximum_sustained_winds': [
+            tc_information_dataframe['maximum_sustained_winds']
+        ],
+        'gustiness': [
+            tc_information_dataframe['gustiness']
+        ],
+        'movement': [
+            tc_information_dataframe['movement']
+        ]
+    })
+
+    return tc_information_dataframe
