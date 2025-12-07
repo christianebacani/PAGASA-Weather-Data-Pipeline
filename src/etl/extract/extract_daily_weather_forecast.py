@@ -304,3 +304,20 @@ def parse_temperature_and_relative_humidity_to_dataframe(
     })
 
     return temperature_and_relative_humidity_dataframe
+
+def stage_temperature_and_relative_humidity_dataframe(
+        temperature_and_relative_humidity_dataframe: pd.DataFrame
+) -> None:
+    '''
+    Stages the temperature and relative humidity of the
+    daily weather forecast as a DataFrame object to
+    the data/stage/daily_weather_forecast
+    subdirectory on the local machine.
+
+    :param temperature_and_relative_humidity_dataframe:
+        Temperature and relative humidity of the daily
+        weather forecast as a DataFrame object
+    :type temperature_and_relative_humidity_dataframe:
+        pd.DataFrame
+    '''
+    # Stage the temperature and relative humidity DataFrame object to the target filepath
