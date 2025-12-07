@@ -36,6 +36,6 @@ def extract_daily_weather_forecast(
         synopsis_dataframe
     )
 
-    parse_tc_information_to_dataframe(
+    tc_information_dataframe = parse_tc_information_to_dataframe(
         'data/raw/daily_weather_forecast/tropical_cyclone_information.json'
     )
