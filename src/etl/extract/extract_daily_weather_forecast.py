@@ -23,9 +23,8 @@ def parse_issued_datetime_to_dataframe(
         issued_datetime_filepath: str
 ) -> pd.DataFrame:
     '''
-    Parses the issued datetime of the daily
-    weather forecast as a JSON file into
-    a Dataframe object.
+    Parses the issued datetime from JSON
+    file into a DataFrame object.
 
     :param issued_datetime_filepath: Relative
         filepath of the JSON file that contains
@@ -70,9 +69,8 @@ def parse_synopsis_to_dataframe(
         synopsis_filepath: str
 ) -> pd.DataFrame:
     '''
-    Parses the synopsis of the daily
-    weather forecast as a JSON file into
-    a Dataframe object.
+    Parses the synopsis from JSON file
+    into a DataFrame object.
 
     :param synopsis_filepath: Relative filepath
         of the JSON file that contains the
@@ -116,17 +114,16 @@ def parse_tc_information_to_dataframe(
         tc_information_filepath: str
 ) -> pd.DataFrame:
     '''
-    Parses the tropical cyclone information of the
-    daily weather forecast as a JSON file into a
-    DataFrame object.
+    Parses the tropical cyclone information
+    from JSON file into a DataFrame object.
 
     :param tc_information_filepath: Relative filepath
         of the JSON file that contains the tropical
-        cyclone information of the daily weather forecast.
+        cyclone information of the daily weather forecast
     :type tc_information_filepath: str
 
     :return: Tropical cyclone information of the daily
-        weather forecast as a DataFrame object.
+        weather forecast as a DataFrame object
     :rtype: DataFrame
     '''
     # Read the tropical cyclone information JSON file as a Pandas Series
@@ -166,9 +163,27 @@ def stage_tc_information_dataframe(
 
     :param tc_information_dataframe: Tropical
         cyclone information of the daily weather
-        forecast as a DataFrame object.
+        forecast as a DataFrame object
     :type tc_information_dataframe: pd.DataFrame
     '''
     # Stage the tropical cyclone information Dataframe object to the target filepath
     target_filepath = 'data/stage/daily_weather_forecast/tropical_cyclone_information.csv'
     tc_information_dataframe.to_csv(target_filepath, index=False)
+
+def extract_forecast_weather_conditions(
+        forecast_weather_conditions_filepath: str
+) -> pd.DataFrame:
+    '''
+    Parses the forecast weather conditions from
+    JSON file into a DataFrame object.
+
+    :param forecast_weather_conditions_filepath:
+        Relative filepath of the JSON file that
+        contains the forecast weather conditions
+        of the daily weather forecast
+    :type forecast_weather_conditions_filepath: str
+
+    :return: Forecast weather conditions of the daily
+        weather forecast as a DataFrame object
+    :rtype: DataFrame
+    '''
