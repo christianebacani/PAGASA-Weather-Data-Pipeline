@@ -208,3 +208,6 @@ def stage_forecast_weather_conditions_dataframe(
         as a DataFrame object
     :type forecast_weather_conditions_dataframe: pd.DataFrame
     '''
+    # Stage the forecast weather conditions DataFrame object to the target filepath
+    target_filepath = 'data/stage/daily_weather_forecast/forecast_weather_conditions.csv'
+    forecast_weather_conditions_dataframe.to_csv(target_filepath, index=False)
