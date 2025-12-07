@@ -211,3 +211,21 @@ def stage_forecast_weather_conditions_dataframe(
     # Stage the forecast weather conditions DataFrame object to the target filepath
     target_filepath = 'data/stage/daily_weather_forecast/forecast_weather_conditions.csv'
     forecast_weather_conditions_dataframe.to_csv(target_filepath, index=False)
+
+def parse_forecast_wind_and_coastal_water_conditions_to_dataframe(
+        forecast_wind_and_coastal_water_conditions_filepath: str
+) -> pd.DataFrame:
+    '''
+    Parses the forecast wind and coastal water conditions from
+    JSON file into a DataFrame object
+
+    :param forecast_wind_and_coastal_water_conditions_filepath:
+        Relative filepath of the JSON file that contains the
+        forecast wind and coastal water conditions of the daily
+        weather forecast
+    :type forecast_wind_and_coastal_water_conditions_filepath: str
+
+    :return: Forecast wind and coastal water conditions of the daily
+        weather forecast as a DataFrame object
+    :rtype: DataFrame
+    '''
