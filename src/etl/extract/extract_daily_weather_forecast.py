@@ -63,8 +63,10 @@ def parse_synopsis_to_dataframe(
         synopsis_filepath: str
 ) -> pd.DataFrame:
     '''
-    Docstring for parse_synopsis_to_dataframe
-    
+    Parses the synopsis of the daily
+    weather forecast as a JSON file into
+    a Dataframe object.
+
     :param synopsis_filepath: Relative filepath
         of the JSON file that contains the
         synopsis of the daily weather forecast
