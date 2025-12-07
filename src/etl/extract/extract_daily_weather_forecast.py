@@ -4,6 +4,17 @@
 '''
 import pandas as pd
 
+def create_subdir(
+) -> None:
+    '''
+        Creates the
+        data/stage/daily_weather_forecast/
+        subdirectory to store CSV files for
+        daily weather forecast from the
+        data/stage subirectory on the local
+        machine.
+    '''
+
 def stage_issued_datetime(
         issued_datetime_filepath: str
 ) -> None:
