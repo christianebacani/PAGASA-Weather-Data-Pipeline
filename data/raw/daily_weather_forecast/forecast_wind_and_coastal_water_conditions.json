@@ -1,6 +1,6 @@
 {
     "place": [
-        "Northern Luzon and the eastern sections of Central and Southern Luzon",
+        "The northern and eastern sections of Luzon",
         "The western section of Mindanao, the rest of Luzon, and the rest of Visayas",
         "The rest of Mindanao"
     ],
@@ -12,11 +12,11 @@
     "direction": [
         "Northeast to North",
         "Northeast to Northwest",
-        "Northwest to Southwest"
+        "Southwest to Southeast"
     ],
     "coastal_water": [
-        "Rough to Very Rough / (2.8 to 5.0 meters)",
-        "Moderate to Rough / (1.5 to 2.8 meters)",
+        "Rough to Very Rough / (2.8 to 4.5 meters)",
+        "Moderate to Rough / (1.2 to 3.1 meters)",
         "Moderate / (1.2 to 2.5 meters)"
     ]
 }
