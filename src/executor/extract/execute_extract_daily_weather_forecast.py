@@ -5,6 +5,7 @@
 '''
 from etl.extract.extract_daily_weather_forecast import create_subdir
 from etl.extract.extract_daily_weather_forecast import parse_issued_datetime_to_dataframe
+from etl.extract.extract_daily_weather_forecast import stage_issued_datetime_dataframe
 
 def extract_daily_weather_forecast(
 ) -> None:
@@ -20,4 +21,7 @@ def extract_daily_weather_forecast(
 
     issued_datetime_dataframe = parse_issued_datetime_to_dataframe(
         'data/raw/daily_weather_forecast/issued_datetime.json'
+    )
+    stage_issued_datetime_dataframe(
+        issued_datetime_dataframe
     )
