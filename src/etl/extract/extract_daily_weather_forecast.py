@@ -93,3 +93,21 @@ def parse_synopsis_to_dataframe(
     })
 
     return synopsis_dataframe
+
+def stage_synopsis_dataframe(
+        synopsis_dataframe: pd.DataFrame
+) -> None:
+    '''
+    Stages the synopsis of the daily weather
+    forecast as a Dataframe object to the
+    data/stage/daily_weather_forecast subdirectory
+    on the local machine.
+
+    :param synopsis_dataframe: Synopsis of the
+        daily weather forecast as a Dataframe
+        object
+    :type synopsis_dataframe: pd.DataFrame
+    '''
+    # Stage the synopsis Dataframe object to the target filepath
+    target_filepath = 'data/stage/daily_weather_forecast/synopsis.csv'
+    synopsis_dataframe.to_csv(target_filepath, index=False)
