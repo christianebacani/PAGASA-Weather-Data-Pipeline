@@ -11,7 +11,7 @@ from ingest.ingest_tropical_cyclone_associated_rainfall import save_tropical_cyc
 def ingest_tropical_cyclone_associated_rainfall(
 ) -> None:
     '''
-        Ingest the tropical cycloneassociated rainfall from the
+        Ingest the tropical cyclone associated rainfall from the
         PAGASA-DOST website by executing
         all functions in the 
         ingest_tropical_cyclone_associated_rainfall
