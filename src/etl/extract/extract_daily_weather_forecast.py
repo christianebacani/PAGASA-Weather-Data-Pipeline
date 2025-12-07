@@ -169,3 +169,6 @@ def stage_tc_information_dataframe(
         forecast as a DataFrame object.
     :type tc_information_dataframe: pd.DataFrame
     '''
+    # Stage the tropical cyclone information Dataframe object to the target filepath
+    target_filepath = 'data/stage/daily_weather_forecast/tropical_cyclone_information.csv'
+    tc_information_dataframe.to_csv(target_filepath, index=False)
