@@ -134,7 +134,10 @@ def parse_ph_cities_weather_outlook_to_dataframe(
         cities as a DataFrame object
     :rtype: DataFrame
     '''
+    # Read the PH cities weather outlook JSON file as a DataFrame object
     ph_cities_weather_outlook_raw_dataframe = pd.read_json(ph_cities_weather_outlook_filepath)
+
+    # Restructure the PH cities weather outlook DataFrame to make it readable
     ph_cities_weather_outlook_dict = {
         'ph_city': [],
         'weather_date': [],
@@ -143,14 +146,18 @@ def parse_ph_cities_weather_outlook_to_dataframe(
         'chance_of_rain_percentage': []
     }
 
+    # Using for-loop to access and restructure all the data from PH cities weather outlook DataFrame
     for ph_city, weather_outlook_dict in ph_cities_weather_outlook_raw_dataframe.items():
+        for _ in range(5 + 1):
+            ph_cities_weather_outlook_dict['ph_city'].append(ph_city)
+
         for column_name, weather_outlooks in weather_outlook_dict.items():
             for weather_outlook in weather_outlooks:
                 if column_name == 'weather_dates':
                     ph_cities_weather_outlook_dict['weather_date'].append(
                         weather_outlook
                     )
-                
+
                 elif column_name == 'chance_of_rain_percentages':
                     ph_cities_weather_outlook_dict['chance_of_rain_percentage'].append(
                         weather_outlook
@@ -163,9 +170,6 @@ def parse_ph_cities_weather_outlook_to_dataframe(
                     ph_cities_weather_outlook_dict['maximum_temperature'].append(
                         weather_outlook[1]
                     )
-
-        for _ in range(5 + 1):
-            ph_cities_weather_outlook_dict['ph_city'].append(ph_city)
     
     ph_cities_weather_outlook_dataframe = pd.DataFrame(ph_cities_weather_outlook_dict)
 
