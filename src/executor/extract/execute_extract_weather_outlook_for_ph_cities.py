@@ -6,6 +6,7 @@
 from etl.extract.extract_weather_outlook_for_ph_cities import create_subdir
 from etl.extract.extract_weather_outlook_for_ph_cities import parse_issued_datetime_to_dataframe
 from etl.extract.extract_weather_outlook_for_ph_cities import stage_issued_datetime_dataframe
+from etl.extract.extract_weather_outlook_for_ph_cities import parse_valid_period_to_dataframe
 
 def extract_weather_outlook_for_ph_cities(
 ) -> None:
@@ -25,4 +26,8 @@ def extract_weather_outlook_for_ph_cities(
     )
     stage_issued_datetime_dataframe(
         issued_datetime_dataframe
+    )
+
+    valid_period_dataframe = parse_valid_period_to_dataframe(
+        'data/raw/weather_outlook_for_ph_cities/valid_period.json'
     )
