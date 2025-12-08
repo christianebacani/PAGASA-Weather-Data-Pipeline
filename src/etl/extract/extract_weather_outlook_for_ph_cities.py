@@ -134,3 +134,41 @@ def parse_ph_cities_weather_outlook_to_dataframe(
         cities as a DataFrame object
     :rtype: DataFrame
     '''
+    ph_cities_weather_outlook_raw_dataframe = pd.read_json(ph_cities_weather_outlook_filepath)
+    ph_cities_weather_outlook_dict = {
+        'ph_city': [],
+        'weather_date': [],
+        'minimum_temperature': [],
+        'maximum_temperature': [],
+        'chance_of_rain_percentage': []
+    }
+
+    for ph_city, weather_outlook_dict in ph_cities_weather_outlook_raw_dataframe.items():
+        for column_name, weather_outlooks in weather_outlook_dict.items():
+            for weather_outlook in weather_outlooks:
+                if column_name == 'weather_dates':
+                    ph_cities_weather_outlook_dict['weather_date'].append(
+                        weather_outlook
+                    )
+                
+                elif column_name == 'chance_of_rain_percentages':
+                    ph_cities_weather_outlook_dict['chance_of_rain_percentage'].append(
+                        weather_outlook
+                    )
+
+                else:
+                    ph_cities_weather_outlook_dict['minimum_temperature'].append(
+                        weather_outlook[0]
+                    )
+                    ph_cities_weather_outlook_dict['maximum_temperature'].append(
+                        weather_outlook[1]
+                    )
+            
+        for _ in range(4):
+            ph_cities_weather_outlook_dict['ph_city'].append(ph_city)
+    
+    print(len(ph_cities_weather_outlook_dict['ph_city']))
+    print(len(ph_cities_weather_outlook_dict['weather_date']))
+    print(len(ph_cities_weather_outlook_dict['minimum_temperature']))
+    print(len(ph_cities_weather_outlook_dict['maximum_temperature']))
+    print(len(ph_cities_weather_outlook_dict['ph_city']))
