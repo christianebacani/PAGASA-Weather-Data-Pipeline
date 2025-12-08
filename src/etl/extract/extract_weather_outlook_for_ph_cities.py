@@ -97,3 +97,21 @@ def parse_valid_period_to_dataframe(
     })
 
     return valid_period_dataframe
+
+def stage_valid_period_dataframe(
+        valid_period_dataframe: pd.DataFrame
+) -> None:
+    '''
+    Stages the valid period of the weather outlook
+    for selected Philippine cities as a DataFrame
+    objet to the data/stage/weather_outlook_for_ph_cities
+    subdirectory on the local machine.
+
+    :param valid_period_dataframe: Valid period of the
+        weather outlook for selected Philippine cities
+        as a DataFrame object
+    :type valid_period_dataframe: pd.DataFrame
+    '''
+    # Stage the valid period DataFrame object to the target filepath
+    target_filepath = 'data/stage/weather_outlook_for_ph_cities/valid_period.csv'
+    valid_period_dataframe.to_csv(target_filepath, index=False)
