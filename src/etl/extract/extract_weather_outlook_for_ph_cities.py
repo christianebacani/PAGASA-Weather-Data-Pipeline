@@ -163,12 +163,10 @@ def parse_ph_cities_weather_outlook_to_dataframe(
                     ph_cities_weather_outlook_dict['maximum_temperature'].append(
                         weather_outlook[1]
                     )
-            
-        for _ in range(4):
+
+        for _ in range(5 + 1):
             ph_cities_weather_outlook_dict['ph_city'].append(ph_city)
     
-    print(len(ph_cities_weather_outlook_dict['ph_city']))
-    print(len(ph_cities_weather_outlook_dict['weather_date']))
-    print(len(ph_cities_weather_outlook_dict['minimum_temperature']))
-    print(len(ph_cities_weather_outlook_dict['maximum_temperature']))
-    print(len(ph_cities_weather_outlook_dict['ph_city']))
+    ph_cities_weather_outlook_dataframe = pd.DataFrame(ph_cities_weather_outlook_dict)
+
+    return ph_cities_weather_outlook_dataframe
