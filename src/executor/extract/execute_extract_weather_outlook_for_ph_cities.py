@@ -1,6 +1,6 @@
 '''
     Module for executing extraction functions for the
-    selected Philippine cities data from the data/stage
+    selected Philippine cities data from the data/raw
     subdirectory on the local machine.
 '''
 
