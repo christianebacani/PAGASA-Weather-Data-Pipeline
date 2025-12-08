@@ -91,8 +91,8 @@ def parse_valid_period_to_dataframe(
     valid_period_raw_dataframe = pd.read_json(valid_period_filepath, typ='series')
     # Parse the Pandas Series as a DataFrame object
     valid_period_dataframe = pd.DataFrame({
-        'issued_datetime': [
-            valid_period_raw_dataframe['issued_datetime']
+        'valid_period': [
+            valid_period_raw_dataframe['valid_period']
         ]
     })
 
