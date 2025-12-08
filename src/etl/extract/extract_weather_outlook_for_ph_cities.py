@@ -170,7 +170,7 @@ def parse_ph_cities_weather_outlook_to_dataframe(
                     ph_cities_weather_outlook_dict['maximum_temperature'].append(
                         weather_outlook[1]
                     )
-    
+
     ph_cities_weather_outlook_dataframe = pd.DataFrame(ph_cities_weather_outlook_dict)
 
     return ph_cities_weather_outlook_dataframe
