@@ -3,6 +3,7 @@
     selected Philippine cities data from the data/raw
     subdirectory on the local machine.
 '''
+from etl.extract.extract_weather_outlook_for_ph_cities import create_subdir
 
 def ingest_weather_outlook_for_ph_cities(
 ) -> None:
@@ -14,3 +15,5 @@ def ingest_weather_outlook_for_ph_cities(
         extract_weather_outlook_for_ph_cities
         module of the src/ingest package.
     '''
+    # Run all functions to ingest weather advisory data
+    create_subdir()
