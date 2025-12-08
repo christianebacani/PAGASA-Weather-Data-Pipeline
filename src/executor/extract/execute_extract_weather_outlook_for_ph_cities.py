@@ -8,6 +8,7 @@ from etl.extract.extract_weather_outlook_for_ph_cities import parse_issued_datet
 from etl.extract.extract_weather_outlook_for_ph_cities import stage_issued_datetime_dataframe
 from etl.extract.extract_weather_outlook_for_ph_cities import parse_valid_period_to_dataframe
 from etl.extract.extract_weather_outlook_for_ph_cities import stage_valid_period_dataframe
+from etl.extract.extract_weather_outlook_for_ph_cities import parse_ph_cities_weather_outlook_to_dataframe
 
 def extract_weather_outlook_for_ph_cities(
 ) -> None:
@@ -34,4 +35,8 @@ def extract_weather_outlook_for_ph_cities(
     )
     stage_valid_period_dataframe(
         valid_period_dataframe
+    )
+
+    parse_ph_cities_weather_outlook_to_dataframe(
+        'data/raw/weather_outlook_for_ph_cities/ph_cities_weather_outlook.json'
     )
