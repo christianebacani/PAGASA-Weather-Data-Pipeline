@@ -6,7 +6,7 @@
 from etl.extract.extract_weather_outlook_for_ph_cities import create_subdir
 from etl.extract.extract_weather_outlook_for_ph_cities import parse_issued_datetime_to_dataframe
 
-def ingest_weather_outlook_for_ph_cities(
+def extract_weather_outlook_for_ph_cities(
 ) -> None:
     '''
         Extracts the weather outlook for selected
