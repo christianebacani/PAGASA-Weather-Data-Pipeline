@@ -12,7 +12,7 @@ def create_subdir(
         data/stage/daily_weather_forecast/
         subdirectory to store CSV files for
         daily weather forecast from the
-        data/stage subirectory on the local
+        data/raw subirectory on the local
         machine.
     '''
     # Create the data/stage/daily_weather_forecast/ subdirectory if it doesn't exist
