@@ -37,6 +37,6 @@ def extract_weather_outlook_for_ph_cities(
         valid_period_dataframe
     )
 
-    parse_ph_cities_weather_outlook_to_dataframe(
+    ph_cities_weather_outlook_dataframe = parse_ph_cities_weather_outlook_to_dataframe(
         'data/raw/weather_outlook_for_ph_cities/ph_cities_weather_outlook.json'
     )
