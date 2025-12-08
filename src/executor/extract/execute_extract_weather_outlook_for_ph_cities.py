@@ -5,6 +5,7 @@
 '''
 from etl.extract.extract_weather_outlook_for_ph_cities import create_subdir
 from etl.extract.extract_weather_outlook_for_ph_cities import parse_issued_datetime_to_dataframe
+from etl.extract.extract_weather_outlook_for_ph_cities import stage_issued_datetime_dataframe
 
 def extract_weather_outlook_for_ph_cities(
 ) -> None:
@@ -21,4 +22,7 @@ def extract_weather_outlook_for_ph_cities(
 
     issued_datetime_dataframe = parse_issued_datetime_to_dataframe(
         'data/raw/weather_outlook_for_ph_cities/issued_datetime.json'
+    )
+    stage_issued_datetime_dataframe(
+        issued_datetime_dataframe
     )
