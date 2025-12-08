@@ -271,11 +271,11 @@ def parse_temperature_and_relative_humidity_to_dataframe(
         daily weather forecast as a DataFrame object
     :rtype: DataFrame
     '''
-    # Read the temperature and relative humidity JSON file as a Pandas Series
+    # Read the temperature and relative humidity JSON file as a DataFrame object
     temperature_and_relative_humidity_raw_dataframe = pd.read_json(
         temperature_and_relative_humidity_filepath
     )
-    # Parse the Pandas Series as a DataFrame object
+    # Restructure the temperature and relative humidity DataFrame to make it readable
     temperature_and_relative_humidity_dataframe = pd.DataFrame({
         'maximum_temperature': [
             temperature_and_relative_humidity_raw_dataframe['temperature']['max'][0]
