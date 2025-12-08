@@ -49,3 +49,22 @@ def parse_issued_datetime_to_dataframe(
     })
 
     return issued_datetime_dataframe
+
+def stage_issued_datetime_dataframe(
+        issued_datetime_dataframe: pd.DataFrame
+) -> None:
+    '''
+    Stages the issued datetime of the weather outlook
+    for selected Philippine cities as a DataFrame
+    object to the data/stage/weather_outlook_for_ph_cities
+    subdirectory on the local machine.
+
+    :param issued_datetime_dataframe: Issued datetime
+        of the weather outlook for selected Philippine
+        cities as a DataFrame
+        object
+    :type issued_datetime_dataframe: pd.DataFrame
+    '''
+    # Stage the issued datetime DataFrame object to the target filepath
+    target_filepath = 'data/stage/weather_outlook_for_ph_cities/issued_datetime.csv'
+    issued_datetime_dataframe.to_csv(target_filepath, index=False)
