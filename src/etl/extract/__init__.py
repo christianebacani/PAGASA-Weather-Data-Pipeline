@@ -1,1 +1,2 @@
 from . import extract_daily_weather_forecast
+from . import extract_weather_outlook_for_ph_cities
