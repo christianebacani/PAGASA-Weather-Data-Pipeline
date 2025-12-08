@@ -68,3 +68,32 @@ def stage_issued_datetime_dataframe(
     # Stage the issued datetime DataFrame object to the target filepath
     target_filepath = 'data/stage/weather_outlook_for_ph_cities/issued_datetime.csv'
     issued_datetime_dataframe.to_csv(target_filepath, index=False)
+
+def parse_valid_period_to_dataframe(
+        valid_period_filepath: str
+) -> pd.DataFrame:
+    '''
+    Parses the valid period from JSON
+    file into a DataFrame object.
+
+    :param valid_period_filepath: Relative
+        filepath of the JSON file that contains
+        the valid period of the weather outlook
+        for selected Philippine cities
+    :type valid_period_filepath: str
+
+    :return: Valid period of the weather
+        outlook for selected Philippine cities
+        as a DataFrame object
+    :rtype: DataFrame
+    '''
+    # Read the valid period JSON file as a Pandas Series
+    valid_period_raw_dataframe = pd.read_json(valid_period_filepath, typ='series')
+    # Parse the Pandas Series as a DataFrame object
+    valid_period_dataframe = pd.DataFrame({
+        'issued_datetime': [
+            valid_period_raw_dataframe['issued_datetime']
+        ]
+    })
+
+    return valid_period_dataframe
