@@ -4,6 +4,7 @@
     subdirectory on the local machine.
 '''
 from etl.extract.extract_weather_outlook_for_ph_cities import create_subdir
+from etl.extract.extract_weather_outlook_for_ph_cities import parse_issued_datetime_to_dataframe
 
 def ingest_weather_outlook_for_ph_cities(
 ) -> None:
@@ -17,3 +18,7 @@ def ingest_weather_outlook_for_ph_cities(
     '''
     # Run all functions to ingest weather advisory data
     create_subdir()
+
+    parse_issued_datetime_to_dataframe(
+        'data/raw/weather_outlook_for_ph_cities/issued_datetime.json'
+    )
