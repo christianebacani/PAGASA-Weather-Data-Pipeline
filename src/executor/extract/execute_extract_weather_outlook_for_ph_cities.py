@@ -19,6 +19,6 @@ def extract_weather_outlook_for_ph_cities(
     # Run all functions to ingest weather advisory data
     create_subdir()
 
-    parse_issued_datetime_to_dataframe(
+    issued_datetime_dataframe = parse_issued_datetime_to_dataframe(
         'data/raw/weather_outlook_for_ph_cities/issued_datetime.json'
     )
