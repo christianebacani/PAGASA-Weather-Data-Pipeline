@@ -148,7 +148,7 @@ def parse_ph_cities_weather_outlook_to_dataframe(
 
     # Using for-loop to access and restructure all the data from PH cities weather outlook DataFrame
     for ph_city, weather_outlook_dict in ph_cities_weather_outlook_raw_dataframe.items():
-        for _ in range(5 + 1):
+        for _ in range(5):
             ph_cities_weather_outlook_dict['ph_city'].append(ph_city)
 
         for column_name, weather_outlooks in weather_outlook_dict.items():
