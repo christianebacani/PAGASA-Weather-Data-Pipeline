@@ -7,7 +7,7 @@
 def ingest_tropical_cyclone_advisory(
 ) -> None:
     '''
-        Ingest the tropical cyclone
+        Ingests the tropical cyclone
         advisory from the PAGASA-DOST
         website by executing all functions
         in the ingest_tropical_cyclone_advisory module
