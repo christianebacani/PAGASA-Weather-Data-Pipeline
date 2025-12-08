@@ -320,4 +320,6 @@ def stage_temperature_and_relative_humidity_dataframe(
     :type temperature_and_relative_humidity_dataframe:
         pd.DataFrame
     '''
-    # Stage the temperature and relative humidity DataFrame object to the target filepath
+    # Stage the temperature and relative humidity to the target filepath
+    target_filepath = f'data/stage/daily_weather_forecast/temperature_and_relative_humidity.csv'
+    temperature_and_relative_humidity_dataframe.to_csv(target_filepath, index=False)
