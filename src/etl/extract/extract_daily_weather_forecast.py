@@ -125,6 +125,11 @@ def stage_synopsis_dataframe(
     target_filepath = 'data/stage/daily_weather_forecast/synopsis.csv'
     synopsis_dataframe.to_csv(target_filepath, index=False)
 
+# TODO
+# 1.) Continue refactoring the content of every docstring starting from this func
+#   to the `extract_weather_outlook_for_ph_cities` module.
+# 2.) Add description to the docstring content for every function that does not have it
+
 def parse_tc_information_to_dataframe(
         tc_information_filepath: str
 ) -> pd.DataFrame:
