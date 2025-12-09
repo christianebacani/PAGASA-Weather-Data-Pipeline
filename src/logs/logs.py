@@ -1,8 +1,10 @@
-'''
-    Module for generating logs during the execution of
-    ETL pipeline jobs that process data from the
-    PAGASA-DOST website.
-'''
+"""
+This module provides function for generating logs.
+
+It includes function for generating logs during the
+execution of ETL pipeline jobs that process data
+from the PAGASA-DOST website.
+"""
 import sys
 import os
 sys.path.insert(0, os.path.abspath('src'))
@@ -23,7 +25,7 @@ from executor.extract.execute_extract_weather_outlook_for_ph_cities import extra
 def generate_logs(
     log_message: str
 ) -> None:
-    '''
+    """
     Generates logs for ETL
     pipeline jobs that process
     data from the PAGASA-DOST
@@ -33,7 +35,7 @@ def generate_logs(
         to log during ETL pipeline
         execution
     :type log_message: str
-    '''
+    """
     format = '%Y-%m-%d %H:%M:%S' # Format: YYYY-MM-DD HH:MM:SS
     now = datetime.now()
     timestamp = now.strftime(format)
