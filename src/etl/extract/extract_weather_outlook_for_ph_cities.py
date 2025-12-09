@@ -174,3 +174,18 @@ def parse_ph_cities_weather_outlook_to_dataframe(
     ph_cities_weather_outlook_dataframe = pd.DataFrame(ph_cities_weather_outlook_dict)
 
     return ph_cities_weather_outlook_dataframe
+
+def stage_ph_cities_weather_outlook_dataframe(
+        ph_cities_weather_outlook_dataframe: pd.DataFrame       
+) -> None:
+    '''
+    Stages the weather outlook for selected Philippine
+    cities as a DataFrame object to the
+    data/stage/weather_outlook_for_ph_cities subdirectory
+    on the local machine.
+
+    :param ph_cities_weather_outlook_dataframe: Weather
+        outlook for selected Philippine cities as a
+        DataFrame object
+    :type ph_cities_weather_outlook_dataframe: pd.DataFrame
+    '''
