@@ -59,8 +59,7 @@ def extract_issued_datetime(
     """
     Extract the issued datetime of the daily weather forecast from the PAGASA-DOST website.
 
-    :param soup: BeautifulSoup object for navigating and manipulating the page content,
-        or None if extraction fails
+    :param soup: BeautifulSoup object for navigating the page, or None if extraction fails
     :type soup: BeautifulSoup | None
 
     :return: Issued datetime of the daily weather forecast
@@ -119,8 +118,7 @@ def extract_synopsis(
     """
     Extract the synopsis of the daily weather forecast from the PAGASA-DOST website.
 
-    :param soup: BeautifulSoup object for navigating and manipulating the page content,
-        or None if extraction fails
+    :param soup: BeautifulSoup object for navigating the page, or None if extraction fails
     :type soup: BeautifulSoup | None
 
     :return: Synopsis of the daily weather forecast
@@ -174,8 +172,7 @@ def extract_tc_information(
     """
     Extract the tropical cyclone information of the daily weather forecast from the PAGASA-DOST website.
 
-    :param soup: BeautifulSoup object for navigating and manipulating the page content,
-        or None if extraction fails
+    :param soup: BeautifulSoup object for navigating the page, or None if extraction fails
     :type soup: BeautifulSoup | None
 
     :return: Dictionary containing tropical cyclone information
@@ -273,8 +270,7 @@ def extract_forecast_weather_conditions(
     """
     Extract the forecast weather conditions of the daily weather forecast from the PAGASA-DOST website.
 
-    :param soup: BeautifulSoup object for navigating and  manipulating the page content,
-        or None if extraction fails
+    :param soup: BeautifulSoup object for navigating the page, or None if extraction fails
     :type soup: BeautifulSoup | None
 
     :return: Dictionary containing forecast weather conditions
@@ -369,8 +365,7 @@ def extract_forecast_wind_and_coastal_water_conditions(
     Extract the forecast wind and coastal water conditions of the daily weather forecast
     from the PAGASA-DOST website.
 
-    :param soup: BeautifulSoup object for navigating and manipulating the page content,
-        or None if extraction fails
+    :param soup: BeautifulSoup object for navigating the page, or None if extraction fails
     :type soup: BeautifulSoup | None
 
     :return: Dictionary containing forecast wind and coastal water conditions
@@ -466,8 +461,7 @@ def extract_temperature_and_relative_humidity(
     Extract the temperature and relative humidity of the daily weather forecast
     from the PAGASA-DOST website.
 
-    :param soup: BeautifulSoup object for navigating and manipulating the page content,
-        or None if extraction fails
+    :param soup: BeautifulSoup object for navigating the page, or None if extraction fails
     :type soup: BeautifulSoup | None
 
     :return: Dictionary containing temperature and relative humidity
