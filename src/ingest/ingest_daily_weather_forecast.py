@@ -1,7 +1,19 @@
-'''
-    Module to ingest daily weather forecast data
-    from the PAGASA-DOST website.
-'''
+"""
+Ingest daily weather forecast data from the PAGASA-DOST website.
+
+This module provides functions to extract key information from the
+daily weather forecast page, including:
+
+- Issued datetime
+- Synopsis
+- Tropical cyclone information
+- Forecast weather conditions
+- Forecast wind and coastal water conditions
+- Temperature and relative humidity
+
+All extracted data is saved as JSON files in the
+`data/raw/daily_weather_forecast/` subdirectory on the local machine.
+"""
 import os
 import requests
 import json
@@ -9,12 +21,12 @@ from bs4 import BeautifulSoup
 
 def create_subdir(
 ) -> None:
-    '''
-        Creates the data/raw/daily_weather_forecast/
-        subdirectory to store JSON files for daily
-        weather forecast data ingested from the
-        PAGASA-DOST website.
-    '''
+    """
+    Create the `data/raw/daily_weather_forecast/` subdirectory to store JSON files.
+
+    This subdirectory holds the daily weather forecast data ingested from the
+    PAGASA-DOST website.
+    """
     # Create the data/raw/daily_weather_forecast/ subdirectory if it doesn't exist
     if not os.path.exists('data/raw/daily_weather_forecast'):
         os.makedirs('data/raw/daily_weather_forecast')
@@ -22,20 +34,15 @@ def create_subdir(
 def extract_beautiful_soup_object(
         url: str
 ) -> BeautifulSoup | None:
-    '''
-    Extracts the BeautifulSoup object of the
-    daily weather forecast page from the
-    PAGASA-DOST website.
+    """
+    Extract the BeautifulSoup object from the daily weather forecast page.
 
-    :param url: URL of the PAGASA-DOST page
-        containing the daily weather forecast
+    :param url: URL of the PAGASA-DOST daily weather forecast page
     :type url: str
 
-    :return: BeautifulSoup object for navigating
-        and manipulating the page content, or
-        None if extraction fails
+    :return: BeautifulSoup object for navigating the page, or None if extraction fails
     :rtype: BeautifulSoup | None
-    '''
+    """
     response = requests.get(url)
 
     # We need to check if the status code of the response for the request is unsuccessful
@@ -49,18 +56,16 @@ def extract_beautiful_soup_object(
 def extract_issued_datetime(
     soup: BeautifulSoup | None
 ) -> str:
-    '''
-    Extracts the issued datetime of the daily
-    weather forecast from the PAGASA-DOST website.
+    """
+    Extract the issued datetime of the daily weather forecast from the PAGASA-DOST website.
 
-    :param soup: BeautifulSoup object for navigating
-        and manipulating the page content, or
-        None if extraction fails
+    :param soup: BeautifulSoup object for navigating and manipulating the page content,
+        or None if extraction fails
     :type soup: BeautifulSoup | None
 
     :return: Issued datetime of the daily weather forecast
     :rtype: str
-    '''
+    """
     issued_datetime = ''
 
     # We need to check if the BeautifulSoup object is missing
@@ -86,16 +91,14 @@ def extract_issued_datetime(
 def save_issued_datetime_to_json(
         issued_datetime: str
 ) -> None:
-    '''
-    Saves the issued datetime of the daily
-    weather forecast to a JSON file in the
-    data/raw/daily_weather_forecast/
-    subdirectory on the local machine.
+    """
+    Save the issued datetime of the daily weather forecast to a JSON file
+    in the `data/raw/daily_weather_forecast/` subdirectory on the local
+    machine.
 
-    :param issued_datetime: Issued datetime
-        of the daily weather forecast
+    :param issued_datetime: Issued datetime of the daily weather forecast
     :type issued_datetime: str
-    '''
+    """
     # Create a dictionary to store issued datetime of the daily weather forecast
     data = {
         "issued_datetime": issued_datetime
@@ -113,18 +116,16 @@ def save_issued_datetime_to_json(
 def extract_synopsis(
         soup: BeautifulSoup | None
 ) -> str:
-    '''
-    Extracts the synopsis of the daily weather
-    forecast from the PAGASA-DOST website.
+    """
+    Extract the synopsis of the daily weather forecast from the PAGASA-DOST website.
 
-    :param soup: BeautifulSoup object for
-        navigating and manipulating the page
-        content, or None if extraction fails
+    :param soup: BeautifulSoup object for navigating and manipulating the page content,
+        or None if extraction fails
     :type soup: BeautifulSoup | None
 
     :return: Synopsis of the daily weather forecast
     :rtype: str
-    '''
+    """
     synopsis = ''
 
     # We need to check if the BeautifulSoup object is missing
@@ -145,14 +146,14 @@ def extract_synopsis(
 def save_synopsis_to_json(
         synopsis: str
 ) -> None:
-    '''
-    Saves the synopsis of the daily weather forecast to a
-    JSON file in the data/raw/daily_weather_forecast/
-    subdirectory on the local machine.
+    """
+    Save the synopsis of the daily weather forecast to a JSON file
+    in the `data/raw/daily_weather_forecast/` subdirectory on the
+    local machine.
 
     :param synopsis: Synopsis of the daily weather forecast
     :type synopsis: str
-    '''
+    """
     # Create a dictionary to store synopsis of the daily weather forecast
     data = {
         "synopsis": synopsis
@@ -170,19 +171,16 @@ def save_synopsis_to_json(
 def extract_tc_information(
         soup: BeautifulSoup | None
 ) -> dict[str, str]:
-    '''
-    Extracts tropical cyclone information from the daily
-    weather forecast on the PAGASA-DOST website.
+    """
+    Extract the tropical cyclone information of the daily weather forecast from the PAGASA-DOST website.
 
-    :param soup: BeautifulSoup object for navigating
-        and manipulating the page content, or
-        None if extraction fails
+    :param soup: BeautifulSoup object for navigating and manipulating the page content,
+        or None if extraction fails
     :type soup: BeautifulSoup | None
 
-    :return: Dictionary containing tropical cyclone
-        information
+    :return: Dictionary containing tropical cyclone information
     :rtype: dict[str, str]
-    '''
+    """
     tc_information = {
         'current_update': '',
         'tropical_cyclone_name': '',
@@ -242,14 +240,14 @@ def extract_tc_information(
 def save_tc_information_to_json(
         tc_information: dict[str, str]
 ) -> None:
-    '''
-    Saves the tropical cyclone information of the daily weather forecast to
-    a JSON file in the data/raw/daily_weather_forecast/ subdirectory on the
-    local machine.
+    """
+    Save the tropical cyclone information of the daily weather forecast
+    to a JSON file in the `data/raw/daily_weather_forecast/` subdirectory
+    on the local machine.
 
     :param tc_information: Dictionary containing tropical cyclone information
     :type tc_information: dict[str, str]
-    '''
+    """
     # Create a dictionary to store tropical cyclone information from the daily weather forecast
     data = {
         "current_update": tc_information['current_update'],
@@ -272,18 +270,16 @@ def save_tc_information_to_json(
 def extract_forecast_weather_conditions(
         soup: BeautifulSoup | None
 ) -> dict[str, list]:
-    ''' 
-    Extracts forecast weather conditions from the daily weather
-    forecast on the PAGASA-DOST website.
+    """
+    Extract the forecast weather conditions of the daily weather forecast from the PAGASA-DOST website.
 
-    :param soup: BeautifulSoup object for navigating and 
-        manipulating the page content, or None if extraction
-        fails
+    :param soup: BeautifulSoup object for navigating and  manipulating the page content,
+        or None if extraction fails
     :type soup: BeautifulSoup | None
 
     :return: Dictionary containing forecast weather conditions
     :rtype: dict[str, list]
-    '''
+    """
     forecast_weather_conditions = {
         'place': [],
         'weather_condition': [],
@@ -341,16 +337,14 @@ def extract_forecast_weather_conditions(
 def save_forecast_weather_conditions_to_json(
     forecast_weather_conditions: dict[str, list]
 ) -> None:
-    '''
-    Saves the forecast weather conditions of the daily
-    weather forecast to a JSON file in the
-    data/raw/daily_weather_forecast/ subdirectory on
-    the local machine.
+    """
+    Save the forecast weather conditions of the daily weather forecast
+    to a JSON file in the `data/raw/daily_weather_forecast/` subdirectory
+    on the local machine.
 
-    :param forecast_weather_conditions: Dictionary
-        containing forecast weather conditions
+    :param forecast_weather_conditions: Dictionary containing forecast weather conditions
     :type forecast_weather_conditions: dict[str, list]
-    '''
+    """
     # Create a dictionary to store forecast weather conditions from the daily weather forecast
     data = {
         "place": forecast_weather_conditions['place'],
@@ -371,20 +365,17 @@ def save_forecast_weather_conditions_to_json(
 def extract_forecast_wind_and_coastal_water_conditions(
         soup: BeautifulSoup | None
 ) -> dict[str, list]:
-    '''
-    Extracts forecast wind and coastal water conditions
-    from the daily weather forecast on the PAGASA-DOST
-    website.
+    """
+    Extract the forecast wind and coastal water conditions of the daily weather forecast
+    from the PAGASA-DOST website.
 
-    :param soup: BeautifulSoup object for navigating
-        and manipulating the page content, or None if
-        extraction fails
+    :param soup: BeautifulSoup object for navigating and manipulating the page content,
+        or None if extraction fails
     :type soup: BeautifulSoup | None
 
-    :return: Dictionary containing forecast wind and
-        coastal water conditions
+    :return: Dictionary containing forecast wind and coastal water conditions
     :rtype: dict[str, list]
-    '''
+    """
     forecast_wind_and_coastal_water_conditions = {
         'place': [],
         'speed': [],
@@ -442,16 +433,15 @@ def extract_forecast_wind_and_coastal_water_conditions(
 def save_forecast_wind_and_coastal_water_conditions_to_json(
     forecast_wind_and_coastal_water_conditions: dict[str, list]
 ) -> None:
-    '''
-    Saves the forecast wind and coastal water conditions of the
-    daily weather forecast to a JSON file in the
-    data/raw/daily_weather_forecast/ subdirectory on the local
-    machine.
+    """
+    Save the forecast wind and coastal water conditions to a JSON
+    file in the `data/raw/daily_weather_forecast` subdirectory on
+    the local machine.
 
-    :param forecast_wind_and_coastal_water_conditions: Dictionary
-        containing forecast wind and coastal water conditions
+    :param forecast_wind_and_coastal_water_conditions: Dictionary containing
+        forecast wind and coastal water conditions
     :type forecast_wind_and_coastal_water_conditions: dict[str, list]
-    '''
+    """
     # Create a dictionary to store forecast wind and coastal water conditions from the daily weather forecast
     data = {
         "place": forecast_wind_and_coastal_water_conditions['place'],
@@ -472,20 +462,17 @@ def save_forecast_wind_and_coastal_water_conditions_to_json(
 def extract_temperature_and_relative_humidity(
         soup: BeautifulSoup | None
 ) -> dict[str, str]:
-    '''
-    Extracts temperature and relative humidity from
-    the daily weather forecast on the PAGASA-DOST
-    website.
-    
-    :param soup: BeautifulSoup object for navigating
-        and manipulating the page content, or None if
-        extraction fails
+    """
+    Extract the temperature and relative humidity of the daily weather forecast
+    from the PAGASA-DOST website.
+
+    :param soup: BeautifulSoup object for navigating and manipulating the page content,
+        or None if extraction fails
     :type soup: BeautifulSoup | None
 
-    :return: Dictionary containing temperature and
-        relative humidity
+    :return: Dictionary containing temperature and relative humidity
     :rtype: dict[str, str]
-    '''
+    """
     temperature_and_relative_humidity = {
         'temperature': {'max': [], 'min': []},
         'relative_humidity_percentage': {'max': [], 'min': []}
@@ -564,16 +551,15 @@ def extract_temperature_and_relative_humidity(
 def save_temperature_and_relative_humidity_to_json(
         temperature_and_relative_humidity: dict[str, dict]
 ) -> None:
-    '''
-    Saves the temperature and relative humidity of the daily
-    weather forecast to a JSON file in the
-    data/raw/daily_weather_forecast/ subdirectory on the local
-    machine.
+    """
+    Save the tempreature and relative humidity of the daily
+    weather forecast to a JSON file in the `data/raw/daily_weather_forecast`
+    subdirectory on the local machine.
 
-    :param temperature_and_relative_humidity: Dictionary
-        containing temperature and relative humidity data
+    :param temperature_and_relative_humidity: Dictionary containing temperature
+        and relative humidity data
     :type temperature_and_relative_humidity: dict[str, dict]
-    '''
+    """
     # Create a dictionary to store temperature and relative humidity from the daily weather forecast
     data = {
         "temperature": {
