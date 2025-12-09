@@ -1,8 +1,8 @@
 """
-This module provides executor function for data ingestion operations.
+Provide an executor function for data ingestion operations.
 
-It includes function for executing ingestion functions in the
-ingest_weather_outlook_for_ph_cities module of the src/ingest
+This module executes ingestion functions in the
+`ingest_weather_outlook_for_ph_cities` module of the `src.ingest`
 package.
 """
 from ingest.ingest_weather_outlook_for_ph_cities import create_subdir
@@ -24,11 +24,12 @@ from ingest.ingest_weather_outlook_for_ph_cities import save_ph_cities_weather_o
 def ingest_weather_outlook_for_ph_cities(
 ) -> None:
     """
-    Ingests the weather outlook for selected
-    Philippine cities from the PAGASA-DOST
-    website by executing all functions in the
-    ingest_weather_outlook_for_ph_cities module
-    of the src/ingest package.
+    Ingest weather outlook for selected Philippine cities
+    data from the PAGASA-DOST website.
+
+    This function executes all ingestion functions defined in the
+    `ingest_weather_outlook_for_ph_cities` module of the `src.ingest`
+    package.
     """
     # Run all functions to ingest weather outlook data for selected Philippine cities
     create_subdir()
