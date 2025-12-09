@@ -1,16 +1,15 @@
 """
-This module provides executor function for data ingestion operations.
+Provide an executor function for data ingestion operations.
 
-It includes function for executing ingestion functions in the
-ingest_tropical_cyclone_advisory module of the src/ingest package.
+This module executes ingestion functions in the
+`ingest_tropical_cyclone_advisory` module of the `src.ingest` package.
 """
 
 def ingest_tropical_cyclone_advisory(
 ) -> None:
     """
-    Ingests the tropical cyclone
-    advisory from the PAGASA-DOST
-    website by executing all functions
-    in the ingest_tropical_cyclone_advisory module
-    of the src/ingest package.
+    Ingest tropical cyclone advisory data from the PAGASA-DOST website.
+
+    This function executes all ingestion functions defined in the
+    `ingest_tropical_cyclone_advisory` module of the `src.ingest` package.
     """
