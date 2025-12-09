@@ -110,17 +110,17 @@ def parse_synopsis_to_dataframe(
 def stage_synopsis_dataframe(
         synopsis_dataframe: pd.DataFrame
 ) -> None:
-    '''
-    Stages the synopsis of the daily weather
-    forecast as a DataFrame object to the
-    data/stage/daily_weather_forecast subdirectory
+    """
+    Stage the synopsis DataFrame to the staging directory.
+
+    This function saves the synopsis of the daily weather forecast
+    as a CSV file in the `data/stage/daily_weather_forecast/` subdirectory
     on the local machine.
 
-    :param synopsis_dataframe: Synopsis of the
-        daily weather forecast as a DataFrame
-        object
+    :param synopsis_dataframe: DataFrame containing the synopsis of the daily
+        weather forecast
     :type synopsis_dataframe: pd.DataFrame
-    '''
+    """
     # Stage the synopsis DataFrame object to the target filepath
     target_filepath = 'data/stage/daily_weather_forecast/synopsis.csv'
     synopsis_dataframe.to_csv(target_filepath, index=False)
