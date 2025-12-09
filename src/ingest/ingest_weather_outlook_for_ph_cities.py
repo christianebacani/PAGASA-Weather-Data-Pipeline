@@ -64,7 +64,7 @@ def extract_issued_datetime(
     :param soup: BeautifulSoup object for navigating the page, or None if extraction fails
     :type soup: BeautifulSoup | None
 
-    :return: Issued datetime of the daily weather forecast
+    :return: Issued datetime of the weather outlook for selected Philippine cities
     :rtype: str
     """
     issued_datetime = ''
