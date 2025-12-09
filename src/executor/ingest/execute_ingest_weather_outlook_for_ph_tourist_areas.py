@@ -1,9 +1,9 @@
 """
-This module provides executor function for data ingestion operations.
+Provide an executor function for data ingestion operations.
 
-It includes function for executing ingestion functions in the
-ingest_weather_outlook_for_ph_tourist_areas module of the
-src/ingest package.
+This module executes ingestion functions in the
+`ingest_weather_outlook_for_ph_tourist_areas` module of the `src.ingest`
+package.
 """
 from ingest.ingest_weather_outlook_for_ph_tourist_areas import create_subdir
 from ingest.ingest_weather_outlook_for_ph_tourist_areas import extract_beautiful_soup_object
@@ -22,11 +22,12 @@ from ingest.ingest_weather_outlook_for_ph_tourist_areas import save_ph_tourist_a
 def ingest_weather_outlook_for_ph_tourist_areas(
 ) -> None:
     """
-    Ingests the weather outlook for selected
-    Philippine tourist areas from the PAGASA-DOST
-    website by executing all functions in the
-    ingest_weather_outlook_for_ph_tourist_areas module of
-    the src/ingest package.
+    Ingest weather outlook for selected Philippine tourist
+    areas data from the PAGASA-DOST website.
+
+    This function executes all ingestion functions defined in the
+    `ingest_weather_outlook_for_ph_tourist_areas` module of the
+    `src.ingest` package.
     """
     # Run all functions to ingest weather outlook data for selected Philippine tourist areas
     create_subdir()
