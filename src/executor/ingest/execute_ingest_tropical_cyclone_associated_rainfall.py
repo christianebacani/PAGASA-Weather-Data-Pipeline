@@ -1,8 +1,10 @@
-'''
-    Module for executing ingestion functions for the
-    tropical cyclone associated rainfall from the
-    PAGASA-DOST website.
-'''
+"""
+Provide an executor function for data ingestion operations.
+
+This module executes ingestion functions in the
+`ingest_tropical_cyclone_associated_rainfall` module of the
+`src.ingest` package.
+"""
 from ingest.ingest_tropical_cyclone_associated_rainfall import create_subdir
 from ingest.ingest_tropical_cyclone_associated_rainfall import extract_beautiful_soup_object
 from ingest.ingest_tropical_cyclone_associated_rainfall import extract_tropical_cyclone_associated_rainfall
@@ -10,13 +12,12 @@ from ingest.ingest_tropical_cyclone_associated_rainfall import save_tropical_cyc
 
 def ingest_tropical_cyclone_associated_rainfall(
 ) -> None:
-    '''
-        Ingests the tropical cyclone associated rainfall from the
-        PAGASA-DOST website by executing
-        all functions in the 
-        ingest_tropical_cyclone_associated_rainfall
-        module of the src/ingest package.
-    '''
+    """
+    Ingest tropical cyclone-associated rainfall data from the PAGASA-DOST website.
+
+    This function executes all ingestion functions defined in the
+    `ingest_tropical_cyclone_associated_rainfall` module of the `src.ingest` package.
+    """
     # Run all functions to ingest weather advisory data
     create_subdir()
     soup = extract_beautiful_soup_object(
