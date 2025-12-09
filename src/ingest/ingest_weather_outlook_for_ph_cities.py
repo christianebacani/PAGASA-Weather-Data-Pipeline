@@ -14,7 +14,6 @@ weather outlook page, including:
 All extracted data is saved as JSON files in the
 `data/raw/weather_outlook_for_ph_cities/` subdirectory on the local machine.
 """
-
 import os
 import requests
 import json
