@@ -22,11 +22,11 @@ from ingest.ingest_weather_outlook_for_ph_cities import save_ph_cities_weather_o
 def ingest_weather_outlook_for_ph_cities(
 ) -> None:
     '''
-        Ingests the weather outlook for selected
-        Philippine cities from the PAGASA-DOST
-        website by executing all functions in the
-        ingest_weather_outlook_for_ph_cities module
-        of the src/ingest package.
+    Ingests the weather outlook for selected
+    Philippine cities from the PAGASA-DOST
+    website by executing all functions in the
+    ingest_weather_outlook_for_ph_cities module
+    of the src/ingest package.
     '''
     # Run all functions to ingest weather outlook data for selected Philippine cities
     create_subdir()
