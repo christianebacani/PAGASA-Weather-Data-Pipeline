@@ -20,11 +20,11 @@ from ingest.ingest_weather_outlook_for_ph_tourist_areas import save_ph_tourist_a
 def ingest_weather_outlook_for_ph_tourist_areas(
 ) -> None:
     '''
-        Ingests the weather outlook for selected
-        Philippine tourist areas from the PAGASA-DOST
-        website by executing all functions in the
-        ingest_weather_outlook_for_ph_tourist_areas module of
-        the src/ingest package.
+    Ingests the weather outlook for selected
+    Philippine tourist areas from the PAGASA-DOST
+    website by executing all functions in the
+    ingest_weather_outlook_for_ph_tourist_areas module of
+    the src/ingest package.
     '''
     # Run all functions to ingest weather outlook data for selected Philippine tourist areas
     create_subdir()
