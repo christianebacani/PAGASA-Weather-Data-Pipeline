@@ -1,7 +1,21 @@
-'''
-    Module to extract daily weather forecast data
-    from the data/raw subdirectory on the local machine.
-'''
+"""
+Extract and stage daily weather forecast data from the data/raw subdirectory on the local machine.
+
+This module provides functions to parse JSON files from the
+daily weather forecast dataset and convert them into structured
+DataFrame objects, including:
+
+- Issued datetime
+- Synopsis
+- Tropical cyclone information
+- Forecast weather conditions
+- Forecast wind and coastal water conditions
+- Temperature and relative humidity
+
+All parsed data is staged as CSV files in the
+`data/stage/daily_weather_forecast/` subdirectory on the
+local machine for further processing.
+"""
 import pandas as pd
 import os
 
