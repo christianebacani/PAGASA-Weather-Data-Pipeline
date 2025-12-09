@@ -1,8 +1,10 @@
-'''
-    Module for executing ingestion fucntions for the
-    weather outlook of selected Philippine cities from
-    the PAGASA-DOST website.
-'''
+"""
+This module provides executor function for data ingestion operations.
+
+It includes function for executing ingestion functions in the
+ingest_weather_outlook_for_ph_cities module of the src/ingest
+package.
+"""
 from ingest.ingest_weather_outlook_for_ph_cities import create_subdir
 from ingest.ingest_weather_outlook_for_ph_cities import extract_beautiful_soup_object
 from ingest.ingest_weather_outlook_for_ph_cities import extract_issued_datetime
@@ -21,13 +23,13 @@ from ingest.ingest_weather_outlook_for_ph_cities import save_ph_cities_weather_o
 
 def ingest_weather_outlook_for_ph_cities(
 ) -> None:
-    '''
+    """
     Ingests the weather outlook for selected
     Philippine cities from the PAGASA-DOST
     website by executing all functions in the
     ingest_weather_outlook_for_ph_cities module
     of the src/ingest package.
-    '''
+    """
     # Run all functions to ingest weather outlook data for selected Philippine cities
     create_subdir()
     soup = extract_beautiful_soup_object(
