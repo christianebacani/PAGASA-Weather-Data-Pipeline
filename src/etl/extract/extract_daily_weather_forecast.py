@@ -21,14 +21,12 @@ import os
 
 def create_subdir(
 ) -> None:
-    '''
-        Creates the
-        data/stage/daily_weather_forecast/
-        subdirectory to store CSV files for
-        daily weather forecast from the
-        data/raw subirectory on the local
-        machine.
-    '''
+    """
+    Create the `data/stage/daily_weather_forecast` subdirectory to store CSV files.
+
+    This subdirectory holds the staged daily weather forecast data parsed from
+    the JSON files located in the `data/raw` directory on the local machine.
+    """
     # Create the data/stage/daily_weather_forecast/ subdirectory if it doesn't exist
     if not os.path.exists('data/stage/daily_weather_forecast'):
         os.makedirs('data/stage/daily_weather_forecast')
