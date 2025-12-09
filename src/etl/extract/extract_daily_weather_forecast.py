@@ -82,19 +82,20 @@ def stage_issued_datetime_dataframe(
 def parse_synopsis_to_dataframe(
         synopsis_filepath: str
 ) -> pd.DataFrame:
-    '''
-    Parses the synopsis from JSON file
-    into a DataFrame object.
+    """
+    Parse the synopsis into a DataFrame.
 
-    :param synopsis_filepath: Relative filepath
-        of the JSON file that contains the
-        synopsis of the daily weather forecast
+    This function reads the JSON file containing the synopsis of the
+    daily weather forecast and converts it into a Pandas DataFrame. The
+    returned DataFrame is used for staging and further processing.
+
+    :param synopsis_filepath: Relative filepatyh of the JSON file that
+        stores the synopsis value
     :type synopsis_filepath: str
 
-    :return: Synopsis of the daily weather
-        forecast as a DataFrame object
-    :rtype: DataFrame
-    '''
+    :return: DataFrame containing the synopsis of the daily weather forecast
+    :rtype: pd.DataFrame
+    """
     # Read the synopsis JSON file as a Pandas Series
     synopsis_raw_dataframe = pd.read_json(synopsis_filepath, typ='series')
     # Parse the Pandas Series as a DataFrame object
