@@ -1,8 +1,9 @@
-'''
-    Module for executing ingestion functions
-    for the dialy weather forecast from the
-    PAGASA-DOST website.
-'''
+"""
+This module provides executor function for data ingestion operations.
+
+It includes function for executing ingestion functions in the
+ingest_daily_weather_forecaast module of the src/ingest package.
+"""
 from ingest.ingest_daily_weather_forecast import create_subdir
 from ingest.ingest_daily_weather_forecast import extract_beautiful_soup_object
 from ingest.ingest_daily_weather_forecast import extract_issued_datetime
@@ -20,12 +21,12 @@ from ingest.ingest_daily_weather_forecast import save_temperature_and_relative_h
 
 def ingest_daily_weather_forecast(
 ) -> None:
-    '''
+    """
     Ingests the daily weather forecast from the
     PAGASA-DOST website by executing all functions 
     in the ingest_daily_weather_forecast module of
     the src/ingest package.
-    '''
+    """
     # Run all functions to ingest daily weather forecast
     create_subdir()
     soup = extract_beautiful_soup_object(
