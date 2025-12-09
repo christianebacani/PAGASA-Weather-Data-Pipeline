@@ -62,17 +62,19 @@ def parse_issued_datetime_to_dataframe(
 def stage_issued_datetime_dataframe(
         issued_datetime_dataframe: pd.DataFrame
 ) -> None:
-    '''
-    Stages the issued datetime of the daily weather
-    forecast as a DataFrame object to the
-    data/stage/daily_weather_forecast subdirectory
+    """
+    Stage the issued datetime DataFrame to the staging directory.
+
+    This function saves the issued datetime of the daily weather forecast
+    as a CSV file in the `data/stage/daily_weather_forecast/` subdirectory
     on the local machine.
 
-    :param issued_datetime_dataframe: Issued datetime
-        of the daily weather forecast as a DataFrame
-        object
+    :param issued_datetime_dataframe: DataFrame containing the issued datetime
+        of the daily weather forecast
     :type issued_datetime_dataframe: pd.DataFrame
-    '''
+
+    :return: None
+    """
     # Stage the issued datetime DataFrame object to the target filepath
     target_filepath = 'data/stage/daily_weather_forecast/issued_datetime.csv'
     issued_datetime_dataframe.to_csv(target_filepath, index=False)
