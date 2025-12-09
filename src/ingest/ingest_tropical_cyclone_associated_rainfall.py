@@ -53,19 +53,16 @@ def extract_beautiful_soup_object(
 def extract_tropical_cyclone_associated_rainfall(
         soup: BeautifulSoup | None
 ) -> str:
-    '''
-    Extracts the tropical cyclone associated
-    rainfall from the PAGASA-DOST website.
+    """
+    Extract the tropical cyclone associated rainfall image source from the
+    PAGASA-DOST website.
 
-    :param soup: BeautifulSoup object
-        for navigating and manipulating
-        the page content, or None if
-        extraction fails
+    :param soup: BeautifulSoup object for navigating the page, or None if extraction fails
     :type soup: BeautifulSoup | None
 
-    :return: Tropical Cyclone Associated Rainfall
+    :return: Tropical cyclone associated rainfall image source
     :rtype: str
-    '''
+    """
     tropical_cyclone_associated_rainfall = ''
 
     # We need to check if the BeautifulSoup object is missing
