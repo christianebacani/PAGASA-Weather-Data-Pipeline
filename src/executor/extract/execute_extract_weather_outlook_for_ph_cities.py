@@ -1,8 +1,11 @@
-'''
-    Module for executing extraction functions for the
-    selected Philippine cities data from the data/raw
-    subdirectory on the local machine.
-'''
+"""
+Execute extraction functions for weather outlook for
+selected Philippine cities data.
+
+This module runs all extraction tasks on files located in the `data/raw`
+subdirectory on the local machine, serving as the entry point for the
+daily extraction workflow.
+"""
 from etl.extract.extract_weather_outlook_for_ph_cities import create_subdir
 from etl.extract.extract_weather_outlook_for_ph_cities import parse_issued_datetime_to_dataframe
 from etl.extract.extract_weather_outlook_for_ph_cities import stage_issued_datetime_dataframe
@@ -13,14 +16,15 @@ from etl.extract.extract_weather_outlook_for_ph_cities import stage_ph_cities_we
 
 def extract_weather_outlook_for_ph_cities(
 ) -> None:
-    '''
-        Extracts the weather outlook for selected
-        Philippine cities from the data/raw
-        subdirectory on the local machine by
-        executing all functions in the
-        extract_weather_outlook_for_ph_cities
-        module of the src/ingest package.
-    '''
+    """
+    Extract the weather outlook for selected
+    Philippine cities from the `data/raw` subdirectory
+    on the local machine.
+
+    This function executes all extraction functions in the
+    `extract_weather_outlook_for_ph_cities` module of the `src.ingest`
+    package.
+    """
     # Run all functions to ingest weather advisory data
     create_subdir()
 
