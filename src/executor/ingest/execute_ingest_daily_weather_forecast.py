@@ -21,10 +21,10 @@ from ingest.ingest_daily_weather_forecast import save_temperature_and_relative_h
 def ingest_daily_weather_forecast(
 ) -> None:
     '''
-        Ingests the daily weather forecast from the
-        PAGASA-DOST website by executing all functions 
-        in the ingest_daily_weather_forecast module of
-        the src/ingest package.
+    Ingests the daily weather forecast from the
+    PAGASA-DOST website by executing all functions 
+    in the ingest_daily_weather_forecast module of
+    the src/ingest package.
     '''
     # Run all functions to ingest daily weather forecast
     create_subdir()
