@@ -1,7 +1,14 @@
-'''
-    Module to ingest weather advisory from the
-    PAGASA-DOST website.
-'''
+"""
+Ingest weather advisory data from the PAGASA-DOST website.
+
+This module provides functions to extract key information from the
+weather advisory page, including:
+
+- Weather advisory source URL or content
+
+All extracted data is saved as a JSON file in the
+`data/raw/weather_advisory/` subdirectory on the local machine.
+"""
 import os
 import requests
 import json
@@ -9,11 +16,11 @@ from bs4 import BeautifulSoup
 
 def create_subdir(
 ) -> None:
-    '''
-        Creates the data/raw/weather_advisory/
-        subdirectory to store JSON files for weather
-        advisory from the PAGASA-DOST website.
-    '''
+    """
+    Create the `data/raw/weather_advisory` subdirectory to store JSON files.
+
+    This subdirectory holds the weather advisory data from the PAGASA-DOST website.
+    """
     # Create the data/raw/weather_advisory/ subdirectory if it doesn't exist
     if not os.path.exists('data/raw/weather_advisory'):
         os.makedirs('data/raw/weather_advisory')
@@ -21,21 +28,15 @@ def create_subdir(
 def extract_beautiful_soup_object(
         url: str
 ) -> BeautifulSoup | None:
-    '''
-    Extracts the BeautifulSoup object
-    of the weather advisory from the
-    PAGASA-DOST website.
+    """
+    Extract the BeautifulSoup object from the weather advisory page.
 
-    :param url: URL of the PAGASA-DOST
-        page containing the weather
-        advisory
+    :param url: URL of the PAGASA-DOST weather advisory page.
     :type url: str
 
-    :return: BeautifulSoup object for navigating
-        the page content, or None if extraction
-        fails
+    :return: BeautifulSoup object for navigating the page, or None if extraction fails
     :rtype: BeautifulSoup | None
-    '''
+    """
     response = requests.get(url)
 
     # We need to check if the status code of the response for the request is unsuccessful
@@ -49,19 +50,15 @@ def extract_beautiful_soup_object(
 def extract_weather_advisory(
         soup: BeautifulSoup | None
 ) -> str:
-    '''
-    Extracts the weather advisory
-    from the PAGASA-DOST website.
+    """
+    Extract the weather advisory source URL or content from the PAGASA-DOST website.
 
-    :param soup: BeautifulSoup object
-        for navigating and manipulating
-        the page content, or None if
-        extraction fails
+    :param soup: BeautifulSoup object for navigating the page, or None if extraction fails
     :type soup: BeautifulSoup | None
 
-    :return: Weather Advisory
+    :return: Weather advisory source URL or content
     :rtype: str
-    '''
+    """
     weather_advisory = ''
 
     # We need to check if the BeautifulSoup object is missing
@@ -90,17 +87,13 @@ def extract_weather_advisory(
 def save_weather_advisory_to_json(
         weather_advisory: str
 ) -> None:
-    '''
-    Saves the weather advisory
-    to a JSON file in the
-    data/raw/weather_advisory/
-    subdirectory on the local
-    machine.
+    """
+    Save the weather advisory source URL or content to a JSON file
+    in the `data/raw/weather_advisory/` subdirectory on the local machine.
 
-    :param weather_advisory:
-        Weather Advisory
+    :param weather_advisory: Weather advisory source URL or content
     :type weather_advisory: str
-    '''
+    """
     # Create a dictionary to store the weather advisory
     data = {
         "weather_advisory": weather_advisory
