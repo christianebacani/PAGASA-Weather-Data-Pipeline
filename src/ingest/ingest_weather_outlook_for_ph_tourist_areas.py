@@ -1,8 +1,18 @@
-'''
-    Module to ingest weather outlook for selected
-    Philippine tourist areas from the PAGASA-DOST
-    website.
-'''
+"""
+Ingest weather outlook data for selected Philippine tourist areas from the PAGASA-DOST website.
+
+This module provides functions to extract key information from the
+weather outlook page, including:
+
+- Issued datetime
+- Valid perio d
+- Selected Philippine tourist area names
+- Weather dates
+- Temperature ranges
+
+All extracted data is saved as JSON files in the
+`data/raw/weather_outlook_for_ph_tourist_areas/` subdirectory on the local machine.
+"""
 import os
 import requests
 import json
@@ -10,11 +20,12 @@ from bs4 import BeautifulSoup
 
 def create_subdir(
 ) -> None:
-    '''
-        Creates the data/raw/weather_outlook_for_ph_tourist_areas/
-        subdirectory to store JSON files for daily weather
-        forecast data ingested from the PAGASA-DOST website.
-    '''
+    """
+    Create the `data/raw/weather_outlook_for_ph_tourist_areas` subdirectory to store JSON files.
+
+    This subdirectory holds the weather outlook for selected Philippine tourist areas data
+    ingested from the PAGASA-DOST website.
+    """
     # Create the data/raw/weather_outlook_for_ph_cities/ subdirectory if it doesn't exist
     if not os.path.exists('data/raw/weather_outlook_for_ph_tourist_areas'):
         os.makedirs('data/raw/weather_outlook_for_ph_tourist_areas')
@@ -22,22 +33,16 @@ def create_subdir(
 def extract_beautiful_soup_object(
         url: str
 ) -> BeautifulSoup | None:
-    '''
-    Extracts the BeautifulSoup object
-    of the weather outlook for selected
-    Philippine tourist areas from the
-    PAGASA-DOST website.
+    """
+    Extract the BeautifulSoup object from the weather outlook
+    for selected Philippine tourist areas page.
 
-    :param url: URL of the PAGASA-DOST
-        page containing the weather outlook
-        for selected Philippine tourist areas.
+    :param url: URL of the PAGASA-DOST weather outlook for selected Philippine tourist areas page.
     :type url: str
 
-    :return: BeautifulSoup object for navigating
-        the page content, or None if extraction
-        fails
+    :return: BeautifulSoup object for navigating the page, or None if extraction fails
     :rtype: BeautifulSoup | None
-    '''
+    """
     response = requests.get(url)
 
     # We need to check if the status code of the response for the request is unsuccessful
@@ -51,20 +56,16 @@ def extract_beautiful_soup_object(
 def extract_issued_datetime(
     soup: BeautifulSoup | None
 ) -> str:
-    '''
-    Extracts the issued datetime of the weather
-    outlook for selected Philippine tourist areas
-    from the PAGASA-DOST website.
+    """
+    Extract the issued datetime of the weather outlook for selected Philippine
+    tourist areas from the PAGASA-DOST website.
 
-    :param soup: BeautifulSoup object for navigating
-        and manipulating the page content, or None if
-        extraction fails
+    :param soup: BeautifulSoup object for navigating the page, or None if extraction fails
     :type soup: BeautifulSoup | None
 
-    :return: Issued datetime of the weather outlook for
-        selected Philippine tourist areas
+    :return: Issued datetime of the weather outlook for selected Philippine tourist areas
     :rtype: str
-    '''
+    """
     issued_datetime = ''
 
     # We need to check if the BeautifulSoup object is missing
@@ -96,18 +97,14 @@ def extract_issued_datetime(
 def save_issued_datetime_to_json(
         issued_datetime: str
 ) -> None:
-    '''
-    Saves the issued datetime of the
-    weather outlook for selected Philippine
-    tourist areas to a JSON file in the
-    data/raw/weather_outlook_for_ph_tourist_areas/
+    """
+    Save the issued datetime of the weather outlook for selected
+    Philippine tourist areas to a JSON file in the `data/raw/weather_outlook_for_ph_tourist_areas/`
     subdirectory on the local machine.
 
-    :param issued_datetime: Issued datetime
-        of the weather outlook for selected
-        Philippine tourist areas
+    :param issued_datetime: Issued datetime of the weather outlook for selected Philippine tourist areas
     :type issued_datetime: str
-    '''
+    """
     # Create a dictionary to store issued datetime of the weather outlook for selected PH tourist areas
     data = {
         "issued_datetime": issued_datetime
@@ -125,20 +122,16 @@ def save_issued_datetime_to_json(
 def extract_valid_period(
         soup: BeautifulSoup | None
 ) -> str:
-    '''
-    Extracts the valid period of the weather
-    outlook for selected Philippine tourist areas
-    from the PAGASA-DOST website.
+    """
+    Extract the valid period of the weather outlook for selected Philippine
+    tourist areas from the PAGASA-DOST website.
 
-    :param soup: BeautifulSoup object for navigating
-        and manipulating the page content, or None if
-        extraction fails
+    :param soup: BeautifulSoup object for navigating the page, or None if extraction fails
     :type soup: BeautifulSoup | None
 
-    :return: Valid period of the weather outlook for
-        selected Philippine tourist areas
+    :return: Valid period of the weather outlook for selected Philippine tourist areas
     :rtype: str
-    '''
+    """
     valid_period = ''
 
     # We need to check if the BeautifulSoup object is missing
@@ -170,18 +163,14 @@ def extract_valid_period(
 def save_valid_period_to_json(
         valid_period: str
 ) -> None:
-    '''
-    Saves the valid period of the
-    weather outlook for selected Philippine
-    tourist areas to a JSON file in the
-    data/raw/weather_outlook_for_ph_tourist_areas/
+    """
+    Save the valid period of the weather outlook for selected
+    Philippine tourist areas to a JSON file in the `data/raw/weather_outlook_for_ph_tourist_areas/`
     subdirectory on the local machine.
 
-    :param issued_datetime: Valid period of
-        the weather outlook for selected Philippine
-        tourist areas
+    :param issued_datetime: Valid period of the weather outlook for selected Philippine tourist areas
     :type issued_datetime: str
-    '''
+    """
     # Create a dictionary to store valid period of the weather outlook for selected PH tourist areas
     data = {
         "valid_period": valid_period
@@ -199,19 +188,16 @@ def save_valid_period_to_json(
 def extract_ph_tourist_area_tags(
         soup: BeautifulSoup | None
 ) -> list[BeautifulSoup]:
-    '''
-    Extracts selected Philippine tourist area tags to get
+    """
+    Extract HTML tags of selected Philippine tourist areas to get
     their weather outlook from the PAGASA-DOST website.
 
-    :param soup: BeautifulSoup object for navigating and
-        manipulating the page content, or None if extraction
-        fails
+    :param soup: BeautifulSoup object for navigating the page, or None if extraction fails
     :type soup: BeautifulSoup | None
 
-    :return: List of selected Philippine tourist area HTML
-        tags
+    :return: List of HTML tags for the selected Philippine tourist areas
     :rtype: list[BeautifulSoup]
-    '''
+    """
     list_of_all_ph_tourist_area_tags = []
 
     # We need to check if the BeautifulSoup object is missing
@@ -241,18 +227,18 @@ def extract_ph_tourist_area_tags(
 def extract_ph_tourist_area_names(
         list_of_all_ph_tourist_area_tags: list[BeautifulSoup]
 ) -> dict[str, dict]:
-    '''
-    Extracts the names of selected Philippine tourist areas
-    to get their weather outlook from the PAGASA-DOST website.
+    """
+    Extract the names of selected Philippine tourist areas from their
+    HTML tags to get their weather outlook.
 
-    :param list_of_all_ph_city_tags: List of selected
-        Philippine tourist area HTML tags
-    :type list_of_all_ph_city_tags: list[BeautifulSoup]
+    :param list_of_all_ph_tourist_area_tags: List of HTML tags for
+        the selected Philippine tourist areas
+    :type list_of_all_ph_tourist_area_tags: list[BeautifulSoup]
 
-    :return: Dictionary of selected Philippine tourist area
-        names
+    :return: Dictionary mapping tourist area names to empty dictionaries
+        for storing weather data
     :rtype: dict[str, dict]
-    '''
+    """
     result = {}
 
     # We need to check if the selected PH tourist area HTML tags list is missing
@@ -272,19 +258,16 @@ def extract_ph_tourist_area_names(
 def extract_weather_dates(
         soup: BeautifulSoup | None
 ) -> list[str]:
-    '''
-    Extracts all weather dates for the weather
-    outlook of selected Philippine tourist areas.
+    """
+    Extract all weather dates from the HTML tags of selected
+    Philippine tourist areas for their weather outlook.
 
-    :param soup: BeautifulSoup object for navigating
-        and manipulating the page content, or None if
-        extraction fails
+    :param soup: BeautifulSoup object for navigating the page, or None if extraction fails
     :type soup: BeautifulSoup | None
 
-    :return: List of weather dates for the selected
-        Philippine tourist areas
+    :return: List of weather dates for the selected Philippine tourist areas
     :rtype: list[str]
-    '''
+    """
     weather_dates = []
 
     # We need to check if the BeautifulSoup object is missing
@@ -322,24 +305,21 @@ def map_weather_dates_to_ph_tourist_areas(
         weather_dates: list[str],
         ph_tourist_area_names: dict[str, dict]
 ) -> dict[str, dict]:
-    '''
-    Maps extracted list of weather dates to the
-    dictionary of selected Philippine tourist areas
-    for their weather outlook from the PAGASA-DOST
-    website.
-
-    :param weather_dates: List of weather dates for the
-        selected Philippine tourist areas
+    """
+    Maps a list of extracted weather dates to the dictionary
+    of selected Philippine tourist area names for their weather outlook.
+    
+    :param weather_dates: List of weather dates for the selected Philippine
+        tourist areas
     :type weather_dates: list[str]
 
-    :param ph_tourist_area_names: Dictionary of selected
-        Philippine tourist area names
+    :param ph_tourist_area_names: Dictionary mapping tourist area names to
+        empty dictionaries for storing weather data
     :type ph_tourist_area_names: dict[str, dict]
 
-    :return: Dictionary of tourist area names with
-        corresponding weather dates
+    :return: Dictionary of tourist area names with their corresponding weather dates
     :rtype: dict[str, dict]
-    '''
+    """
     # We need to check if the weather dates list or PH tourist area names dict is misisng
     if weather_dates == [] or ph_tourist_area_names == {}:
         return {}
@@ -358,18 +338,17 @@ def map_weather_dates_to_ph_tourist_areas(
 def extract_temperature_ranges(
         list_of_all_ph_tourist_area_tags: list[BeautifulSoup]
 ) -> list[list]:
-    '''
-    Extracts all temperature ranges for the weather
-    outlook of selected Philippine tourist areas.        
+    """
+    Extract all temperature ranges from the HTML tags of
+    selected Philippine tourist areas for their weather outlook.
 
-    :param list_of_all_ph_tourist_area_tags: List
-        of selected Philippine tourist area HTML tags
+    :param list_of_all_ph_tourist_area_tags: List of HTML tags
+        for the selected Philippine tourist areas
     :type list_of_all_ph_tourist_area_tags: list[BeautifulSoup]
 
-    :return: List of temperature ranges for the selected
-        Philippine tourist areas
+    :return: List of temperature ranges for the selected Philippine tourist areas
     :rtype: list[list]
-    '''
+    """
     result = []
 
     # We need to check if the selected PH tourist area HTML tags list is missing
@@ -400,23 +379,23 @@ def map_temperature_ranges_to_ph_tourist_areas(
         temperature_ranges: list[list],
         ph_tourist_areas_with_weather_dates: dict[str, dict]
 ) -> dict[str, dict]:
-    '''
-    Maps extracted list of temperature ranges to the dictionary
-    of selected Philippine tourist area names with weather dates
-    for their weather outlook from the PAGASA-DOST website.
+    """
+    Maps a list of extracted temperature ranges to the dictionary
+    of selected Philippine tourist area names with their weather dates
+    for the weather outlook.
 
-    :param temperature_ranges: List of temperature ranges
-        for the selected Philippine tourist areas
+    :param temperature_ranges: List of temperature ranges for the
+        selected Philippine tourist areas
     :type temperature_ranges: list[list]
-    
-    :param ph_tourist_areas_with_weather_dates: Dictionary
-        of tourist area names with corresponding weather dates
+
+    :param ph_tourist_areas_with_weather_dates: Dictionary of tourist
+        area names with their corresponding weather dates
     :type ph_tourist_areas_with_weather_dates: dict[str, dict]
 
     :return: Dictionary of tourist area names with weather dates
-        and temperature ranges
+        and their corresponding temperature ranges
     :rtype: dict[str, dict]
-    '''
+    """
     # We need to check if the temperature ranges list or PH tourist areas with weather dates dict is missing
     if temperature_ranges == [] or ph_tourist_areas_with_weather_dates == {}:
         return {}
@@ -438,17 +417,15 @@ def map_temperature_ranges_to_ph_tourist_areas(
 def save_ph_tourist_areas_weather_outlook_to_json(
         ph_tourist_areas_weather_outlook: dict[str, dict]
 ) -> None:
-    '''
-    Saves the weather outlook for selected Philippine
-    tourist areas to a JSON file in the
-    data/raw/weather_outlook_for_ph_tourist_areas/
+    """
+    Save the weather outlook for selected Philippine tourist areas
+    to a JSON file in the `data/raw/weather_outlook_for_ph_tourist_areas`
     subdirectory on the local machine.
 
-    :param ph_tourist_areas_weather_outlook: Dictionary
-        of tourist area names with weather dates and
-        temperature ranges
-    :type ph_tourust_areas_weather_outlook: dict[str, dict]
-    '''
+    :param ph_cities_weather_outlook: Dictionary of tourist area names with weather dates
+        and their corresponding temperature ranges
+    :type ph_cities_weather_outlook: dict[str, dict]
+    """
     # Create a dictionary to store weather outlook of selected PH tourist areas
     data = ph_tourist_areas_weather_outlook
 
