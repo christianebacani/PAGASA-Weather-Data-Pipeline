@@ -27,8 +27,7 @@ def extract_daily_weather_forecast(
 
     This function executes all extraction functions in the
     `extract_daily_weather_forecast` module of the `src.ingest`
-    package and returns a DataFrame containing the extracted
-    forecast data.
+    package.
     """
     # Run all functions to ingest weather advisory data
     create_subdir()
