@@ -1,11 +1,11 @@
 {
     "Puerto Galera (Beach Resort & Diving Areas)": {
         "weather_dates": [
-            "Sunday December 07, 2025",
             "Monday December 08, 2025",
             "Tuesday December 09, 2025",
             "Wednesday December 10, 2025",
-            "Thursday December 11, 2025"
+            "Thursday December 11, 2025",
+            "Friday December 12, 2025"
         ],
         "temperature_ranges": [
             [
@@ -32,20 +32,20 @@
     },
     "Anilao (Beach Resorts)": {
         "weather_dates": [
-            "Sunday December 07, 2025",
             "Monday December 08, 2025",
             "Tuesday December 09, 2025",
             "Wednesday December 10, 2025",
-            "Thursday December 11, 2025"
+            "Thursday December 11, 2025",
+            "Friday December 12, 2025"
         ],
         "temperature_ranges": [
             [
                 "21\u00b0C",
-                "27\u00b0C"
+                "30\u00b0C"
             ],
             [
                 "22\u00b0C",
-                "30\u00b0C"
+                "31\u00b0C"
             ],
             [
                 "22\u00b0C",
@@ -63,11 +63,11 @@
     },
     "Boracay (Beach Resorts, Diving Areas)": {
         "weather_dates": [
-            "Sunday December 07, 2025",
             "Monday December 08, 2025",
             "Tuesday December 09, 2025",
             "Wednesday December 10, 2025",
-            "Thursday December 11, 2025"
+            "Thursday December 11, 2025",
+            "Friday December 12, 2025"
         ],
         "temperature_ranges": [
             [
@@ -94,11 +94,11 @@
     },
     "Vigan (Cathedral & the Old Spanish Houses)": {
         "weather_dates": [
-            "Sunday December 07, 2025",
             "Monday December 08, 2025",
             "Tuesday December 09, 2025",
             "Wednesday December 10, 2025",
-            "Thursday December 11, 2025"
+            "Thursday December 11, 2025",
+            "Friday December 12, 2025"
         ],
         "temperature_ranges": [
             [
@@ -125,11 +125,11 @@
     },
     "Cebu (Magellan`s Cross and Lapu - Lapu Shrine)": {
         "weather_dates": [
-            "Sunday December 07, 2025",
             "Monday December 08, 2025",
             "Tuesday December 09, 2025",
             "Wednesday December 10, 2025",
-            "Thursday December 11, 2025"
+            "Thursday December 11, 2025",
+            "Friday December 12, 2025"
         ],
         "temperature_ranges": [
             [
@@ -156,16 +156,16 @@
     },
     "Naga City (Malabsay Falls & The Our Lady of Penafrancia)": {
         "weather_dates": [
-            "Sunday December 07, 2025",
             "Monday December 08, 2025",
             "Tuesday December 09, 2025",
             "Wednesday December 10, 2025",
-            "Thursday December 11, 2025"
+            "Thursday December 11, 2025",
+            "Friday December 12, 2025"
         ],
         "temperature_ranges": [
             [
                 "24\u00b0C",
-                "27\u00b0C"
+                "30\u00b0C"
             ],
             [
                 "24\u00b0C",
@@ -187,23 +187,23 @@
     },
     "Baguio (Mines View Park, Philippine Military Academy, Etc.)": {
         "weather_dates": [
-            "Sunday December 07, 2025",
             "Monday December 08, 2025",
             "Tuesday December 09, 2025",
             "Wednesday December 10, 2025",
-            "Thursday December 11, 2025"
+            "Thursday December 11, 2025",
+            "Friday December 12, 2025"
         ],
         "temperature_ranges": [
             [
-                "14\u00b0C",
+                "17\u00b0C",
                 "22\u00b0C"
             ],
             [
-                "14\u00b0C",
+                "16\u00b0C",
                 "22\u00b0C"
             ],
             [
-                "14\u00b0C",
+                "16\u00b0C",
                 "23\u00b0C"
             ],
             [
@@ -218,11 +218,11 @@
     },
     "Davao (Mt. Apo)": {
         "weather_dates": [
-            "Sunday December 07, 2025",
             "Monday December 08, 2025",
             "Tuesday December 09, 2025",
             "Wednesday December 10, 2025",
-            "Thursday December 11, 2025"
+            "Thursday December 11, 2025",
+            "Friday December 12, 2025"
         ],
         "temperature_ranges": [
             [
@@ -249,19 +249,19 @@
     },
     "Banaue (Rice Terraces, Sagada)": {
         "weather_dates": [
-            "Sunday December 07, 2025",
             "Monday December 08, 2025",
             "Tuesday December 09, 2025",
             "Wednesday December 10, 2025",
-            "Thursday December 11, 2025"
+            "Thursday December 11, 2025",
+            "Friday December 12, 2025"
         ],
         "temperature_ranges": [
             [
-                "14\u00b0C",
+                "16\u00b0C",
                 "22\u00b0C"
             ],
             [
-                "14\u00b0C",
+                "15\u00b0C",
                 "22\u00b0C"
             ],
             [
@@ -280,11 +280,11 @@
     },
     "Taal (Taal Lake & Crater area)": {
         "weather_dates": [
-            "Sunday December 07, 2025",
             "Monday December 08, 2025",
             "Tuesday December 09, 2025",
             "Wednesday December 10, 2025",
-            "Thursday December 11, 2025"
+            "Thursday December 11, 2025",
+            "Friday December 12, 2025"
         ],
         "temperature_ranges": [
             [
@@ -311,11 +311,11 @@
     },
     "Bohol (The Chocolate Hills, Beach Resorts)": {
         "weather_dates": [
-            "Sunday December 07, 2025",
             "Monday December 08, 2025",
             "Tuesday December 09, 2025",
             "Wednesday December 10, 2025",
-            "Thursday December 11, 2025"
+            "Thursday December 11, 2025",
+            "Friday December 12, 2025"
         ],
         "temperature_ranges": [
             [
@@ -342,11 +342,11 @@
     },
     "El Nido (The Islands of God - Heaven on Earth)": {
         "weather_dates": [
-            "Sunday December 07, 2025",
             "Monday December 08, 2025",
             "Tuesday December 09, 2025",
             "Wednesday December 10, 2025",
-            "Thursday December 11, 2025"
+            "Thursday December 11, 2025",
+            "Friday December 12, 2025"
         ],
         "temperature_ranges": [
             [
@@ -373,11 +373,11 @@
     },
     "Camiguin (The Philippines Garden of Eden, Mt. Hibok - Hibok)": {
         "weather_dates": [
-            "Sunday December 07, 2025",
             "Monday December 08, 2025",
             "Tuesday December 09, 2025",
             "Wednesday December 10, 2025",
-            "Thursday December 11, 2025"
+            "Thursday December 11, 2025",
+            "Friday December 12, 2025"
         ],
         "temperature_ranges": [
             [
