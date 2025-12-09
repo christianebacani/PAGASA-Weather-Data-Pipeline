@@ -1,8 +1,15 @@
-'''
-    Module to ingest tropical cyclone
-    associated rainfall from the PAGASA-
-    DOST website.
-'''
+"""
+Ingest tropical cyclone associated rainfall from the PAGASA-DOST website.
+
+This module provides functions to extract key information from the
+tropical cyclone associated rainfall page, including:
+
+- Tropical cyclone associated rainfall image source
+
+All extracted data is saved as JSON files in the
+`data/raw/tropical_cyclone_associated_rainfall/` subdirectory on the local machine.
+"""
+
 import os
 import requests
 import json
