@@ -30,21 +30,16 @@ def create_subdir(
 def extract_beautiful_soup_object(
         url: str
 ) -> BeautifulSoup | None:
-    '''
-    Extracts the BeautifulSoup object
-    of the tropical cyclone associated
-    rainfall from the PAGASA-DOST website.
+    """
+    Extract the BeautifulSoup object from the tropical cyclone
+    associated rainfall page.
 
-    :param url: URL of the PAGASA-DOST
-        page containing the tropical
-        cyclone associated rainfall
+    :param url: URL of the PAGASA-DOST tropical cyclone associated rainfall page.
     :type url: str
 
-    :return: BeautifulSoup object for navigating
-        the page content, or None if extraction
-        fails
+    :return: BeautifulSoup object for navigating the page, or None if extraction fails
     :rtype: BeautifulSoup | None
-    '''
+    """
     response = requests.get(url)
 
     # We need to check if the status code of the response for the request is unsuccessful
