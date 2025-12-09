@@ -89,7 +89,7 @@ def parse_synopsis_to_dataframe(
     daily weather forecast and converts it into a Pandas DataFrame. The
     returned DataFrame is used for staging and further processing.
 
-    :param synopsis_filepath: Relative filepatyh of the JSON file that
+    :param synopsis_filepath: Relative filepath of the JSON file that
         stores the synopsis value
     :type synopsis_filepath: str
 
@@ -125,27 +125,25 @@ def stage_synopsis_dataframe(
     target_filepath = 'data/stage/daily_weather_forecast/synopsis.csv'
     synopsis_dataframe.to_csv(target_filepath, index=False)
 
-# TODO
-# 1.) Continue refactoring the content of every docstring starting from this func
-#   to the `extract_weather_outlook_for_ph_cities` module.
-# 2.) Add description to the docstring content for every function that does not have it
-
 def parse_tc_information_to_dataframe(
         tc_information_filepath: str
 ) -> pd.DataFrame:
-    '''
-    Parses the tropical cyclone information
-    from JSON file into a DataFrame object.
+    """
+    Parse the tropical cyclone information into a DataFrame.
 
-    :param tc_information_filepath: Relative filepath
-        of the JSON file that contains the tropical
-        cyclone information of the daily weather forecast
+    This function reads the JSON file containing the tropical
+    cyclone information of the daily weather forecast and converts
+    it into a Pandas DataFrame. The returned DataFrame is used for
+    staging and further processing.
+
+    :param tc_information_filepath: Relative filepath of the JSON file
+        that stores the tropical cyclone information value
     :type tc_information_filepath: str
 
-    :return: Tropical cyclone information of the daily
-        weather forecast as a DataFrame object
+    :return: DataFrame containing the tropical cyclone information of the
+        daily weather forecast
     :rtype: DataFrame
-    '''
+    """
     # Read the tropical cyclone information JSON file as a Pandas Series
     tc_information_raw_dataframe = pd.read_json(tc_information_filepath, typ='series')
     # Parse the Pandas Series as a DataFrame object
@@ -171,6 +169,11 @@ def parse_tc_information_to_dataframe(
     })
 
     return tc_information_dataframe
+
+# TODO
+# 1.) Continue refactoring the content of every docstring starting from this func
+#   to the `extract_weather_outlook_for_ph_cities` module.
+# 2.) Add description to the docstring content for every function that does not have it
 
 def stage_tc_information_dataframe(
         tc_information_dataframe: pd.DataFrame
