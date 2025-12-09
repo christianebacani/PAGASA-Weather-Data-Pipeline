@@ -5,7 +5,7 @@ This module provides functions to extract key information from the
 weather outlook page, including:
 
 - Issued datetime
-- Valid perio d
+- Valid period
 - Selected Philippine tourist area names
 - Weather dates
 - Temperature ranges
