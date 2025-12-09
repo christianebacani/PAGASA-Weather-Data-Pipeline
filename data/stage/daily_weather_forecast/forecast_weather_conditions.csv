@@ -1,7 +1,7 @@
 place,weather_condition,caused_by,impacts
-MIMAROPA and Western Visayas,Cloudy skies with scattered rains and thunderstorms,LPA,Possible flash floods or landslides due to moderate to heavy rains
-"Cordillera Administrative Region, Cagayan, Isabela, Nueva Vizcaya, Quirino, Aurora, and Quezon",Cloudy skies with scattered rains and isolated thunderstorms,Shear Line,Possible flash floods or landslides due to moderate to heavy rains
-"Metro Manila, the rest of Cagayan Valley, the rest of Central Luzon, and the rest of CALABARZON",Cloudy skies with rains,Northeast Monsoon,Possible flash floods or landslides due to moderate to at times heavy rains
-Bicol Region,Cloudy skies with scattered rains and isolated thunderstorms,Easterlies,Possible flash floods or landslides due to moderate to at times heavy rains
-Ilocos Region,Partly cloudy to cloudy skies with isolated light rains,Northeast Monsoon,No significant impact
-Mindanao and the rest of Visayas,Partly cloudy to cloudy skies with isolated rainshowers or thunderstorms,Localized Thunderstorms,Possible flash floods or landslides during severe thunderstorms
+Kalayaan Islands,Cloudy skies with scattered rains and thunderstorms,LPA,Possible flash floods or landslides due to moderate to at times heavy rains
+"Cordillera Administrative Region, Cagayan, Isabela, Nueva Vizcaya, Quirino, Aurora, and Quezon",Cloudy skies with scattered rains and isolated thunderstorms,Shear Line,Possible flash floods or landslides due to moderate to at times heavy rains
+Batanes and Ilocos Norte,Cloudy skies with light rains,Northeast Monsoon,No significant impact
+"Metro Manila, the rest of Ilocos Region, and the rest of Central Luzon",Partly cloudy to cloudy skies with isolated light rains,Northeast Monsoon,No significant impact
+Bicol Region and Eastern Visayas,Partly cloudy to cloudy skies with isolated rainshowers or thunderstorms,Easterlies,Possible flash floods or landslides during severe thunderstorms
+The rest of the country,Partly cloudy to cloudy skies with isolated rainshowers or thunderstorms,Localized  Thunderstorms,Possible flash floods or landslides during severe thunderstorms
