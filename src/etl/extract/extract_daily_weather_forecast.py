@@ -170,25 +170,20 @@ def parse_tc_information_to_dataframe(
 
     return tc_information_dataframe
 
-# TODO
-# 1.) Continue refactoring the content of every docstring starting from this func
-#   to the `extract_weather_outlook_for_ph_cities` module.
-# 2.) Add description to the docstring content for every function that does not have it
-
 def stage_tc_information_dataframe(
         tc_information_dataframe: pd.DataFrame
 ) -> None:
-    '''
-    Stages the tropical cyclone information of the
-    daily weather forecast as a DataFrame object to
-    the data/stage/daily_weather_forecast
-    subdirectory on the local machine.
+    """
+    Stage the tropical cyclone information DataFrame to the staging directory.
 
-    :param tc_information_dataframe: Tropical
-        cyclone information of the daily weather
-        forecast as a DataFrame object
+    This function saves the tropical cycline information of the daily weather forecast
+    as a CSV file in the `data/stage/daily_weather_forecast/` subdirectory
+    on the local machine.
+
+    :param tc_information_dataframe: DataFrame containing the tropical cyclone information
+        of the daily weather forecast
     :type tc_information_dataframe: pd.DataFrame
-    '''
+    """
     # Stage the tropical cyclone information DataFrame object to the target filepath
     target_filepath = 'data/stage/daily_weather_forecast/tropical_cyclone_information.csv'
     tc_information_dataframe.to_csv(target_filepath, index=False)
