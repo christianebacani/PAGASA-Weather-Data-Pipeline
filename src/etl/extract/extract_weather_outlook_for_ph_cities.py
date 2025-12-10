@@ -102,12 +102,8 @@ def stage_valid_period_dataframe(
         valid_period_dataframe: pd.DataFrame
 ) -> None:
     """
-    Stage the valid period DataFrame to the staging directory.
-
-    This function saves the valid period of the weather outlook
-    for selected Philippine cities as a CSV file in the
-    `data/stage/weather_outlook_for_ph_cities` subdirectory on the
-    local machine.
+    Stage the valid period DataFrame to the staging directory for further
+    processing.
 
     :param valid_period_dataframe: DataFrame containing the valid
         period of the weather outlook for selected Philippine cities
