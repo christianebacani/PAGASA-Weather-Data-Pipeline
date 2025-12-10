@@ -179,5 +179,5 @@ def stage_ph_cities_weather_outlook_dataframe(
     :type ph_cities_weather_outlook_dataframe: pd.DataFrame
     """
     # Stage the weather outlook for selected Philippine cities DataFrame object to the target filepath
-    target_filepath = 'data/stage/weather_outlook_for_ph_cities'
+    target_filepath = 'data/stage/weather_outlook_for_ph_cities/weather_outlook_for_ph_cities.csv'
     ph_cities_weather_outlook_dataframe.to_csv(target_filepath, index=False)
