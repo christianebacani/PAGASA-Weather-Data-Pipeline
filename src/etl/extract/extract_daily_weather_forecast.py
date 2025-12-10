@@ -36,11 +36,7 @@ def parse_issued_datetime_to_dataframe(
         issued_datetime_filepath: str
 ) -> pd.DataFrame:
     """
-    Parse the issued datetime into a DataFrame.
-
-    This function reads the JSON file containing the issued datetime of the
-    daily weather forecast and converts it into a Pandas DataFrame. The returned
-    DataFrame is used for staging and further processing.
+    Parse the issued datetime of the daily weather forecast into a DataFrame.
 
     :param issued_datetime_filepath: Relative filepath of the JSON file that
         stores the issued datetime of the daily weather forecast
@@ -64,11 +60,7 @@ def stage_issued_datetime_dataframe(
         issued_datetime_dataframe: pd.DataFrame
 ) -> None:
     """
-    Stage the issued datetime DataFrame to the staging directory.
-
-    This function saves the issued datetime of the daily weather forecast
-    as a CSV file in the `data/stage/daily_weather_forecast/` subdirectory
-    on the local machine.
+    Stage the issued datetime DataFrame to the staging directory for further processing.
 
     :param issued_datetime_dataframe: DataFrame containing the issued datetime
         of the daily weather forecast
