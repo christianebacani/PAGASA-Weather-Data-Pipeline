@@ -232,12 +232,8 @@ def stage_forecast_wind_and_coastal_water_conditions_dataframe(
         forecast_wind_and_coastal_water_conditions_dataframe: pd.DataFrame
 ) -> None:
     """
-    Stage the forecast wind and coastal water conditions DataFrame to the staging
-    directory.
-
-    This function saves the forecast wind and coastal water conditions of the daily
-    weather forecast as a CSV file in the `data/stage/daily_weather_forecast/` subdirectory
-    on the local machine.
+    Stage the foreast wind and coastal water conditions DataFrame to the staging
+    directory for further processing.
 
     :param forecast_wind_and_coastal_water_conditions_dataframe: DataFrame containing the
         forecast wind and coastal water conditions of the daily weather forecast
