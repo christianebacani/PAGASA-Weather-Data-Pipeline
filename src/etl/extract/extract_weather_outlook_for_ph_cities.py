@@ -33,22 +33,23 @@ def create_subdir(
 def parse_issued_datetime_to_dataframe(
         issued_datetime_filepath: str
 ) -> pd.DataFrame:
-    '''
-    Parses the issued datetime from JSON
-    file into a DataFrame object.
+    """
+    Parse the issued datetime into a DataFrame.
 
-    :param issued_datetime_filepath: Relative
-        filepath of the JSON file that contains
-        the issued datetime of the weather
-        outlook for selected Philippine
-        cities
+    This function reads the JSON file containing the
+    issued datetime of the weather outlook for selected
+    Philippine cities and coverts it into a Pandas DataFrame.
+    The returned DataFrame is used for staging and further
+    processing.
+
+    :param issued_datetime_filepath: Relative filepath of the
+        JSON file that stores the issued datetime
     :type issued_datetime_filepath: str
 
-    :return: Issued datetime of the weather
-        outlook for selected Philippine cities
-        as a DataFrame object
+    :return: DataFrame containing the issued datetime of the weather outlook
+        for selected Philippine cities
     :rtype: DataFrame
-    '''
+    """
     # Read the issued datetime JSON file as a Pandas Series
     issued_datetime_raw_dataframe = pd.read_json(issued_datetime_filepath, typ='series')
     # Parse the Pandas Series as a DataFrame object
