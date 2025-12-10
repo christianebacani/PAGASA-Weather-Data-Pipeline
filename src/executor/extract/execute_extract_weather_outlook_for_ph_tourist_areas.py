@@ -5,3 +5,19 @@ selected Philippine tourist areas data.
 This module runs all extraction tasks on files located in the `data/raw/weather_outlook_for_ph_tourist_areas`
 subdirectory on the local machine, serving as the entry point for the daily extraction workflow.
 """
+from etl.extract.extract_weather_outlook_for_ph_tourist_areas import create_subdir
+
+def extract_weather_outlook_for_ph_tourist_areas(
+) -> None:
+    """
+    Extract the weather outlook for selected
+    Philippine tourist areas from the
+    `data/raw/weather_outlook_for_ph_tourist_areas` subdirectory
+    on the local machine.
+
+    This function executes all extraction functions in the
+    `extract_weather_outlook_for_ph_tourist_areas` module of the `src.etl.extract`
+    package.
+    """
+    # Run all functions to extract weather outlook for selected Philippine tourist areas
+    create_subdir()
