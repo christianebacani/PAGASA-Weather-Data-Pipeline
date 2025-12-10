@@ -1,8 +1,19 @@
-'''
-    Module to extract weather outlook for
-    selected Philippine cities from the
-    data/raw subdirectory on the local machine.
-'''
+"""
+Extract and stage weather outlook for selected Philippine cities from the 
+`data/raw/weather_outlook_for_ph_cities` subdirectory on the local machine.
+
+This module provides functions to parse JSON files from the
+`data/raw/weather_outlook_for_ph_cities` subdirectory and convert them into structured DataFrame
+objects, including:
+
+- Issued datetime
+- Valid period
+- Weather outlook for selected Philippine cities
+
+Parsed DataFrames are staged as CSV files in the
+`data/stage/weather_outlook_for_ph_cities/` subdirectory
+on the local machine for further processing.
+"""
 import pandas as pd
 import os
 
