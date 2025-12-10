@@ -34,13 +34,8 @@ def parse_issued_datetime_to_dataframe(
         issued_datetime_filepath: str
 ) -> pd.DataFrame:
     """
-    Parse the issued datetime into a DataFrame.
-
-    This function reads the JSON file containing the
-    issued datetime of the weather outlook for selected
-    Philippine cities and converts it into a Pandas DataFrame.
-    The returned DataFrame is used for staging and further
-    processing.
+    Parse the issued datetime of the weather outlook for selected Philippine
+    cities into a DataFrame.
 
     :param issued_datetime_filepath: Relative filepath of the
         JSON file that stores the issued datetime of the
