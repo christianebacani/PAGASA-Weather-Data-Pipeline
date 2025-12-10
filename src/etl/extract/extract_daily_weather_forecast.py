@@ -263,17 +263,18 @@ def parse_forecast_wind_and_coastal_water_conditions_to_dataframe(
 def stage_forecast_wind_and_coastal_water_conditions_dataframe(
         forecast_wind_and_coastal_water_conditions_dataframe: pd.DataFrame
 ) -> None:
-    '''
-    Stages the forecast wind and coastal water conditions of the
-    daily weather forecast as a DataFrame object to the
-    data/stage/daily_weather_forecast subdirectory on the
-    local machine.
+    """
+    Stage the forecast wind and coastal water conditions DataFrame to the staging
+    directory.
 
-    :param forecast_wind_and_coastal_water_conditions_dataframe:
-        Forecast wind and coastal water conditions of the daily
-        weather forecast as a DataFrame object
+    This function saves the forecast wind and coastal water conditions of the daily
+    weather forecast as a CSV file in the `data/stage/daily_weather_forecast/` subdirectory
+    on the local machine.
+
+    :param forecast_wind_and_coastal_water_conditions_dataframe: DataFrame containing the
+        forecast wind and coastal water conditions of the daily weather forecast
     :type forecast_wind_and_coastal_water_conditions_dataframe: pd.DataFrame
-    '''
+    """
     # Stage the forecast wind and coastal water conditions DataFrame object to the target filepath
     target_filepath = 'data/stage/daily_weather_forecast/forecast_wind_and_coastal_water_conditions.csv'
     forecast_wind_and_coastal_water_conditions_dataframe.to_csv(target_filepath, index=False)
