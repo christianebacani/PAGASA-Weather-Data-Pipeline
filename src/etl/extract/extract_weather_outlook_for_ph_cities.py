@@ -38,7 +38,7 @@ def parse_issued_datetime_to_dataframe(
 
     This function reads the JSON file containing the
     issued datetime of the weather outlook for selected
-    Philippine cities and coverts it into a Pandas DataFrame.
+    Philippine cities and converts it into a Pandas DataFrame.
     The returned DataFrame is used for staging and further
     processing.
 
@@ -89,7 +89,7 @@ def parse_valid_period_to_dataframe(
 
     This function reads the JSON file containing the
     valid period of the weather outlook for selected
-    Philippine cities and coverts it into a Pandas DataFrame.
+    Philippine cities and converts it into a Pandas DataFrame.
     The returned DataFrame is used for staging and further
     processing.
 
@@ -135,21 +135,17 @@ def stage_valid_period_dataframe(
 def parse_ph_cities_weather_outlook_to_dataframe(
         ph_cities_weather_outlook_filepath: str
 ) -> None:
-    '''
-    Parses the weather outlook for selected
-    Philippine cities from JSON file into a
-    DataFrame object.
+    """
+    Parse the weather outlook for selected Philippine cities into a DataFrame.
 
-    :param ph_cities_weather_outlook_filepath:
-        Relative filepath of the JSON file that
-        contains the weather outlook for selected
-        Philippine cities
+    This function reads the JSON file containing the weather outlook for selected
+    Philippine cities and converts it into a Pandas DataFrame. The returned DataFrame
+    is used for staging and further processing.
+        
+    :param ph_cities_weather_outlook_filepath: Relative filepath of the JSON file that
+        stores the weather outlook for selected Philippine cities
     :type ph_cities_weather_outlook_filepath: str
-
-    :return: Weather outlook for selected Philippine
-        cities as a DataFrame object
-    :rtype: DataFrame
-    '''
+    """
     # Read the PH cities weather outlook JSON file as a DataFrame object
     ph_cities_weather_outlook_raw_dataframe = pd.read_json(ph_cities_weather_outlook_filepath)
 
