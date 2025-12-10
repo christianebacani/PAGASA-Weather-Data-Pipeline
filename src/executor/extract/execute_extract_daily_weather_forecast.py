@@ -1,7 +1,7 @@
 """
 Execute extraction functions for daily weather forecast data.
 
-This module runs all extraction tasks on files located in the `data/raw`
+This module runs all extraction tasks on files located in the `data/raw/daily_weather_forecast`
 subdirectory on the local machine, serving as the entry point for the
 daily extraction workflow.
 """
@@ -22,11 +22,11 @@ from etl.extract.extract_daily_weather_forecast import stage_temperature_and_rel
 def extract_daily_weather_forecast(
 ) -> None:
     """
-    Extract the daily weather forecast from the
-    `data/raw` subdirectory on the local machine.
+    Extract the daily weather forecast from the `data/raw/daily_weather_forecast`
+    subdirectory on the local machine.
 
     This function executes all extraction functions in the
-    `extract_daily_weather_forecast` module of the `src.ingest`
+    `extract_daily_weather_forecast` module of the `src.etl.extract`
     package.
     """
     # Run all functions to ingest weather advisory data
