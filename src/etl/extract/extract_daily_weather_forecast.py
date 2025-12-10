@@ -156,11 +156,8 @@ def stage_tc_information_dataframe(
         tc_information_dataframe: pd.DataFrame
 ) -> None:
     """
-    Stage the tropical cyclone information DataFrame to the staging directory.
-
-    This function saves the tropical cyclone information of the daily weather forecast
-    as a CSV file in the `data/stage/daily_weather_forecast/` subdirectory
-    on the local machine.
+    Stage the tropical cyclone information DataFrame to the staging directory for
+    further processing.
 
     :param tc_information_dataframe: DataFrame containing the tropical cyclone information
         of the daily weather forecast
