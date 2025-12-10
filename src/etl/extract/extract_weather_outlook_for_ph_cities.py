@@ -43,7 +43,8 @@ def parse_issued_datetime_to_dataframe(
     processing.
 
     :param issued_datetime_filepath: Relative filepath of the
-        JSON file that stores the issued datetime
+        JSON file that stores the issued datetime of the
+        weather outlook for selected Philippine cities
     :type issued_datetime_filepath: str
 
     :return: DataFrame containing the issued datetime of the weather outlook
@@ -83,21 +84,24 @@ def stage_issued_datetime_dataframe(
 def parse_valid_period_to_dataframe(
         valid_period_filepath: str
 ) -> pd.DataFrame:
-    '''
-    Parses the valid period from JSON
-    file into a DataFrame object.
+    """
+    Parse the valid period into a DataFrame.
 
-    :param valid_period_filepath: Relative
-        filepath of the JSON file that contains
-        the valid period of the weather outlook
+    This function reads the JSON file containing the
+    valid period of the weather outlook for selected
+    Philippine cities and coverts it into a Pandas DataFrame.
+    The returned DataFrame is used for staging and further
+    processing.
+
+    :param valid_period_filepath: Relative filepath of the JSON
+        file that stores the valid period of the weather outlook
         for selected Philippine cities
     :type valid_period_filepath: str
 
-    :return: Valid period of the weather
+    :return: DataFrame containing the valid period of the weather
         outlook for selected Philippine cities
-        as a DataFrame object
     :rtype: DataFrame
-    '''
+    """
     # Read the valid period JSON file as a Pandas Series
     valid_period_raw_dataframe = pd.read_json(valid_period_filepath, typ='series')
     # Parse the Pandas Series as a DataFrame object
