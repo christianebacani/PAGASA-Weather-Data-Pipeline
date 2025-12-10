@@ -200,6 +200,7 @@ def stage_ph_cities_weather_outlook_dataframe(
     file in the `data/stage/weather_outlook_for_ph_cities` subdirectory on the local    
     machine.
 
-    :param ph_cities_weather_outlook_dataframe: Description
+    :param ph_cities_weather_outlook_dataframe: DataFrame containing the weather
+        outlook for selected Philippine cities
     :type ph_cities_weather_outlook_dataframe: pd.DataFrame
     """
