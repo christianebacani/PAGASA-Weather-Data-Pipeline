@@ -119,10 +119,6 @@ def parse_ph_cities_weather_outlook_to_dataframe(
     """
     Parse the weather outlook for selected Philippine cities into a DataFrame.
 
-    This function reads the JSON file containing the weather outlook for selected
-    Philippine cities and converts it into a Pandas DataFrame. The returned DataFrame
-    is used for staging and further processing.
-
     :param ph_cities_weather_outlook_filepath: Relative filepath of the JSON file that
         stores the weather outlook for selected Philippine cities
     :type ph_cities_weather_outlook_filepath: str
