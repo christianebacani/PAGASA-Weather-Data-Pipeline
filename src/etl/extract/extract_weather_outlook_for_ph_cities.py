@@ -134,17 +134,20 @@ def stage_valid_period_dataframe(
 
 def parse_ph_cities_weather_outlook_to_dataframe(
         ph_cities_weather_outlook_filepath: str
-) -> None:
+) -> pd.DataFrame:
     """
     Parse the weather outlook for selected Philippine cities into a DataFrame.
 
     This function reads the JSON file containing the weather outlook for selected
     Philippine cities and converts it into a Pandas DataFrame. The returned DataFrame
     is used for staging and further processing.
-        
+
     :param ph_cities_weather_outlook_filepath: Relative filepath of the JSON file that
         stores the weather outlook for selected Philippine cities
     :type ph_cities_weather_outlook_filepath: str
+
+    :return: DataFrame containing the weather outlook for selected Philippine cities
+    :rtype: DataFrame
     """
     # Read the PH cities weather outlook JSON file as a DataFrame object
     ph_cities_weather_outlook_raw_dataframe = pd.read_json(ph_cities_weather_outlook_filepath)
@@ -190,14 +193,13 @@ def parse_ph_cities_weather_outlook_to_dataframe(
 def stage_ph_cities_weather_outlook_dataframe(
         ph_cities_weather_outlook_dataframe: pd.DataFrame       
 ) -> None:
-    '''
-    Stages the weather outlook for selected Philippine
-    cities as a DataFrame object to the
-    data/stage/weather_outlook_for_ph_cities subdirectory
-    on the local machine.
+    """
+    Stage the weather outlook for selected Philippine cities to the staging directory.
 
-    :param ph_cities_weather_outlook_dataframe: Weather
-        outlook for selected Philippine cities as a
-        DataFrame object
+    This function saves the weather outlook for selected Philippine cities as a CSV
+    file in the `data/stage/weather_outlook_for_ph_cities` subdirectory on the local    
+    machine.
+
+    :param ph_cities_weather_outlook_dataframe: Description
     :type ph_cities_weather_outlook_dataframe: pd.DataFrame
-    '''
+    """
