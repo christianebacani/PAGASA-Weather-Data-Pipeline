@@ -176,7 +176,7 @@ def stage_tc_information_dataframe(
     """
     Stage the tropical cyclone information DataFrame to the staging directory.
 
-    This function saves the tropical cycline information of the daily weather forecast
+    This function saves the tropical cyclone information of the daily weather forecast
     as a CSV file in the `data/stage/daily_weather_forecast/` subdirectory
     on the local machine.
 
@@ -205,7 +205,7 @@ def parse_forecast_weather_conditions_to_dataframe(
     :type forecast_weather_conditions_filepath: str
 
     :return: DataFrame containing the forecast weather conditions
-        of the dalily weather forecast
+        of the daily weather forecast
     :rtype: DataFrame
     """
     # Read the issued datetime JSON file as a DataFrame object
