@@ -171,11 +171,8 @@ def stage_ph_cities_weather_outlook_dataframe(
         ph_cities_weather_outlook_dataframe: pd.DataFrame       
 ) -> None:
     """
-    Stage the weather outlook for selected Philippine cities to the staging directory.
-
-    This function saves the weather outlook for selected Philippine cities as a CSV
-    file in the `data/stage/weather_outlook_for_ph_cities` subdirectory on the local    
-    machine.
+    Stage the weather outlook for selected Philippine cities
+    DataFrame to the staging directory for further processing.
 
     :param ph_cities_weather_outlook_dataframe: DataFrame containing the weather
         outlook for selected Philippine cities
