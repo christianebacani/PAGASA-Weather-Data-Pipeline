@@ -14,3 +14,15 @@ Parsed DataFrames are staged as CSV files in the
 `data/stage/weather_outlook_for_ph_tourist_areas/` subdirectory
 on the local machine for further processing.
 """
+import pandas as pd
+import os
+
+def create_subdir(
+) -> None:
+    """
+    Create the `data/stage/weather_outlook_for_ph_tourist_areas` subdirectory to store CSV files.
+
+    This subdirectory holds the staged weather outlook for selected Philippine tourist areas
+    data parsed from the JSON files located in the `data/raw/weather_outlook_for_ph_tourist_areas`
+    subdirectory on the local machine.
+    """
