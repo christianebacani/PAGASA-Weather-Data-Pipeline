@@ -194,11 +194,8 @@ def stage_forecast_weather_conditions_dataframe(
         forecast_weather_conditions_dataframe: pd.DataFrame
 ) -> None:
     """
-    Stage the forecast weather conditions DataFrame to the staging directory.
-
-    This function saves the forecast weather conditions of the daily weather
-    forecast as a CSV file in the `data/stage/daily_weather_forecast/` subdirectory
-    on the local machine.
+    Stage the forecast weather conditions DataFrame to the staging directory for
+    further processing.
 
     :param forecast_weather_conditions_dataframe: DataFrame containing the forecast
         weather conditions of the daily weather forecast
