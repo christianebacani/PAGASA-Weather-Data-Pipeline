@@ -26,12 +26,15 @@ def generate_logs(
     log_message: str
 ) -> None:
     """
-    Generate logs for ETL pipeline jobs that process data from the PAGASA-DOST website.
+    Generate logs for ETL pipeline jobs that process data from
+    the PAGASA-DOST website.
 
-    This function appends a new log entry to the `logs.csv` file located in the `src/logs/`
-    package directory. Each log entry contains the message and the timestamp of when the
-    log is generated. Logs are stored in a tabular format using a pandas DataFrame to
-    support tracking, auditing, and debugging of ETL pipeline executions.
+    This function appends a new log entry to the `logs.csv` file
+    located in the `src/logs/` package directory. Each log entry
+    contains the message and the timestamp of when the log is
+    generated. Logs are stored in a tabular format using a pandas
+    DataFrame to support tracking, auditing, and debugging of ETL
+    pipeline executions.
 
     :param log_message: The message to log during ETL pipeline execution
     :type log_message: str
