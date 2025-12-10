@@ -6,6 +6,7 @@ This module runs all extraction tasks on files located in the `data/raw/weather_
 subdirectory on the local machine, serving as the entry point for the daily extraction workflow.
 """
 from etl.extract.extract_weather_outlook_for_ph_tourist_areas import create_subdir
+from etl.extract.extract_weather_outlook_for_ph_tourist_areas import parse_issued_datetime_to_dataframe
 
 def extract_weather_outlook_for_ph_tourist_areas(
 ) -> None:
@@ -21,3 +22,7 @@ def extract_weather_outlook_for_ph_tourist_areas(
     """
     # Run all functions to extract weather outlook data for selected Philippine tourist areas
     create_subdir()
+
+    issued_datetime_dataframe = parse_issued_datetime_to_dataframe(
+        'data/raw/weather_outlook_for_ph_tourist_areas/issued_datetime.json'
+    )
