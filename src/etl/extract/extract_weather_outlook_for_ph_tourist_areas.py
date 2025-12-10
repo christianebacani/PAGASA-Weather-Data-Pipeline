@@ -46,3 +46,13 @@ def parse_issued_datetime_to_dataframe(
         for selected Philippine tourist areas into a DataFrame.
     :rtype: DataFrame
     """
+    # Read the issued datetime JSON file as a Pandas Series
+    issued_datetime_raw_dataframe = pd.read_json(issued_datetime_filepath, typ='series')
+    # Parse the Pandas Series as a DataFrame object
+    issued_datetime_dataframe = pd.DataFrame({
+        'issued_datetime': [
+            issued_datetime_raw_dataframe['issued_datetime']
+        ]
+    })
+
+    return issued_datetime_dataframe
