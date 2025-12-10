@@ -21,6 +21,7 @@ from executor.ingest.execute_ingest_tropical_cyclone_associated_rainfall import 
 
 from executor.extract.execute_extract_daily_weather_forecast import extract_daily_weather_forecast
 from executor.extract.execute_extract_weather_outlook_for_ph_cities import extract_weather_outlook_for_ph_cities
+from executor.extract.execute_extract_weather_outlook_for_ph_tourist_areas import extract_weather_outlook_for_ph_tourist_areas
 
 def generate_logs(
     log_message: str
@@ -92,4 +93,9 @@ if __name__ == '__main__':
     extract_weather_outlook_for_ph_cities()
     generate_logs(
         '(DEV): Extract the data for the weather outlook for selected Philippine cities.'
+    )
+
+    extract_weather_outlook_for_ph_tourist_areas()
+    generate_logs(
+        '(DEV): Extract the data for the weather outlook for selected Philippine tourist areas.'
     )
