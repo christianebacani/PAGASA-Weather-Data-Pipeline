@@ -297,12 +297,8 @@ def stage_temperature_and_relative_humidity_dataframe(
         temperature_and_relative_humidity_dataframe: pd.DataFrame
 ) -> None:
     """
-    Stage the temperature and relative humidity DataFrame to the staging
-    directory.
-
-    This function saves the temperature and relative humidity of the daily
-    weather forecast as a CSV file in the `data/stage/daily_weather_forecast/`
-    subdirectory on the local machine.
+    Stage the temperature and relative humdity DataFrame to the staging directory
+    for further processing.
 
     :param temperature_and_relative_humidity_dataframe: DataFrame containing
         the temperature and relative humidity of the daily weather forecast
