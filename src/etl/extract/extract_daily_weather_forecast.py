@@ -191,20 +191,23 @@ def stage_tc_information_dataframe(
 def parse_forecast_weather_conditions_to_dataframe(
         forecast_weather_conditions_filepath: str
 ) -> pd.DataFrame:
-    '''
-    Parses the forecast weather conditions from
-    JSON file into a DataFrame object.
+    """
+    Parse the forecast weather conditions into a DataFrame.
 
-    :param forecast_weather_conditions_filepath:
-        Relative filepath of the JSON file that
-        contains the forecast weather conditions
-        of the daily weather forecast
+    This function reads the JSON file containing the tropical
+    cyclone information of the daily weather forecast and converts
+    it into a Pandas DataFrame. The returned DataFrame is used
+    for staging and further processing.
+
+    :param forecast_weather_conditions_filepath: Relative
+        filepath of the JSON file that stores the forecast
+        weather conditions value
     :type forecast_weather_conditions_filepath: str
 
-    :return: Forecast weather conditions of the daily
-        weather forecast as a DataFrame object
+    :return: DataFrame containing the forecast weather conditions
+        of the dalily weather forecast
     :rtype: DataFrame
-    '''
+    """
     # Read the issued datetime JSON file as a DataFrame object
     forecast_weather_conditions_dataframe = pd.read_json(
         forecast_weather_conditions_filepath
