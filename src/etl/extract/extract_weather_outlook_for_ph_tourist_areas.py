@@ -43,7 +43,7 @@ def parse_issued_datetime_to_dataframe(
     :type issued_datetime_filepath: str
 
     :return: DataFrame containing the issued datetime of the weather outlook
-        for selected Philippine tourist areas into a DataFrame.
+        for selected Philippine tourist areas into a DataFrame
     :rtype: DataFrame
     """
     # Read the issued datetime JSON file as a Pandas Series
@@ -56,3 +56,14 @@ def parse_issued_datetime_to_dataframe(
     })
 
     return issued_datetime_dataframe
+
+def stage_issued_datetime_dataframe(
+        issued_datetime_dataframe: pd.DataFrame
+) -> None:
+    """
+    Stage the issued datetime DataFrame to the staging directory for further processing.
+
+    :param issued_datetime_dataframe: DataFrame containing the issued datetime of the
+        weather outlook for selected Philippine tourist areas into a DataFrame
+    :type issued_datetime_dataframe: pd.DataFrame
+    """
