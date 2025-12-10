@@ -61,12 +61,7 @@ def stage_issued_datetime_dataframe(
         issued_datetime_dataframe: pd.DataFrame
 ) -> None:
     """
-    Stage the issued datetime DataFrame to the staging directory.
-
-    This function saves the issued datetime of the weather outlook
-    for selected Philippine cities as a CSV file in the
-    `data/stage/weather_outlook_for_ph_cities` subdirectory on the
-    local machine.
+    Stage the issued datetime DataFrame to the staging directory for further processing.
 
     :param issued_datetime_dataframe: DataFrame containing the issued
         datetime of the weather outlook for selected Philippine cities
