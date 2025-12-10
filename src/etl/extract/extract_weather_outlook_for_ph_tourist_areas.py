@@ -29,3 +29,20 @@ def create_subdir(
     # Create the data/stage/weather_outlook_for_ph_cities/ subdirectory if it doesn't exist
     if not os.path.exists('data/stage/weather_outlook_for_ph_tourist_areas'):
         os.makedirs('data/stage/weather_outlook_for_ph_tourist_areas')
+
+def parse_issued_datetime_to_dataframe(
+        issued_datetime_filepath: str
+) -> pd.DataFrame:
+    """
+    Parse the issued datetime of the weather outlook for selected Philippine
+    tourist areas into a DataFrame.
+
+    :param issued_datetime_filepath: Relative filepath of the JSON file that
+        stores the issued datetime of the weather outlook for selected
+        Philippine tourist areas
+    :type issued_datetime_filepath: str
+
+    :return: DataFrame containing the issued datetime of the weather outlook
+        for selected Philippine tourist areas into a DataFrame.
+    :rtype: DataFrame
+    """
