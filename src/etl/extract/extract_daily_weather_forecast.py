@@ -76,11 +76,7 @@ def parse_synopsis_to_dataframe(
         synopsis_filepath: str
 ) -> pd.DataFrame:
     """
-    Parse the synopsis into a DataFrame.
-
-    This function reads the JSON file containing the synopsis of the
-    daily weather forecast and converts it into a Pandas DataFrame. The
-    returned DataFrame is used for staging and further processing.
+    Parse the synopsis of the daily weather forecast into a DataFrame.
 
     :param synopsis_filepath: Relative filepath of the JSON file that
         stores the synopsis of the daily weather forecast
