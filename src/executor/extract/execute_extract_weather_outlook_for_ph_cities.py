@@ -2,7 +2,7 @@
 Execute extraction functions for weather outlook for
 selected Philippine cities data.
 
-This module runs all extraction tasks on files located in the `data/raw`
+This module runs all extraction tasks on files located in the `data/raw/weather_outlook_for_ph_cities`
 subdirectory on the local machine, serving as the entry point for the
 daily extraction workflow.
 """
@@ -18,11 +18,11 @@ def extract_weather_outlook_for_ph_cities(
 ) -> None:
     """
     Extract the weather outlook for selected
-    Philippine cities from the `data/raw` subdirectory
-    on the local machine.
+    Philippine cities from the `data/raw/weather_outlook_for_ph_tourist_cities`
+    subdirectory on the local machine.
 
     This function executes all extraction functions in the
-    `extract_weather_outlook_for_ph_cities` module of the `src.ingest`
+    `extract_weather_outlook_for_ph_cities` module of the `src.etl.extract`
     package.
     """
     # Run all functions to ingest weather advisory data
