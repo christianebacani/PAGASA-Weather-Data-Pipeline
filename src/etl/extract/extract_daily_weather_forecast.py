@@ -194,8 +194,8 @@ def parse_forecast_weather_conditions_to_dataframe(
     """
     Parse the forecast weather conditions into a DataFrame.
 
-    This function reads the JSON file containing the tropical
-    cyclone information of the daily weather forecast and converts
+    This function reads the JSON file containing the forecast
+    weather conditions of the daily weather forecast and converts
     it into a Pandas DataFrame. The returned DataFrame is used
     for staging and further processing.
 
@@ -236,20 +236,23 @@ def stage_forecast_weather_conditions_dataframe(
 def parse_forecast_wind_and_coastal_water_conditions_to_dataframe(
         forecast_wind_and_coastal_water_conditions_filepath: str
 ) -> pd.DataFrame:
-    '''
-    Parses the forecast wind and coastal water conditions from
-    JSON file into a DataFrame object
+    """
+    Parse the forecast wind and coastal water conditions into a DataFrame.
 
-    :param forecast_wind_and_coastal_water_conditions_filepath:
-        Relative filepath of the JSON file that contains the
-        forecast wind and coastal water conditions of the daily
-        weather forecast
+    This function reads the JSON file containing the forecast wind and
+    coastal water conditions of the daily weather forecast and converts
+    it into a Pandas DataFrame. The returned DataFrame is used for staging
+    and further processing.
+
+    :param forecast_wind_and_coastal_water_conditions_filepath: Relative
+        filepath of the JSON file that stores the forecast wind and coastal
+        water conditions value
     :type forecast_wind_and_coastal_water_conditions_filepath: str
 
-    :return: Forecast wind and coastal water conditions of the daily
-        weather forecast as a DataFrame object
+    :return: DataFrame containg the forecast wind and coastal water conditions
+        value
     :rtype: DataFrame
-    '''
+    """
     # Read the forecast wind and coastal water conditions JSON file as a DataFrame object
     forecast_wind_and_coastal_water_conditions_dataframe = pd.read_json(
         forecast_wind_and_coastal_water_conditions_filepath
