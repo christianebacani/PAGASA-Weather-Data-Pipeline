@@ -29,7 +29,7 @@ def extract_daily_weather_forecast(
     `extract_daily_weather_forecast` module of the `src.etl.extract`
     package.
     """
-    # Run all functions to extract daily weather forecast
+    # Run all functions to extract daily weather forecast data
     create_subdir()
 
     issued_datetime_dataframe = parse_issued_datetime_to_dataframe(
