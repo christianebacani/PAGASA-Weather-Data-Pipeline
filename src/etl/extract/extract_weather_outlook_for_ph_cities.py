@@ -75,13 +75,8 @@ def parse_valid_period_to_dataframe(
         valid_period_filepath: str
 ) -> pd.DataFrame:
     """
-    Parse the valid period into a DataFrame.
-
-    This function reads the JSON file containing the
-    valid period of the weather outlook for selected
-    Philippine cities and converts it into a Pandas DataFrame.
-    The returned DataFrame is used for staging and further
-    processing.
+    Parse the valid period of the weather outlook for selected Philippine
+    cities into a DataFrame.
 
     :param valid_period_filepath: Relative filepath of the JSON
         file that stores the valid period of the weather outlook
