@@ -114,12 +114,8 @@ def parse_tc_information_to_dataframe(
         tc_information_filepath: str
 ) -> pd.DataFrame:
     """
-    Parse the tropical cyclone information into a DataFrame.
-
-    This function reads the JSON file containing the tropical
-    cyclone information of the daily weather forecast and converts
-    it into a Pandas DataFrame. The returned DataFrame is used for
-    staging and further processing.
+    Parse the tropical cyclone information of the daily weather forecast into
+    a DataFrame.
 
     :param tc_information_filepath: Relative filepath of the JSON file
         that stores the tropical cyclone information of the daily
