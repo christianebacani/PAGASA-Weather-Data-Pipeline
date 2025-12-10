@@ -36,7 +36,7 @@ def parse_issued_datetime_to_dataframe(
         issued_datetime_filepath: str
 ) -> pd.DataFrame:
     """
-    Parse the issued datetime value into a DataFrame.
+    Parse the issued datetime into a DataFrame.
 
     This function reads the JSON file containing the issued datetime of the
     daily weather forecast and converts it into a Pandas DataFrame. The returned
