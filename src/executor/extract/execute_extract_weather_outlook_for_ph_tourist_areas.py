@@ -19,5 +19,5 @@ def extract_weather_outlook_for_ph_tourist_areas(
     `extract_weather_outlook_for_ph_tourist_areas` module of the `src.etl.extract`
     package.
     """
-    # Run all functions to extract weather outlook for selected Philippine tourist areas
+    # Run all functions to extract weather outlook data for selected Philippine tourist areas
     create_subdir()
