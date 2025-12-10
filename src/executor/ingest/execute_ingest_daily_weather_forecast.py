@@ -28,7 +28,7 @@ def ingest_daily_weather_forecast(
     `ingest_daily_weather_forecast` module of the `src.ingest`
     package.
     """
-    # Run all functions to ingest daily weather forecast
+    # Run all functions to ingest daily weather forecast data
     create_subdir()
     soup = extract_beautiful_soup_object(
         'https://www.pagasa.dost.gov.ph/weather#daily-weather-forecast'

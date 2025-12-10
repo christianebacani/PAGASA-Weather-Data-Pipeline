@@ -18,7 +18,7 @@ def ingest_tropical_cyclone_associated_rainfall(
     This function executes all ingestion functions defined in the
     `ingest_tropical_cyclone_associated_rainfall` module of the `src.ingest` package.
     """
-    # Run all functions to ingest weather advisory data
+    # Run all functions to ingest tropical cyclone associated rainfall data
     create_subdir()
     soup = extract_beautiful_soup_object(
         'https://www.pagasa.dost.gov.ph/climate/tropical-cyclone-associated-rainfall'
