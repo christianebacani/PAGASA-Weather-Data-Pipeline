@@ -171,12 +171,8 @@ def parse_forecast_weather_conditions_to_dataframe(
         forecast_weather_conditions_filepath: str
 ) -> pd.DataFrame:
     """
-    Parse the forecast weather conditions into a DataFrame.
-
-    This function reads the JSON file containing the forecast
-    weather conditions of the daily weather forecast and converts
-    it into a Pandas DataFrame. The returned DataFrame is used
-    for staging and further processing.
+    Parse the forecast weather conditions of the daily weather forecast into a
+    DataFrame.
 
     :param forecast_weather_conditions_filepath: Relative
         filepath of the JSON file that stores the forecast
