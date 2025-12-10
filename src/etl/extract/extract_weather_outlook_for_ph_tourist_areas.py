@@ -67,3 +67,6 @@ def stage_issued_datetime_dataframe(
         weather outlook for selected Philippine tourist areas into a DataFrame
     :type issued_datetime_dataframe: pd.DataFrame
     """
+    # Stage the issued datetime DataFrame object to the target filepath
+    target_filepath = 'data/stage/weather_outlook_for_ph_tourist_areas/issued_datetime.csv'
+    issued_datetime_dataframe.to_csv(target_filepath, index=False)
