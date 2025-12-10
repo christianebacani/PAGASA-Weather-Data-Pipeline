@@ -249,8 +249,8 @@ def parse_forecast_wind_and_coastal_water_conditions_to_dataframe(
         water conditions value
     :type forecast_wind_and_coastal_water_conditions_filepath: str
 
-    :return: DataFrame containg the forecast wind and coastal water conditions
-        value
+    :return: DataFrame containing the forecast wind and coastal water conditions
+        of the daily weather forecast
     :rtype: DataFrame
     """
     # Read the forecast wind and coastal water conditions JSON file as a DataFrame object
@@ -282,20 +282,23 @@ def stage_forecast_wind_and_coastal_water_conditions_dataframe(
 def parse_temperature_and_relative_humidity_to_dataframe(
         temperature_and_relative_humidity_filepath: str
 ) -> pd.DataFrame:
-    '''
-    Parses the temperature and relative humidity from
-    JSON file into a DataFrame object
+    """
+    Parse the temperature and relative humidity into a DataFrame.
 
-    :param temperature_and_relative_humidity_filepath:
-        Relative filepath of the JSON file that contains
-        the temperature and relative humidity of the
-        daily weather forecast
+    This function reads the JSON file containing the temperature
+    and relative humidity of the daily weather forecast and converts
+    it into a Pandas DataFrame. The returned DataFrame is used for
+    staging and further processing.
+
+    :param temperature_and_relative_humidity_filepath: Relative
+        filepath of the JSON file that stores the temperature and
+        relative humidity value
     :type temperature_and_relative_humidity_filepath: str
 
-    :return: Temperature and relative humidity of the
-        daily weather forecast as a DataFrame object
+    :return: DataFrame containing the temperature and relative
+        of the daily weather forecast
     :rtype: DataFrame
-    '''
+    """
     # Read the temperature and relative humidity JSON file as a DataFrame object
     temperature_and_relative_humidity_raw_dataframe = pd.read_json(
         temperature_and_relative_humidity_filepath
