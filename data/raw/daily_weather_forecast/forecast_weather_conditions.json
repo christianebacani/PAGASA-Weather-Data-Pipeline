@@ -1,34 +1,26 @@
 {
     "place": [
-        "Kalayaan Islands",
-        "Cordillera Administrative Region, Cagayan, Isabela, Nueva Vizcaya, Quirino, Aurora, and Quezon",
-        "Batanes and Ilocos Norte",
-        "Metro Manila, the rest of Ilocos Region, and the rest of Central Luzon",
-        "Bicol Region and Eastern Visayas",
-        "The rest of the country"
+        "Cagayan, Isabela, Quirino, and Aurora",
+        "Cordillera Administrative Region, and the rest of Cagayan Valley",
+        "Ilocos Region",
+        "Metro Manila and the rest of the country"
     ],
     "weather_condition": [
-        "Cloudy skies with scattered rains and thunderstorms",
         "Cloudy skies with scattered rains and isolated thunderstorms",
-        "Cloudy skies with light rains",
+        "Cloudy skies with rains",
         "Partly cloudy to cloudy skies with isolated light rains",
-        "Partly cloudy to cloudy skies with isolated rainshowers or thunderstorms",
         "Partly cloudy to cloudy skies with isolated rainshowers or thunderstorms"
     ],
     "caused_by": [
-        "LPA",
         "Shear Line",
         "Northeast Monsoon",
         "Northeast Monsoon",
-        "Easterlies",
         "Localized  Thunderstorms"
     ],
     "impacts": [
         "Possible flash floods or landslides due to moderate to at times heavy rains",
-        "Possible flash floods or landslides due to moderate to at times heavy rains",
+        "Possible flash floods or landslides due to light to moderate with at times heavy rains",
         "No significant impact",
-        "No significant impact",
-        "Possible flash floods or landslides during severe thunderstorms",
         "Possible flash floods or landslides during severe thunderstorms"
     ]
 }
