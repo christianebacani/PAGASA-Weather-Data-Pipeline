@@ -43,7 +43,7 @@ def parse_issued_datetime_to_dataframe(
     DataFrame is used for staging and further processing.
 
     :param issued_datetime_filepath: Relative filepath of the JSON file that
-        stores the issued datetime value
+        stores the issued datetime
     :type issued_datetime_filepath: str
 
     :return: DataFrame containing the issued datetime of the daily weather forecast
@@ -91,7 +91,7 @@ def parse_synopsis_to_dataframe(
     returned DataFrame is used for staging and further processing.
 
     :param synopsis_filepath: Relative filepath of the JSON file that
-        stores the synopsis value
+        stores the synopsis
     :type synopsis_filepath: str
 
     :return: DataFrame containing the synopsis of the daily weather forecast
@@ -138,7 +138,7 @@ def parse_tc_information_to_dataframe(
     staging and further processing.
 
     :param tc_information_filepath: Relative filepath of the JSON file
-        that stores the tropical cyclone information value
+        that stores the tropical cyclone information
     :type tc_information_filepath: str
 
     :return: DataFrame containing the tropical cyclone information of the
@@ -202,7 +202,7 @@ def parse_forecast_weather_conditions_to_dataframe(
 
     :param forecast_weather_conditions_filepath: Relative
         filepath of the JSON file that stores the forecast
-        weather conditions value
+        weather conditions
     :type forecast_weather_conditions_filepath: str
 
     :return: DataFrame containing the forecast weather conditions
@@ -247,7 +247,7 @@ def parse_forecast_wind_and_coastal_water_conditions_to_dataframe(
 
     :param forecast_wind_and_coastal_water_conditions_filepath: Relative
         filepath of the JSON file that stores the forecast wind and coastal
-        water conditions value
+        water conditions
     :type forecast_wind_and_coastal_water_conditions_filepath: str
 
     :return: DataFrame containing the forecast wind and coastal water conditions
@@ -293,7 +293,7 @@ def parse_temperature_and_relative_humidity_to_dataframe(
 
     :param temperature_and_relative_humidity_filepath: Relative
         filepath of the JSON file that stores the temperature and
-        relative humidity value
+        relative humidity
     :type temperature_and_relative_humidity_filepath: str
 
     :return: DataFrame containing the temperature and relative
