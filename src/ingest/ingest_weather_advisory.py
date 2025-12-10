@@ -73,12 +73,12 @@ def extract_weather_advisory(
             'class': 'weekly-content-adv'
         }
     )
+    iframe_tag = weather_advisory_tag.find('iframe')
 
-    # We need to check if weather_advisory_tag is missing
-    if weather_advisory_tag is None:
+    # We need to check if the iframe_tag is missing
+    if iframe_tag is None:
         return weather_advisory
 
-    iframe_tag = weather_advisory_tag.find('iframe')
     weather_advisory = iframe_tag['src']
     weather_advisory = str(weather_advisory).strip()
 
