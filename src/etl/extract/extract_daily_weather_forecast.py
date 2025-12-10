@@ -296,7 +296,7 @@ def parse_temperature_and_relative_humidity_to_dataframe(
     :type temperature_and_relative_humidity_filepath: str
 
     :return: DataFrame containing the temperature and relative
-        of the daily weather forecast
+        humidity of the daily weather forecast
     :rtype: DataFrame
     """
     # Read the temperature and relative humidity JSON file as a DataFrame object
@@ -336,18 +336,18 @@ def parse_temperature_and_relative_humidity_to_dataframe(
 def stage_temperature_and_relative_humidity_dataframe(
         temperature_and_relative_humidity_dataframe: pd.DataFrame
 ) -> None:
-    '''
-    Stages the temperature and relative humidity of the
-    daily weather forecast as a DataFrame object to
-    the data/stage/daily_weather_forecast
+    """
+    Stage the temperature and relative humidity DataFrame to the staging
+    directory.
+
+    This function saves the temperature and relative humidity of the daily
+    weather forecast as a CSV file in the `data/stage/daily_weather_forecast/`
     subdirectory on the local machine.
 
-    :param temperature_and_relative_humidity_dataframe:
-        Temperature and relative humidity of the daily
-        weather forecast as a DataFrame object
-    :type temperature_and_relative_humidity_dataframe:
-        pd.DataFrame
-    '''
+    :param temperature_and_relative_humidity_dataframe: DataFrame containing
+        the temperature and relative humidity of the daily weather forecast
+    :type temperature_and_relative_humidity_dataframe: pd.DataFrame
+    """
     # Stage the temperature and relative humidity to the target filepath
     target_filepath = f'data/stage/daily_weather_forecast/temperature_and_relative_humidity.csv'
     temperature_and_relative_humidity_dataframe.to_csv(target_filepath, index=False)
