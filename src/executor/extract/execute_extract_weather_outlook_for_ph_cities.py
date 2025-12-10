@@ -25,7 +25,7 @@ def extract_weather_outlook_for_ph_cities(
     `extract_weather_outlook_for_ph_cities` module of the `src.etl.extract`
     package.
     """
-    # Run all functions to ingest weather advisory data
+    # Run all functions to extract weather outlook for selected Philippine cities
     create_subdir()
 
     issued_datetime_dataframe = parse_issued_datetime_to_dataframe(
