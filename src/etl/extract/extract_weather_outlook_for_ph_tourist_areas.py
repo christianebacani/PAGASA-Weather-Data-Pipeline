@@ -160,7 +160,7 @@ def parse_ph_tourist_areas_weather_outlook_to_dataframe(
             ph_tourist_areas_weather_outlook_dict['minimum_temperatures'].append(
                 minimum_temperature
             )
-            ph_tourist_areas_weather_outlook_dict['maximum_temperature'].append(
+            ph_tourist_areas_weather_outlook_dict['maximum_temperatures'].append(
                 maximum_temperature
             )
 
