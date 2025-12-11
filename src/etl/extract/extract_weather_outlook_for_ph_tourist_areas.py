@@ -97,3 +97,17 @@ def parse_valid_period_to_dataframe(
     })
 
     return valid_period_dataframe
+
+def stage_valid_period_dataframe(
+        valid_period_dataframe: pd.DataFrame
+) -> None:
+    """
+    Stage the valid period DataFrame to the staging directory for further processing.
+
+    :param issued_datetime_dataframe: DataFrame containing the valid period of the
+        weather outlook for selected Philippine tourist areas
+    :type issued_datetime_dataframe: pd.DataFrame
+    """
+    # Stage the valid period DataFrame object to the target filepath
+    target_filepath = 'data/stage/weather_outlook_for_ph_tourist_areas/valid_period.csv'
+    valid_period_dataframe.to_csv(target_filepath, index=False)
