@@ -153,7 +153,7 @@ def parse_ph_tourist_areas_weather_outlook_to_dataframe(
                 weather_date
             )
 
-        for temperatures in weather_outlook_dict['temperatures']:
+        for temperatures in weather_outlook_dict['temperature_ranges']:
             minimum_temperature = temperatures[0]
             maximum_temperature = temperatures[1]
 
