@@ -133,7 +133,7 @@ def parse_ph_tourist_areas_weather_outlook_to_dataframe(
         ph_tourist_areas_weather_outlook_filepath
     )
 
-    # Restructure the PH tourist areas weather outlook DataFrame to make it readable
+    # Using initialized dictionary to restructure data from PH tourist areas weather outlook DataFrame
     ph_tourist_areas_weather_outlook_dict = {
         'ph_tourist_areas': [],
         'weather_dates': [],
@@ -141,9 +141,32 @@ def parse_ph_tourist_areas_weather_outlook_to_dataframe(
         'maximum_temperatures': []
     }
 
+    # Map PH tourist areas weather outlook DataFrame to the initialized dictionary using a for-loop
     for ph_tourist_area, weather_outlook_dict in ph_tourist_areas_weather_outlook_raw_dataframe.items():
         for _ in range(5):
-            ph_tourist_areas_weather_outlook_dict['ph_tourist_areas'].append(ph_tourist_area)
+            ph_tourist_areas_weather_outlook_dict['ph_tourist_areas'].append(
+                ph_tourist_area
+            )
 
-        print(weather_outlook_dict['weather_dates'])
-        print()
+        for weather_date in weather_outlook_dict['weather_dates']:
+            ph_tourist_areas_weather_outlook_dict['weather_dates'].append(
+                weather_date
+            )
+
+        for temperatures in weather_outlook_dict['temperatures']:
+            minimum_temperature = temperatures[0]
+            maximum_temperature = temperatures[1]
+
+            ph_tourist_areas_weather_outlook_dict['minimum_temperatures'].append(
+                minimum_temperature
+            )
+            ph_tourist_areas_weather_outlook_dict['maximum_temperature'].append(
+                maximum_temperature
+            )
+
+    # Convert the dictionary to a DataFrame object
+    ph_tourist_areas_weather_outlook_dataframe = pd.DataFrame(
+        ph_tourist_areas_weather_outlook_dict
+    )
+
+    print(ph_tourist_areas_weather_outlook_dataframe)
