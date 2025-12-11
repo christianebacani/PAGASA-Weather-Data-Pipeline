@@ -43,7 +43,7 @@ def parse_issued_datetime_to_dataframe(
     :type issued_datetime_filepath: str
 
     :return: DataFrame containing the issued datetime of the weather outlook
-        for selected Philippine tourist areas into a DataFrame
+        for selected Philippine tourist areas
     :rtype: DataFrame
     """
     # Read the issued datetime JSON file as a Pandas Series
@@ -75,10 +75,15 @@ def parse_valid_period_to_dataframe(
         valid_period_filepath: str
 ) -> pd.DataFrame:
     """
-    Docstring for parse_valid_period_to_dataframe
-    
-    :param valid_period_filepath: Description
+    Parse the valid period of the weather outlook for selected Philippine
+    tourist areas into a DataFrame.
+
+    :param valid_period_filepath: Relative filepath of the JSON file that
+        stores the valid period of the weather outlook for selected
+        Philippine tourist areas
     :type valid_period_filepath: str
-    :return: Description
+    
+    :return: DataFrame containing the valid period of the weather outlook for
+        selected Philippine tourist areas
     :rtype: DataFrame
     """
