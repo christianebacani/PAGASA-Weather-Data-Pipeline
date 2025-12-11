@@ -1,6 +1,6 @@
 {
     "place": [
-        "The northern and eastern sections of Luzon",
+        "Northern Luzon",
         "The rest of Luzon",
         "Visayas and Mindanao"
     ],
@@ -15,8 +15,8 @@
         "Northeast to North"
     ],
     "coastal_water": [
-        "Moderate to Rough / (2.1 to 3.5 meters)",
-        "Moderate to Rough / (1.2 to 3.1 meters)",
-        "Slight to Moderate / (0.8 to 2.1 meters)"
+        "Moderate to Rough / (1.5 to 3.1 meters)",
+        "Moderate to Rough / (1.0 to 2.8 meters)",
+        "Slight to Moderate / (0.6 to 2.1 meters)"
     ]
 }
