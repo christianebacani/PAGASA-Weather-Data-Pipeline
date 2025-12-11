@@ -7,6 +7,8 @@ subdirectory on the local machine, serving as the entry point for the daily extr
 """
 from etl.extract.extract_weather_outlook_for_ph_tourist_areas import create_subdir
 from etl.extract.extract_weather_outlook_for_ph_tourist_areas import parse_issued_datetime_to_dataframe
+from etl.extract.extract_weather_outlook_for_ph_tourist_areas import stage_issued_datetime_dataframe
+from etl.extract.extract_weather_outlook_for_ph_tourist_areas import parse_valid_period_to_dataframe
 
 def extract_weather_outlook_for_ph_tourist_areas(
 ) -> None:
@@ -25,4 +27,11 @@ def extract_weather_outlook_for_ph_tourist_areas(
 
     issued_datetime_dataframe = parse_issued_datetime_to_dataframe(
         'data/raw/weather_outlook_for_ph_tourist_areas/issued_datetime.json'
+    )
+    stage_issued_datetime_dataframe(
+        issued_datetime_dataframe
+    )
+
+    parse_valid_period_to_dataframe(
+        'data/raw/weather_outlook_for_ph_tourist_areas/valid_period.json'
     )
