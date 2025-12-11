@@ -128,3 +128,32 @@ def parse_ph_tourist_areas_weather_outlook_to_dataframe(
         tourist areas
     :rtype: DataFrame
     """
+    ph_tourist_areas_weather_outlook_raw_dataframe = pd.read_json(
+        ph_tourist_areas_weather_outlook_filepath
+    )
+
+    ph_tourist_areas_weather_outlook_dict = {
+        'ph_tourist_areas': [],
+        'weather_dates': [],
+        'minimum_temperatures': [],
+        'maximum_temperatures': []
+    }
+
+    for ph_tourist_area, weather_outlook_dict in ph_tourist_areas_weather_outlook_raw_dataframe.items():
+        for _ in range(5):
+            ph_tourist_areas_weather_outlook_dict['ph_tourist_areas'].append(ph_tourist_area)
+
+        for column_name, weather_outlooks in weather_outlook_dict.items():
+            for weather_outlook in weather_outlooks:
+                if column_name == 'weather_dates':
+                    ph_tourist_areas_weather_outlook_dict['weather_dates'].append(
+                        weather_outlook
+                    )
+
+                else:
+                    ph_tourist_areas_weather_outlook_dict['minimum_temperatures'].append(
+                        weather_outlook[0]
+                    )
+                    ph_tourist_areas_weather_outlook_dict['maximum_temperatures'].append(
+                        weather_outlook[1]
+                    )
