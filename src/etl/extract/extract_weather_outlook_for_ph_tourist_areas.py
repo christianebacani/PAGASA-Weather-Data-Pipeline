@@ -87,7 +87,7 @@ def parse_valid_period_to_dataframe(
         selected Philippine tourist areas
     :rtype: DataFrame
     """
-    # Read the issued datetime JSON file as a Pandas Series
+    # Read the valid period JSON file as a Pandas Series
     valid_period_raw_dataframe = pd.read_json(valid_period_filepath, typ='series')
     # Parse the Pandas Series as a DataFrame object
     valid_period_dataframe = pd.DataFrame({
