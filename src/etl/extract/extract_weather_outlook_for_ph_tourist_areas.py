@@ -111,3 +111,20 @@ def stage_valid_period_dataframe(
     # Stage the valid period DataFrame object to the target filepath
     target_filepath = 'data/stage/weather_outlook_for_ph_tourist_areas/valid_period.csv'
     valid_period_dataframe.to_csv(target_filepath, index=False)
+
+def parse_ph_tourist_areas_weather_outlook_to_dataframe(
+        ph_tourist_areas_weather_outlook_filepath: str
+) -> pd.DataFrame:
+    """
+    Parse the weather outlook for selected Philippine tourist areas into
+    a DataFrame.
+
+    :param ph_tourist_areas_weather_outlook_filepath: Relative filepath of
+        the JSON file that stores the weather outlook for selected Philippine
+        tourist areas
+    :type ph_tourist_areas_weather_outlook_filepath: str
+
+    :return: DataFrame containing the weather outlook for selected Philippine
+        tourist areas
+    :rtype: DataFrame
+    """
