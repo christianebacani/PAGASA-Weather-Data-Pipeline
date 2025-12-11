@@ -70,3 +70,15 @@ def stage_issued_datetime_dataframe(
     # Stage the issued datetime DataFrame object to the target filepath
     target_filepath = 'data/stage/weather_outlook_for_ph_tourist_areas/issued_datetime.csv'
     issued_datetime_dataframe.to_csv(target_filepath, index=False)
+
+def parse_valid_period_to_dataframe(
+        valid_period_filepath: str
+) -> pd.DataFrame:
+    """
+    Docstring for parse_valid_period_to_dataframe
+    
+    :param valid_period_filepath: Description
+    :type valid_period_filepath: str
+    :return: Description
+    :rtype: DataFrame
+    """
