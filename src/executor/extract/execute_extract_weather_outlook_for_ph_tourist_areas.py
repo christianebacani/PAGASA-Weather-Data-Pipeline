@@ -41,6 +41,6 @@ def extract_weather_outlook_for_ph_tourist_areas(
         valid_period_dataframe
     )
 
-    parse_ph_tourist_areas_weather_outlook_to_dataframe(
+    ph_tourist_areas_weather_outlook_to_dataframe = parse_ph_tourist_areas_weather_outlook_to_dataframe(
         'data/raw/weather_outlook_for_ph_tourist_areas/ph_tourist_areas_weather_outlook.json'
     )
