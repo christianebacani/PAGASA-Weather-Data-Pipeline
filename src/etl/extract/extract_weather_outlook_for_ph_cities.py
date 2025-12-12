@@ -147,7 +147,7 @@ def parse_ph_cities_weather_outlook_to_dataframe(
             ph_cities_weather_outlook_dict['weather_dates'].append(
                 weather_date
             )
-        
+
         for temperature_ranges in weather_outlook_dict['temperature_ranges']:
             minimum_temperature = temperature_ranges[0]
             maximum_temperature = temperature_ranges[1]
