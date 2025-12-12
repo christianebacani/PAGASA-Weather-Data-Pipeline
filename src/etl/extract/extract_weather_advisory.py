@@ -26,3 +26,17 @@ def create_subdir(
     # Create the data/stage/weather_outlook_for_ph_cities/ subdirectory if it doesn't exist
     if not os.path.exists('data/stage/weather_advisory'):
         os.makedirs('data/stage/weather_advisory')
+
+def parse_weather_advisory_to_dataframe(
+        weather_advisory_filepath: str
+) -> pd.DataFrame:
+    """
+    Parse the weather advisory into a DataFrame.
+
+    :param weather_advisory_filepath: Relative filepath of the JSON file that
+        stores the weather advisory
+    :type weather_advisory_filepath: str
+
+    :return: DataFrame containing the weather advisory
+    :rtype: DataFrame
+    """
