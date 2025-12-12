@@ -129,40 +129,42 @@ def parse_ph_cities_weather_outlook_to_dataframe(
     # Read the PH cities weather outlook JSON file as a DataFrame object
     ph_cities_weather_outlook_raw_dataframe = pd.read_json(ph_cities_weather_outlook_filepath)
 
-    # Restructure the PH cities weather outlook DataFrame to make it readable
+    # Using initialized dictionary to restructure data from PH cities weather outlook DataFrame
     ph_cities_weather_outlook_dict = {
-        'ph_city': [],
-        'weather_date': [],
-        'minimum_temperature': [],
-        'maximum_temperature': [],
-        'chance_of_rain_percentage': []
+        'ph_cities': [],
+        'weather_dates': [],
+        'minimum_temperatures': [],
+        'maximum_temperatures': [],
+        'chance_of_rain_percentages': []
     }
 
-    # Using for-loop to access and restructure all the data from PH cities weather outlook DataFrame
+    # Map PH cities weather outlook DataFrame to the initialized dictionary using a for-loop
     for ph_city, weather_outlook_dict in ph_cities_weather_outlook_raw_dataframe.items():
         for _ in range(5):
             ph_cities_weather_outlook_dict['ph_city'].append(ph_city)
+        
+        for weather_date in weather_outlook_dict['weather_dates']:
+            ph_cities_weather_outlook_dict['weather_dates'].append(
+                weather_date
+            )
+        
+        for temperature_ranges in weather_outlook_dict['temperature_ranges']:
+            minimum_temperature = temperature_ranges[0]
+            maximum_temperature = temperature_ranges[1]
 
-        for column_name, weather_outlooks in weather_outlook_dict.items():
-            for weather_outlook in weather_outlooks:
-                if column_name == 'weather_dates':
-                    ph_cities_weather_outlook_dict['weather_date'].append(
-                        weather_outlook
-                    )
+            ph_cities_weather_outlook_dict['minimum_temperatures'].append(
+                minimum_temperature
+            )
+            ph_cities_weather_outlook_dict['maximum_temperatures'].append(
+                maximum_temperature
+            )
 
-                elif column_name == 'chance_of_rain_percentages':
-                    ph_cities_weather_outlook_dict['chance_of_rain_percentage'].append(
-                        weather_outlook
-                    )
+        for chance_of_rain_percentage in weather_outlook_dict['chance_of_rain_percentages']:
+            ph_cities_weather_outlook_dict['chance_of_rain_percentages'].append(
+                chance_of_rain_percentage
+            )
 
-                else:
-                    ph_cities_weather_outlook_dict['minimum_temperature'].append(
-                        weather_outlook[0]
-                    )
-                    ph_cities_weather_outlook_dict['maximum_temperature'].append(
-                        weather_outlook[1]
-                    )
-
+    # Convert the dictionary to a DataFrame object
     ph_cities_weather_outlook_dataframe = pd.DataFrame(ph_cities_weather_outlook_dict)
 
     return ph_cities_weather_outlook_dataframe
