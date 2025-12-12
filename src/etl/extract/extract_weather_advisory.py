@@ -20,7 +20,7 @@ def create_subdir(
     """
     Create the `data/stage/weather_advisory` subdirectory to store CSV files.
 
-    This subdirectory stores the weatehr advisory data parsed from JSON files located
+    This subdirectory stores the weather advisory data parsed from JSON files located
     in the `data/raw/weather_advisory` subdirectory on the local machine.
     """
     # Create the data/stage/weather_outlook_for_ph_cities/ subdirectory if it doesn't exist
