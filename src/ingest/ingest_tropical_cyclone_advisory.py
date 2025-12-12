@@ -13,3 +13,15 @@ import os
 import requests
 import json
 from bs4 import BeautifulSoup
+
+def create_subdir(
+) -> None:
+    """
+    Create the `data/raw/tropical_cyclone_advisory` subdirectory to store JSON files.
+
+    This subdirectory holds the tropical cyclone advisory data from the PAGASA-DOST
+    website.
+    """
+    # Create the data/raw/tropical_cyclone_advisory/ subdirectory if it doesn't exist
+    if not os.path.exists('data/raw/tropical_cyclone_advisory'):
+        os.makedirs('data/raw/tropical_cyclone_advisory')
