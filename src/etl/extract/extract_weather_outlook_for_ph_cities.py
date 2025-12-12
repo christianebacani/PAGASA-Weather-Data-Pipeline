@@ -141,7 +141,7 @@ def parse_ph_cities_weather_outlook_to_dataframe(
     # Map PH cities weather outlook DataFrame to the initialized dictionary using a for-loop
     for ph_city, weather_outlook_dict in ph_cities_weather_outlook_raw_dataframe.items():
         for _ in range(5):
-            ph_cities_weather_outlook_dict['ph_city'].append(ph_city)
+            ph_cities_weather_outlook_dict['ph_cities'].append(ph_city)
         
         for weather_date in weather_outlook_dict['weather_dates']:
             ph_cities_weather_outlook_dict['weather_dates'].append(
