@@ -1,87 +1,87 @@
 {
     "Bacolod City": {
         "weather_dates": [
-            "Thursday December 11, 2025",
             "Friday December 12, 2025",
             "Saturday December 13, 2025",
             "Sunday December 14, 2025",
-            "Monday December 15, 2025"
+            "Monday December 15, 2025",
+            "Tuesday December 16, 2025"
         ],
         "temperature_ranges": [
             [
-                "25\u00b0C",
-                "32\u00b0C"
+                "26\u00b0C",
+                "31\u00b0C"
             ],
             [
                 "25\u00b0C",
-                "32\u00b0C"
+                "31\u00b0C"
             ],
             [
                 "25\u00b0C",
-                "32\u00b0C"
+                "31\u00b0C"
             ],
             [
-                "25\u00b0C",
-                "32\u00b0C"
+                "26\u00b0C",
+                "30\u00b0C"
             ],
             [
-                "25\u00b0C",
-                "32\u00b0C"
+                "26\u00b0C",
+                "31\u00b0C"
             ]
         ],
         "chance_of_rain_percentages": [
             "Chance of rain: 40%",
-            "Chance of rain: 60%",
+            "Chance of rain: 40%",
+            "Chance of rain: 20%",
             "Chance of rain: 30%",
-            "Chance of rain: 60%",
-            "Chance of rain: 60%"
+            "Chance of rain: 40%"
         ]
     },
     "Baguio City": {
         "weather_dates": [
-            "Thursday December 11, 2025",
             "Friday December 12, 2025",
             "Saturday December 13, 2025",
             "Sunday December 14, 2025",
-            "Monday December 15, 2025"
+            "Monday December 15, 2025",
+            "Tuesday December 16, 2025"
         ],
         "temperature_ranges": [
             [
-                "16\u00b0C",
-                "23\u00b0C"
+                "17\u00b0C",
+                "24\u00b0C"
+            ],
+            [
+                "17\u00b0C",
+                "24\u00b0C"
             ],
             [
                 "16\u00b0C",
-                "22\u00b0C"
+                "24\u00b0C"
             ],
             [
-                "15\u00b0C",
-                "23\u00b0C"
+                "16\u00b0C",
+                "25\u00b0C"
             ],
             [
-                "15\u00b0C",
-                "22\u00b0C"
-            ],
-            [
-                "15\u00b0C",
-                "22\u00b0C"
+                "17\u00b0C",
+                "25\u00b0C"
             ]
         ],
         "chance_of_rain_percentages": [
-            "Chance of rain: 10%",
-            "Chance of rain: 40%",
-            "Chance of rain: 40%",
+            "Chance of rain: 60%",
+            "Chance of rain: 70%",
+            "Chance of rain: 60%",
             "Chance of rain: 20%",
-            "Chance of rain: 10%"
+            "Chance of rain: 60%"
         ]
     },
     "Cagayan De Oro City": {
         "weather_dates": [
-            "Thursday December 11, 2025",
             "Friday December 12, 2025",
             "Saturday December 13, 2025",
             "Sunday December 14, 2025",
-            "Monday December 15, 2025"
+            "Monday December 15, 2025",
+            "Tuesday December 16, 2025"
         ],
         "temperature_ranges": [
             [
@@ -97,46 +97,46 @@
                 "31\u00b0C"
             ],
             [
-                "23\u00b0C",
+                "25\u00b0C",
                 "31\u00b0C"
             ],
             [
-                "23\u00b0C",
+                "25\u00b0C",
                 "31\u00b0C"
             ]
         ],
         "chance_of_rain_percentages": [
-            "Chance of rain: 10%",
-            "Chance of rain: 10%",
-            "Chance of rain: 10%",
+            "Chance of rain: 20%",
+            "Chance of rain: 0%",
+            "Chance of rain: 30%",
             "Chance of rain: 40%",
-            "Chance of rain: 30%"
+            "Chance of rain: 40%"
         ]
     },
     "Iloilo City": {
         "weather_dates": [
-            "Thursday December 11, 2025",
             "Friday December 12, 2025",
             "Saturday December 13, 2025",
             "Sunday December 14, 2025",
-            "Monday December 15, 2025"
+            "Monday December 15, 2025",
+            "Tuesday December 16, 2025"
         ],
         "temperature_ranges": [
             [
-                "24\u00b0C",
-                "32\u00b0C"
-            ],
-            [
-                "24\u00b0C",
-                "32\u00b0C"
-            ],
-            [
-                "24\u00b0C",
-                "32\u00b0C"
-            ],
-            [
                 "25\u00b0C",
-                "32\u00b0C"
+                "31\u00b0C"
+            ],
+            [
+                "24\u00b0C",
+                "31\u00b0C"
+            ],
+            [
+                "24\u00b0C",
+                "31\u00b0C"
+            ],
+            [
+                "24\u00b0C",
+                "30\u00b0C"
             ],
             [
                 "24\u00b0C",
@@ -153,23 +153,15 @@
     },
     "Kalayaan Group Of Islands": {
         "weather_dates": [
-            "Thursday December 11, 2025",
             "Friday December 12, 2025",
             "Saturday December 13, 2025",
             "Sunday December 14, 2025",
-            "Monday December 15, 2025"
+            "Monday December 15, 2025",
+            "Tuesday December 16, 2025"
         ],
         "temperature_ranges": [
             [
                 "25\u00b0C",
-                "32\u00b0C"
-            ],
-            [
-                "25\u00b0C",
-                "32\u00b0C"
-            ],
-            [
-                "25\u00b0C",
                 "31\u00b0C"
             ],
             [
@@ -178,7 +170,15 @@
             ],
             [
                 "25\u00b0C",
-                "32\u00b0C"
+                "30\u00b0C"
+            ],
+            [
+                "25\u00b0C",
+                "31\u00b0C"
+            ],
+            [
+                "25\u00b0C",
+                "31\u00b0C"
             ]
         ],
         "chance_of_rain_percentages": [
@@ -191,23 +191,23 @@
     },
     "Laoag City": {
         "weather_dates": [
-            "Thursday December 11, 2025",
             "Friday December 12, 2025",
             "Saturday December 13, 2025",
             "Sunday December 14, 2025",
-            "Monday December 15, 2025"
+            "Monday December 15, 2025",
+            "Tuesday December 16, 2025"
         ],
         "temperature_ranges": [
             [
+                "22\u00b0C",
+                "33\u00b0C"
+            ],
+            [
                 "23\u00b0C",
-                "32\u00b0C"
+                "33\u00b0C"
             ],
             [
                 "24\u00b0C",
-                "32\u00b0C"
-            ],
-            [
-                "25\u00b0C",
                 "32\u00b0C"
             ],
             [
@@ -216,29 +216,29 @@
             ],
             [
                 "24\u00b0C",
-                "31\u00b0C"
+                "33\u00b0C"
             ]
         ],
         "chance_of_rain_percentages": [
-            "Chance of rain: 40%",
-            "Chance of rain: 10%",
-            "Chance of rain: 10%",
-            "Chance of rain: 30%",
-            "Chance of rain: 10%"
+            "Chance of rain: 0%",
+            "Chance of rain: 0%",
+            "Chance of rain: 0%",
+            "Chance of rain: 0%",
+            "Chance of rain: 0%"
         ]
     },
     "Legazpi City": {
         "weather_dates": [
-            "Thursday December 11, 2025",
             "Friday December 12, 2025",
             "Saturday December 13, 2025",
             "Sunday December 14, 2025",
-            "Monday December 15, 2025"
+            "Monday December 15, 2025",
+            "Tuesday December 16, 2025"
         ],
         "temperature_ranges": [
             [
-                "24\u00b0C",
-                "32\u00b0C"
+                "25\u00b0C",
+                "30\u00b0C"
             ],
             [
                 "25\u00b0C",
@@ -246,41 +246,41 @@
             ],
             [
                 "24\u00b0C",
-                "30\u00b0C"
-            ],
-            [
-                "23\u00b0C",
                 "31\u00b0C"
             ],
             [
-                "23\u00b0C",
+                "25\u00b0C",
+                "30\u00b0C"
+            ],
+            [
+                "25\u00b0C",
                 "30\u00b0C"
             ]
         ],
         "chance_of_rain_percentages": [
+            "Chance of rain: 100%",
             "Chance of rain: 90%",
             "Chance of rain: 90%",
-            "Chance of rain: 80%",
-            "Chance of rain: 80%",
+            "Chance of rain: 100%",
             "Chance of rain: 90%"
         ]
     },
     "Lipa City": {
         "weather_dates": [
-            "Thursday December 11, 2025",
             "Friday December 12, 2025",
             "Saturday December 13, 2025",
             "Sunday December 14, 2025",
-            "Monday December 15, 2025"
+            "Monday December 15, 2025",
+            "Tuesday December 16, 2025"
         ],
         "temperature_ranges": [
             [
-                "25\u00b0C",
-                "31\u00b0C"
+                "24\u00b0C",
+                "30\u00b0C"
             ],
             [
-                "25\u00b0C",
-                "31\u00b0C"
+                "24\u00b0C",
+                "30\u00b0C"
             ],
             [
                 "24\u00b0C",
@@ -288,28 +288,66 @@
             ],
             [
                 "23\u00b0C",
-                "31\u00b0C"
+                "29\u00b0C"
             ],
             [
                 "23\u00b0C",
-                "31\u00b0C"
+                "29\u00b0C"
             ]
         ],
         "chance_of_rain_percentages": [
-            "Chance of rain: 40%",
-            "Chance of rain: 40%",
-            "Chance of rain: 40%",
             "Chance of rain: 30%",
-            "Chance of rain: 30%"
+            "Chance of rain: 30%",
+            "Chance of rain: 30%",
+            "Chance of rain: 40%",
+            "Chance of rain: 60%"
         ]
     },
     "Metro Cebu": {
         "weather_dates": [
-            "Thursday December 11, 2025",
             "Friday December 12, 2025",
             "Saturday December 13, 2025",
             "Sunday December 14, 2025",
-            "Monday December 15, 2025"
+            "Monday December 15, 2025",
+            "Tuesday December 16, 2025"
+        ],
+        "temperature_ranges": [
+            [
+                "26\u00b0C",
+                "31\u00b0C"
+            ],
+            [
+                "26\u00b0C",
+                "30\u00b0C"
+            ],
+            [
+                "26\u00b0C",
+                "31\u00b0C"
+            ],
+            [
+                "26\u00b0C",
+                "30\u00b0C"
+            ],
+            [
+                "26\u00b0C",
+                "30\u00b0C"
+            ]
+        ],
+        "chance_of_rain_percentages": [
+            "Chance of rain: 30%",
+            "Chance of rain: 40%",
+            "Chance of rain: 30%",
+            "Chance of rain: 70%",
+            "Chance of rain: 60%"
+        ]
+    },
+    "Metro Davao": {
+        "weather_dates": [
+            "Friday December 12, 2025",
+            "Saturday December 13, 2025",
+            "Sunday December 14, 2025",
+            "Monday December 15, 2025",
+            "Tuesday December 16, 2025"
         ],
         "temperature_ranges": [
             [
@@ -318,74 +356,36 @@
             ],
             [
                 "25\u00b0C",
-                "32\u00b0C"
+                "34\u00b0C"
             ],
             [
                 "25\u00b0C",
-                "32\u00b0C"
+                "34\u00b0C"
             ],
             [
                 "26\u00b0C",
                 "33\u00b0C"
             ],
             [
-                "24\u00b0C",
-                "32\u00b0C"
-            ]
-        ],
-        "chance_of_rain_percentages": [
-            "Chance of rain: 10%",
-            "Chance of rain: 20%",
-            "Chance of rain: 10%",
-            "Chance of rain: 40%",
-            "Chance of rain: 40%"
-        ]
-    },
-    "Metro Davao": {
-        "weather_dates": [
-            "Thursday December 11, 2025",
-            "Friday December 12, 2025",
-            "Saturday December 13, 2025",
-            "Sunday December 14, 2025",
-            "Monday December 15, 2025"
-        ],
-        "temperature_ranges": [
-            [
-                "25\u00b0C",
-                "34\u00b0C"
-            ],
-            [
-                "25\u00b0C",
-                "34\u00b0C"
-            ],
-            [
-                "25\u00b0C",
+                "26\u00b0C",
                 "33\u00b0C"
-            ],
-            [
-                "24\u00b0C",
-                "32\u00b0C"
-            ],
-            [
-                "24\u00b0C",
-                "32\u00b0C"
             ]
         ],
         "chance_of_rain_percentages": [
             "Chance of rain: 30%",
-            "Chance of rain: 10%",
-            "Chance of rain: 10%",
+            "Chance of rain: 30%",
             "Chance of rain: 40%",
-            "Chance of rain: 40%"
+            "Chance of rain: 60%",
+            "Chance of rain: 30%"
         ]
     },
     "Metro Manila": {
         "weather_dates": [
-            "Thursday December 11, 2025",
             "Friday December 12, 2025",
             "Saturday December 13, 2025",
             "Sunday December 14, 2025",
-            "Monday December 15, 2025"
+            "Monday December 15, 2025",
+            "Tuesday December 16, 2025"
         ],
         "temperature_ranges": [
             [
@@ -393,7 +393,7 @@
                 "31\u00b0C"
             ],
             [
-                "25\u00b0C",
+                "24\u00b0C",
                 "31\u00b0C"
             ],
             [
@@ -410,20 +410,20 @@
             ]
         ],
         "chance_of_rain_percentages": [
-            "Chance of rain: 60%",
             "Chance of rain: 20%",
-            "Chance of rain: 40%",
-            "Chance of rain: 40%",
+            "Chance of rain: 30%",
+            "Chance of rain: 10%",
+            "Chance of rain: 30%",
             "Chance of rain: 40%"
         ]
     },
     "Puerto Princesa City": {
         "weather_dates": [
-            "Thursday December 11, 2025",
             "Friday December 12, 2025",
             "Saturday December 13, 2025",
             "Sunday December 14, 2025",
-            "Monday December 15, 2025"
+            "Monday December 15, 2025",
+            "Tuesday December 16, 2025"
         ],
         "temperature_ranges": [
             [
@@ -448,20 +448,20 @@
             ]
         ],
         "chance_of_rain_percentages": [
-            "Chance of rain: 10%",
-            "Chance of rain: 10%",
-            "Chance of rain: 20%",
-            "Chance of rain: 10%",
-            "Chance of rain: 20%"
+            "Chance of rain: 60%",
+            "Chance of rain: 70%",
+            "Chance of rain: 60%",
+            "Chance of rain: 70%",
+            "Chance of rain: 90%"
         ]
     },
     "Sbma (Olongapo)": {
         "weather_dates": [
-            "Thursday December 11, 2025",
             "Friday December 12, 2025",
             "Saturday December 13, 2025",
             "Sunday December 14, 2025",
-            "Monday December 15, 2025"
+            "Monday December 15, 2025",
+            "Tuesday December 16, 2025"
         ],
         "temperature_ranges": [
             [
@@ -473,12 +473,12 @@
                 "32\u00b0C"
             ],
             [
-                "25\u00b0C",
-                "31\u00b0C"
+                "24\u00b0C",
+                "33\u00b0C"
             ],
             [
                 "24\u00b0C",
-                "32\u00b0C"
+                "31\u00b0C"
             ],
             [
                 "24\u00b0C",
@@ -486,58 +486,58 @@
             ]
         ],
         "chance_of_rain_percentages": [
+            "Chance of rain: 20%",
+            "Chance of rain: 20%",
             "Chance of rain: 10%",
             "Chance of rain: 10%",
-            "Chance of rain: 10%",
-            "Chance of rain: 10%",
-            "Chance of rain: 10%"
+            "Chance of rain: 20%"
         ]
     },
     "Tacloban City": {
         "weather_dates": [
-            "Thursday December 11, 2025",
             "Friday December 12, 2025",
             "Saturday December 13, 2025",
             "Sunday December 14, 2025",
-            "Monday December 15, 2025"
+            "Monday December 15, 2025",
+            "Tuesday December 16, 2025"
         ],
         "temperature_ranges": [
             [
-                "26\u00b0C",
-                "32\u00b0C"
-            ],
-            [
                 "25\u00b0C",
                 "32\u00b0C"
             ],
             [
                 "25\u00b0C",
-                "31\u00b0C"
+                "32\u00b0C"
             ],
             [
                 "25\u00b0C",
-                "31\u00b0C"
+                "33\u00b0C"
             ],
             [
                 "25\u00b0C",
-                "30\u00b0C"
+                "32\u00b0C"
+            ],
+            [
+                "25\u00b0C",
+                "33\u00b0C"
             ]
         ],
         "chance_of_rain_percentages": [
-            "Chance of rain: 70%",
-            "Chance of rain: 60%",
-            "Chance of rain: 70%",
-            "Chance of rain: 70%",
-            "Chance of rain: 80%"
+            "Chance of rain: 90%",
+            "Chance of rain: 90%",
+            "Chance of rain: 90%",
+            "Chance of rain: 90%",
+            "Chance of rain: 90%"
         ]
     },
     "Tagaytay City": {
         "weather_dates": [
-            "Thursday December 11, 2025",
             "Friday December 12, 2025",
             "Saturday December 13, 2025",
             "Sunday December 14, 2025",
-            "Monday December 15, 2025"
+            "Monday December 15, 2025",
+            "Tuesday December 16, 2025"
         ],
         "temperature_ranges": [
             [
@@ -545,20 +545,20 @@
                 "29\u00b0C"
             ],
             [
-                "23\u00b0C",
+                "22\u00b0C",
                 "29\u00b0C"
             ],
             [
-                "23\u00b0C",
+                "22\u00b0C",
                 "29\u00b0C"
             ],
             [
-                "23\u00b0C",
-                "30\u00b0C"
+                "21\u00b0C",
+                "28\u00b0C"
             ],
             [
-                "23\u00b0C",
-                "30\u00b0C"
+                "21\u00b0C",
+                "29\u00b0C"
             ]
         ],
         "chance_of_rain_percentages": [
@@ -571,23 +571,23 @@
     },
     "Tuguegarao City": {
         "weather_dates": [
-            "Thursday December 11, 2025",
             "Friday December 12, 2025",
             "Saturday December 13, 2025",
             "Sunday December 14, 2025",
-            "Monday December 15, 2025"
+            "Monday December 15, 2025",
+            "Tuesday December 16, 2025"
         ],
         "temperature_ranges": [
             [
-                "22\u00b0C",
+                "23\u00b0C",
                 "28\u00b0C"
             ],
             [
-                "23\u00b0C",
+                "22\u00b0C",
                 "29\u00b0C"
             ],
             [
-                "24\u00b0C",
+                "23\u00b0C",
                 "28\u00b0C"
             ],
             [
@@ -596,66 +596,70 @@
             ],
             [
                 "22\u00b0C",
-                "27\u00b0C"
+                "28\u00b0C"
             ]
         ],
         "chance_of_rain_percentages": [
-            "Chance of rain: 80%",
+            "Chance of rain: 70%",
             "Chance of rain: 40%",
             "Chance of rain: 40%",
-            "Chance of rain: 60%",
-            "Chance of rain: 60%"
+            "Chance of rain: 100%",
+            "Chance of rain: 100%"
         ]
     },
     "Valencia City": {
         "weather_dates": [
-            "Thursday December 11, 2025",
             "Friday December 12, 2025",
             "Saturday December 13, 2025",
             "Sunday December 14, 2025",
-            "Monday December 15, 2025"
+            "Monday December 15, 2025",
+            "Tuesday December 16, 2025"
         ],
         "temperature_ranges": [
+            [
+                "22\u00b0C",
+                "33\u00b0C"
+            ],
+            [
+                "22\u00b0C",
+                "33\u00b0C"
+            ],
+            [
+                "22\u00b0C",
+                "33\u00b0C"
+            ],
             [
                 "23\u00b0C",
                 "32\u00b0C"
             ],
             [
                 "23\u00b0C",
-                "31\u00b0C"
-            ],
-            [
-                "22\u00b0C",
-                "31\u00b0C"
-            ],
-            [
-                "23\u00b0C",
-                "31\u00b0C"
-            ],
-            [
-                "22\u00b0C",
                 "32\u00b0C"
             ]
         ],
         "chance_of_rain_percentages": [
-            "Chance of rain: 10%",
-            "Chance of rain: 10%",
             "Chance of rain: 20%",
+            "Chance of rain: 0%",
+            "Chance of rain: 30%",
             "Chance of rain: 40%",
             "Chance of rain: 40%"
         ]
     },
     "Zamboanga City": {
         "weather_dates": [
-            "Thursday December 11, 2025",
             "Friday December 12, 2025",
             "Saturday December 13, 2025",
             "Sunday December 14, 2025",
-            "Monday December 15, 2025"
+            "Monday December 15, 2025",
+            "Tuesday December 16, 2025"
         ],
         "temperature_ranges": [
             [
                 "24\u00b0C",
+                "33\u00b0C"
+            ],
+            [
+                "24\u00b0C",
                 "34\u00b0C"
             ],
             [
@@ -667,20 +671,16 @@
                 "33\u00b0C"
             ],
             [
-                "25\u00b0C",
-                "33\u00b0C"
-            ],
-            [
                 "24\u00b0C",
-                "32\u00b0C"
+                "33\u00b0C"
             ]
         ],
         "chance_of_rain_percentages": [
+            "Chance of rain: 40%",
+            "Chance of rain: 30%",
             "Chance of rain: 20%",
-            "Chance of rain: 10%",
-            "Chance of rain: 20%",
-            "Chance of rain: 10%",
-            "Chance of rain: 10%"
+            "Chance of rain: 60%",
+            "Chance of rain: 60%"
         ]
     }
 }
