@@ -11,6 +11,7 @@ from etl.extract.extract_weather_outlook_for_ph_tourist_areas import stage_issue
 from etl.extract.extract_weather_outlook_for_ph_tourist_areas import parse_valid_period_to_dataframe
 from etl.extract.extract_weather_outlook_for_ph_tourist_areas import stage_valid_period_dataframe
 from etl.extract.extract_weather_outlook_for_ph_tourist_areas import parse_ph_tourist_areas_weather_outlook_to_dataframe
+from etl.extract.extract_weather_outlook_for_ph_tourist_areas import stage_ph_tourist_areas_weather_outlook_dataframe
 
 def extract_weather_outlook_for_ph_tourist_areas(
 ) -> None:
@@ -43,4 +44,7 @@ def extract_weather_outlook_for_ph_tourist_areas(
 
     ph_tourist_areas_weather_outlook_to_dataframe = parse_ph_tourist_areas_weather_outlook_to_dataframe(
         'data/raw/weather_outlook_for_ph_tourist_areas/ph_tourist_areas_weather_outlook.json'
+    )
+    stage_ph_tourist_areas_weather_outlook_dataframe(
+        ph_tourist_areas_weather_outlook_to_dataframe
     )
