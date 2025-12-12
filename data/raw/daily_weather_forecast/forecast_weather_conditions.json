@@ -1,26 +1,30 @@
 {
     "place": [
-        "Cagayan, Isabela, Quirino, Nueva Vizcaya, Kalinga, Mountain Province, Ifugao, Aurora, and Quezon",
-        "Batanes, Apayao, Abra, and Ilocos Norte",
-        "The rest of Ilocos Region and the rest of Cordillera Administrative Region",
-        "Metro Manila and the rest of the country"
+        "Bicol Region, Quezon, Northern Samar, and Eastern Samar",
+        "Cagayan, Isabela, and Aurora",
+        "Ilocos Region, Cordillera Administrative Region, the rest of Cagayan Valley, and the rest of Central Luzon",
+        "Metro Manila and the rest of CALABARZON",
+        "The rest of the country"
     ],
     "weather_condition": [
         "Cloudy skies with scattered rains and isolated thunderstorms",
         "Cloudy skies with rains",
         "Partly cloudy to cloudy skies with isolated light rains",
+        "Partly cloudy to cloudy skies with isolated rainshowers or thunderstorms",
         "Partly cloudy to cloudy skies with isolated rainshowers or thunderstorms"
     ],
     "caused_by": [
         "Shear Line",
         "Northeast Monsoon",
         "Northeast Monsoon",
-        "Localized  Thunderstorms"
+        "Shear Line",
+        "Easterlies"
     ],
     "impacts": [
         "Possible flash floods or landslides due to moderate to at times heavy rains",
         "Possible flash floods or landslides due to moderate to at times heavy rains",
         "No significant impact",
+        "Possible flash floods or landslides during severe thunderstorms",
         "Possible flash floods or landslides during severe thunderstorms"
     ]
 }
