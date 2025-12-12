@@ -170,7 +170,3 @@ def parse_ph_tourist_areas_weather_outlook_to_dataframe(
     )
 
     return ph_tourist_areas_weather_outlook_dataframe
-
-# TODO:
-# - Change the content of the funct `parse_ph_cities_weather_outlook_to_dataframe` to match
-#   it with the content of the funct `parse_ph_tourist_areas_weather_outlook_to_dataframe`
