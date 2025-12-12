@@ -170,3 +170,19 @@ def parse_ph_tourist_areas_weather_outlook_to_dataframe(
     )
 
     return ph_tourist_areas_weather_outlook_dataframe
+
+def stage_ph_tourist_areas_weather_outlook_dataframe(
+        ph_tourist_areas_weather_outlook_dataframe: pd.DataFrame
+) -> None:
+    """
+    Stage the weather outlook for selected Philippine tourist areas
+    DataFrame to the staging directory for further processing.
+
+    :param ph_tourist_areas_weather_outlook_dataframe: DataFrame 
+        containing the weather outlook for selected Philippine tourist
+        areas
+    :type ph_tourist_areas_weather_outlook_dataframe: pd.DataFrame
+    """
+    # Stage the PH tourist areas weather outlook DataFrame object to the target filepath
+    target_filepath = 'data/stage/weather_outlook_for_ph_tourist_areas/ph_tourist_areas_weather_outlook.csv'
+    ph_tourist_areas_weather_outlook_dataframe.to_csv(target_filepath, index=False)
