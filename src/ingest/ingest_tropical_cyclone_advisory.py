@@ -9,3 +9,7 @@ tropical cyclone advisory page, including:
 All extracted data is saved as a JSON file in the
 `data/raw/weather_advisory/` subdirectory on the local machine.
 """
+import os
+import requests
+import json
+from bs4 import BeautifulSoup
