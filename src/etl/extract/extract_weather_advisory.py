@@ -23,7 +23,7 @@ def create_subdir(
     This subdirectory stores the weather advisory data parsed from JSON files located
     in the `data/raw/weather_advisory` subdirectory on the local machine.
     """
-    # Create the data/stage/weather_outlook_for_ph_cities/ subdirectory if it doesn't exist
+    # Create the data/stage/weather_advisory/ subdirectory if it doesn't exist
     if not os.path.exists('data/stage/weather_advisory'):
         os.makedirs('data/stage/weather_advisory')
 
