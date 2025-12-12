@@ -24,6 +24,7 @@ from executor.extract.execute_extract_weather_outlook_for_ph_cities import extra
 from executor.extract.execute_extract_weather_outlook_for_ph_tourist_areas import extract_weather_outlook_for_ph_tourist_areas
 from executor.extract.execute_extract_weather_advisory import extract_weather_advisory
 from executor.extract.execute_extract_tropical_cyclone_advisory import extract_tropical_cyclone_advisory
+from executor.extract.execute_extract_tropical_cyclone_associated_rainfall import extract_tropical_cyclone_associated_rainfall
 
 def generate_logs(
     log_message: str
@@ -110,4 +111,9 @@ if __name__ == '__main__':
     extract_tropical_cyclone_advisory()
     generate_logs(
         '(DEV): Extract the data for the tropical cyclone advisory.'
+    )
+
+    extract_tropical_cyclone_associated_rainfall()
+    generate_logs(
+        '(DEV): Extract the data for the tropical cyclone associated rainfall.'
     )
