@@ -50,77 +50,18 @@ def extract_beautiful_soup_object(
     soup = BeautifulSoup(response.text, 'html.parser')
     return soup
 
-def extract_tropical_cyclone_associated_rainfall(
+def extract_tropical_cyclone_associated_rainfalls_of_2025(
         soup: BeautifulSoup | None
-) -> str:
+) -> list[str]:
     """
-    Extract the tropical cyclone associated rainfall image source from the
-    PAGASA-DOST website.
-
-    :param soup: BeautifulSoup object for navigating the page, or None if extraction fails
+    Extract the tropical cyclone associated rainfall image sources
+    for the year 2025 from the PAGASA-DOST website.
+    
+    :param soup: BeautifulSoup object for navigating the page, or None if
+        extraction fails
     :type soup: BeautifulSoup | None
 
-    :return: Tropical cyclone associated rainfall image source
+    :return: List of tropical cyclone associated rainfall image sources
+        for the year of 2025
     :rtype: str
     """
-    tropical_cyclone_associated_rainfall = ''
-
-    # We need to check if the BeautifulSoup object is missing
-    if soup is None:
-        return tropical_cyclone_associated_rainfall
-
-    # Extract HTML tags for tropical cyclone associated rainfall
-    div_tag_with_row_climate_page_class = soup.find('div', attrs={'class': 'row climate-page'})
-    tropical_cyclone_associated_rainfall_tag = div_tag_with_row_climate_page_class.find(
-        'div',
-        attrs={
-            'class': 'col-md-12 article-content'
-        }
-    )
-    div_tag_with_panel_class = tropical_cyclone_associated_rainfall_tag.find(
-        'div',
-        attrs={
-            'class': 'panel'
-        }
-    )
-
-    # We need to check if div_tag_with_panel_class is missing
-    if div_tag_with_panel_class is None:
-        return tropical_cyclone_associated_rainfall
-
-    tropical_cyclone_associated_rainfall_tag = div_tag_with_panel_class.find(
-        'div',
-        attrs={
-            'class': 'col-md-8'
-        }
-    )
-    img_tag = tropical_cyclone_associated_rainfall_tag.find('img')
-    tropical_cyclone_associated_rainfall = img_tag['src']
-    tropical_cyclone_associated_rainfall = str(tropical_cyclone_associated_rainfall).strip()
-
-    return tropical_cyclone_associated_rainfall
-
-def save_tropical_cyclone_associated_rainfall_to_json(
-        tropical_cyclone_associated_rainfall: str
-) -> None:
-    """
-    Save the tropical cyclone associated rainfall image source to
-    a JSON file in the `data/raw/tropical_cyclone_associated_rainfall`
-    on the local machine.
-
-    :param tropical_cyclone_associated_rainfall: Tropical cyclone associated rainfall image source
-    :type tropical_cyclone_associated_rainfall: str
-    """
-    # Create a dictionary to store the tropical cyclone associated rainfall
-    data = {
-        "tropical_cyclone_associated_rainfall": tropical_cyclone_associated_rainfall
-    }
-
-    # Save the dictionary to a json file using open() method and json module
-    with open(
-        'data/raw/tropical_cyclone_associated_rainfall/current_tropical_cyclone_associated_rainfall.json',
-        'w'
-    ) as json_file:
-        json.dump(data, json_file, indent=4)
-
-    json_file.close()
