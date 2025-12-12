@@ -12,3 +12,5 @@ Parsed DataFrames are staged as CSV files in the
 `data/stage/tropical_cyclone_associated_rainfall/` subdirectory
 on the local machine for further processing.
 """
+import pandas as pd
+import os
