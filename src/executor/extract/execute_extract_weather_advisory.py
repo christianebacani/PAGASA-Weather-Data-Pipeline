@@ -18,7 +18,7 @@ def extract_weather_advisory(
     `extract_weather_advisory` module of the `src.etl.extract`
     package.
     """
-    # Run all functiosn to extract weather advisory data
+    # Run all functions to extract weather advisory data
     create_subdir()
 
     parse_weather_advisory_to_dataframe(
