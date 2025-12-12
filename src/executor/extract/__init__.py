@@ -1,3 +1,4 @@
 from . import execute_extract_daily_weather_forecast
 from . import execute_extract_weather_outlook_for_ph_cities
 from . import execute_extract_weather_outlook_for_ph_tourist_areas
+from . import execute_extract_weather_advisory
