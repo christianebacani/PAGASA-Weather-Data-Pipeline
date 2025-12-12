@@ -1,91 +1,91 @@
-ph_city,weather_date,minimum_temperature,maximum_temperature,chance_of_rain_percentage
-Bacolod City,"Thursday December 11, 2025",25°C,32°C,Chance of rain: 40%
-Bacolod City,"Friday December 12, 2025",25°C,32°C,Chance of rain: 60%
-Bacolod City,"Saturday December 13, 2025",25°C,32°C,Chance of rain: 30%
-Bacolod City,"Sunday December 14, 2025",25°C,32°C,Chance of rain: 60%
-Bacolod City,"Monday December 15, 2025",25°C,32°C,Chance of rain: 60%
-Baguio City,"Thursday December 11, 2025",16°C,23°C,Chance of rain: 10%
-Baguio City,"Friday December 12, 2025",16°C,22°C,Chance of rain: 40%
-Baguio City,"Saturday December 13, 2025",15°C,23°C,Chance of rain: 40%
-Baguio City,"Sunday December 14, 2025",15°C,22°C,Chance of rain: 20%
-Baguio City,"Monday December 15, 2025",15°C,22°C,Chance of rain: 10%
-Cagayan De Oro City,"Thursday December 11, 2025",24°C,31°C,Chance of rain: 10%
-Cagayan De Oro City,"Friday December 12, 2025",24°C,31°C,Chance of rain: 10%
-Cagayan De Oro City,"Saturday December 13, 2025",24°C,31°C,Chance of rain: 10%
-Cagayan De Oro City,"Sunday December 14, 2025",23°C,31°C,Chance of rain: 40%
-Cagayan De Oro City,"Monday December 15, 2025",23°C,31°C,Chance of rain: 30%
-Iloilo City,"Thursday December 11, 2025",24°C,32°C,Chance of rain: %
-Iloilo City,"Friday December 12, 2025",24°C,32°C,Chance of rain: %
-Iloilo City,"Saturday December 13, 2025",24°C,32°C,Chance of rain: %
-Iloilo City,"Sunday December 14, 2025",25°C,32°C,Chance of rain: %
-Iloilo City,"Monday December 15, 2025",24°C,31°C,Chance of rain: %
-Kalayaan Group Of Islands,"Thursday December 11, 2025",25°C,32°C,Chance of rain: %
-Kalayaan Group Of Islands,"Friday December 12, 2025",25°C,32°C,Chance of rain: %
+ph_cities,weather_dates,minimum_temperatures,maximum_temperatures,chance_of_rain_percentages
+Bacolod City,"Friday December 12, 2025",26°C,31°C,Chance of rain: 40%
+Bacolod City,"Saturday December 13, 2025",25°C,31°C,Chance of rain: 40%
+Bacolod City,"Sunday December 14, 2025",25°C,31°C,Chance of rain: 20%
+Bacolod City,"Monday December 15, 2025",26°C,30°C,Chance of rain: 30%
+Bacolod City,"Tuesday December 16, 2025",26°C,31°C,Chance of rain: 40%
+Baguio City,"Friday December 12, 2025",17°C,24°C,Chance of rain: 60%
+Baguio City,"Saturday December 13, 2025",17°C,24°C,Chance of rain: 70%
+Baguio City,"Sunday December 14, 2025",16°C,24°C,Chance of rain: 60%
+Baguio City,"Monday December 15, 2025",16°C,25°C,Chance of rain: 20%
+Baguio City,"Tuesday December 16, 2025",17°C,25°C,Chance of rain: 60%
+Cagayan De Oro City,"Friday December 12, 2025",24°C,31°C,Chance of rain: 20%
+Cagayan De Oro City,"Saturday December 13, 2025",24°C,31°C,Chance of rain: 0%
+Cagayan De Oro City,"Sunday December 14, 2025",24°C,31°C,Chance of rain: 30%
+Cagayan De Oro City,"Monday December 15, 2025",25°C,31°C,Chance of rain: 40%
+Cagayan De Oro City,"Tuesday December 16, 2025",25°C,31°C,Chance of rain: 40%
+Iloilo City,"Friday December 12, 2025",25°C,31°C,Chance of rain: %
+Iloilo City,"Saturday December 13, 2025",24°C,31°C,Chance of rain: %
+Iloilo City,"Sunday December 14, 2025",24°C,31°C,Chance of rain: %
+Iloilo City,"Monday December 15, 2025",24°C,30°C,Chance of rain: %
+Iloilo City,"Tuesday December 16, 2025",24°C,31°C,Chance of rain: %
+Kalayaan Group Of Islands,"Friday December 12, 2025",25°C,31°C,Chance of rain: %
 Kalayaan Group Of Islands,"Saturday December 13, 2025",25°C,31°C,Chance of rain: %
-Kalayaan Group Of Islands,"Sunday December 14, 2025",25°C,31°C,Chance of rain: %
-Kalayaan Group Of Islands,"Monday December 15, 2025",25°C,32°C,Chance of rain: %
-Laoag City,"Thursday December 11, 2025",23°C,32°C,Chance of rain: 40%
-Laoag City,"Friday December 12, 2025",24°C,32°C,Chance of rain: 10%
-Laoag City,"Saturday December 13, 2025",25°C,32°C,Chance of rain: 10%
-Laoag City,"Sunday December 14, 2025",24°C,32°C,Chance of rain: 30%
-Laoag City,"Monday December 15, 2025",24°C,31°C,Chance of rain: 10%
-Legazpi City,"Thursday December 11, 2025",24°C,32°C,Chance of rain: 90%
-Legazpi City,"Friday December 12, 2025",25°C,30°C,Chance of rain: 90%
-Legazpi City,"Saturday December 13, 2025",24°C,30°C,Chance of rain: 80%
-Legazpi City,"Sunday December 14, 2025",23°C,31°C,Chance of rain: 80%
-Legazpi City,"Monday December 15, 2025",23°C,30°C,Chance of rain: 90%
-Lipa City,"Thursday December 11, 2025",25°C,31°C,Chance of rain: 40%
-Lipa City,"Friday December 12, 2025",25°C,31°C,Chance of rain: 40%
-Lipa City,"Saturday December 13, 2025",24°C,30°C,Chance of rain: 40%
-Lipa City,"Sunday December 14, 2025",23°C,31°C,Chance of rain: 30%
-Lipa City,"Monday December 15, 2025",23°C,31°C,Chance of rain: 30%
-Metro Cebu,"Thursday December 11, 2025",25°C,33°C,Chance of rain: 10%
-Metro Cebu,"Friday December 12, 2025",25°C,32°C,Chance of rain: 20%
-Metro Cebu,"Saturday December 13, 2025",25°C,32°C,Chance of rain: 10%
-Metro Cebu,"Sunday December 14, 2025",26°C,33°C,Chance of rain: 40%
-Metro Cebu,"Monday December 15, 2025",24°C,32°C,Chance of rain: 40%
-Metro Davao,"Thursday December 11, 2025",25°C,34°C,Chance of rain: 30%
-Metro Davao,"Friday December 12, 2025",25°C,34°C,Chance of rain: 10%
-Metro Davao,"Saturday December 13, 2025",25°C,33°C,Chance of rain: 10%
-Metro Davao,"Sunday December 14, 2025",24°C,32°C,Chance of rain: 40%
-Metro Davao,"Monday December 15, 2025",24°C,32°C,Chance of rain: 40%
-Metro Manila,"Thursday December 11, 2025",24°C,31°C,Chance of rain: 60%
-Metro Manila,"Friday December 12, 2025",25°C,31°C,Chance of rain: 20%
-Metro Manila,"Saturday December 13, 2025",24°C,31°C,Chance of rain: 40%
-Metro Manila,"Sunday December 14, 2025",24°C,30°C,Chance of rain: 40%
-Metro Manila,"Monday December 15, 2025",24°C,30°C,Chance of rain: 40%
-Puerto Princesa City,"Thursday December 11, 2025",25°C,32°C,Chance of rain: 10%
-Puerto Princesa City,"Friday December 12, 2025",25°C,32°C,Chance of rain: 10%
-Puerto Princesa City,"Saturday December 13, 2025",25°C,31°C,Chance of rain: 20%
-Puerto Princesa City,"Sunday December 14, 2025",25°C,32°C,Chance of rain: 10%
-Puerto Princesa City,"Monday December 15, 2025",25°C,32°C,Chance of rain: 20%
-Sbma (Olongapo),"Thursday December 11, 2025",25°C,32°C,Chance of rain: 10%
-Sbma (Olongapo),"Friday December 12, 2025",25°C,32°C,Chance of rain: 10%
-Sbma (Olongapo),"Saturday December 13, 2025",25°C,31°C,Chance of rain: 10%
-Sbma (Olongapo),"Sunday December 14, 2025",24°C,32°C,Chance of rain: 10%
-Sbma (Olongapo),"Monday December 15, 2025",24°C,32°C,Chance of rain: 10%
-Tacloban City,"Thursday December 11, 2025",26°C,32°C,Chance of rain: 70%
-Tacloban City,"Friday December 12, 2025",25°C,32°C,Chance of rain: 60%
-Tacloban City,"Saturday December 13, 2025",25°C,31°C,Chance of rain: 70%
-Tacloban City,"Sunday December 14, 2025",25°C,31°C,Chance of rain: 70%
-Tacloban City,"Monday December 15, 2025",25°C,30°C,Chance of rain: 80%
-Tagaytay City,"Thursday December 11, 2025",22°C,29°C,Chance of rain: %
-Tagaytay City,"Friday December 12, 2025",23°C,29°C,Chance of rain: %
-Tagaytay City,"Saturday December 13, 2025",23°C,29°C,Chance of rain: %
-Tagaytay City,"Sunday December 14, 2025",23°C,30°C,Chance of rain: %
-Tagaytay City,"Monday December 15, 2025",23°C,30°C,Chance of rain: %
-Tuguegarao City,"Thursday December 11, 2025",22°C,28°C,Chance of rain: 80%
-Tuguegarao City,"Friday December 12, 2025",23°C,29°C,Chance of rain: 40%
-Tuguegarao City,"Saturday December 13, 2025",24°C,28°C,Chance of rain: 40%
-Tuguegarao City,"Sunday December 14, 2025",23°C,28°C,Chance of rain: 60%
-Tuguegarao City,"Monday December 15, 2025",22°C,27°C,Chance of rain: 60%
-Valencia City,"Thursday December 11, 2025",23°C,32°C,Chance of rain: 10%
-Valencia City,"Friday December 12, 2025",23°C,31°C,Chance of rain: 10%
-Valencia City,"Saturday December 13, 2025",22°C,31°C,Chance of rain: 20%
-Valencia City,"Sunday December 14, 2025",23°C,31°C,Chance of rain: 40%
-Valencia City,"Monday December 15, 2025",22°C,32°C,Chance of rain: 40%
-Zamboanga City,"Thursday December 11, 2025",24°C,34°C,Chance of rain: 20%
-Zamboanga City,"Friday December 12, 2025",24°C,34°C,Chance of rain: 10%
-Zamboanga City,"Saturday December 13, 2025",24°C,33°C,Chance of rain: 20%
-Zamboanga City,"Sunday December 14, 2025",25°C,33°C,Chance of rain: 10%
-Zamboanga City,"Monday December 15, 2025",24°C,32°C,Chance of rain: 10%
+Kalayaan Group Of Islands,"Sunday December 14, 2025",25°C,30°C,Chance of rain: %
+Kalayaan Group Of Islands,"Monday December 15, 2025",25°C,31°C,Chance of rain: %
+Kalayaan Group Of Islands,"Tuesday December 16, 2025",25°C,31°C,Chance of rain: %
+Laoag City,"Friday December 12, 2025",22°C,33°C,Chance of rain: 0%
+Laoag City,"Saturday December 13, 2025",23°C,33°C,Chance of rain: 0%
+Laoag City,"Sunday December 14, 2025",24°C,32°C,Chance of rain: 0%
+Laoag City,"Monday December 15, 2025",24°C,32°C,Chance of rain: 0%
+Laoag City,"Tuesday December 16, 2025",24°C,33°C,Chance of rain: 0%
+Legazpi City,"Friday December 12, 2025",25°C,30°C,Chance of rain: 100%
+Legazpi City,"Saturday December 13, 2025",25°C,30°C,Chance of rain: 90%
+Legazpi City,"Sunday December 14, 2025",24°C,31°C,Chance of rain: 90%
+Legazpi City,"Monday December 15, 2025",25°C,30°C,Chance of rain: 100%
+Legazpi City,"Tuesday December 16, 2025",25°C,30°C,Chance of rain: 90%
+Lipa City,"Friday December 12, 2025",24°C,30°C,Chance of rain: 30%
+Lipa City,"Saturday December 13, 2025",24°C,30°C,Chance of rain: 30%
+Lipa City,"Sunday December 14, 2025",24°C,30°C,Chance of rain: 30%
+Lipa City,"Monday December 15, 2025",23°C,29°C,Chance of rain: 40%
+Lipa City,"Tuesday December 16, 2025",23°C,29°C,Chance of rain: 60%
+Metro Cebu,"Friday December 12, 2025",26°C,31°C,Chance of rain: 30%
+Metro Cebu,"Saturday December 13, 2025",26°C,30°C,Chance of rain: 40%
+Metro Cebu,"Sunday December 14, 2025",26°C,31°C,Chance of rain: 30%
+Metro Cebu,"Monday December 15, 2025",26°C,30°C,Chance of rain: 70%
+Metro Cebu,"Tuesday December 16, 2025",26°C,30°C,Chance of rain: 60%
+Metro Davao,"Friday December 12, 2025",25°C,33°C,Chance of rain: 30%
+Metro Davao,"Saturday December 13, 2025",25°C,34°C,Chance of rain: 30%
+Metro Davao,"Sunday December 14, 2025",25°C,34°C,Chance of rain: 40%
+Metro Davao,"Monday December 15, 2025",26°C,33°C,Chance of rain: 60%
+Metro Davao,"Tuesday December 16, 2025",26°C,33°C,Chance of rain: 30%
+Metro Manila,"Friday December 12, 2025",24°C,31°C,Chance of rain: 20%
+Metro Manila,"Saturday December 13, 2025",24°C,31°C,Chance of rain: 30%
+Metro Manila,"Sunday December 14, 2025",24°C,31°C,Chance of rain: 10%
+Metro Manila,"Monday December 15, 2025",24°C,30°C,Chance of rain: 30%
+Metro Manila,"Tuesday December 16, 2025",24°C,30°C,Chance of rain: 40%
+Puerto Princesa City,"Friday December 12, 2025",25°C,32°C,Chance of rain: 60%
+Puerto Princesa City,"Saturday December 13, 2025",25°C,32°C,Chance of rain: 70%
+Puerto Princesa City,"Sunday December 14, 2025",25°C,31°C,Chance of rain: 60%
+Puerto Princesa City,"Monday December 15, 2025",25°C,32°C,Chance of rain: 70%
+Puerto Princesa City,"Tuesday December 16, 2025",25°C,32°C,Chance of rain: 90%
+Sbma (Olongapo),"Friday December 12, 2025",25°C,32°C,Chance of rain: 20%
+Sbma (Olongapo),"Saturday December 13, 2025",25°C,32°C,Chance of rain: 20%
+Sbma (Olongapo),"Sunday December 14, 2025",24°C,33°C,Chance of rain: 10%
+Sbma (Olongapo),"Monday December 15, 2025",24°C,31°C,Chance of rain: 10%
+Sbma (Olongapo),"Tuesday December 16, 2025",24°C,32°C,Chance of rain: 20%
+Tacloban City,"Friday December 12, 2025",25°C,32°C,Chance of rain: 90%
+Tacloban City,"Saturday December 13, 2025",25°C,32°C,Chance of rain: 90%
+Tacloban City,"Sunday December 14, 2025",25°C,33°C,Chance of rain: 90%
+Tacloban City,"Monday December 15, 2025",25°C,32°C,Chance of rain: 90%
+Tacloban City,"Tuesday December 16, 2025",25°C,33°C,Chance of rain: 90%
+Tagaytay City,"Friday December 12, 2025",22°C,29°C,Chance of rain: %
+Tagaytay City,"Saturday December 13, 2025",22°C,29°C,Chance of rain: %
+Tagaytay City,"Sunday December 14, 2025",22°C,29°C,Chance of rain: %
+Tagaytay City,"Monday December 15, 2025",21°C,28°C,Chance of rain: %
+Tagaytay City,"Tuesday December 16, 2025",21°C,29°C,Chance of rain: %
+Tuguegarao City,"Friday December 12, 2025",23°C,28°C,Chance of rain: 70%
+Tuguegarao City,"Saturday December 13, 2025",22°C,29°C,Chance of rain: 40%
+Tuguegarao City,"Sunday December 14, 2025",23°C,28°C,Chance of rain: 40%
+Tuguegarao City,"Monday December 15, 2025",23°C,28°C,Chance of rain: 100%
+Tuguegarao City,"Tuesday December 16, 2025",22°C,28°C,Chance of rain: 100%
+Valencia City,"Friday December 12, 2025",22°C,33°C,Chance of rain: 20%
+Valencia City,"Saturday December 13, 2025",22°C,33°C,Chance of rain: 0%
+Valencia City,"Sunday December 14, 2025",22°C,33°C,Chance of rain: 30%
+Valencia City,"Monday December 15, 2025",23°C,32°C,Chance of rain: 40%
+Valencia City,"Tuesday December 16, 2025",23°C,32°C,Chance of rain: 40%
+Zamboanga City,"Friday December 12, 2025",24°C,33°C,Chance of rain: 40%
+Zamboanga City,"Saturday December 13, 2025",24°C,34°C,Chance of rain: 30%
+Zamboanga City,"Sunday December 14, 2025",24°C,34°C,Chance of rain: 20%
+Zamboanga City,"Monday December 15, 2025",24°C,33°C,Chance of rain: 60%
+Zamboanga City,"Tuesday December 16, 2025",24°C,33°C,Chance of rain: 60%
