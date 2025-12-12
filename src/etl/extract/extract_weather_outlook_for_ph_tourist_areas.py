@@ -26,7 +26,7 @@ def create_subdir(
     parsed from JSON files located in the `data/raw/weather_outlook_for_ph_tourist_areas` subdirectory
     on the local machine.
     """
-    # Create the data/stage/weather_outlook_for_ph_cities/ subdirectory if it doesn't exist
+    # Create the data/stage/weather_outlook_for_ph_tourist_areas/ subdirectory if it doesn't exist
     if not os.path.exists('data/stage/weather_outlook_for_ph_tourist_areas'):
         os.makedirs('data/stage/weather_outlook_for_ph_tourist_areas')
 
