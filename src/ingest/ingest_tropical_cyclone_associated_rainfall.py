@@ -50,8 +50,27 @@ def extract_beautiful_soup_object(
     soup = BeautifulSoup(response.text, 'html.parser')
     return soup
 
+def extract_tropical_cyclone_associated_rainfalls_of_2025_tag(
+    soup: BeautifulSoup | None
+) -> BeautifulSoup:
+    """
+    Extract HTML tag of tropical cyclone associated rainfalls for
+    the year 2025 from the PAGASA-DOST website.
+
+    :param soup: BeautifulSoup object for navigating the page,
+        or None if extraction fails
+    :type soup: BeautifulSoup | None
+    
+    :return: HTML tag for the tropical cyclone associated rainfall
+        of the year 2025
+    :rtype: BeautifulSoup
+    """
+    # We need to check if the BeautifulSoup object is missing
+    if soup is None:
+        return None
+
 def extract_tropical_cyclone_associated_rainfalls_of_2025(
-        soup: BeautifulSoup | None
+        tropical_cyclone_associated_rainfalls_of_2025_tag: BeautifulSoup | None
 ) -> list[str]:
     """
     Extract the tropical cyclone associated rainfall image sources
