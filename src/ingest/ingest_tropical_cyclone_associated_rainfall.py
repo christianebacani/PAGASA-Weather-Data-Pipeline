@@ -109,6 +109,7 @@ def extract_tc_associated_rainfall_tags_of_2025(
     )[1:]
 
     return tc_associated_rainfall_tags_of_2025
+
 def extract_tc_associated_rainfalls_of_2025(
         tc_associated_rainfall_tags: list[BeautifulSoup] | None
 ) -> list[str]:
