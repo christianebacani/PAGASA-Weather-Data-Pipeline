@@ -50,7 +50,7 @@ def extract_beautiful_soup_object(
     return soup
 
 def extract_tc_associated_rainfall_tags_of_2025(
-    soup: BeautifulSoup | None
+        soup: BeautifulSoup | None
 ) -> list[BeautifulSoup] | None:
     """
     Extract HTML tags of the tropical cyclone associated rainfalls
@@ -111,7 +111,7 @@ def extract_tc_associated_rainfall_tags_of_2025(
     return tc_associated_rainfall_tags_of_2025
 
 def extract_tc_associated_rainfall_image_sources_of_2025(
-    tc_associated_rainfall_tags_of_2025: list[BeautifulSoup] | None
+        tc_associated_rainfall_tags_of_2025: list[BeautifulSoup] | None
 ) -> list[str]:
     """
     Extract the tropical cyclone associated rainfall image sources
@@ -141,7 +141,7 @@ def extract_tc_associated_rainfall_image_sources_of_2025(
     return tc_associated_rainfall_image_sources
 
 def save_tc_associated_rainfall_image_sources_of_2025_to_json(
-    tc_associated_rainfall_image_sources: list[str]
+        tc_associated_rainfall_image_sources: list[str]
 ) -> None:
     """
     Save the tropical cyclone associated image sources for the year
@@ -166,7 +166,7 @@ def save_tc_associated_rainfall_image_sources_of_2025_to_json(
     json_file.close()
 
 def extract_tc_associated_rainfall_tags_of_2024(
-    soup: BeautifulSoup | None
+        soup: BeautifulSoup | None
 ) -> list[BeautifulSoup] | None:
     """
     Extract list of HTML tags for the tropical cyclone associated
