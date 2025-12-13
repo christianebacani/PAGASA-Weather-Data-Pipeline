@@ -280,3 +280,6 @@ def save_tc_associated_rainfall_image_sources_of_2024_to_json(
         json.dump(data, json_file, indent=4)
 
     json_file.close()
+
+# TODO:
+# - Rename the extract and save functions of this module
