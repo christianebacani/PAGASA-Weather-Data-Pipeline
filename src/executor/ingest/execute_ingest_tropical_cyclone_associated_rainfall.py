@@ -9,6 +9,7 @@ from ingest.ingest_tropical_cyclone_associated_rainfall import create_subdir
 from ingest.ingest_tropical_cyclone_associated_rainfall import extract_beautiful_soup_object
 from ingest.ingest_tropical_cyclone_associated_rainfall import extract_tc_associated_rainfall_tags_of_2025
 from ingest.ingest_tropical_cyclone_associated_rainfall import extract_tc_associated_rainfall_image_sources_of_2025
+from ingest.ingest_tropical_cyclone_associated_rainfall import extract_tc_associated_rainfall_tags_of_2024
 
 def ingest_tropical_cyclone_associated_rainfall(
 ) -> None:
@@ -29,4 +30,8 @@ def ingest_tropical_cyclone_associated_rainfall(
     )
     tc_associated_rainfall_image_sources_of_2025 = extract_tc_associated_rainfall_image_sources_of_2025(
         tc_associated_rainfall_tag_of_2025
+    )
+
+    tc_associated_rainfall_tags_of_2024 = extract_tc_associated_rainfall_tags_of_2024(
+        soup
     )
