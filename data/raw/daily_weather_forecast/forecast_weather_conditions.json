@@ -1,13 +1,13 @@
 {
     "place": [
-        "Bicol Region, Eastern Visayas, Laguna, Quezon, Marinduque, and Romblon",
-        "Cagayan Valley and Aurora",
-        "Metro Manila, Ilocos Region, Cordillera Administrative Region, and the rest of Central Luzon and CALABARZON",
+        "Bicol Region, Eastern Visayas, Marinduque, and Romblon",
+        "Quezon",
+        "Metro Manila and the rest of Luzon",
         "The rest of the country"
     ],
     "weather_condition": [
         "Cloudy skies with scattered rains and isolated thunderstorms",
-        "Cloudy skies with light rains",
+        "Cloudy skies with rains",
         "Partly cloudy to cloudy skies with isolated light rains",
         "Partly cloudy to cloudy skies with isolated rainshowers or thunderstorms"
     ],
@@ -19,7 +19,7 @@
     ],
     "impacts": [
         "Possible flash floods or landslides due to moderate to at times heavy rains",
-        "No significant impact",
+        "Possible flash floods or landslides due to moderate to at times heavy rains",
         "No significant impact",
         "Possible flash floods or landslides during severe thunderstorms"
     ]
