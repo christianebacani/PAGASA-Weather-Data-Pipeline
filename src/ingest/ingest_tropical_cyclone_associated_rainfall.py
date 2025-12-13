@@ -4,12 +4,11 @@ Ingest tropical cyclone associated rainfall from the PAGASA-DOST website.
 This module provides functions to extract key information from the
 tropical cyclone associated rainfall page, including:
 
-- Tropical cyclone associated rainfall image source
+- Tropical cyclone associated rainfall image sources
 
 All extracted data is saved as JSON files in the
 `data/raw/tropical_cyclone_associated_rainfall/` subdirectory on the local machine.
 """
-
 import os
 import requests
 import json
@@ -118,13 +117,13 @@ def extract_tc_associated_rainfalls_of_2025(
     Extract the tropical cyclone associated rainfall image sources
     for the year 2025 from the PAGASA-DOST website.
 
-    :param tc_associated_rainfalls_of_2025_tags: HTML tag for the
-        tropical cyclone associated rainfall of the year 2025
-    :type tc_associated_rainfalls_of_2025_tags:
-
+    :param tc_associated_rainfalls_of_2025_tags: List of HTML tags
+        for the tropical cyclone associated rainfall of the year 2025
+    :type tc_associated_rainfalls_of_2025_tags: list[BeautifulSoup] | None
+    
     :return: List of tropical cyclone associated rainfall image sources
-        for the year of 2025
-    :rtype: str
+        for the year 2025
+    :rtype: list[str]
     """
     tc_associated_rainfalls_of_2025 = []
 
