@@ -26,4 +26,3 @@ def ingest_tropical_cyclone_associated_rainfall(
     tc_associated_rainfalls_of_2025_tags = extract_tc_associated_rainfalls_of_2025_tags(
         soup
     )
-    print(tc_associated_rainfalls_of_2025_tags)
