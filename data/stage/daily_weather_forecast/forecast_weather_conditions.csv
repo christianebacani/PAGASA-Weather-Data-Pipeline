@@ -1,5 +1,5 @@
 place,weather_condition,caused_by,impacts
-"Bicol Region, Eastern Visayas, Laguna, Quezon, Marinduque, and Romblon",Cloudy skies with scattered rains and isolated thunderstorms,Shear Line,Possible flash floods or landslides due to moderate to at times heavy rains
-Cagayan Valley and Aurora,Cloudy skies with light rains,Northeast Monsoon,No significant impact
-"Metro Manila, Ilocos Region, Cordillera Administrative Region, and the rest of Central Luzon and CALABARZON",Partly cloudy to cloudy skies with isolated light rains,Northeast Monsoon,No significant impact
+"Bicol Region, Eastern Visayas, Marinduque, and Romblon",Cloudy skies with scattered rains and isolated thunderstorms,Shear Line,Possible flash floods or landslides due to moderate to at times heavy rains
+Quezon,Cloudy skies with rains,Northeast Monsoon,Possible flash floods or landslides due to moderate to at times heavy rains
+Metro Manila and the rest of Luzon,Partly cloudy to cloudy skies with isolated light rains,Northeast Monsoon,No significant impact
 The rest of the country,Partly cloudy to cloudy skies with isolated rainshowers or thunderstorms,Easterlies,Possible flash floods or landslides during severe thunderstorms
