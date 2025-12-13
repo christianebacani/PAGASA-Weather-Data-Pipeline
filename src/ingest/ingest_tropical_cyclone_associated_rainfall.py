@@ -225,3 +225,19 @@ def extract_tc_associated_rainfall_tags_of_2024(
     )[1:]
 
     return tc_associated_rainfall_tags_of_2024
+
+def extract_tc_associated_rainfall_image_sources_of_2024(
+        tc_associated_rainfall_tags_of_2024: BeautifulSoup | None
+) -> list[str]:
+    """
+    Extract the tropical cyclone associated rainfall image sources
+    for the year 2024 from the PAGASA-DOST website.
+
+    :param tc_associated_rainfall_tags_of_2024: List of HTML tags
+        for the tropical cyclone associated rainfall of the year 2024
+    :type tc_associated_rainfall_tags_of_2024: list[BeautifulSoup] | None
+
+    :return: List of tropical cyclone associated rainfall image sources
+        for the year 2024
+    :rtype: list[str]
+    """
