@@ -220,8 +220,8 @@ def extract_tc_associated_rainfall_tags_of_2024(
             'class': 'form-control tc_select'
         }
     )[1]
-    tc_associated_rainfall_tags_of_2025 = select_tag_with_form_control_classs.find_all(
+    tc_associated_rainfall_tags_of_2024 = select_tag_with_form_control_classs.find_all(
         'option'
     )[1:]
 
-    return tc_associated_rainfall_tags_of_2025
+    return tc_associated_rainfall_tags_of_2024
