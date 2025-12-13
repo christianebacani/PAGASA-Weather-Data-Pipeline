@@ -114,10 +114,10 @@ def extract_tc_associated_rainfalls_of_2025(
     """
     Extract the tropical cyclone associated rainfall image sources
     for the year 2025 from the PAGASA-DOST website.
-    
-    :param soup: BeautifulSoup object for navigating the page, or None if
-        extraction fails
-    :type soup: BeautifulSoup | None
+
+    :param tc_associated_rainfalls_of_2025_tag: HTML tag for the
+        tropical cyclone associated rainfall of the year 2025
+    :type tc_associated_rainfalls_of_2025_tag:
 
     :return: List of tropical cyclone associated rainfall image sources
         for the year of 2025
