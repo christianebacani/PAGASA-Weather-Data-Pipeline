@@ -50,9 +50,9 @@ def extract_beautiful_soup_object(
     soup = BeautifulSoup(response.text, 'html.parser')
     return soup
 
-def extract_tc_associated_rainfalls_of_2025_tag(
+def extract_tc_associated_rainfalls_of_2025_tags(
     soup: BeautifulSoup | None
-) -> BeautifulSoup | None:
+) -> list[BeautifulSoup] | None:
     """
     Extract HTML tag of tropical cyclone associated rainfalls for
     the year 2025 from the PAGASA-DOST website.
@@ -99,25 +99,28 @@ def extract_tc_associated_rainfalls_of_2025_tag(
             'class': 'form-group'
         }
     )
-    tc_associated_rainfalls_of_2025_tag = div_class_with_form_group_class.find(
+    select_tag_with_form_control_classs = div_class_with_form_group_class.find(
         'select',
         attrs={
             'class': 'form-control tc_select'
         }
     )
+    tc_associated_rainfalls_of_2025_tags = select_tag_with_form_control_classs.find_all(
+        'option'
+    )[1:]
 
-    return tc_associated_rainfalls_of_2025_tag
+    return tc_associated_rainfalls_of_2025_tags
 
 def extract_tc_associated_rainfalls_of_2025(
-        tc_associated_rainfalls_of_2025_tag: BeautifulSoup | None
+        tc_associated_rainfalls_of_2025_tags: BeautifulSoup | None
 ) -> list[str]:
     """
     Extract the tropical cyclone associated rainfall image sources
     for the year 2025 from the PAGASA-DOST website.
 
-    :param tc_associated_rainfalls_of_2025_tag: HTML tag for the
+    :param tc_associated_rainfalls_of_2025_tags: HTML tag for the
         tropical cyclone associated rainfall of the year 2025
-    :type tc_associated_rainfalls_of_2025_tag:
+    :type tc_associated_rainfalls_of_2025_tags:
 
     :return: List of tropical cyclone associated rainfall image sources
         for the year of 2025
