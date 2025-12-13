@@ -158,7 +158,7 @@ def save_tc_associated_rainfall_image_sources_of_2025_to_json(
 
     # Save the dictionary to a json file using open() method and json module
     with open(
-        'data/raw/tropical_cyclone_associated_rainfall/tc_associated_rainfall_image_sources_of_2025',
+        'data/raw/tropical_cyclone_associated_rainfall/tc_associated_rainfall_image_sources_of_2025.json',
         'w'
     ) as json_file:
         json.dump(data, json_file, indent=4)
