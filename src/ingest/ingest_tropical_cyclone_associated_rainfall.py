@@ -110,8 +110,8 @@ def extract_tc_associated_rainfall_tags_of_2025(
 
     return tc_associated_rainfall_tags_of_2025
 
-def extract_tc_associated_rainfalls_of_2025(
-        tc_associated_rainfall_tags_of_2025: list[BeautifulSoup] | None
+def extract_tc_associated_rainfall_image_sources_of_2025(
+    tc_associated_rainfall_tags_of_2025: list[BeautifulSoup] | None
 ) -> list[str]:
     """
     Extract the tropical cyclone associated rainfall image sources
