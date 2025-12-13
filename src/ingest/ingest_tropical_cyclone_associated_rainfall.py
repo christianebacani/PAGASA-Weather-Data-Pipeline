@@ -126,3 +126,8 @@ def extract_tc_associated_rainfalls_of_2025(
         for the year of 2025
     :rtype: str
     """
+    tc_associated_rainfalls_of_2025 = []
+
+    # We need to check if tc_associated_rainfalls_of_2025_tags is missing
+    if tc_associated_rainfalls_of_2025_tags == None:
+        return tc_associated_rainfalls_of_2025
