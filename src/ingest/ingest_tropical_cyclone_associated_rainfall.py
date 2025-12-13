@@ -93,6 +93,21 @@ def extract_tc_associated_rainfalls_of_2025_tag(
     if div_tag_with_panel_class is None:
         return None
 
+    div_class_with_form_group_class = div_tag_with_panel_class.find(
+        'div',
+        attrs={
+            'class': 'form-group'
+        }
+    )
+    tc_associated_rainfalls_of_2025_tag = div_class_with_form_group_class.find(
+        'select',
+        attrs={
+            'class': 'form-control tc_select'
+        }
+    )
+
+    return tc_associated_rainfalls_of_2025_tag
+
 def extract_tc_associated_rainfalls_of_2025(
         tc_associated_rainfalls_of_2025_tag: BeautifulSoup | None
 ) -> list[str]:
