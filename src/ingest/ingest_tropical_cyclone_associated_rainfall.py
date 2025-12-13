@@ -49,7 +49,7 @@ def extract_beautiful_soup_object(
     soup = BeautifulSoup(response.text, 'html.parser')
     return soup
 
-def extract_tc_associated_rainfalls_of_2025_tags(
+def extract_2025_tc_associated_rainfall_tags(
     soup: BeautifulSoup | None
 ) -> list[BeautifulSoup] | None:
     """
@@ -104,22 +104,22 @@ def extract_tc_associated_rainfalls_of_2025_tags(
             'class': 'form-control tc_select'
         }
     )
-    tc_associated_rainfalls_of_2025_tags = select_tag_with_form_control_classs.find_all(
+    tc_associated_rainfall_tags = select_tag_with_form_control_classs.find_all(
         'option'
     )[1:]
 
-    return tc_associated_rainfalls_of_2025_tags
+    return tc_associated_rainfall_tags
 
 def extract_tc_associated_rainfalls_of_2025(
-        tc_associated_rainfalls_of_2025_tags: list[BeautifulSoup] | None
+        tc_associated_rainfall_tags: list[BeautifulSoup] | None
 ) -> list[str]:
     """
     Extract the tropical cyclone associated rainfall image sources
     for the year 2025 from the PAGASA-DOST website.
 
-    :param tc_associated_rainfalls_of_2025_tags: List of HTML tags
+    :param tc_associated_rainfall_tags: List of HTML tags
         for the tropical cyclone associated rainfall of the year 2025
-    :type tc_associated_rainfalls_of_2025_tags: list[BeautifulSoup] | None
+    :type tc_associated_rainfall_tags: list[BeautifulSoup] | None
 
     :return: List of tropical cyclone associated rainfall image sources
         for the year 2025
@@ -127,12 +127,12 @@ def extract_tc_associated_rainfalls_of_2025(
     """
     tc_associated_rainfall_image_sources = []
 
-    # We need to check if tc_associated_rainfalls_of_2025_tags is missing
-    if tc_associated_rainfalls_of_2025_tags == None:
+    # We need to check if tc_associated_rainfall_tags is missing
+    if tc_associated_rainfall_tags == None:
         return tc_associated_rainfall_image_sources
 
     # Loop through the tc associated rainfall tags for the year of 2025 to extract their image sources
-    for tc_associated_rainfall_of_2025_tag in tc_associated_rainfalls_of_2025_tags:
+    for tc_associated_rainfall_of_2025_tag in tc_associated_rainfall_tags:
         tc_associated_rainfall_image_source = str(tc_associated_rainfall_of_2025_tag['value']).strip()
         tc_associated_rainfall_image_sources.append(
             tc_associated_rainfall_image_source
