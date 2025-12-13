@@ -255,3 +255,28 @@ def extract_tc_associated_rainfall_image_sources_of_2024(
         )
 
     return tc_associated_rainfall_image_sources
+
+def save_tc_associated_rainfall_image_sources_of_2024_to_json(
+        tc_associated_rainfall_image_sources: list[str]
+) -> None:
+    """
+    Save the tropical cyclone associated image sources for the year
+    2024 from the PAGASA-DOST webite.
+
+    :param tc_associated_rainfall_image_sources: List of tropical
+        cyclone associated rainfall image sources for the year 2024
+    :type tc_associated_rainfall_image_sources: list[str]
+    """
+    # Create a dictionary to store the tc associated rainfall image sources
+    data = {
+        "tc_associated_rainfall_image_sources_of_2025": tc_associated_rainfall_image_sources
+    }
+
+    # Save the dictionary to a json file using open() method and json module
+    with open(
+        'data/raw/tropical_cyclone_associated_rainfall/tc_associated_rainfall_image_sources_of_2024.json',
+        'w'
+    ) as json_file:
+        json.dump(data, json_file, indent=4)
+
+    json_file.close()
