@@ -120,13 +120,21 @@ def extract_tc_associated_rainfalls_of_2025(
     :param tc_associated_rainfalls_of_2025_tags: List of HTML tags
         for the tropical cyclone associated rainfall of the year 2025
     :type tc_associated_rainfalls_of_2025_tags: list[BeautifulSoup] | None
-    
+
     :return: List of tropical cyclone associated rainfall image sources
         for the year 2025
     :rtype: list[str]
     """
-    tc_associated_rainfalls_of_2025 = []
+    tc_associated_rainfall_image_sources = []
 
     # We need to check if tc_associated_rainfalls_of_2025_tags is missing
     if tc_associated_rainfalls_of_2025_tags == None:
-        return tc_associated_rainfalls_of_2025
+        return tc_associated_rainfall_image_sources
+
+    for tc_associated_rainfall_of_2025_tag in tc_associated_rainfalls_of_2025_tags:
+        tc_associated_rainfall_image_source = str(tc_associated_rainfall_of_2025_tag['value']).strip()
+        tc_associated_rainfall_image_sources.append(
+            tc_associated_rainfall_image_source
+        )
+
+    return tc_associated_rainfall_image_sources
