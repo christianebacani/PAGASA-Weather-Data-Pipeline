@@ -139,3 +139,64 @@ def extract_tc_associated_rainfall_image_sources_of_2025(
         )
 
     return tc_associated_rainfall_image_sources
+
+def extract_tc_associated_rainfall_tags_of_2024(
+    soup: BeautifulSoup | None
+) -> list[BeautifulSoup] | None:
+    """
+    Extract list of HTML tags for the tropical cyclone associated
+    rainfalls of the year 2024 from the PAGASA-DOST website.
+
+    :param soup: BeautifulSoup object for navigating the page,
+        or None if extraction fails
+    :type soup: BeautifulSoup | None
+
+    :return: List of HTML tags for the tropical cyclone associated
+        rainfall of the year 2024
+    :rtype: list[BeautifulSoup] | None
+    """
+    # We need to check if the BeautifulSoup object is missing
+    if soup is None:
+        return None
+
+    # Extract HTML tags for tc associated rainfalls for the year 2024
+    div_tag_with_row_climate_page_class = soup.find(
+        'div',
+        attrs={
+            'class': 'row climate-page'
+        }
+    )
+    div_tag_with_article_content_class = div_tag_with_row_climate_page_class.find(
+        'div',
+        attrs={
+            'class': 'col-md-12 article-content'
+        }
+    )
+    div_tag_with_panel_class = div_tag_with_article_content_class.find(
+        'div',
+        attrs={
+            'class': 'panel'
+        }
+    )
+
+    # We need to check if the div_tag_with_panel_class is missing
+    if div_tag_with_panel_class is None:
+        return None
+
+    div_class_with_form_group_class = div_tag_with_panel_class.find(
+        'div',
+        attrs={
+            'class': 'form-group'
+        }
+    )
+    select_tag_with_form_control_classs = div_class_with_form_group_class.find_all(
+        'select',
+        attrs={
+            'class': 'form-control tc_select'
+        }
+    )[1]
+    tc_associated_rainfall_tags_of_2025 = select_tag_with_form_control_classs.find_all(
+        'option'
+    )[1:]
+
+    return tc_associated_rainfall_tags_of_2025
