@@ -61,7 +61,7 @@ def extract_tc_associated_rainfalls_of_2025_tags(
         or None if extraction fails
     :type soup: BeautifulSoup | None
 
-    :return: HTML tag for the tropical cyclone associated rainfall
+    :return: List of HTML tags for the tropical cyclone associated rainfall
         of the year 2025
     :rtype: list[BeautifulSoup] | None
     """
