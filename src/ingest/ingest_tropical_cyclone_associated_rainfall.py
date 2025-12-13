@@ -241,3 +241,17 @@ def extract_tc_associated_rainfall_image_sources_of_2024(
         for the year 2024
     :rtype: list[str]
     """
+    tc_associated_rainfall_image_sources = []
+
+    # We need to check if tc_associated_rainfall_tags_of_2024 is missing
+    if tc_associated_rainfall_tags_of_2024 == None:
+        return tc_associated_rainfall_image_sources
+
+    # Loop through the tc associated rainfall tags for the year of 2024 to extract their image sources
+    for tc_associated_rainfall_of_2025_tag in tc_associated_rainfall_tags_of_2024:
+        tc_associated_rainfall_image_source = str(tc_associated_rainfall_of_2025_tag['value']).strip()
+        tc_associated_rainfall_image_sources.append(
+            tc_associated_rainfall_image_source
+        )
+
+    return tc_associated_rainfall_image_sources
