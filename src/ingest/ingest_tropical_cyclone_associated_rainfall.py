@@ -69,6 +69,30 @@ def extract_tc_associated_rainfalls_of_2025_tag(
     if soup is None:
         return None
 
+    # Extract HTML tags for tc associated rainfalls for the year 2025
+    div_tag_with_row_climate_page_class = soup.find(
+        'div',
+        attrs={
+            'class': 'row climate-page'
+        }
+    )
+    div_tag_with_article_content_class = div_tag_with_row_climate_page_class.find(
+        'div',
+        attrs={
+            'class': 'col-md-12 article-content'
+        }
+    )
+    div_tag_with_panel_class = div_tag_with_article_content_class.find(
+        'div',
+        attrs={
+            'class': 'panel'
+        }
+    )
+
+    # We need to check if the div_tag_with_panel_class is missing
+    if div_tag_with_panel_class is None:
+        return None
+
 def extract_tc_associated_rainfalls_of_2025(
         tc_associated_rainfalls_of_2025_tag: BeautifulSoup | None
 ) -> list[str]:
