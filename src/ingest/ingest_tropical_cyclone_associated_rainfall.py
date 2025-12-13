@@ -63,7 +63,7 @@ def extract_tc_associated_rainfalls_of_2025_tags(
 
     :return: HTML tag for the tropical cyclone associated rainfall
         of the year 2025
-    :rtype: BeautifulSoup
+    :rtype: list[BeautifulSoup] | None
     """
     # We need to check if the BeautifulSoup object is missing
     if soup is None:
@@ -112,7 +112,7 @@ def extract_tc_associated_rainfalls_of_2025_tags(
     return tc_associated_rainfalls_of_2025_tags
 
 def extract_tc_associated_rainfalls_of_2025(
-        tc_associated_rainfalls_of_2025_tags: BeautifulSoup | None
+        tc_associated_rainfalls_of_2025_tags: list[BeautifulSoup] | None
 ) -> list[str]:
     """
     Extract the tropical cyclone associated rainfall image sources
