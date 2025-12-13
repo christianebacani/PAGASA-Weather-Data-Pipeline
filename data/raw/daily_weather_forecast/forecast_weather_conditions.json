@@ -1,26 +1,26 @@
 {
     "place": [
-        "Bicol Region, Eastern Visayas, Marinduque, and Romblon",
-        "Quezon",
-        "Metro Manila and the rest of Luzon",
-        "The rest of the country"
+        "Bicol Region, Quezon, Laguna, Batangas, Oriental Mindoro, Occidental Mindoro, Marinduque, and Romblon",
+        "Metro Manila, the rest of CALABARZON, and Aurora",
+        "Visayas, Mindanao, and Palawan",
+        "The rest of Luzon"
     ],
     "weather_condition": [
         "Cloudy skies with scattered rains and isolated thunderstorms",
-        "Cloudy skies with rains",
-        "Partly cloudy to cloudy skies with isolated light rains",
-        "Partly cloudy to cloudy skies with isolated rainshowers or thunderstorms"
+        "Cloudy skies with light rains",
+        "Partly cloudy to cloudy skies with isolated rainshowers or thunderstorms",
+        "Partly cloudy to cloudy skies with isolated light rains"
     ],
     "caused_by": [
         "Shear Line",
         "Northeast Monsoon",
-        "Northeast Monsoon",
-        "Easterlies"
+        "Easterlies",
+        "Northeast Monsoon"
     ],
     "impacts": [
         "Possible flash floods or landslides due to moderate to at times heavy rains",
         "Possible flash floods or landslides due to moderate to at times heavy rains",
-        "No significant impact",
-        "Possible flash floods or landslides during severe thunderstorms"
+        "Possible flash floods or landslides during severe thunderstorms",
+        "No significant impact"
     ]
 }
