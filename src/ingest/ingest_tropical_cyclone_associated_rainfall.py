@@ -49,7 +49,7 @@ def extract_beautiful_soup_object(
     soup = BeautifulSoup(response.text, 'html.parser')
     return soup
 
-def extract_2025_tc_associated_rainfall_tags(
+def extract_tc_associated_rainfall_tags_of_2025(
     soup: BeautifulSoup | None
 ) -> list[BeautifulSoup] | None:
     """
@@ -104,12 +104,11 @@ def extract_2025_tc_associated_rainfall_tags(
             'class': 'form-control tc_select'
         }
     )
-    tc_associated_rainfall_tags = select_tag_with_form_control_classs.find_all(
+    tc_associated_rainfall_tags_of_2025 = select_tag_with_form_control_classs.find_all(
         'option'
     )[1:]
 
-    return tc_associated_rainfall_tags
-
+    return tc_associated_rainfall_tags_of_2025
 def extract_tc_associated_rainfalls_of_2025(
         tc_associated_rainfall_tags: list[BeautifulSoup] | None
 ) -> list[str]:
