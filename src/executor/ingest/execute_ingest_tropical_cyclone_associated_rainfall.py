@@ -8,6 +8,7 @@ This module executes ingestion functions in the
 from ingest.ingest_tropical_cyclone_associated_rainfall import create_subdir
 from ingest.ingest_tropical_cyclone_associated_rainfall import extract_beautiful_soup_object
 from ingest.ingest_tropical_cyclone_associated_rainfall import extract_tc_associated_rainfalls_of_2025_tags
+from ingest.ingest_tropical_cyclone_associated_rainfall import extract_tc_associated_rainfalls_of_2025
 
 def ingest_tropical_cyclone_associated_rainfall(
 ) -> None:
@@ -25,4 +26,7 @@ def ingest_tropical_cyclone_associated_rainfall(
 
     tc_associated_rainfalls_of_2025_tags = extract_tc_associated_rainfalls_of_2025_tags(
         soup
+    )
+    extract_tc_associated_rainfalls_of_2025(
+        tc_associated_rainfalls_of_2025_tags
     )
