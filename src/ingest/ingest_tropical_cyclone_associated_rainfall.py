@@ -269,7 +269,7 @@ def save_tc_associated_rainfall_image_sources_of_2024_to_json(
     """
     # Create a dictionary to store the tc associated rainfall image sources
     data = {
-        "tc_associated_rainfall_image_sources_of_2025": tc_associated_rainfall_image_sources
+        "tc_associated_rainfall_image_sources_of_2024": tc_associated_rainfall_image_sources
     }
 
     # Save the dictionary to a json file using open() method and json module
