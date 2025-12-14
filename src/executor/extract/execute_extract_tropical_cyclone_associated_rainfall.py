@@ -24,3 +24,24 @@ def extract_tropical_cyclone_associated_rainfall(
     tc_assoc_rainfall_image_sources_of_2025_dataframe = parse_tc_assoc_rainfall_image_sources_to_dataframe(
         'data/raw/tropical_cyclone_associated_rainfall/tc_associated_rainfall_image_sources_of_2025.json'
     )
+    tc_assoc_rainfall_image_sources_of_2024_dataframe = parse_tc_assoc_rainfall_image_sources_to_dataframe(
+        'data/raw/tropical_cyclone_associated_rainfall/tc_associated_rainfall_image_sources_of_2024.json'
+    )
+    tc_assoc_rainfall_image_sources_of_2023_dataframe = parse_tc_assoc_rainfall_image_sources_to_dataframe(
+        'data/raw/tropical_cyclone_associated_rainfall/tc_associated_rainfall_image_sources_of_2023.json'
+    )
+    tc_assoc_rainfall_image_sources_of_2022_dataframe = parse_tc_assoc_rainfall_image_sources_to_dataframe(
+        'data/raw/tropical_cyclone_associated_rainfall/tc_associated_rainfall_image_sources_of_2022.json'
+    )
+    tc_assoc_rainfall_image_sources_of_2021_dataframe = parse_tc_assoc_rainfall_image_sources_to_dataframe(
+        'data/raw/tropical_cyclone_associated_rainfall/tc_associated_rainfall_image_sources_of_2021.json'
+    )
+    tc_assoc_rainfall_image_sources_of_2020_dataframe = parse_tc_assoc_rainfall_image_sources_to_dataframe(
+        'data/raw/tropical_cyclone_associated_rainfall/tc_associated_rainfall_image_sources_of_2020.json'
+    )
+    tc_assoc_rainfall_image_sources_of_2019_dataframe = parse_tc_assoc_rainfall_image_sources_to_dataframe(
+        'data/raw/tropical_cyclone_associated_rainfall/tc_associated_rainfall_image_sources_of_2019.json'
+    )
+    tc_assoc_rainfall_image_sources_of_2018_dataframe = parse_tc_assoc_rainfall_image_sources_to_dataframe(
+        'data/raw/tropical_cyclone_associated_rainfall/tc_associated_rainfall_image_sources_of_2018.json'
+    )
