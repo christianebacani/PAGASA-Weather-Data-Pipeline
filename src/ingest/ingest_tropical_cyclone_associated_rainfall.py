@@ -60,14 +60,15 @@ def extract_tc_assoc_rainfall_tag(
         or None if extraction fails
     :type soup: BeautifulSoup | None
 
-    :return: HTML tag of the tropical cyclone associated rainfalls
+    :return: HTML tag of the tropical cyclone associated rainfall
+        for all listed years
     :rtype: BeautifulSoup | None
     """
     # We need to check if the BeautifulSoup object is missing
     if soup is None:
         return None
 
-    # Extract HTML tags for tropical cyclone associated rainfall of the year 2025 to get their image sources
+    # Extract HTML tags to get the specific tag for the tropical cyclone associated rainfall for all listed years
     div_tag_with_row_climate_page_class = soup.find(
         'div',
         attrs={
