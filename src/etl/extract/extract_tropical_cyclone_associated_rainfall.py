@@ -28,18 +28,18 @@ def create_subdir(
         os.makedirs('data/stage/tropical_cyclone_associated_rainfall')
 
 def parse_tc_assoc_rainfall_image_sources_to_dataframe(
-        tc_assoc_rainfall_image_sources_filepath: str,
-        year: int
+        tc_assoc_rainfall_image_sources_filepath: str
 ) -> pd.DataFrame:
     """
-    Docstring for parse_tc_assoc_rainfall_image_sources_to_dataframe
+    Parse the tropical cyclone associated rainfall image sources
+    into a DataFrame.
 
-    :param tc_assoc_rainfall_image_sources_filepath: Description
+    :param tc_assoc_rainfall_image_sources_filepath: Relative
+        filepath of the JSON file that stores the tropical
+        cyclone associated rainfall image sources
     :type tc_assoc_rainfall_image_sources_filepath: str
 
-    :param year: Description
-    :type year: int
-
-    :return: Description
+    :return: DataFrame containing the tropical cyclone associated
+        rainfall image sources
     :rtype: DataFrame
     """
