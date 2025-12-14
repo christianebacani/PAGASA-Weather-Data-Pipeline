@@ -20,7 +20,7 @@ def create_subdir(
     """
     Create the `data/stage/tropical_cyclone_advisory` subdirectory to store CSV files.
 
-    This subdirectory stores the tropical cyclone advisory data parsed from JSON files
+    This subdirectory stores the tropical cyclone advisory data, parsed from JSON files
     located in the `data/raw/tropical_cyclone_advisory` subdirectory on the local machine.
     """
     # Create the data/stage/tropical_cyclone_advisory/ subdirectory if it doesn't exist
