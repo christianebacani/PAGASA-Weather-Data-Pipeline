@@ -19,7 +19,7 @@ def create_subdir(
     """
     Create the `data/raw/tropical_cyclone_associated_rainfall` subdirectory to store JSON files.
 
-    This subdirectory holds the tropical cyclone associated rainfall data ingested from the
+    This subdirectory holds the tropical cyclone associated rainfall data, ingested from the
     PAGASA-DOST website.
     """
     # Create the data/raw/tropical_cyclone_associated_rainfall/ subdirectory if it doesn't exist
