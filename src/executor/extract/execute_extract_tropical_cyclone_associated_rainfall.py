@@ -5,6 +5,7 @@ This module runs all extraction tasks on files located in the `data/raw/tropical
 subdirectory on the local machine, serving as the entry point for the daily extraction workflow.
 """
 from etl.extract.extract_tropical_cyclone_associated_rainfall import create_subdir
+from etl.extract.extract_tropical_cyclone_associated_rainfall import parse_tc_assoc_rainfall_image_sources_to_dataframe
 
 def extract_tropical_cyclone_associated_rainfall(
 ) -> None:
@@ -19,3 +20,7 @@ def extract_tropical_cyclone_associated_rainfall(
     """
     # Run all functions to extract tropical cyclone associated rainfall data
     create_subdir()
+
+    tc_assoc_rainfall_image_sources_of_2025 = parse_tc_assoc_rainfall_image_sources_to_dataframe(
+        'data/raw/tropical_cyclone_associated_rainfall/tc_associated_rainfall_image_sources_of_2025.json'
+    )
