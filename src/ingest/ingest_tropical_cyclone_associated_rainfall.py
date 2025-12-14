@@ -53,8 +53,9 @@ def extract_tc_assoc_rainfall_tag(
         soup: BeautifulSoup | None
 ) -> BeautifulSoup | None:
     """
-    Extract HTML tags of the tropical cyclone associated rainfalls
-    for the year 2025 from the PAGASA-DOST website.
+    Extract HTML tag of the tropical cyclone associated
+    rainfall for all listed years from the PAGASA-DOST
+    website.
 
     :param soup: BeautifulSoup object for navigating the page,
         or None if extraction fails
