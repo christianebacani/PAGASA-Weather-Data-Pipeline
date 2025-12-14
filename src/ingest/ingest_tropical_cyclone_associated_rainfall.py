@@ -123,14 +123,14 @@ def extract_tc_assoc_rainfall_image_sources(
     :rtype: list[str]
     """
     tc_assoc_rainfall_image_sources = {
-        '2025': [],
-        '2024': [],
-        '2023': [],
-        '2022': [],
-        '2021': [],
-        '2020': [],
-        '2019': [],
-        '2018': []
+        2025: [],
+        2024: [],
+        2023: [],
+        2022: [],
+        2021: [],
+        2020: [],
+        2019: [],
+        2018: []
     }
 
     # We need to check if tc_assoc_rainfall_tag is missing
