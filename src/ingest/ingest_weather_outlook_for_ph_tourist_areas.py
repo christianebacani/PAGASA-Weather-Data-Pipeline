@@ -23,8 +23,8 @@ def create_subdir(
     """
     Create the `data/raw/weather_outlook_for_ph_tourist_areas` subdirectory to store JSON files.
 
-    This subdirectory holds the weather outlook for selected Philippine tourist areas data
-    ingested from the PAGASA-DOST website.
+    This subdirectory holds the weather outlook for selected Philippine tourist areas data, ingested
+    from the PAGASA-DOST website.
     """
     # Create the data/raw/weather_outlook_for_ph_cities/ subdirectory if it doesn't exist
     if not os.path.exists('data/raw/weather_outlook_for_ph_tourist_areas'):
