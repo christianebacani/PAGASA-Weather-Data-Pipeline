@@ -168,3 +168,16 @@ def extract_tc_assoc_rainfall_image_sources(
                 break
 
     return tc_assoc_rainfall_image_sources[year]
+
+def save_tc_assoc_rainfall_image_sources(
+        tc_assoc_rainfall_image_sources: list[str],
+        year: int
+) -> None:
+    """
+    Docstring for save_tc_assoc_rainfall_image_sources
+    
+    :param tc_assoc_rainfall_image_sources: Description
+    :type tc_assoc_rainfall_image_sources: list[str]
+    :param year: Description
+    :type year: int
+    """
