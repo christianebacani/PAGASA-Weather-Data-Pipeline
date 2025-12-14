@@ -19,7 +19,8 @@ def create_subdir(
     """
     Create the `data/raw/weather_advisory` subdirectory to store JSON files.
 
-    This subdirectory holds the weather advisory data from the PAGASA-DOST website.
+    This subdirectory holds the weather advisory data, ingested from the
+    PAGASA-DOST website.
     """
     # Create the data/raw/weather_advisory/ subdirectory if it doesn't exist
     if not os.path.exists('data/raw/weather_advisory'):
