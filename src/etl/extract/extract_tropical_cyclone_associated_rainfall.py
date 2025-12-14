@@ -43,3 +43,9 @@ def parse_tc_assoc_rainfall_image_sources_to_dataframe(
         rainfall image sources
     :rtype: DataFrame
     """
+    # Read the tc associated rainfall image sources JSON file as a DataFrame object
+    tc_assoc_rainfall_image_sources_dataframe = pd.read_json(
+        tc_assoc_rainfall_image_sources_filepath
+    )
+
+    return tc_assoc_rainfall_image_sources_dataframe
