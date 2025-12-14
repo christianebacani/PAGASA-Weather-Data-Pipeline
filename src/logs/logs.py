@@ -124,3 +124,8 @@ if __name__ == '__main__':
     generate_logs(
         '(DEV): Transform the data for the daily weather forecast.'
     )
+
+    # TODO:
+    # - Add comments for every function executed here
+    # - Check if the `create_subdir` function of `src.etl.transform.transform_daily_weather_forecast`
+    #   works correctly
