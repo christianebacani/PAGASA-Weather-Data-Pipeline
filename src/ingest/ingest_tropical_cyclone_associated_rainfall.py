@@ -174,10 +174,15 @@ def save_tc_assoc_rainfall_image_sources_to_json(
         year: int
 ) -> None:
     """
-    Docstring for save_tc_assoc_rainfall_image_sources
-    
-    :param tc_assoc_rainfall_image_sources: Description
+    Save the tropical cyclone associated rainfall image sources for the
+    specified year to a JSON file in the `data/raw/tropical_cyclone_associated_rainfall/`
+    subdirectory on the local machine.
+
+    :param tc_assoc_rainfall_image_sources: Tropical
+        cyclone associated rainfall image sources
     :type tc_assoc_rainfall_image_sources: list[str]
-    :param year: Description
+
+    :param year: Specified year of the tropical cyclone
+        associated rainfall image sources
     :type year: int
     """
