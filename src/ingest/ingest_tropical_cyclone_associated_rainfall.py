@@ -169,7 +169,7 @@ def extract_tc_assoc_rainfall_image_sources(
 
     return tc_assoc_rainfall_image_sources[year]
 
-def save_tc_assoc_rainfall_image_sources(
+def save_tc_assoc_rainfall_image_sources_to_json(
         tc_assoc_rainfall_image_sources: list[str],
         year: int
 ) -> None:
