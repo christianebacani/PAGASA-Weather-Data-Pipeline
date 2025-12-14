@@ -24,7 +24,7 @@ def create_subdir(
     """
     Create the `data/raw/daily_weather_forecast/` subdirectory to store JSON files.
 
-    This subdirectory holds the daily weather forecast data ingested from the
+    This subdirectory holds the daily weather forecast data, ingested from the
     PAGASA-DOST website.
     """
     # Create the data/raw/daily_weather_forecast/ subdirectory if it doesn't exist
