@@ -106,14 +106,18 @@ def extract_tc_assoc_rainfall_image_sources(
         year: int
 ) -> list[str]:
     """
-    Docstring for extract_tc_assoc_rainfall_image_sources
-    
-    :param tc_assoc_rainfall_tag: Description
+    Extract the tropical cyclone associated rainfall
+    for the specified year from the PAGASA-DOST website.
+
+    :param tc_assoc_rainfall_tag: HTML tag of the tropical
+        cyclone associated rainfall for all listed years
     :type tc_assoc_rainfall_tag: BeautifulSoup | None
 
-    :param year: Description
+    :param year: Specified year of the tropical cyclone
+        associated rainfall
     :type year: int
 
-    :return: Description
+    :return: Tropical cyclone associated rainfall image
+        sources
     :rtype: list[str]
     """
