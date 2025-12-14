@@ -122,3 +122,42 @@ def extract_tc_assoc_rainfall_image_sources(
         sources
     :rtype: list[str]
     """
+    tc_assoc_rainfall_image_sources = {
+        '2025': [],
+        '2024': [],
+        '2023': [],
+        '2022': [],
+        '2021': [],
+        '2020': [],
+        '2019': [],
+        '2018': []
+    }
+
+    # We need to check if tc_assoc_rainfall_tag is missing
+    if tc_assoc_rainfall_tag is None:
+        return []
+
+    select_tag_with_form_control_classes = tc_assoc_rainfall_tag.find_all(
+        'select',
+        attrs={
+            'class': 'form-control tc_select'
+        }
+    )
+
+    for select_tag_with_form_control_class in select_tag_with_form_control_classes:
+        tc_assoc_rainfall_image_source_tags = select_tag_with_form_control_class.find_all(
+            'option'
+        )[1:]
+
+        list_of_all_tc_assoc_rainfal_image_sources = []
+
+        for tc_assoc_rainfall_image_source_tag in tc_assoc_rainfall_image_source_tags:
+            tc_assoc_rainfall_image_source = str(tc_assoc_rainfall_image_source_tag['value']).strip()
+            list_of_all_tc_assoc_rainfal_image_sources.append(
+                tc_assoc_rainfall_image_source
+            )
+
+        for key, value in tc_assoc_rainfall_image_sources.items():
+            if value == []:
+                tc_assoc_rainfall_image_sources[key] = list_of_all_tc_assoc_rainfal_image_sources
+                break
