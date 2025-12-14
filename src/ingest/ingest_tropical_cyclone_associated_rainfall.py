@@ -49,9 +49,9 @@ def extract_beautiful_soup_object(
     soup = BeautifulSoup(response.text, 'html.parser')
     return soup
 
-def extract_tc_assoc_rainfall_tags_2025(
+def extract_tc_assoc_rainfall_tag(
         soup: BeautifulSoup | None
-) -> list[BeautifulSoup] | None:
+) -> BeautifulSoup | None:
     """
     Extract HTML tags of the tropical cyclone associated rainfalls
     for the year 2025 from the PAGASA-DOST website.
@@ -92,20 +92,11 @@ def extract_tc_assoc_rainfall_tags_2025(
     if div_tag_with_panel_class is None:
         return None
 
-    div_tag_with_form_group_class = div_tag_with_panel_class.find(
+    tc_assoc_rainfall_tag = div_tag_with_panel_class.find(
         'div',
         attrs={
             'class': 'form-group'
         }
     )
-    select_tag_with_form_control_class = div_tag_with_form_group_class.find(
-        'select',
-        attrs={
-            'class': 'form-control tc_select'
-        }
-    )
-    tc_assoc_rainfall_tags_2025 = select_tag_with_form_control_class.find_all(
-        'option'
-    )[1:]
 
-    return tc_assoc_rainfall_tags_2025
+    return tc_assoc_rainfall_tag
