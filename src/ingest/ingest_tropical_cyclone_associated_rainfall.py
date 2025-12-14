@@ -166,3 +166,5 @@ def extract_tc_assoc_rainfall_image_sources(
                 # Map the tc associated rainfall image sources list to the correct key (year)
                 tc_assoc_rainfall_image_sources[key] = list_of_all_tc_assoc_rainfal_image_sources
                 break
+
+    return tc_assoc_rainfall_image_sources[year]
