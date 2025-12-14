@@ -91,3 +91,21 @@ def extract_tc_assoc_rainfall_tags_of_2025(
     # We need to check if div_tag_with_panel_class is missing
     if div_tag_with_panel_class is None:
         return None
+
+    div_tag_with_form_group_class = div_tag_with_panel_class.find(
+        'div',
+        attrs={
+            'class': 'form-group'
+        }
+    )
+    select_tag_with_form_control_class = div_tag_with_form_group_class.find(
+        'select',
+        attrs={
+            'class': 'form-control tc_select'
+        }
+    )
+    tc_assoc_rainfall_tags_of_2025 = select_tag_with_form_control_class.find_all(
+        'option'
+    )[1:]
+
+    return tc_assoc_rainfall_tags_of_2025
