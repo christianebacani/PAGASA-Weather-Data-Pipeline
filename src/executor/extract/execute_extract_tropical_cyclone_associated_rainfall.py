@@ -21,6 +21,6 @@ def extract_tropical_cyclone_associated_rainfall(
     # Run all functions to extract tropical cyclone associated rainfall data
     create_subdir()
 
-    tc_assoc_rainfall_image_sources_of_2025 = parse_tc_assoc_rainfall_image_sources_to_dataframe(
+    tc_assoc_rainfall_image_sources_of_2025_dataframe = parse_tc_assoc_rainfall_image_sources_to_dataframe(
         'data/raw/tropical_cyclone_associated_rainfall/tc_associated_rainfall_image_sources_of_2025.json'
     )
