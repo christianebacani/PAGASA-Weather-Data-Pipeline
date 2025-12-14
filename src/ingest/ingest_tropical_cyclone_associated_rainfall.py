@@ -64,3 +64,30 @@ def extract_tc_assoc_rainfall_tags_of_2025(
         rainfall of the year 2025
     :rtype: list[BeautifulSoup] | None
     """
+    # We need to check if the BeautifulSoup object is missing
+    if soup is None:
+        return None
+
+    # Extract HTML tags for tropical cyclone associated rainfall of the year 2025 to get their image sources
+    div_tag_with_row_climate_page_class = soup.find(
+        'div',
+        attrs={
+            'class': 'row climate-page'
+        }
+    )
+    div_tag_with_article_content_class = div_tag_with_row_climate_page_class.find(
+        'div',
+        attrs={
+            'class': 'col-md-12 article-content'
+        }
+    )
+    div_tag_with_panel_class = div_tag_with_article_content_class.find(
+        'div',
+        attrs={
+            'class': 'panel'
+        }
+    )
+
+    # We need to check if div_tag_with_panel_class is missing
+    if div_tag_with_panel_class is None:
+        return None
