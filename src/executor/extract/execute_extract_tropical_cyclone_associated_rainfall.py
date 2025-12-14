@@ -6,6 +6,7 @@ subdirectory on the local machine, serving as the entry point for the daily extr
 """
 from etl.extract.extract_tropical_cyclone_associated_rainfall import create_subdir
 from etl.extract.extract_tropical_cyclone_associated_rainfall import parse_tc_assoc_rainfall_image_sources_to_dataframe
+from etl.extract.extract_tropical_cyclone_associated_rainfall import stage_tc_assoc_rainfall_image_sources_dataframe
 
 def extract_tropical_cyclone_associated_rainfall(
 ) -> None:
@@ -24,6 +25,10 @@ def extract_tropical_cyclone_associated_rainfall(
     tc_assoc_rainfall_image_sources_of_2025_dataframe = parse_tc_assoc_rainfall_image_sources_to_dataframe(
         'data/raw/tropical_cyclone_associated_rainfall/tc_associated_rainfall_image_sources_of_2025.json'
     )
+    stage_tc_assoc_rainfall_image_sources_dataframe(
+        tc_assoc_rainfall_image_sources_of_2025_dataframe
+    )
+
     tc_assoc_rainfall_image_sources_of_2024_dataframe = parse_tc_assoc_rainfall_image_sources_to_dataframe(
         'data/raw/tropical_cyclone_associated_rainfall/tc_associated_rainfall_image_sources_of_2024.json'
     )
