@@ -49,7 +49,7 @@ def extract_beautiful_soup_object(
     soup = BeautifulSoup(response.text, 'html.parser')
     return soup
 
-def extract_tc_associated_rainfall_tags_of_2025(
+def extract_tc_assoc_rainfall_tags_of_2025(
         soup: BeautifulSoup | None
 ) -> list[BeautifulSoup] | None:
     """
