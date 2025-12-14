@@ -26,6 +26,8 @@ from executor.extract.execute_extract_weather_advisory import extract_weather_ad
 from executor.extract.execute_extract_tropical_cyclone_advisory import extract_tropical_cyclone_advisory
 from executor.extract.execute_extract_tropical_cyclone_associated_rainfall import extract_tropical_cyclone_associated_rainfall
 
+from executor.transform.execute_transform_daily_weather_forecast import transform_daily_weather_forecast
+
 def generate_logs(
     log_message: str
 ) -> None:
@@ -116,4 +118,9 @@ if __name__ == '__main__':
     extract_tropical_cyclone_associated_rainfall()
     generate_logs(
         '(DEV): Extract the data for the tropical cyclone associated rainfall.'
+    )
+
+    transform_daily_weather_forecast()
+    generate_logs(
+        '(DEV): Transform the data for the daily weather forecast.'
     )
