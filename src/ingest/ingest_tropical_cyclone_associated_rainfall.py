@@ -160,7 +160,7 @@ def extract_tc_assoc_rainfall_image_sources(
                 tc_assoc_rainfall_image_source
             )
 
-        # Loop through tc associated rainfall image sources dict to map it to the tc associated rainfall image sources
+        # Loop through tc associated rainfall image sources dict to map the tc associated rainfall image sources list
         for key, value in tc_assoc_rainfall_image_sources.items():
             if value == []:
                 # Map the tc associated rainfall image sources list to the correct key (year)
