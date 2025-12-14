@@ -62,3 +62,8 @@ def stage_tc_assoc_rainfall_image_sources_dataframe(
         sources
     :type tc_assoc_rainfall_image_sources_dataframe: pd.DataFrame
     """
+    filename = list(tc_assoc_rainfall_image_sources_dataframe.keys())[0]
+
+    # Stage the tc associated rainfall image sources DataFrame object to the target filepath
+    target_filepath = f'data/stage/weather_outlook_for_ph_tourist_areas/{filename}.csv'
+    tc_assoc_rainfall_image_sources_dataframe.to_csv(target_filepath, index=False)
