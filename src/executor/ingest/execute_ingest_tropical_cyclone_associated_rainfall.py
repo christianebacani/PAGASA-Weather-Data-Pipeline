@@ -8,6 +8,7 @@ This module executes ingestion functions in the
 from ingest.ingest_tropical_cyclone_associated_rainfall import create_subdir
 from ingest.ingest_tropical_cyclone_associated_rainfall import extract_beautiful_soup_object
 from ingest.ingest_tropical_cyclone_associated_rainfall import extract_tc_assoc_rainfall_tag
+from ingest.ingest_tropical_cyclone_associated_rainfall import extract_tc_assoc_rainfall_image_sources
 
 def ingest_tropical_cyclone_associated_rainfall(
 ) -> None:
@@ -24,3 +25,36 @@ def ingest_tropical_cyclone_associated_rainfall(
     )
 
     tc_assoc_rainfall_tag = extract_tc_assoc_rainfall_tag(soup)
+
+    tc_assoc_rainfall_image_sources_2025 = extract_tc_assoc_rainfall_image_sources(
+        tc_assoc_rainfall_tag,
+        2025
+    )
+    tc_assoc_rainfall_image_sources_2024 = extract_tc_assoc_rainfall_image_sources(
+        tc_assoc_rainfall_tag,
+        2024
+    )
+    tc_assoc_rainfall_image_sources_2023 = extract_tc_assoc_rainfall_image_sources(
+        tc_assoc_rainfall_tag,
+        2023
+    )
+    tc_assoc_rainfall_image_sources_2022 = extract_tc_assoc_rainfall_image_sources(
+        tc_assoc_rainfall_tag,
+        2022
+    )
+    tc_assoc_rainfall_image_sources_2021 = extract_tc_assoc_rainfall_image_sources(
+        tc_assoc_rainfall_tag,
+        2021
+    )
+    tc_assoc_rainfall_image_sources_2020 = extract_tc_assoc_rainfall_image_sources(
+        tc_assoc_rainfall_tag,
+        2020
+    )
+    tc_assoc_rainfall_image_sources_2019 = extract_tc_assoc_rainfall_image_sources(
+        tc_assoc_rainfall_tag,
+        2019
+    )
+    tc_assoc_rainfall_image_sources_2018 = extract_tc_assoc_rainfall_image_sources(
+        tc_assoc_rainfall_tag,
+        2018
+    )
