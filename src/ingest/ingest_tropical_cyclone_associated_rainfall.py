@@ -60,9 +60,8 @@ def extract_tc_assoc_rainfall_tag(
         or None if extraction fails
     :type soup: BeautifulSoup | None
 
-    :return: List of HTML tags for the tropical cyclone associated
-        rainfall of the year 2025
-    :rtype: list[BeautifulSoup] | None
+    :return: HTML tag of the tropical cyclone associated rainfalls
+    :rtype: BeautifulSoup | None
     """
     # We need to check if the BeautifulSoup object is missing
     if soup is None:
