@@ -187,3 +187,16 @@ def save_tc_assoc_rainfall_image_sources_to_json(
         associated rainfall image sources
     :type year: int
     """
+    # Create a dictionary to store the tc associated rainfall image sources for the specified year
+    data = {
+        f"tc_associated_rainfall_image_sources_of_{year}": tc_assoc_rainfall_image_sources
+    }
+
+    # Save the dictionary to a json file using open() method and json module
+    with open(
+        f'data/raw/tropical_cyclone_associated_rainfall/tc_associated_rainfall_image_sources_of_{year}.json',
+        'w'
+    ) as json_file:
+        json.dump(data, json_file, indent=4)
+
+    json_file.close()
