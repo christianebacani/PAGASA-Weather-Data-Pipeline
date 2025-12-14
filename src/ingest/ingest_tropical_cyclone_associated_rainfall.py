@@ -137,6 +137,7 @@ def extract_tc_assoc_rainfall_image_sources(
     if tc_assoc_rainfall_tag is None:
         return []
 
+    # Use find_all() method to access all tc associated rainfall HTML tags
     select_tag_with_form_control_classes = tc_assoc_rainfall_tag.find_all(
         'select',
         attrs={
@@ -144,6 +145,7 @@ def extract_tc_assoc_rainfall_image_sources(
         }
     )
 
+    # Loop through the select HTML tags to extract tc associated rainfall image source tags
     for select_tag_with_form_control_class in select_tag_with_form_control_classes:
         tc_assoc_rainfall_image_source_tags = select_tag_with_form_control_class.find_all(
             'option'
@@ -151,13 +153,16 @@ def extract_tc_assoc_rainfall_image_sources(
 
         list_of_all_tc_assoc_rainfal_image_sources = []
 
+        # Loop through tags to extract tc associated rainfall image source
         for tc_assoc_rainfall_image_source_tag in tc_assoc_rainfall_image_source_tags:
             tc_assoc_rainfall_image_source = str(tc_assoc_rainfall_image_source_tag['value']).strip()
             list_of_all_tc_assoc_rainfal_image_sources.append(
                 tc_assoc_rainfall_image_source
             )
 
+        # Loop through tc associated rainfall image sources dict to map it to the tc associated rainfall image sources
         for key, value in tc_assoc_rainfall_image_sources.items():
             if value == []:
+                # Map the tc associated rainfall image sources list to the correct key (year)
                 tc_assoc_rainfall_image_sources[key] = list_of_all_tc_assoc_rainfal_image_sources
                 break
