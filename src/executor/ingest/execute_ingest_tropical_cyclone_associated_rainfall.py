@@ -9,6 +9,7 @@ from ingest.ingest_tropical_cyclone_associated_rainfall import create_subdir
 from ingest.ingest_tropical_cyclone_associated_rainfall import extract_beautiful_soup_object
 from ingest.ingest_tropical_cyclone_associated_rainfall import extract_tc_assoc_rainfall_tag
 from ingest.ingest_tropical_cyclone_associated_rainfall import extract_tc_assoc_rainfall_image_sources
+from ingest.ingest_tropical_cyclone_associated_rainfall import save_tc_assoc_rainfall_image_sources_to_json
 
 def ingest_tropical_cyclone_associated_rainfall(
 ) -> None:
@@ -30,31 +31,70 @@ def ingest_tropical_cyclone_associated_rainfall(
         tc_assoc_rainfall_tag,
         2025
     )
+    save_tc_assoc_rainfall_image_sources_to_json(
+        tc_assoc_rainfall_image_sources_2025,
+        2025
+    )
+
     tc_assoc_rainfall_image_sources_2024 = extract_tc_assoc_rainfall_image_sources(
         tc_assoc_rainfall_tag,
         2024
     )
+    save_tc_assoc_rainfall_image_sources_to_json(
+        tc_assoc_rainfall_image_sources_2024,
+        2024
+    )
+
     tc_assoc_rainfall_image_sources_2023 = extract_tc_assoc_rainfall_image_sources(
         tc_assoc_rainfall_tag,
         2023
     )
+    save_tc_assoc_rainfall_image_sources_to_json(
+        tc_assoc_rainfall_image_sources_2023,
+        2023
+    )
+
     tc_assoc_rainfall_image_sources_2022 = extract_tc_assoc_rainfall_image_sources(
         tc_assoc_rainfall_tag,
         2022
     )
+    save_tc_assoc_rainfall_image_sources_to_json(
+        tc_assoc_rainfall_image_sources_2022,
+        2022
+    )
+
     tc_assoc_rainfall_image_sources_2021 = extract_tc_assoc_rainfall_image_sources(
         tc_assoc_rainfall_tag,
         2021
     )
+    save_tc_assoc_rainfall_image_sources_to_json(
+        tc_assoc_rainfall_image_sources_2021,
+        2021
+    )
+
     tc_assoc_rainfall_image_sources_2020 = extract_tc_assoc_rainfall_image_sources(
         tc_assoc_rainfall_tag,
         2020
     )
+    save_tc_assoc_rainfall_image_sources_to_json(
+        tc_assoc_rainfall_image_sources_2020,
+        2020
+    )
+
     tc_assoc_rainfall_image_sources_2019 = extract_tc_assoc_rainfall_image_sources(
         tc_assoc_rainfall_tag,
         2019
     )
+    save_tc_assoc_rainfall_image_sources_to_json(
+        tc_assoc_rainfall_image_sources_2019,
+        2019
+    )
+
     tc_assoc_rainfall_image_sources_2018 = extract_tc_assoc_rainfall_image_sources(
         tc_assoc_rainfall_tag,
+        2018
+    )
+    save_tc_assoc_rainfall_image_sources_to_json(
+        tc_assoc_rainfall_image_sources_2018,
         2018
     )
