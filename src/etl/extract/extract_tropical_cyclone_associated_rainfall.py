@@ -49,3 +49,16 @@ def parse_tc_assoc_rainfall_image_sources_to_dataframe(
     )
 
     return tc_assoc_rainfall_image_sources_dataframe
+
+def stage_tc_assoc_rainfall_image_sources_dataframe(
+        tc_assoc_rainfall_image_sources_dataframe: pd.DataFrame
+) -> None:
+    """
+    Stage the tropical cyclone associated rainfall image sources
+    DataFrame to the staging directory for further processing.
+
+    :param tc_assoc_rainfall_image_sources_dataframe: DataFrame
+        containing the tropical cyclone associated rainfall image
+        sources
+    :type tc_assoc_rainfall_image_sources_dataframe: pd.DataFrame
+    """
