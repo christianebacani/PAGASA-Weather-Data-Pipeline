@@ -100,3 +100,20 @@ def extract_tc_assoc_rainfall_tag(
     )
 
     return tc_assoc_rainfall_tag
+
+def extract_tc_assoc_rainfall_image_sources(
+        tc_assoc_rainfall_tag: BeautifulSoup | None,
+        year: int
+) -> list[str]:
+    """
+    Docstring for extract_tc_assoc_rainfall_image_sources
+    
+    :param tc_assoc_rainfall_tag: Description
+    :type tc_assoc_rainfall_tag: BeautifulSoup | None
+
+    :param year: Description
+    :type year: int
+
+    :return: Description
+    :rtype: list[str]
+    """
