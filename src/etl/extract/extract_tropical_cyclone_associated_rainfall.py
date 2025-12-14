@@ -26,3 +26,20 @@ def create_subdir(
     # Create the data/stage/tropical_cyclone_associated_rainfall/ subdirectory if it doesn't exist
     if not os.path.exists('data/stage/tropical_cyclone_associated_rainfall'):
         os.makedirs('data/stage/tropical_cyclone_associated_rainfall')
+
+def parse_tc_assoc_rainfall_image_sources_to_dataframe(
+        tc_assoc_rainfall_image_sources_filepath: str,
+        year: int
+) -> pd.DataFrame:
+    """
+    Docstring for parse_tc_assoc_rainfall_image_sources_to_dataframe
+
+    :param tc_assoc_rainfall_image_sources_filepath: Description
+    :type tc_assoc_rainfall_image_sources_filepath: str
+
+    :param year: Description
+    :type year: int
+
+    :return: Description
+    :rtype: DataFrame
+    """
