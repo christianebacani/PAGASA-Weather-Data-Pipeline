@@ -90,42 +90,44 @@ if __name__ == '__main__':
         '(DEV): Ingest the data for the tropical cyclone associated rainfall.'
     )
 
+    # Extract and stage the data for the daily weather forecast
     extract_daily_weather_forecast()
     generate_logs(
         '(DEV): Extract the data for the daily weather forecast.'
     )
 
+    # Extract and stage the data for the weather outlook for Philippine cities
     extract_weather_outlook_for_ph_cities()
     generate_logs(
         '(DEV): Extract the data for the weather outlook for selected Philippine cities.'
     )
 
+    # Extract and stage the data for the weather outlook for Philippine tourist areas
     extract_weather_outlook_for_ph_tourist_areas()
     generate_logs(
         '(DEV): Extract the data for the weather outlook for selected Philippine tourist areas.'
     )
 
+    # Extract and stage the data for weather advisory
     extract_weather_advisory()
     generate_logs(
         '(DEV): Extract the data for the weather advisory.'
     )
 
+    # Extract and stage the data for the tropical cyclone advisory
     extract_tropical_cyclone_advisory()
     generate_logs(
         '(DEV): Extract the data for the tropical cyclone advisory.'
     )
 
+    # Extract and stage the data for the tropical cyclone associated rainfall
     extract_tropical_cyclone_associated_rainfall()
     generate_logs(
         '(DEV): Extract the data for the tropical cyclone associated rainfall.'
     )
 
+    # Transform the data for the daly weather forecast
     transform_daily_weather_forecast()
     generate_logs(
         '(DEV): Transform the data for the daily weather forecast.'
     )
-
-    # TODO:
-    # - Add comments for every function executed here
-    # - Check if the `create_subdir` function of `src.etl.transform.transform_daily_weather_forecast`
-    #   works correctly
