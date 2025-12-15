@@ -37,7 +37,7 @@ def transform_daily_weather_forecast(
         synopsis_dataframe
     )
 
-    add_issued_datetime_to_synopsis_dataframe(
+    synopsis_dataframe_with_issued_datetime_dataframe = add_issued_datetime_to_synopsis_dataframe(
         transformed_issued_datetime_dataframe,
         transformed_synopsis_dataframe,
     )
