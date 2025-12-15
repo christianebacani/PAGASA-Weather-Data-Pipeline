@@ -35,4 +35,3 @@ def transform_daily_weather_forecast(
     transformed_synopsis_dataframe = transform_synopsis_dataframe(
         synopsis_dataframe
     )
-    print(transformed_synopsis_dataframe)
