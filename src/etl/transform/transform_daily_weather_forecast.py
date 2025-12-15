@@ -146,5 +146,5 @@ def add_issued_datetime_to_synopsis_dataframe(
     )
 
     for _, row in synopsis_dataframe.iterrows():
-        issued_datetime = issued_datetime['issued_datetime'][0]
+        issued_datetime = issued_datetime_dataframe['issued_datetime'][0]
         print(issued_datetime)
