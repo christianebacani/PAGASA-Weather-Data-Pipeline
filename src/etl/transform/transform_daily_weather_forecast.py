@@ -78,10 +78,17 @@ def transform_synopsis_dataframe(
         synopsis_dataframe: pd.DataFrame
 ) -> pd.DataFrame:
     """
-    Docstring for transform_synopsis_dataframe
-    
-    :param synopsis_dataframe: Description
-    :type synopsis_dataframe: pd.DataFrame
-    :return: Description
+    Transform the synopsis DataFrame objet
+    located in the `data/stage/daily_weather_forecast`
+    subdirectory on the local machine.
+
+    :param issued_datetime_dataframe: DataFrame
+        containing the synopsis of the daily
+        weather forecast
+    :type issued_datetime_dataframe: pd.DataFrame
+
+    :return: Transformed Dataframe containing the
+        cleaned and standardized synopsis of the
+        daily weather forecast
     :rtype: DataFrame
     """
