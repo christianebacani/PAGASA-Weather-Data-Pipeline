@@ -49,7 +49,7 @@ def transform_issued_datetime_dataframe(
     :type issued_datetime_dataframe: pd.DataFrame
 
     :return: Transformed Dataframe containing the
-        cleaned and standardized issued datetime of
+        cleaned issued datetime of
         the daily weather forecast
     :rtype: DataFrame
     """
@@ -88,7 +88,7 @@ def transform_synopsis_dataframe(
     :type issued_datetime_dataframe: pd.DataFrame
 
     :return: Transformed Dataframe containing the
-        cleaned and standardized synopsis of the
+        cleaned synopsis of the
         daily weather forecast
     :rtype: DataFrame
     """
