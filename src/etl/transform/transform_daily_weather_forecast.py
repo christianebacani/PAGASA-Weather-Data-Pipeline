@@ -34,3 +34,21 @@ def create_subdir(
     # Create the data/processed/daily_weather_forecast/ subdirectory if it doesn't exist
     if not os.path.exists('data/processed/daily_weather_forecast'):
         os.makedirs('data/processed/daily_weather_forecast')
+
+def transform_issued_datetime_dataframe(
+        issued_datetime_dataframe: pd.DataFrame
+) -> pd.DataFrame:
+    """
+    Docstring for transform_issued_datetime_dataframe
+
+    :param issued_datetime_dataframe: Description
+    :type issued_datetime_dataframe: pd.DataFrame
+
+    :return: Description
+    :rtype: DataFrame
+    """
+    columns = list(issued_datetime_dataframe.keys())
+    transformed_dataframe = pd.DataFrame(columns=columns)
+
+    for _, row in issued_datetime_dataframe.iterrows():
+        row['issued_datetime']
