@@ -117,8 +117,8 @@ def restructure_synopsis_dataframe(
         synopsis_dataframe: pd.DataFrame
 ) -> pd.DataFrame:
     """
-    Restructure the synopsis DataFrame by
-    adding the issued datetime, making it
+    Restructure the synopsis DataFrame object
+    by adding the issued datetime, making it
     analysis-ready for downstream processing
     and consumption.
 
