@@ -137,10 +137,14 @@ def add_issued_datetime_to_synopsis_dataframe(
         daily weather forecast
     :rtype: DataFrame
     """
-    # Using initialized DataFrame to store synopsis data with issued datetime
-    synopsis_with_issued_datetime_dataframe = pd.DataFrame(
-        columns=[
-            'issued_datetime',
-            'synopsis'
+    # Using initialized DataFrame object to add the issued datetime to the synopsis
+    synopsis_dataframe_with_issued_datetime_dataframe = pd.DataFrame({
+        'synopsis': [
+            synopsis_dataframe['synopsis'][0]
+        ],
+        'issued_datetime': [
+            issued_datetime_dataframe['issued_datetime'][0]
         ]
-    )
+    })
+
+    return synopsis_dataframe_with_issued_datetime_dataframe
