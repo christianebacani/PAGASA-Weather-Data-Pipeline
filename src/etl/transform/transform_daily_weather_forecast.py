@@ -95,3 +95,18 @@ def transform_synopsis_dataframe(
     # Using initialized DataFrame to store transformed data from the issued datatetime DataFrame object
     columns = list(synopsis_dataframe.keys())
     transformed_dataframe = pd.DataFrame(columns=columns)
+
+    for _, row in synopsis_dataframe.iterrows():
+        synopsis = row['synopsis']
+        synopsis = str(synopsis).strip()
+
+        transformed_dataframe = pd.concat([
+            transformed_dataframe,
+            pd.DataFrame({
+                'synopsis': [
+                    synopsis_dataframe['synopsis']
+                ]
+            })
+        ], ignore_index=True)
+
+    return transformed_dataframe
