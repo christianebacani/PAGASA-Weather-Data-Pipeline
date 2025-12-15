@@ -73,3 +73,15 @@ def transform_issued_datetime_dataframe(
         ], ignore_index=True)
 
     return transformed_dataframe
+
+def transform_synopsis_dataframe(
+        synopsis_dataframe: pd.DataFrame
+) -> pd.DataFrame:
+    """
+    Docstring for transform_synopsis_dataframe
+    
+    :param synopsis_dataframe: Description
+    :type synopsis_dataframe: pd.DataFrame
+    :return: Description
+    :rtype: DataFrame
+    """
