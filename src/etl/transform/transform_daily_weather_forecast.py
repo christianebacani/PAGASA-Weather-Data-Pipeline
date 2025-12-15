@@ -106,7 +106,7 @@ def transform_synopsis_dataframe(
             transformed_dataframe,
             pd.DataFrame({
                 'synopsis': [
-                    synopsis_dataframe['synopsis']
+                    synopsis
                 ]
             })
         ], ignore_index=True)
