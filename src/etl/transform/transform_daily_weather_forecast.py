@@ -39,12 +39,18 @@ def transform_issued_datetime_dataframe(
         issued_datetime_dataframe: pd.DataFrame
 ) -> pd.DataFrame:
     """
-    Docstring for transform_issued_datetime_dataframe
+    Transform the issued datetime DataFrame object
+    located in the `data/stage/daily_weather_forecast`
+    subdirectory on the local machine.
 
-    :param issued_datetime_dataframe: Description
+    :param issued_datetime_dataframe: DataFrame
+        containing the issued datetime of the daily
+        weather forecast
     :type issued_datetime_dataframe: pd.DataFrame
 
-    :return: Description
+    :return: Transformed Dataframe containing the
+        cleaned and standardized issued datetime of
+        the daily weather forecast
     :rtype: DataFrame
     """
     # Using initialized DataFrame to store transformed data from the issued datatetime DataFrame object
