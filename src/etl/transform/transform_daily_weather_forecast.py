@@ -133,8 +133,8 @@ def add_issued_datetime_to_synopsis_dataframe(
     :type synopsis_dataframe: pd.DataFrame
 
     :return: Transformed DataFrame containing the
-        issued datetime and synopsis of the
-        daily weather forecast
+        synopsis and issued datetime of the daily
+        weather forecast
     :rtype: DataFrame
     """
     # Using initialized DataFrame object to add the issued datetime to the synopsis
