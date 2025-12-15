@@ -48,7 +48,7 @@ def transform_issued_datetime_dataframe(
         weather forecast
     :type issued_datetime_dataframe: pd.DataFrame
 
-    :return: Transformed Dataframe containing the
+    :return: Transformed DataFrame containing the
         cleaned issued datetime of
         the daily weather forecast
     :rtype: DataFrame
@@ -87,7 +87,7 @@ def transform_synopsis_dataframe(
         weather forecast
     :type issued_datetime_dataframe: pd.DataFrame
 
-    :return: Transformed Dataframe containing the
+    :return: Transformed DataFrame containing the
         cleaned synopsis of the
         daily weather forecast
     :rtype: DataFrame
@@ -112,3 +112,23 @@ def transform_synopsis_dataframe(
         ], ignore_index=True)
 
     return transformed_dataframe
+
+def restructure_synopsis_dataframe(
+        synopsis_dataframe: pd.DataFrame
+) -> pd.DataFrame:
+    """
+    Restructure the synopsis DataFrame by
+    adding the issued datetime, making it
+    analysis-ready for downstream processing
+    and consumption.
+
+    :param synopsis_dataframe: Transformed
+        Dataframe containing the cleaned
+        synopsis of the daily weather forecast
+    :type synopsis_dataframe: pd.DataFrame
+
+    :return: Restructured DataFrame containing
+        containing the synopsis and issued datetime
+        of the daily weather forecast
+    :rtype: DataFrame
+    """
