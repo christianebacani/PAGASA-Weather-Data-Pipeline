@@ -1,6 +1,7 @@
 place,weather_condition,caused_by,impacts
-Aurora and Quezon,Cloudy skies with scattered rains and isolated thunderstorms,Shear Line,Possible flash floods or landslides due to moderate to at times heavy rains
-Caraga and Davao Region,Cloudy skies with scattered rains and thunderstorms,Easterlies,Possible flash floods or landslides due to moderate to at times heavy rains
-Metro Manila and the rest of CALABARZON,Cloudy skies with light rains,Northeast Monsoon,No significant impact
-"Visayas, Bicol Region, MIMAROPA, and the rest of Mindanao",Partly cloudy to cloudy skies with isolated rainshowers or thunderstorms,Easterlies,Possible flash floods or landslides during severe thunderstorms
-The rest of Luzon,Partly cloudy to cloudy skies with isolated light rains,Northeast Monsoon,No significant impact
+"Quezon, Rizal, Batangas, and Laguna",Cloudy skies with scattered rains and isolated thunderstorms,Shear Line,Possible flash floods or landslides due to moderate to at times heavy rains
+"Bicol Region, Caraga, Davao Region, Northern Samar, Eastern Samar, and Southern Leyte",Cloudy skies with scattered rains and thunderstorms,Easterlies,Possible flash floods or landslides due to moderate to at times heavy rains
+"Metro Manila, Cagayan, Isabela, Quirino, Aurora, Bulacan, and Cavite",Cloudy skies with rains,Northeast Monsoon,Possible flash floods or landslides due to light to moderate with at times heavy rains
+"Batanes, Cordillera Administrative Region, and the rest of Central Luzon",Cloudy skies with light rains,Northeast Monsoon,No significant impact
+Ilocos Region,Partly cloudy to cloudy skies with isolated light rains,Northeast Monsoon,No significant impact
+The rest of the country,Partly cloudy to cloudy skies with isolated rainshowers or thunderstorms,Easterlies,Possible flash floods or landslides due to severe thunderstorms
