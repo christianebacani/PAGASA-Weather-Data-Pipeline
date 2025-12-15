@@ -112,30 +112,3 @@ def transform_synopsis_dataframe(
         ], ignore_index=True)
 
     return transformed_dataframe
-
-def restructure_synopsis_dataframe(
-        synopsis_dataframe: pd.DataFrame
-) -> pd.DataFrame:
-    """
-    Restructure the synopsis DataFrame object
-    by adding the issued datetime, making it
-    analysis-ready for downstream processing
-    and consumption.
-
-    :param synopsis_dataframe: Transformed
-        Dataframe containing the cleaned
-        synopsis of the daily weather forecast
-    :type synopsis_dataframe: pd.DataFrame
-
-    :return: Restructured DataFrame containing
-        containing the synopsis and issued datetime
-        of the daily weather forecast
-    :rtype: DataFrame
-    """
-    # Using initialized DataFrame to restructure the transformed data of synopsis DataFrame object
-    restructured_dataframe = pd.DataFrame(
-        columns=[
-            'issued_datetime',
-            'synopsis'
-        ]
-    )
