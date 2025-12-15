@@ -132,3 +132,10 @@ def restructure_synopsis_dataframe(
         of the daily weather forecast
     :rtype: DataFrame
     """
+    # Using initialized DataFrame to restructure the transformed data of synopsis DataFrame object
+    restructured_dataframe = pd.DataFrame(
+        columns=[
+            'issued_datetime',
+            'synopsis'
+        ]
+    )
