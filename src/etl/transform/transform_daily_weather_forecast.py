@@ -47,8 +47,23 @@ def transform_issued_datetime_dataframe(
     :return: Description
     :rtype: DataFrame
     """
+    # Using initialized DataFrame to store transformed data from the issued datatetime DataFrame object
     columns = list(issued_datetime_dataframe.keys())
     transformed_dataframe = pd.DataFrame(columns=columns)
 
+    # Loop through the issued datetime DataFrame object to transform its data
     for _, row in issued_datetime_dataframe.iterrows():
-        row['issued_datetime']
+        issued_datetime = row['issued_datetime']
+        issued_datetime = str(issued_datetime).strip()
+
+        # Concatenate the transformed data to the initialized DataFrame
+        transformed_dataframe = pd.concat([
+            transformed_dataframe,
+            pd.DataFrame({
+                'issued_datetime': [
+                    issued_datetime
+                ]
+            })
+        ], ignore_index=True)
+
+    return transformed_dataframe
