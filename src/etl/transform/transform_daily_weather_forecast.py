@@ -96,10 +96,12 @@ def transform_synopsis_dataframe(
     columns = list(synopsis_dataframe.keys())
     transformed_dataframe = pd.DataFrame(columns=columns)
 
+    # Loop through the synopsis DataFrame object to transform its data
     for _, row in synopsis_dataframe.iterrows():
         synopsis = row['synopsis']
         synopsis = str(synopsis).strip()
 
+        # Concatenate the transformed data to the initialized DataFrame
         transformed_dataframe = pd.concat([
             transformed_dataframe,
             pd.DataFrame({
