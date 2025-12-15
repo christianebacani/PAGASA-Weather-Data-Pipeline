@@ -25,6 +25,6 @@ def transform_daily_weather_forecast(
 
     issued_datetime_filepath = 'data/stage/daily_weather_forecast/issued_datetime.csv'
     issued_datetime_dataframe = pd.read_csv(issued_datetime_filepath)
-    transform_issued_datetime_dataframe(
+    transformed_issued_datetime_dataframe = transform_issued_datetime_dataframe(
         issued_datetime_dataframe
     )
