@@ -112,3 +112,28 @@ def transform_synopsis_dataframe(
         ], ignore_index=True)
 
     return transformed_dataframe
+
+def add_issued_datetime_to_synopsis_dataframe(
+        issued_datetime_dataframe: pd.DataFrame,
+        synopsis_dataframe: pd.DataFrame
+) -> pd.DataFrame:
+    """
+    Add the issued datetime to the synopsis DataFrame
+    object to produce an analysis-ready dataset
+    for downstream processing and consumption.
+
+    :param issued_datetime_dataframe: Transformed
+        DataFrame containing the cleaned issued
+        datetime of the daily weather forecast
+    :type issued_datetime_dataframe: pd.DataFrame
+
+    :param synopsis_dataframe: Transformed DataFrame
+        containing the cleaned synopsis of the
+        daily weather forecast
+    :type synopsis_dataframe: pd.DataFrame
+
+    :return: Transformed DataFrame containing the
+        issued datetime and synopsis of the
+        daily weather forecast
+    :rtype: DataFrame
+    """
