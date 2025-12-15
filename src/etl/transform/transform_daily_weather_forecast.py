@@ -147,4 +147,18 @@ def add_issued_datetime_to_synopsis_dataframe(
 
     for _, row in synopsis_dataframe.iterrows():
         issued_datetime = issued_datetime_dataframe['issued_datetime'][0]
-        print(issued_datetime)
+        synopsis = row['synopsis']
+
+        synopsis_with_issued_datetime_dataframe = pd.concat([
+            synopsis_with_issued_datetime_dataframe,
+            pd.DataFrame({
+                'issued_datetime': [
+                    issued_datetime
+                ],
+                'synopsis': [
+                    synopsis
+                ]
+            })
+        ], ignore_index=True)
+
+    return synopsis_with_issued_datetime_dataframe
