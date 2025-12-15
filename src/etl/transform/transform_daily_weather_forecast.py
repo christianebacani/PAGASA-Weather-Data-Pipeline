@@ -78,7 +78,7 @@ def transform_synopsis_dataframe(
         synopsis_dataframe: pd.DataFrame
 ) -> pd.DataFrame:
     """
-    Transform the synopsis DataFrame objet
+    Transform the synopsis DataFrame object
     located in the `data/stage/daily_weather_forecast`
     subdirectory on the local machine.
 
