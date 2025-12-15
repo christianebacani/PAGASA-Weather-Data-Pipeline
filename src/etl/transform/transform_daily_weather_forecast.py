@@ -138,41 +138,5 @@ def enrich_synopsis_dataframe_with_issued_datetime(
     :rtype: DataFrame
     """
 
-def add_issued_datetime_to_synopsis_dataframe(
-        issued_datetime_dataframe: pd.DataFrame,
-        synopsis_dataframe: pd.DataFrame
-) -> pd.DataFrame:
-    """
-    Add the issued datetime to the synopsis DataFrame
-    object to produce an analysis-ready dataset
-    for downstream processing and consumption.
-
-    :param issued_datetime_dataframe: Transformed
-        DataFrame containing the cleaned issued
-        datetime of the daily weather forecast
-    :type issued_datetime_dataframe: pd.DataFrame
-
-    :param synopsis_dataframe: Transformed DataFrame
-        containing the cleaned synopsis of the
-        daily weather forecast
-    :type synopsis_dataframe: pd.DataFrame
-
-    :return: Transformed DataFrame containing the
-        synopsis and issued datetime of the daily
-        weather forecast
-    :rtype: DataFrame
-    """
-    # Using initialized DataFrame object to add the issued datetime to the synopsis
-    synopsis_dataframe_with_issued_datetime_dataframe = pd.DataFrame({
-        'synopsis': [
-            synopsis_dataframe['synopsis'][0]
-        ],
-        'issued_datetime': [
-            issued_datetime_dataframe['issued_datetime'][0]
-        ]
-    })
-
-    return synopsis_dataframe_with_issued_datetime_dataframe
-
 # TODO:
 # - Change the name of the add function to `enrich_synopsis_dataframe_with_issued_datetime`
