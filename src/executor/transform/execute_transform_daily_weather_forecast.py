@@ -10,7 +10,7 @@ from etl.transform.transform_daily_weather_forecast import create_subdir
 from etl.transform.transform_daily_weather_forecast import transform_issued_datetime_dataframe
 from etl.transform.transform_daily_weather_forecast import transform_synopsis_dataframe
 from etl.transform.transform_daily_weather_forecast import enrich_synopsis_dataframe_with_issued_datetime
-from etl.transform.transform_daily_weather_forecast import save_synopsis_with_issued_datetime_to_processed
+from etl.transform.transform_daily_weather_forecast import save_synopsis_with_issued_datetime_to_processed_subdir
 from etl.transform.transform_daily_weather_forecast import transform_forecast_weather_conditions_dataframe
 
 def transform_daily_weather_forecast(
@@ -43,7 +43,7 @@ def transform_daily_weather_forecast(
         transformed_synopsis_dataframe,
         transformed_issued_datetime_dataframe
     )
-    save_synopsis_with_issued_datetime_to_processed(
+    save_synopsis_with_issued_datetime_to_processed_subdir(
         synopsis_dataframe_with_issued_datetime_dataframe
     )
 
