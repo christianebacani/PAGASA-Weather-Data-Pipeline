@@ -139,11 +139,11 @@ def enrich_synopsis_dataframe_with_issued_datetime(
     """
     # Using initialized DataFrame to store synopsis data with issued datetime
     synopsis_with_issued_datetime_dataframe = pd.DataFrame({
-        'synopsis': [
-            synopsis_dataframe['synopsis'][0]
+        'synopses': [
+            synopsis_dataframe['synopses'][0]
         ],
-        'issued_datetime': [
-            issued_datetime_dataframe['issued_datetime'][0]
+        'issued_datetimes': [
+            issued_datetime_dataframe['issued_datetimes'][0]
         ]
     })
 
