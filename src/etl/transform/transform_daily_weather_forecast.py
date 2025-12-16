@@ -137,6 +137,3 @@ def enrich_synopsis_dataframe_with_issued_datetime(
         weather forecast
     :rtype: DataFrame
     """
-
-# TODO:
-# - Change the name of the add function to `enrich_synopsis_dataframe_with_issued_datetime`
