@@ -48,7 +48,7 @@ def ingest_beautiful_soup_object(
     soup = BeautifulSoup(response.text, 'html.parser')
     return soup
 
-def ingest_weather_advisory(
+def ingest_weather_advisory_source_url_or_content(
         soup: BeautifulSoup | None
 ) -> str:
     """
