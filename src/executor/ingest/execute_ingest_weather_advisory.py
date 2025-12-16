@@ -6,7 +6,7 @@ This module executes ingestion functions in the
 """
 from ingest.ingest_weather_advisory import create_subdir
 from ingest.ingest_weather_advisory import ingest_beautiful_soup_object
-from ingest.ingest_weather_advisory import ingest_weather_advisory
+from ingest.ingest_weather_advisory import ingest_weather_advisory_source_url_or_content
 from ingest.ingest_weather_advisory import save_weather_advisory_to_raw_subdir
 
 def ingest_weather_advisory(
@@ -23,5 +23,5 @@ def ingest_weather_advisory(
         'https://www.pagasa.dost.gov.ph/weather/weather-advisory'
     )
 
-    weather_advisory = ingest_weather_advisory(soup)
+    weather_advisory = ingest_weather_advisory_source_url_or_content(soup)
     save_weather_advisory_to_raw_subdir(weather_advisory)
