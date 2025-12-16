@@ -229,9 +229,16 @@ def parse_forecast_wind_and_coastal_water_conditions_to_dataframe(
     :rtype: DataFrame
     """
     # Read the forecast wind and coastal water conditions JSON file as a DataFrame object
-    forecast_wind_and_coastal_water_conditions_dataframe = pd.read_json(
+    forecast_wind_and_coastal_water_conditions_raw_dataframe = pd.read_json(
         forecast_wind_and_coastal_water_conditions_filepath
     )
+
+    forecast_wind_and_coastal_water_conditions_dataframe = pd.DataFrame({
+        'places': forecast_wind_and_coastal_water_conditions_raw_dataframe['place'],
+        'speeds': forecast_wind_and_coastal_water_conditions_raw_dataframe['speed'],
+        'directions': forecast_wind_and_coastal_water_conditions_raw_dataframe['direction'],
+        'coastal_waters': forecast_wind_and_coastal_water_conditions_raw_dataframe['coastal_water']
+    })
 
     return forecast_wind_and_coastal_water_conditions_dataframe
 
