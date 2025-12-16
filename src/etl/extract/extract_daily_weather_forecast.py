@@ -234,11 +234,11 @@ def parse_forecast_wind_and_coastal_water_conditions_to_dataframe(
     )
 
     # Rename the columns of the DataFrame object
-    forecast_wind_and_coastal_water_conditions_dataframe.rename({
+    forecast_wind_and_coastal_water_conditions_dataframe.rename(columns={
         'place': 'places',
         'speed': 'speeds',
         'direction': 'directions',
-        'coastal_water': 'coastal_waters'
+        'coastal_water': 'coastal_waters'        
     }, inplace=True)
 
     return forecast_wind_and_coastal_water_conditions_dataframe
