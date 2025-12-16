@@ -166,11 +166,11 @@ def save_synopsis_to_raw_subdir(
 
     json_file.close()
 
-def extract_tc_information(
+def ingest_tc_information(
         soup: BeautifulSoup | None
 ) -> dict[str, str]:
     """
-    Extract the tropical cyclone information of the daily weather forecast from the PAGASA-DOST website.
+    Ingest the tropical cyclone information of the daily weather forecast from the PAGASA-DOST website.
 
     :param soup: BeautifulSoup object for navigating the page, or None if extraction fails
     :type soup: BeautifulSoup | None
@@ -234,7 +234,7 @@ def extract_tc_information(
 
     return tc_information
 
-def save_tc_information_to_json(
+def save_tc_information_to_raw_subdir(
         tc_information: dict[str, str]
 ) -> None:
     """
@@ -264,11 +264,11 @@ def save_tc_information_to_json(
     
     json_file.close()
 
-def extract_forecast_weather_conditions(
+def ingest_forecast_weather_conditions(
         soup: BeautifulSoup | None
 ) -> dict[str, list]:
     """
-    Extract the forecast weather conditions of the daily weather forecast from the PAGASA-DOST website.
+    Ingest the forecast weather conditions of the daily weather forecast from the PAGASA-DOST website.
 
     :param soup: BeautifulSoup object for navigating the page, or None if extraction fails
     :type soup: BeautifulSoup | None
@@ -330,7 +330,7 @@ def extract_forecast_weather_conditions(
 
     return forecast_weather_conditions
 
-def save_forecast_weather_conditions_to_json(
+def save_forecast_weather_conditions_to_raw_subdir(
     forecast_weather_conditions: dict[str, list]
 ) -> None:
     """
@@ -358,11 +358,11 @@ def save_forecast_weather_conditions_to_json(
 
     json_file.close()
 
-def extract_forecast_wind_and_coastal_water_conditions(
+def ingest_forecast_wind_and_coastal_water_conditions(
         soup: BeautifulSoup | None
 ) -> dict[str, list]:
     """
-    Extract the forecast wind and coastal water conditions of the daily weather forecast
+    Ingest the forecast wind and coastal water conditions of the daily weather forecast
     from the PAGASA-DOST website.
 
     :param soup: BeautifulSoup object for navigating the page, or None if extraction fails
@@ -425,7 +425,7 @@ def extract_forecast_wind_and_coastal_water_conditions(
 
     return forecast_wind_and_coastal_water_conditions
 
-def save_forecast_wind_and_coastal_water_conditions_to_json(
+def save_forecast_wind_and_coastal_water_conditions_to_raw_subdir(
     forecast_wind_and_coastal_water_conditions: dict[str, list]
 ) -> None:
     """
@@ -454,11 +454,11 @@ def save_forecast_wind_and_coastal_water_conditions_to_json(
 
     json_file.close()
 
-def extract_temperature_and_relative_humidity(
+def ingest_temperature_and_relative_humidity(
         soup: BeautifulSoup | None
 ) -> dict[str, str]:
     """
-    Extract the temperature and relative humidity of the daily weather forecast
+    Ingest the temperature and relative humidity of the daily weather forecast
     from the PAGASA-DOST website.
 
     :param soup: BeautifulSoup object for navigating the page, or None if extraction fails
@@ -542,7 +542,7 @@ def extract_temperature_and_relative_humidity(
 
     return temperature_and_relative_humidity
 
-def save_temperature_and_relative_humidity_to_json(
+def save_temperature_and_relative_humidity_to_raw_subdir(
         temperature_and_relative_humidity: dict[str, dict]
 ) -> None:
     """
