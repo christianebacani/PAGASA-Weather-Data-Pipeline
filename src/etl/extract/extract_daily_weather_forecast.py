@@ -46,6 +46,7 @@ def parse_issued_datetime_to_dataframe(
     """
     # Read the issued datetime JSON file as a Pandas Series
     issued_datetime_raw_dataframe = pd.read_json(issued_datetime_filepath, typ='series')
+
     # Parse the Pandas Series as a DataFrame object
     issued_datetime_dataframe = pd.DataFrame({
         'issued_datetimes': [
@@ -87,6 +88,7 @@ def parse_synopsis_to_dataframe(
     """
     # Read the synopsis JSON file as a Pandas Series
     synopsis_raw_dataframe = pd.read_json(synopsis_filepath, typ='series')
+
     # Parse the Pandas Series as a DataFrame object
     synopsis_dataframe = pd.DataFrame({
         'synopses': [
@@ -128,6 +130,7 @@ def parse_tc_information_to_dataframe(
     """
     # Read the tropical cyclone information JSON file as a Pandas Series
     tc_information_raw_dataframe = pd.read_json(tc_information_filepath, typ='series')
+
     # Parse the Pandas Series as a DataFrame object
     tc_information_dataframe = pd.DataFrame({
         'current_updates': [
