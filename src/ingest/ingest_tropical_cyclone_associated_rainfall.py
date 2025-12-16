@@ -54,7 +54,7 @@ def ingest_tc_assoc_rainfall_tag(
 ) -> BeautifulSoup | None:
     """
     Ingest HTML tag of the tropical cyclone associated
-    rainfall for all listed years from the PAGASA-DOST
+    rainfall image sources for all listed years from the PAGASA-DOST
     website.
 
     :param soup: BeautifulSoup object for navigating the page,
@@ -62,7 +62,7 @@ def ingest_tc_assoc_rainfall_tag(
     :type soup: BeautifulSoup | None
 
     :return: HTML tag of the tropical cyclone associated rainfall
-        for all listed years
+        image sources for all listed years
     :rtype: BeautifulSoup | None
     """
     # We need to check if the BeautifulSoup object is missing
@@ -112,11 +112,12 @@ def ingest_tc_assoc_rainfall_image_sources(
     PAGASA-DOST website.
 
     :param tc_assoc_rainfall_tag: HTML tag of the tropical
-        cyclone associated rainfall for all listed years
+        cyclone associated rainfall image sources for all
+        listed years
     :type tc_assoc_rainfall_tag: BeautifulSoup | None
 
     :param year: Specified year of the tropical cyclone
-        associated rainfall
+        associated rainfall image sources
     :type year: int
 
     :return: Tropical cyclone associated rainfall image
