@@ -1,7 +1,7 @@
 """
 Ingest weather advisory data from the PAGASA-DOST website.
 
-This module provides functions to extract key information from the
+This module provides functions to ingest key information from the
 weather advisory page, including:
 
 - Weather advisory source URL or content
@@ -26,11 +26,11 @@ def create_subdir(
     if not os.path.exists('data/raw/weather_advisory'):
         os.makedirs('data/raw/weather_advisory')
 
-def extract_beautiful_soup_object(
+def ingest_beautiful_soup_object(
         url: str
 ) -> BeautifulSoup | None:
     """
-    Extract the BeautifulSoup object from the weather advisory page.
+    Ingest the BeautifulSoup object from the weather advisory page.
 
     :param url: URL of the PAGASA-DOST weather advisory page.
     :type url: str
@@ -48,11 +48,11 @@ def extract_beautiful_soup_object(
     soup = BeautifulSoup(response.text, 'html.parser')
     return soup
 
-def extract_weather_advisory(
+def ingest_weather_advisory(
         soup: BeautifulSoup | None
 ) -> str:
     """
-    Extract the weather advisory source URL or content from the PAGASA-DOST website.
+    Ingest the weather advisory source URL or content from the PAGASA-DOST website.
 
     :param soup: BeautifulSoup object for navigating the page, or None if extraction fails
     :type soup: BeautifulSoup | None
@@ -66,7 +66,7 @@ def extract_weather_advisory(
     if soup is None:
         return weather_advisory
 
-    # Extract HTML tags for weather advisory
+    # Ingest HTML tags for weather advisory
     div_tag_with_row_marine_class = soup.find('div', attrs={'class': 'row marine'})
     weather_advisory_tag = div_tag_with_row_marine_class.find(
         'div',
@@ -85,7 +85,7 @@ def extract_weather_advisory(
 
     return weather_advisory
 
-def save_weather_advisory_to_json(
+def save_weather_advisory_to_raw_subdir(
         weather_advisory: str
 ) -> None:
     """
