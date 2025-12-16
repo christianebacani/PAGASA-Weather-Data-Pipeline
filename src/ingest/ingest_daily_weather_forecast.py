@@ -141,7 +141,7 @@ def ingest_synopsis(
 
     return synopsis
 
-def save_synopsis_to_json(
+def save_synopsis_to_raw_subdir(
         synopsis: str
 ) -> None:
     """
