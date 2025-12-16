@@ -53,11 +53,11 @@ def ingest_beautiful_soup_object(
     soup = BeautifulSoup(response.text, 'html.parser')
     return soup
 
-def extract_issued_datetime(
+def ingest_issued_datetime(
     soup: BeautifulSoup | None
 ) -> str:
     """
-    Extract the issued datetime of the daily weather forecast from the PAGASA-DOST website.
+    Ingest the issued datetime of the daily weather forecast from the PAGASA-DOST website.
 
     :param soup: BeautifulSoup object for navigating the page, or None if extraction fails
     :type soup: BeautifulSoup | None
