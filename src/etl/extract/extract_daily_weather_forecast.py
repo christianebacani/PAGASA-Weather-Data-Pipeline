@@ -265,28 +265,28 @@ def parse_temperature_and_relative_humidity_to_dataframe(
     )
     # Restructure the temperature and relative humidity DataFrame to make it readable
     temperature_and_relative_humidity_dataframe = pd.DataFrame({
-        'maximum_temperature': [
+        'maximum_temperatures': [
             temperature_and_relative_humidity_raw_dataframe['temperature']['max'][0]
         ],
-        'time_of_maximum_temperature': [
+        'time_of_maximum_temperatures': [
             temperature_and_relative_humidity_raw_dataframe['temperature']['max'][1]
         ],
-        'minimum_temperature': [
+        'minimum_temperatures': [
             temperature_and_relative_humidity_raw_dataframe['temperature']['min'][0]
         ],
-        'time_of_minimum_temperature': [
+        'time_of_minimum_temperatures': [
             temperature_and_relative_humidity_raw_dataframe['temperature']['min'][1]
         ],
-        'maximum_relative_humidity_percentage': [
+        'maximum_relative_humidity_percentages': [
             temperature_and_relative_humidity_raw_dataframe['relative_humidity_percentage']['max'][0]
         ],
-        'time_of_maximum_relative_humidity_percentage': [
+        'time_of_maximum_relative_humidity_percentages': [
             temperature_and_relative_humidity_raw_dataframe['relative_humidity_percentage']['max'][1]
         ],
-        'minimum_relative_humidity_humidity_percentage': [
+        'minimum_relative_humidity_humidity_percentages': [
             temperature_and_relative_humidity_raw_dataframe['relative_humidity_percentage']['min'][0]
         ],
-        'time_of_minimum_relative_humidity_percentage': [
+        'time_of_minimum_relative_humidity_percentages': [
             temperature_and_relative_humidity_raw_dataframe['relative_humidity_percentage']['min'][1]
         ]
     })
