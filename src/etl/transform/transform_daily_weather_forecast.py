@@ -137,6 +137,7 @@ def enrich_synopsis_dataframe_with_issued_datetime(
         weather forecast
     :rtype: DataFrame
     """
+    # Using initialized DataFrame to store synopsis data with issued datetime
     synopsis_with_issued_datetime_dataframe = pd.DataFrame({
         'synopsis': [
             synopsis_dataframe['synopsis'][0]
