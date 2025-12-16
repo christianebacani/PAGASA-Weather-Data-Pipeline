@@ -149,7 +149,7 @@ def enrich_synopsis_dataframe_with_issued_datetime(
 
     return synopsis_with_issued_datetime_dataframe
 
-def save_synopsis_with_issued_datetime_to_processed(
+def save_synopsis_with_issued_datetime_to_processed_subdir(
         synopsis_with_issued_datetime_dataframe: pd.DataFrame
 ) -> None:
     """
@@ -183,7 +183,3 @@ def transform_forecast_weather_conditions_dataframe(
         weather conditions of the daily weather forecast
     :rtype: DataFrame
     """
-    # TODO
-    # - Convert to_processed functions to to_procesed_subdir functions
-    # - Check what should be added in the return description of the docstring for the
-    #   function `transform_forecast_weather_conditions_dataframe`
