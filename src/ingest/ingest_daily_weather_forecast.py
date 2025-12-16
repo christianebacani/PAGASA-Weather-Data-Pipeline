@@ -87,7 +87,7 @@ def ingest_issued_datetime(
 
     return issued_datetime
 
-def save_issued_datetime_to_json(
+def save_issued_datetime_to_raw_subdir(
         issued_datetime: str
 ) -> None:
     """
