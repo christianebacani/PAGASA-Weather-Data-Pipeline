@@ -184,16 +184,16 @@ def parse_forecast_weather_conditions_to_dataframe(
     :rtype: DataFrame
     """
     # Read the forecast weather conditions JSON file as a DataFrame object
-    forecast_weather_conditions_raw_dataframe = pd.read_json(
+    forecast_weather_conditions_dataframe = pd.read_json(
         forecast_weather_conditions_filepath
     )
 
-    forecast_weather_conditions_dataframe = pd.DataFrame({
-        'places': forecast_weather_conditions_raw_dataframe['place'],
-        'weather_conditions': forecast_weather_conditions_raw_dataframe['weather_condition'],
-        'causes_by': forecast_weather_conditions_raw_dataframe['caused_by'],
-        'impacts': forecast_weather_conditions_raw_dataframe['impacts']
-    })
+    # Rename the columns
+    forecast_weather_conditions_dataframe.rename({
+        'place': 'places',
+        'weather_condition': 'weather_conditions',
+        'caused_by': 'causes_by'
+    }, inplace=True)
 
     return forecast_weather_conditions_dataframe
 
