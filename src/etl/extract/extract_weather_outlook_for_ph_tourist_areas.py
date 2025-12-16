@@ -1,5 +1,5 @@
 """
-Extract and stage weather outlook for selected Philippine tourist areas from the 
+Extract weather outlook for selected Philippine tourist areas from the 
 `data/raw/weather_outlook_for_ph_tourist_areas` subdirectory on the local machine.
 
 This module provides functions to parse JSON files from the
