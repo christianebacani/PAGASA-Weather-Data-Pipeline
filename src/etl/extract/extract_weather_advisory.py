@@ -40,3 +40,12 @@ def parse_weather_advisory_to_dataframe(
     :return: DataFrame containing the weather advisory
     :rtype: DataFrame
     """
+    # Read the weather advisory JSON file as a DataFrame object
+    weather_advisory_dataframe = pd.read_json(weather_advisory_filepath)
+
+    # Rename the columns of the DataFrame object
+    weather_advisory_dataframe.rename(columns={
+        'weather_advisory': 'weather_advisory_document_sources'
+    }, inplace=True)
+
+    return weather_advisory_dataframe
