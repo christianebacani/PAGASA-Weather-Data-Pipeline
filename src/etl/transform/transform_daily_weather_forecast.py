@@ -183,3 +183,8 @@ def transform_forecast_weather_conditions_dataframe(
         weather conditions of the daily weather forecast
     :rtype: DataFrame
     """
+    # Using initialized DataFrame to store transformed data from the forecast weather conditions DataFrame object
+    columns = list(forecast_weather_conditions_dataframe.keys())
+    transformed_dataframe = pd.DataFrame(columns=columns)
+
+    # Loop through the synopsis DataFrame object to transform its data
