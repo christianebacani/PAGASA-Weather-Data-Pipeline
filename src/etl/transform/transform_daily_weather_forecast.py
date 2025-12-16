@@ -162,3 +162,4 @@ def save_synopsis_with_issued_datetime_to_processed(
         the daily weather forecast
     :type synopsis_with_issued_datetime_dataframe: pd.DataFrame
     """
+    target_filepath = 'data/processed/daily_weather_forecast/synopsis.csv'
