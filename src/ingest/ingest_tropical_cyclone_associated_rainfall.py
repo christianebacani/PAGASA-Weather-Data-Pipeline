@@ -1,7 +1,7 @@
 """
 Ingest tropical cyclone associated rainfall from the PAGASA-DOST website.
 
-This module provides functions to extract key information from the
+This module provides functions to ingest key information from the
 tropical cyclone associated rainfall page, including:
 
 - Tropical cyclone associated rainfall image sources
@@ -26,11 +26,11 @@ def create_subdir(
     if not os.path.exists('data/raw/tropical_cyclone_associated_rainfall'):
         os.makedirs('data/raw/tropical_cyclone_associated_rainfall')
 
-def extract_beautiful_soup_object(
+def ingest_beautiful_soup_object(
         url: str
 ) -> BeautifulSoup | None:
     """
-    Extract the BeautifulSoup object from the tropical cyclone
+    Ingest the BeautifulSoup object from the tropical cyclone
     associated rainfall page.
 
     :param url: URL of the PAGASA-DOST tropical cyclone associated rainfall page.
@@ -49,11 +49,11 @@ def extract_beautiful_soup_object(
     soup = BeautifulSoup(response.text, 'html.parser')
     return soup
 
-def extract_tc_assoc_rainfall_tag(
+def ingest_tc_assoc_rainfall_tag(
         soup: BeautifulSoup | None
 ) -> BeautifulSoup | None:
     """
-    Extract HTML tag of the tropical cyclone associated
+    Ingest HTML tag of the tropical cyclone associated
     rainfall for all listed years from the PAGASA-DOST
     website.
 
@@ -69,7 +69,7 @@ def extract_tc_assoc_rainfall_tag(
     if soup is None:
         return None
 
-    # Extract HTML tags to get the specific tag for the tropical cyclone associated rainfall for all listed years
+    # Ingest HTML tags to get the specific tag for the tropical cyclone associated rainfall for all listed years
     div_tag_with_row_climate_page_class = soup.find(
         'div',
         attrs={
@@ -102,12 +102,12 @@ def extract_tc_assoc_rainfall_tag(
 
     return tc_assoc_rainfall_tag
 
-def extract_tc_assoc_rainfall_image_sources(
+def ingest_tc_assoc_rainfall_image_sources(
         tc_assoc_rainfall_tag: BeautifulSoup | None,
         year: int
 ) -> list[str]:
     """
-    Extract the tropical cyclone associated rainfall
+    Ingest the tropical cyclone associated rainfall
     for the specified year from the PAGASA-DOST website.
 
     :param tc_assoc_rainfall_tag: HTML tag of the tropical
@@ -145,7 +145,7 @@ def extract_tc_assoc_rainfall_image_sources(
         }
     )
 
-    # Loop through the select HTML tags to extract tc associated rainfall image source tags
+    # Loop through the select HTML tags to ingest tc associated rainfall image source tags
     for select_tag_with_form_control_class in select_tag_with_form_control_classes:
         tc_assoc_rainfall_image_source_tags = select_tag_with_form_control_class.find_all(
             'option'
@@ -153,7 +153,7 @@ def extract_tc_assoc_rainfall_image_sources(
 
         list_of_all_tc_assoc_rainfal_image_sources = []
 
-        # Loop through tags to extract tc associated rainfall image source
+        # Loop through tags to ingest tc associated rainfall image source
         for tc_assoc_rainfall_image_source_tag in tc_assoc_rainfall_image_source_tags:
             tc_assoc_rainfall_image_source = str(tc_assoc_rainfall_image_source_tag['value']).strip()
             list_of_all_tc_assoc_rainfal_image_sources.append(
@@ -169,7 +169,7 @@ def extract_tc_assoc_rainfall_image_sources(
 
     return tc_assoc_rainfall_image_sources[year]
 
-def save_tc_assoc_rainfall_image_sources_to_json(
+def save_tc_assoc_rainfall_image_sources_to_raw_subdir(
         tc_assoc_rainfall_image_sources: list[str],
         year: int
 ) -> None:
