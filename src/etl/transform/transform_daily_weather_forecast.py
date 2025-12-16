@@ -151,12 +151,14 @@ def enrich_synopsis_dataframe_with_issued_datetime(
 
 def save_synopsis_with_issued_datetime_to_processed(
         synopsis_with_issued_datetime_dataframe: pd.DataFrame
-) -> pd.DataFrame:
+) -> None:
     """
-    Docstring for save_synopsis_with_issued_datetime_to_processed
-    
-    :param synopsis_with_issued_datetime_dataframe: Description
+    Save the synopsis with issued datetime DataFrame object to
+    a a CSV file in the `data/processed/daily_weather_forecast`
+    subdirectory on the local machine.
+
+    :param synopsis_with_issued_datetime_dataframe: Transformed
+        DataFrame containing the synopsis and issued datetime of
+        the daily weather forecast
     :type synopsis_with_issued_datetime_dataframe: pd.DataFrame
-    :return: Description
-    :rtype: DataFrame
     """
