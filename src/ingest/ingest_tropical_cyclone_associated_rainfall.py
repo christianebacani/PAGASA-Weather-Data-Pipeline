@@ -69,7 +69,7 @@ def ingest_tc_assoc_rainfall_tag(
     if soup is None:
         return None
 
-    # Ingest HTML tags to get the specific tag for the tropical cyclone associated rainfall for all listed years
+    # Ingest HTML tags to get the specific tag for the tc associated rainfall image sources for all listed years
     div_tag_with_row_climate_page_class = soup.find(
         'div',
         attrs={
