@@ -1,5 +1,5 @@
 """
-Extract and stage weather outlook for selected Philippine cities from the 
+Extract weather outlook for selected Philippine cities from the 
 `data/raw/weather_outlook_for_ph_cities` subdirectory on the local machine.
 
 This module provides functions to parse JSON files from the
