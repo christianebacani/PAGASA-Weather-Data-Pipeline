@@ -48,7 +48,7 @@ def parse_issued_datetime_to_dataframe(
     issued_datetime_raw_dataframe = pd.read_json(issued_datetime_filepath, typ='series')
     # Parse the Pandas Series as a DataFrame object
     issued_datetime_dataframe = pd.DataFrame({
-        'issued_datetime': [
+        'issued_datetimes': [
             issued_datetime_raw_dataframe['issued_datetime']
         ]
     })
