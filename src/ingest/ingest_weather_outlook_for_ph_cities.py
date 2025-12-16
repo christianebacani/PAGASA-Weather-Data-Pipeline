@@ -1,7 +1,7 @@
 """
 Ingest weather outlook data for selected Philippine cities from the PAGASA-DOST website.
 
-This module provides functions to extract key information from the
+This module provides functions to ingest key information from the
 weather outlook page, including:
 
 - Issued datetime
@@ -31,11 +31,11 @@ def create_subdir(
     if not os.path.exists('data/raw/weather_outlook_for_ph_cities'):
         os.makedirs('data/raw/weather_outlook_for_ph_cities')
 
-def extract_beautiful_soup_object(
+def ingest_beautiful_soup_object(
         url: str
 ) -> BeautifulSoup | None:
     """
-    Extract the BeautifulSoup object from the weather outlook
+    Ingest the BeautifulSoup object from the weather outlook
     for selected Philippine cities page.
     
     :param url: URL of the PAGASA-DOST weather outlook for selected Philippine cities page.
@@ -54,11 +54,11 @@ def extract_beautiful_soup_object(
     soup = BeautifulSoup(response.text, 'html.parser')
     return soup
 
-def extract_issued_datetime(
+def ingest_issued_datetime(
         soup: BeautifulSoup | None
 ) -> str:
     """
-    Extract the issued datetime of the weather outlook for selected Philippine
+    Ingest the issued datetime of the weather outlook for selected Philippine
     cities from the PAGASA-DOST website.
     
     :param soup: BeautifulSoup object for navigating the page, or None if extraction fails
@@ -73,7 +73,7 @@ def extract_issued_datetime(
     if soup is None:
         return issued_datetime
 
-    # Extract HTML tags for issued datetime of the weather outlook for selected PH cities
+    # Ingest HTML tags for issued datetime of the weather outlook for selected PH cities
     div_tag_with_row_weather_page_class = soup.find('div', attrs={'class': 'row weather-page'})
     issued_datetime_and_valid_period_tag = div_tag_with_row_weather_page_class.find(
         'div',
@@ -97,7 +97,7 @@ def extract_issued_datetime(
 
     return issued_datetime
 
-def save_issued_datetime_to_json(
+def save_issued_datetime_to_raw_subdir(
         issued_datetime: str
 ) -> None:
     """
@@ -122,11 +122,11 @@ def save_issued_datetime_to_json(
 
     json_file.close()
 
-def extract_valid_period(
+def ingest_valid_period(
         soup: BeautifulSoup | None
 ) -> str:
     """
-    Extract the valid period of the weather outlook for selected Philippine
+    Ingest the valid period of the weather outlook for selected Philippine
     cities from the PAGASA-DOST website.
 
     :param soup: BeautifulSoup object for navigating the page, or None if extraction fails
@@ -141,7 +141,7 @@ def extract_valid_period(
     if soup is None:
         return valid_period
 
-    # Extract HTML tags for valid period of the weather outlook for selected PH cities
+    # Ingest HTML tags for valid period of the weather outlook for selected PH cities
     div_tag_with_row_weather_page_class = soup.find('div', attrs={'class': 'row weather-page'})
     issued_datetime_and_valid_period_tag = div_tag_with_row_weather_page_class.find(
         'div',
@@ -163,7 +163,7 @@ def extract_valid_period(
 
     return valid_period
 
-def save_valid_period_to_json(
+def save_valid_period_to_raw_subdir(
         valid_period: str
 ) -> None:
     """
@@ -188,11 +188,11 @@ def save_valid_period_to_json(
 
     json_file.close()
 
-def extract_ph_city_tags(
+def ingest_ph_city_tags(
     soup: BeautifulSoup | None
 ) -> list[BeautifulSoup]:
     """
-    Extract HTML tags of selected Philippine cities to get
+    Ingest HTML tags of selected Philippine cities to get
     their weather outlook from the PAGASA-DOST website.
 
     :param soup: BeautifulSoup object for navigating the page, or None if extraction fails
@@ -207,7 +207,7 @@ def extract_ph_city_tags(
     if soup is None:
         return list_of_all_ph_city_tags
 
-    # Extract HTML tags for all selected PH cities to get their weather outlook
+    # Ingest HTML tags for all selected PH cities to get their weather outlook
     div_tag_with_row_weather_page_class = soup.find('div', attrs={'class': 'row weather-page'})
     weather_outlook_for_ph_city_tag = div_tag_with_row_weather_page_class.find(
         'div',
@@ -236,13 +236,13 @@ def extract_ph_city_tags(
 
     return list_of_all_ph_city_tags
 
-def extract_ph_city_names(
+def ingest_ph_city_names(
         list_of_all_ph_city_tags: list[BeautifulSoup]
 ) -> dict[str, dict]:
     """
-    Extract the names of selected Philippine cities from their
+    Ingest the names of selected Philippine cities from their
     HTML tags to get their weather outlook.
-    
+
     :param list_of_all_ph_city_tags: List of HTML tags for the selected Philippine cities
     :type list_of_all_ph_city_tags: list[BeautifulSoup]
 
@@ -255,7 +255,7 @@ def extract_ph_city_names(
     if list_of_all_ph_city_tags == []:
         return result
 
-    # Loop through rows containing HTML tags to extract the names of the selected PH cities
+    # Loop through rows containing HTML tags to ingest the names of the selected PH cities
     for ph_city_tag in list_of_all_ph_city_tags:
         ph_city_name_tag = ph_city_tag.find('a')
         ph_city_name = str(ph_city_name_tag.text).strip()
@@ -263,11 +263,11 @@ def extract_ph_city_names(
 
     return result
 
-def extract_weather_dates(
+def ingest_weather_dates(
         list_of_all_ph_city_tags: list[BeautifulSoup]
 ) -> list[str]:
     """
-    Extract all weather dates from the HTML tags of selected
+    Ingest all weather dates from the HTML tags of selected
     Philippine cities for their weather outlook.
 
     :param list_of_all_ph_city_tags: List of HTML tags for the selected Philippine cities
@@ -284,11 +284,11 @@ def extract_weather_dates(
 
     ph_city_tag = list_of_all_ph_city_tags[0]
 
-    # Extract HTML tags to get all weather dates of selected PH cities
+    # Ingest HTML tags to get all weather dates of selected PH cities
     table_tag = ph_city_tag.find('table', attrs={'class': 'table'})
     list_of_all_table_header_tags = table_tag.find_all('th')
 
-    # Loop through rows containing HTML tags to extract all weather dates of selected PH cities
+    # Loop through rows containing HTML tags to ingest all weather dates of selected PH cities
     for table_header_tag in list_of_all_table_header_tags:
         weather_date = str(table_header_tag.text).strip()
         # Use split() method to remove extra whitespaces in between words
@@ -330,11 +330,11 @@ def map_weather_dates_to_ph_cities(
 
     return result
 
-def extract_temperature_ranges(
+def ingest_temperature_ranges(
         list_of_all_ph_city_tags: list[BeautifulSoup]
 ) -> list[list]:
     """
-    Extract all temperature ranges from the HTML tags
+    Ingest all temperature ranges from the HTML tags
     of selected Philippine cities for their weather outlook.
 
     :param list_of_all_ph_city_tags: List of HTML tags for the selected Philippine cities
@@ -349,7 +349,7 @@ def extract_temperature_ranges(
     if list_of_all_ph_city_tags == []:
         return result
 
-    # Loop through PH city tags to extract temperature range tags
+    # Loop through PH city tags to ingest temperature range tags
     for ph_city_tag in list_of_all_ph_city_tags:
         table_tag = ph_city_tag.find('table', attrs={'class': 'table'})
         temperature_ranges_tag = table_tag.find('tr', attrs={'class': 'desktop-view-tr'})
@@ -357,7 +357,7 @@ def extract_temperature_ranges(
 
         temperature_ranges = []
 
-        # Loop through tags to extract temperature ranges for selected PH cities
+        # Loop through tags to ingest temperature ranges for selected PH cities
         for table_data_tag in list_of_all_table_data_tags:
             minimum_temperature_tag = table_data_tag.find('span', attrs={'class': 'min'})
             minimum_temperature = str(minimum_temperature_tag.text).strip()
@@ -407,11 +407,11 @@ def map_temperature_ranges_to_ph_cities(
 
     return result
 
-def extract_chance_of_rain_percentages(
+def ingest_chance_of_rain_percentages(
         list_of_all_ph_city_tags: list[BeautifulSoup]
 ) -> list[list]:
     """
-    Extract all chance of rain percentages from the HTML tags
+    Ingest all chance of rain percentages from the HTML tags
     of selected Philippine cities for their weather outlook
     
     :param list_of_all_ph_city_tags: List of HTML tags for the selected Philippine cities
@@ -426,7 +426,7 @@ def extract_chance_of_rain_percentages(
     if list_of_all_ph_city_tags == []:
         return result
 
-    # Loop through the selected Ph city HTML tags list to extract rain chance pct tags
+    # Loop through the selected Ph city HTML tags list to ingest rain chance pct tags
     for ph_city_tag in list_of_all_ph_city_tags:
         table_tag = ph_city_tag.find('table', attrs={'class': 'table'})
         chance_of_rain_percentages_tag = table_tag.find('tr', attrs={'class': 'desktop-view-tr'})
@@ -434,7 +434,7 @@ def extract_chance_of_rain_percentages(
 
         chance_of_rain_percentages = []
 
-        # Loop through tags to extract rain chance pcts for selected PH cities
+        # Loop through tags to ingest rain chance pcts for selected PH cities
         for table_data_tag in list_of_all_table_data_tags:
             chance_of_rain_percentage_tag = table_data_tag.find(
                 'span',
@@ -488,7 +488,7 @@ def map_chance_of_rain_percentages_to_ph_cities(
 
     return result
 
-def save_ph_cities_weather_outlook_to_json(
+def save_ph_cities_weather_outlook_to_raw_subdir(
         ph_cities_weather_outlook: dict[str, dict]
 ) -> None:
     """
