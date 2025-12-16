@@ -1,3 +1,4 @@
-place,speed,direction,coastal_water
-Luzon and the eastern sections of Visayas and Mindanao,Moderate to Strong,Northeast to East,Moderate to Rough / (2.5 to 4.0 meters)
-The rest of the country,Light to Moderate,East to Northeast,Slight to Moderate / (0.6 to 2.5 meters)
+places,speeds,directions,coastal_waters
+Northern Luzon and Central Luzon,Moderate to Strong,Northeast,Moderate to Rough / (2.5 to 4.0 meters)
+Visayas and the rest of Luzon,Moderate to Strong,Northeast,Moderate to Rough / (1.2 to 3.1 meters)
+Mindanao,Light to Moderate,East to Northeast,Slight to Moderate / (0.6 to 2.5 meters)
