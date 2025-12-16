@@ -137,3 +137,13 @@ def enrich_synopsis_dataframe_with_issued_datetime(
         weather forecast
     :rtype: DataFrame
     """
+    synopsis_with_issued_datetime_dataframe = pd.DataFrame({
+        'synopsis': [
+            synopsis_dataframe['synopsis'][0]
+        ],
+        'issued_datetime': [
+            issued_datetime_dataframe['issued_datetime'][0]
+        ]
+    })
+
+    return synopsis_with_issued_datetime_dataframe
