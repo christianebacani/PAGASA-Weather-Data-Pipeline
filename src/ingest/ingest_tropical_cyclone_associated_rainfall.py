@@ -108,7 +108,8 @@ def ingest_tc_assoc_rainfall_image_sources(
 ) -> list[str]:
     """
     Ingest the tropical cyclone associated rainfall
-    for the specified year from the PAGASA-DOST website.
+    image sources for the specified year from the
+    PAGASA-DOST website.
 
     :param tc_assoc_rainfall_tag: HTML tag of the tropical
         cyclone associated rainfall for all listed years
