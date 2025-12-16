@@ -7,11 +7,11 @@ subdirectory on the local machine, serving as the entry point for the daily extr
 """
 from etl.extract.extract_weather_outlook_for_ph_tourist_areas import create_subdir
 from etl.extract.extract_weather_outlook_for_ph_tourist_areas import parse_issued_datetime_to_dataframe
-from etl.extract.extract_weather_outlook_for_ph_tourist_areas import stage_issued_datetime_dataframe
+from etl.extract.extract_weather_outlook_for_ph_tourist_areas import save_issued_datetime_dataframe_to_stage_subdir
 from etl.extract.extract_weather_outlook_for_ph_tourist_areas import parse_valid_period_to_dataframe
-from etl.extract.extract_weather_outlook_for_ph_tourist_areas import stage_valid_period_dataframe
+from etl.extract.extract_weather_outlook_for_ph_tourist_areas import save_valid_period_dataframe_to_stage_subdir
 from etl.extract.extract_weather_outlook_for_ph_tourist_areas import parse_ph_tourist_areas_weather_outlook_to_dataframe
-from etl.extract.extract_weather_outlook_for_ph_tourist_areas import stage_ph_tourist_areas_weather_outlook_dataframe
+from etl.extract.extract_weather_outlook_for_ph_tourist_areas import save_ph_tourist_areas_weather_outlook_dataframe_to_stage_subdir
 
 def extract_weather_outlook_for_ph_tourist_areas(
 ) -> None:
@@ -31,20 +31,20 @@ def extract_weather_outlook_for_ph_tourist_areas(
     issued_datetime_dataframe = parse_issued_datetime_to_dataframe(
         'data/raw/weather_outlook_for_ph_tourist_areas/issued_datetime.json'
     )
-    stage_issued_datetime_dataframe(
+    save_issued_datetime_dataframe_to_stage_subdir(
         issued_datetime_dataframe
     )
 
     valid_period_dataframe = parse_valid_period_to_dataframe(
         'data/raw/weather_outlook_for_ph_tourist_areas/valid_period.json'
     )
-    stage_valid_period_dataframe(
+    save_valid_period_dataframe_to_stage_subdir(
         valid_period_dataframe
     )
 
     ph_tourist_areas_weather_outlook_to_dataframe = parse_ph_tourist_areas_weather_outlook_to_dataframe(
         'data/raw/weather_outlook_for_ph_tourist_areas/ph_tourist_areas_weather_outlook.json'
     )
-    stage_ph_tourist_areas_weather_outlook_dataframe(
+    save_ph_tourist_areas_weather_outlook_dataframe_to_stage_subdir(
         ph_tourist_areas_weather_outlook_to_dataframe
     )
