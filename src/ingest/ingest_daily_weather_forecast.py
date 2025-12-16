@@ -31,11 +31,11 @@ def create_subdir(
     if not os.path.exists('data/raw/daily_weather_forecast'):
         os.makedirs('data/raw/daily_weather_forecast')
 
-def extract_beautiful_soup_object(
+def ingest_beautiful_soup_object(
         url: str
 ) -> BeautifulSoup | None:
     """
-    Extract the BeautifulSoup object from the daily weather forecast page.
+    Ingest the BeautifulSoup object from the daily weather forecast page.
 
     :param url: URL of the PAGASA-DOST daily weather forecast page
     :type url: str
