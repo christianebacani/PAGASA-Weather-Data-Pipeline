@@ -1,5 +1,5 @@
 """
-Extract and stage tropical cyclone associated rainfall from the `data/raw/tropical_cyclone_associated_rainfall`
+Extract tropical cyclone associated rainfall from the `data/raw/tropical_cyclone_associated_rainfall`
 subdirectory on the local machine.
 
 This module provides functions to parse JSON files from the
@@ -8,7 +8,7 @@ objects, including:
 
 - Tropical cyclone associated rainfall image source
 
-Parsed DataFrames are staged as CSV files in the
+Parsed DataFrames are saved as CSV files in the
 `data/stage/tropical_cyclone_associated_rainfall/` subdirectory
 on the local machine for further processing.
 """
@@ -50,11 +50,11 @@ def parse_tc_assoc_rainfall_image_sources_to_dataframe(
 
     return tc_assoc_rainfall_image_sources_dataframe
 
-def stage_tc_assoc_rainfall_image_sources_dataframe(
+def save_tc_assoc_rainfall_image_sources_dataframe_to_stage_subdir(
         tc_assoc_rainfall_image_sources_dataframe: pd.DataFrame
 ) -> None:
     """
-    Stage the tropical cyclone associated rainfall image sources
+    Save the tropical cyclone associated rainfall image sources
     DataFrame to the staging directory for further processing.
 
     :param tc_assoc_rainfall_image_sources_dataframe: DataFrame
@@ -64,6 +64,6 @@ def stage_tc_assoc_rainfall_image_sources_dataframe(
     """
     filename = list(tc_assoc_rainfall_image_sources_dataframe.keys())[0]
 
-    # Stage the tc associated rainfall image sources DataFrame object to the target filepath
+    # Save the tc associated rainfall image sources DataFrame object to the target filepath
     target_filepath = f'data/stage/tropical_cyclone_associated_rainfall/{filename}.csv'
     tc_assoc_rainfall_image_sources_dataframe.to_csv(target_filepath, index=False)
