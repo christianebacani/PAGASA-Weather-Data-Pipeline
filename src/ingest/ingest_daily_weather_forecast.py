@@ -1,7 +1,7 @@
 """
 Ingest daily weather forecast data from the PAGASA-DOST website.
 
-This module provides functions to extract key information from the
+This module provides functions to ingest key information from the
 daily weather forecast page, including:
 
 - Issued datetime
