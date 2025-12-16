@@ -1,21 +1,13 @@
 {
     "Puerto Galera (Beach Resort & Diving Areas)": {
         "weather_dates": [
-            "Monday December 15, 2025",
             "Tuesday December 16, 2025",
             "Wednesday December 17, 2025",
             "Thursday December 18, 2025",
-            "Friday December 19, 2025"
+            "Friday December 19, 2025",
+            "Saturday December 20, 2025"
         ],
         "temperature_ranges": [
-            [
-                "24\u00b0C",
-                "31\u00b0C"
-            ],
-            [
-                "24\u00b0C",
-                "30\u00b0C"
-            ],
             [
                 "24\u00b0C",
                 "30\u00b0C"
@@ -26,23 +18,27 @@
             ],
             [
                 "25\u00b0C",
+                "30\u00b0C"
+            ],
+            [
+                "24\u00b0C",
+                "30\u00b0C"
+            ],
+            [
+                "24\u00b0C",
                 "30\u00b0C"
             ]
         ]
     },
     "Anilao (Beach Resorts)": {
         "weather_dates": [
-            "Monday December 15, 2025",
             "Tuesday December 16, 2025",
             "Wednesday December 17, 2025",
             "Thursday December 18, 2025",
-            "Friday December 19, 2025"
+            "Friday December 19, 2025",
+            "Saturday December 20, 2025"
         ],
         "temperature_ranges": [
-            [
-                "24\u00b0C",
-                "30\u00b0C"
-            ],
             [
                 "24\u00b0C",
                 "30\u00b0C"
@@ -52,8 +48,12 @@
                 "30\u00b0C"
             ],
             [
-                "24\u00b0C",
-                "29\u00b0C"
+                "26\u00b0C",
+                "30\u00b0C"
+            ],
+            [
+                "25\u00b0C",
+                "30\u00b0C"
             ],
             [
                 "25\u00b0C",
@@ -63,28 +63,28 @@
     },
     "Boracay (Beach Resorts, Diving Areas)": {
         "weather_dates": [
-            "Monday December 15, 2025",
             "Tuesday December 16, 2025",
             "Wednesday December 17, 2025",
             "Thursday December 18, 2025",
-            "Friday December 19, 2025"
+            "Friday December 19, 2025",
+            "Saturday December 20, 2025"
         ],
         "temperature_ranges": [
             [
+                "24\u00b0C",
+                "31\u00b0C"
+            ],
+            [
                 "25\u00b0C",
-                "31\u00b0C"
+                "32\u00b0C"
             ],
             [
                 "24\u00b0C",
-                "31\u00b0C"
+                "32\u00b0C"
             ],
             [
                 "24\u00b0C",
-                "30\u00b0C"
-            ],
-            [
-                "24\u00b0C",
-                "30\u00b0C"
+                "32\u00b0C"
             ],
             [
                 "25\u00b0C",
@@ -94,24 +94,16 @@
     },
     "Vigan (Cathedral & the Old Spanish Houses)": {
         "weather_dates": [
-            "Monday December 15, 2025",
             "Tuesday December 16, 2025",
             "Wednesday December 17, 2025",
             "Thursday December 18, 2025",
-            "Friday December 19, 2025"
+            "Friday December 19, 2025",
+            "Saturday December 20, 2025"
         ],
         "temperature_ranges": [
             [
                 "24\u00b0C",
-                "32\u00b0C"
-            ],
-            [
-                "25\u00b0C",
                 "31\u00b0C"
-            ],
-            [
-                "25\u00b0C",
-                "32\u00b0C"
             ],
             [
                 "24\u00b0C",
@@ -119,17 +111,25 @@
             ],
             [
                 "24\u00b0C",
+                "31\u00b0C"
+            ],
+            [
+                "24\u00b0C",
+                "32\u00b0C"
+            ],
+            [
+                "25\u00b0C",
                 "32\u00b0C"
             ]
         ]
     },
     "Cebu (Magellan`s Cross and Lapu - Lapu Shrine)": {
         "weather_dates": [
-            "Monday December 15, 2025",
             "Tuesday December 16, 2025",
             "Wednesday December 17, 2025",
             "Thursday December 18, 2025",
-            "Friday December 19, 2025"
+            "Friday December 19, 2025",
+            "Saturday December 20, 2025"
         ],
         "temperature_ranges": [
             [
@@ -137,16 +137,16 @@
                 "31\u00b0C"
             ],
             [
-                "27\u00b0C",
+                "26\u00b0C",
+                "31\u00b0C"
+            ],
+            [
+                "25\u00b0C",
                 "31\u00b0C"
             ],
             [
                 "26\u00b0C",
-                "30\u00b0C"
-            ],
-            [
-                "26\u00b0C",
-                "30\u00b0C"
+                "31\u00b0C"
             ],
             [
                 "26\u00b0C",
@@ -156,11 +156,11 @@
     },
     "Naga City (Malabsay Falls & The Our Lady of Penafrancia)": {
         "weather_dates": [
-            "Monday December 15, 2025",
             "Tuesday December 16, 2025",
             "Wednesday December 17, 2025",
             "Thursday December 18, 2025",
-            "Friday December 19, 2025"
+            "Friday December 19, 2025",
+            "Saturday December 20, 2025"
         ],
         "temperature_ranges": [
             [
@@ -172,57 +172,57 @@
                 "30\u00b0C"
             ],
             [
-                "23\u00b0C",
-                "30\u00b0C"
-            ],
-            [
-                "23\u00b0C",
-                "29\u00b0C"
+                "24\u00b0C",
+                "31\u00b0C"
             ],
             [
                 "24\u00b0C",
-                "29\u00b0C"
+                "31\u00b0C"
+            ],
+            [
+                "24\u00b0C",
+                "30\u00b0C"
             ]
         ]
     },
     "Baguio (Mines View Park, Philippine Military Academy, Etc.)": {
         "weather_dates": [
-            "Monday December 15, 2025",
             "Tuesday December 16, 2025",
             "Wednesday December 17, 2025",
             "Thursday December 18, 2025",
-            "Friday December 19, 2025"
+            "Friday December 19, 2025",
+            "Saturday December 20, 2025"
         ],
         "temperature_ranges": [
             [
                 "15\u00b0C",
-                "23\u00b0C"
-            ],
-            [
-                "16\u00b0C",
-                "23\u00b0C"
-            ],
-            [
-                "16\u00b0C",
-                "23\u00b0C"
-            ],
-            [
-                "16\u00b0C",
-                "23\u00b0C"
-            ],
-            [
-                "15\u00b0C",
                 "24\u00b0C"
+            ],
+            [
+                "16\u00b0C",
+                "24\u00b0C"
+            ],
+            [
+                "16\u00b0C",
+                "23\u00b0C"
+            ],
+            [
+                "17\u00b0C",
+                "24\u00b0C"
+            ],
+            [
+                "17\u00b0C",
+                "25\u00b0C"
             ]
         ]
     },
     "Davao (Mt. Apo)": {
         "weather_dates": [
-            "Monday December 15, 2025",
             "Tuesday December 16, 2025",
             "Wednesday December 17, 2025",
             "Thursday December 18, 2025",
-            "Friday December 19, 2025"
+            "Friday December 19, 2025",
+            "Saturday December 20, 2025"
         ],
         "temperature_ranges": [
             [
@@ -231,37 +231,37 @@
             ],
             [
                 "24\u00b0C",
-                "31\u00b0C"
+                "30\u00b0C"
             ],
             [
                 "25\u00b0C",
                 "31\u00b0C"
             ],
             [
-                "25\u00b0C",
+                "24\u00b0C",
                 "32\u00b0C"
             ],
             [
                 "24\u00b0C",
-                "31\u00b0C"
+                "32\u00b0C"
             ]
         ]
     },
     "Banaue (Rice Terraces, Sagada)": {
         "weather_dates": [
-            "Monday December 15, 2025",
             "Tuesday December 16, 2025",
             "Wednesday December 17, 2025",
             "Thursday December 18, 2025",
-            "Friday December 19, 2025"
+            "Friday December 19, 2025",
+            "Saturday December 20, 2025"
         ],
         "temperature_ranges": [
             [
                 "15\u00b0C",
-                "22\u00b0C"
+                "23\u00b0C"
             ],
             [
-                "15\u00b0C",
+                "16\u00b0C",
                 "23\u00b0C"
             ],
             [
@@ -269,66 +269,66 @@
                 "23\u00b0C"
             ],
             [
-                "15\u00b0C",
-                "22\u00b0C"
+                "16\u00b0C",
+                "23\u00b0C"
             ],
             [
-                "15\u00b0C",
-                "23\u00b0C"
+                "16\u00b0C",
+                "24\u00b0C"
             ]
         ]
     },
     "Taal (Taal Lake & Crater area)": {
         "weather_dates": [
-            "Monday December 15, 2025",
             "Tuesday December 16, 2025",
             "Wednesday December 17, 2025",
             "Thursday December 18, 2025",
-            "Friday December 19, 2025"
+            "Friday December 19, 2025",
+            "Saturday December 20, 2025"
         ],
         "temperature_ranges": [
             [
-                "24\u00b0C",
+                "22\u00b0C",
+                "28\u00b0C"
+            ],
+            [
+                "22\u00b0C",
+                "28\u00b0C"
+            ],
+            [
+                "21\u00b0C",
+                "28\u00b0C"
+            ],
+            [
+                "22\u00b0C",
                 "29\u00b0C"
             ],
             [
-                "24\u00b0C",
+                "22\u00b0C",
                 "29\u00b0C"
-            ],
-            [
-                "24\u00b0C",
-                "30\u00b0C"
-            ],
-            [
-                "24\u00b0C",
-                "30\u00b0C"
-            ],
-            [
-                "24\u00b0C",
-                "30\u00b0C"
             ]
         ]
     },
     "Bohol (The Chocolate Hills, Beach Resorts)": {
         "weather_dates": [
-            "Monday December 15, 2025",
             "Tuesday December 16, 2025",
             "Wednesday December 17, 2025",
             "Thursday December 18, 2025",
-            "Friday December 19, 2025"
+            "Friday December 19, 2025",
+            "Saturday December 20, 2025"
         ],
         "temperature_ranges": [
             [
-                "25\u00b0C",
+                "24\u00b0C",
                 "31\u00b0C"
             ],
             [
                 "26\u00b0C",
-                "31\u00b0C"
+                "32\u00b0C"
             ],
             [
-                "25\u00b0C",
-                "30\u00b0C"
+                "26\u00b0C",
+                "31\u00b0C"
             ],
             [
                 "25\u00b0C",
@@ -342,11 +342,11 @@
     },
     "El Nido (The Islands of God - Heaven on Earth)": {
         "weather_dates": [
-            "Monday December 15, 2025",
             "Tuesday December 16, 2025",
             "Wednesday December 17, 2025",
             "Thursday December 18, 2025",
-            "Friday December 19, 2025"
+            "Friday December 19, 2025",
+            "Saturday December 20, 2025"
         ],
         "temperature_ranges": [
             [
@@ -359,7 +359,7 @@
             ],
             [
                 "25\u00b0C",
-                "31\u00b0C"
+                "30\u00b0C"
             ],
             [
                 "25\u00b0C",
@@ -367,29 +367,21 @@
             ],
             [
                 "24\u00b0C",
-                "30\u00b0C"
+                "31\u00b0C"
             ]
         ]
     },
     "Camiguin (The Philippines Garden of Eden, Mt. Hibok - Hibok)": {
         "weather_dates": [
-            "Monday December 15, 2025",
             "Tuesday December 16, 2025",
             "Wednesday December 17, 2025",
             "Thursday December 18, 2025",
-            "Friday December 19, 2025"
+            "Friday December 19, 2025",
+            "Saturday December 20, 2025"
         ],
         "temperature_ranges": [
             [
                 "25\u00b0C",
-                "29\u00b0C"
-            ],
-            [
-                "25\u00b0C",
-                "30\u00b0C"
-            ],
-            [
-                "24\u00b0C",
                 "30\u00b0C"
             ],
             [
@@ -399,6 +391,14 @@
             [
                 "24\u00b0C",
                 "29\u00b0C"
+            ],
+            [
+                "25\u00b0C",
+                "30\u00b0C"
+            ],
+            [
+                "24\u00b0C",
+                "30\u00b0C"
             ]
         ]
     }
