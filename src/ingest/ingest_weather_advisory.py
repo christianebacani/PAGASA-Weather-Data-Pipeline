@@ -86,18 +86,18 @@ def ingest_weather_advisory_document_source(
     return weather_advisory
 
 def save_weather_advisory_document_source_to_raw_subdir(
-        weather_advisory: str
+        weather_advisory_document_source: str
 ) -> None:
     """
     Save the weather advisory document source to a JSON file
     in the `data/raw/weather_advisory/` subdirectory on the local machine.
 
-    :param weather_advisory: Weather advisory document source
-    :type weather_advisory: str
+    :param weather_advisory_document_source: Weather advisory document source
+    :type weather_advisory_document_source: str
     """
     # Create a dictionary to store the weather advisory
     data = {
-        "weather_advisory": weather_advisory
+        "weather_advisory": weather_advisory_document_source
     }
 
     # Save the dictionary to a json file using open() method and json module
