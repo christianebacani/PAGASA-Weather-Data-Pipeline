@@ -112,11 +112,11 @@ def save_issued_datetime_to_raw_subdir(
 
     json_file.close()
 
-def extract_synopsis(
+def ingest_synopsis(
         soup: BeautifulSoup | None
 ) -> str:
     """
-    Extract the synopsis of the daily weather forecast from the PAGASA-DOST website.
+    Ingest the synopsis of the daily weather forecast from the PAGASA-DOST website.
 
     :param soup: BeautifulSoup object for navigating the page, or None if extraction fails
     :type soup: BeautifulSoup | None
