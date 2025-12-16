@@ -12,7 +12,7 @@ subdirectory and convert them into structured DataFrame objects, including:
 - Forecast wind and coastal water conditions
 - Temperature and relative humidity
 
-Parsed DataFrames are staged as CSV files in the
+Parsed DataFrames are saved as CSV files in the
 `data/stage/daily_weather_forecast/` subdirectory
 on the local machine for further processing.
 """
