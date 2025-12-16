@@ -1,10 +1,10 @@
 {
     "place": [
         "Cagayan, Isabela, Quirino, Nueva Vizcaya, Aurora, and Quezon",
-        "Bicol Region, Caraga, Northern Samar, Eastern Samar, Samar, and Leyte",
-        "Apayao, Kalinga, Mountain Province, and Ifugao",
-        "Davao Region, Sarangani, Basilan, Sulu, and Tawi-Tawi",
-        "Metro Manila, Ilocos Region, the rest of Cordillera Administrative Region, the rest of Central Luzon, and Batanes",
+        "Bicol Region, Caraga, Northern Samar, Eastern Samar, and Southern Leyte",
+        "Batanes, Apayao, Kalinga, Mountain Province, and Ifugao",
+        "Zamboanga Peninsula, Davao Region, SOCCSKSARGEN, Basilan, and Tawi-Tawi",
+        "Metro Manila, Ilocos Region, the rest of Cordillera Administrative Region, and the rest of Central Luzon",
         "The rest of the country"
     ],
     "weather_condition": [
