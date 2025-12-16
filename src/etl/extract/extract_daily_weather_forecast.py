@@ -171,8 +171,8 @@ def parse_forecast_weather_conditions_to_dataframe(
         forecast_weather_conditions_filepath: str
 ) -> pd.DataFrame:
     """
-    Parse the forecast weather conditions of the daily weather forecast into a
-    DataFrame.
+    Parse the forecast weather conditions of the daily
+    weather forecast into a DataFrame.
 
     :param forecast_weather_conditions_filepath: Relative
         filepath of the JSON file that stores the forecast
@@ -183,10 +183,17 @@ def parse_forecast_weather_conditions_to_dataframe(
         of the daily weather forecast
     :rtype: DataFrame
     """
-    # Read the issued datetime JSON file as a DataFrame object
-    forecast_weather_conditions_dataframe = pd.read_json(
+    # Read the forecast weather conditions JSON file as a DataFrame object
+    forecast_weather_conditions_raw_dataframe = pd.read_json(
         forecast_weather_conditions_filepath
     )
+
+    forecast_weather_conditions_dataframe = pd.DataFrame({
+        'places': forecast_weather_conditions_raw_dataframe['place'],
+        'weather_conditions': forecast_weather_conditions_raw_dataframe['weather_condition'],
+        'causes_by': forecast_weather_conditions_raw_dataframe['caused_by'],
+        'impacts': forecast_weather_conditions_raw_dataframe['impacts']
+    })
 
     return forecast_weather_conditions_dataframe
 
