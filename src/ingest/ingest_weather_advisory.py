@@ -4,7 +4,7 @@ Ingest weather advisory data from the PAGASA-DOST website.
 This module provides functions to ingest key information from the
 weather advisory page, including:
 
-- Weather advisory source URL or content
+- Weather advisory document source
 
 All extracted data is saved as a JSON file in the
 `data/raw/weather_advisory/` subdirectory on the local machine.
@@ -48,16 +48,16 @@ def ingest_beautiful_soup_object(
     soup = BeautifulSoup(response.text, 'html.parser')
     return soup
 
-def ingest_weather_advisory_source_url_or_content(
+def ingest_weather_advisory_document_source(
         soup: BeautifulSoup | None
 ) -> str:
     """
-    Ingest the weather advisory source URL or content from the PAGASA-DOST website.
+    Ingest the weather advisory document source from the PAGASA-DOST website.
 
     :param soup: BeautifulSoup object for navigating the page, or None if extraction fails
     :type soup: BeautifulSoup | None
 
-    :return: Weather advisory source URL or content
+    :return: Weather advisory document source
     :rtype: str
     """
     weather_advisory = ''
@@ -85,14 +85,14 @@ def ingest_weather_advisory_source_url_or_content(
 
     return weather_advisory
 
-def save_weather_advisory_to_raw_subdir(
+def save_weather_advisory_document_source_to_raw_subdir(
         weather_advisory: str
 ) -> None:
     """
-    Save the weather advisory source URL or content to a JSON file
+    Save the weather advisory document source to a JSON file
     in the `data/raw/weather_advisory/` subdirectory on the local machine.
 
-    :param weather_advisory: Weather advisory source URL or content
+    :param weather_advisory: Weather advisory document source
     :type weather_advisory: str
     """
     # Create a dictionary to store the weather advisory
