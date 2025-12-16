@@ -183,3 +183,7 @@ def transform_forecast_weather_conditions_dataframe(
         weather conditions of the daily weather forecast
     :rtype: DataFrame
     """
+    # TODO
+    # - Convert to_processed functions to to_procesed_subdir functions
+    # - Check what should be added in the return description of the docstring for the
+    #   function `transform_forecast_weather_conditions_dataframe`
