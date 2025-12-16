@@ -38,6 +38,6 @@ def transform_daily_weather_forecast(
     )
 
     synopsis_dataframe_with_issued_datetime_dataframe = enrich_synopsis_dataframe_with_issued_datetime(
-        transformed_issued_datetime_dataframe,
         transformed_synopsis_dataframe,
+        transformed_issued_datetime_dataframe
     )
