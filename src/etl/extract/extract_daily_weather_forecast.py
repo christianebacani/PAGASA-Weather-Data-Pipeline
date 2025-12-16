@@ -89,7 +89,7 @@ def parse_synopsis_to_dataframe(
     synopsis_raw_dataframe = pd.read_json(synopsis_filepath, typ='series')
     # Parse the Pandas Series as a DataFrame object
     synopsis_dataframe = pd.DataFrame({
-        'synopsis': [
+        'synopses': [
             synopsis_raw_dataframe['synopsis']
         ]
     })
@@ -130,13 +130,13 @@ def parse_tc_information_to_dataframe(
     tc_information_raw_dataframe = pd.read_json(tc_information_filepath, typ='series')
     # Parse the Pandas Series as a DataFrame object
     tc_information_dataframe = pd.DataFrame({
-        'current_update': [
+        'current_updates': [
             tc_information_raw_dataframe['current_update']
         ],
-        'tropical_cyclone_name': [
+        'tropical_cyclone_names': [
             tc_information_raw_dataframe['tropical_cyclone_name']
         ],
-        'location': [
+        'locations': [
             tc_information_raw_dataframe['location']
         ],
         'maximum_sustained_winds': [
@@ -145,7 +145,7 @@ def parse_tc_information_to_dataframe(
         'gustiness': [
             tc_information_raw_dataframe['gustiness']
         ],
-        'movement': [
+        'movements': [
             tc_information_raw_dataframe['movement']
         ]
     })
