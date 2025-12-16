@@ -21,6 +21,6 @@ def extract_weather_advisory(
     # Run all functions to extract weather advisory data
     create_subdir()
 
-    parse_weather_advisory_to_dataframe(
+    weather_advisory_dataframe = parse_weather_advisory_to_dataframe(
         'data/raw/weather_advisory/weather_advisory.json'
     )
