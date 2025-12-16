@@ -109,7 +109,7 @@ def save_issued_datetime_to_json(
         'w'
     ) as json_file:
         json.dump(data, json_file, indent=4)
-    
+
     json_file.close()
 
 def extract_synopsis(
