@@ -148,3 +148,15 @@ def enrich_synopsis_dataframe_with_issued_datetime(
     })
 
     return synopsis_with_issued_datetime_dataframe
+
+def save_synopsis_with_issued_datetime_to_processed(
+        synopsis_with_issued_datetime_dataframe: pd.DataFrame
+) -> pd.DataFrame:
+    """
+    Docstring for save_synopsis_with_issued_datetime_to_processed
+    
+    :param synopsis_with_issued_datetime_dataframe: Description
+    :type synopsis_with_issued_datetime_dataframe: pd.DataFrame
+    :return: Description
+    :rtype: DataFrame
+    """
