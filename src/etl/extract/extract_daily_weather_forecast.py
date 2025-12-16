@@ -1,5 +1,5 @@
 """
-Extract and stage daily weather forecast from the `data/raw/daily_weather_forecast`
+Extract daily weather forecast from the `data/raw/daily_weather_forecast`
 subdirectory on the local machine.
 
 This module provides functions to parse JSON files from the `data/raw/daily_weather_forecast`
