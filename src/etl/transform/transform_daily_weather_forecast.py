@@ -188,3 +188,8 @@ def transform_forecast_weather_conditions_dataframe(
     transformed_dataframe = pd.DataFrame(columns=columns)
 
     # Loop through the synopsis DataFrame object to transform its data
+    for _, row in forecast_weather_conditions_dataframe.iterrows():
+        places = row['places']
+        weather_conditions = row['weather_conditions']
+        causes_by = row['causes_by']
+        impacts = row['impacts']
