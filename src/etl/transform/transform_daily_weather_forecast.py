@@ -59,14 +59,14 @@ def transform_issued_datetime_dataframe(
 
     # Loop through the issued datetime DataFrame object to transform its data
     for _, row in issued_datetime_dataframe.iterrows():
-        issued_datetime = row['issued_datetime']
+        issued_datetime = row['issued_datetimes']
         issued_datetime = str(issued_datetime).strip()
 
         # Concatenate the transformed data to the initialized DataFrame
         transformed_dataframe = pd.concat([
             transformed_dataframe,
             pd.DataFrame({
-                'issued_datetime': [
+                'issued_datetimes': [
                     issued_datetime
                 ]
             })
