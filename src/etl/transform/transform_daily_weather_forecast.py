@@ -53,7 +53,7 @@ def transform_issued_datetime_dataframe(
         the daily weather forecast
     :rtype: DataFrame
     """
-    # Using initialized DataFrame to store transformed data from the issued datatetime DataFrame object
+    # Using initialized DataFrame to store transformed data from the issued datetime DataFrame object
     columns = list(issued_datetime_dataframe.keys())
     transformed_dataframe = pd.DataFrame(columns=columns)
 
@@ -92,7 +92,7 @@ def transform_synopsis_dataframe(
         daily weather forecast
     :rtype: DataFrame
     """
-    # Using initialized DataFrame to store transformed data from the issued datatetime DataFrame object
+    # Using initialized DataFrame to store transformed data from the issued datetime DataFrame object
     columns = list(synopsis_dataframe.keys())
     transformed_dataframe = pd.DataFrame(columns=columns)
 
