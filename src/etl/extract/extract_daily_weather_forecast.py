@@ -189,7 +189,7 @@ def parse_forecast_weather_conditions_to_dataframe(
     )
 
     # Rename the columns of the DataFrame object
-    forecast_weather_conditions_dataframe.rename({
+    forecast_weather_conditions_dataframe.rename(columns={
         'place': 'places',
         'weather_condition': 'weather_conditions',
         'caused_by': 'causes_by'
