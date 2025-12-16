@@ -1,7 +1,7 @@
 """
 Ingest tropical cyclone advisory data from the PAGASA-DOST website.
 
-This module provides functions to extract key information from the
+This module provides functions to ingest key information from the
 tropical cyclone advisory page, including:
 
 - TBD
@@ -26,11 +26,11 @@ def create_subdir(
     if not os.path.exists('data/raw/tropical_cyclone_advisory'):
         os.makedirs('data/raw/tropical_cyclone_advisory')
 
-def extract_beautiful_soup_object(
+def ingest_beautiful_soup_object(
         url: str
 ) -> BeautifulSoup | None:
     """
-    Extract the BeautifulSoup object from the tropical cyclone advisory page.
+    Ingest the BeautifulSoup object from the tropical cyclone advisory page.
 
     :param url: URL of the PAGASA-DOST tropical cyclone advisory page.
     :type url: str
