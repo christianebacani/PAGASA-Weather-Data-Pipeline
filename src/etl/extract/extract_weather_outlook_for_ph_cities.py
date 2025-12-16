@@ -48,6 +48,7 @@ def parse_issued_datetime_to_dataframe(
     """
     # Read the issued datetime JSON file as a Pandas Series
     issued_datetime_raw_dataframe = pd.read_json(issued_datetime_filepath, typ='series')
+
     # Parse the Pandas Series as a DataFrame object
     issued_datetime_dataframe = pd.DataFrame({
         'issued_datetimes': [
@@ -89,6 +90,7 @@ def parse_valid_period_to_dataframe(
     """
     # Read the valid period JSON file as a Pandas Series
     valid_period_raw_dataframe = pd.read_json(valid_period_filepath, typ='series')
+
     # Parse the Pandas Series as a DataFrame object
     valid_period_dataframe = pd.DataFrame({
         'valid_periods': [
