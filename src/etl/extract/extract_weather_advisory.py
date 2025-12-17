@@ -51,3 +51,13 @@ def parse_weather_advisory_to_dataframe(
     })
 
     return weather_advisory_dataframe
+
+def save_weather_advisory_dataframe_to_stage_subdir(
+        weather_advisory_dataframe: pd.DataFrame
+) -> None:
+    """
+    Docstring for save_weather_advisory_dataframe_to_stage_subdir
+    
+    :param weather_advisory_dataframe: Description
+    :type weather_advisory_dataframe: pd.DataFrame
+    """
