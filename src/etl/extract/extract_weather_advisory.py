@@ -61,6 +61,6 @@ def save_weather_advisory_dataframe_to_stage_subdir(
     :param weather_advisory_dataframe: DataFrame containing the weather advisory
     :type weather_advisory_dataframe: pd.DataFrame
     """
-    # Save the issued datetime DataFrame object to the target filepath
-    target_filepath = 'data/stage/weather_outlook_for_ph_tourist_areas/issued_datetime.csv'
-    issued_datetime_dataframe.to_csv(target_filepath, index=False)
+    # Save the weather advisory DataFrame object to the target filepath
+    target_filepath = 'data/stage/weather_advisory/weather_advisory.csv'
+    weather_advisory_dataframe.to_csv(target_filepath, index=False)
