@@ -113,7 +113,7 @@ def transform_synopsis_dataframe(
 
     return transformed_dataframe
 
-def enrich_synopsis_dataframe_with_issued_datetime(
+def enrich_synopsis_with_issued_datetime(
         synopsis_dataframe: pd.DataFrame,
         issued_datetime_dataframe: pd.DataFrame
 ) -> pd.DataFrame:
@@ -220,7 +220,7 @@ def transform_forecast_weather_conditions_dataframe(
 
     return transformed_dataframe
 
-def enrich_forecast_weather_conditions_dataframe_with_issued_datetime(
+def enrich_forecast_weather_conditions_with_issued_datetime(
         forecast_weather_conditions_dataframe: pd.DataFrame,
         issued_datetime_dataframe: pd.DataFrame
 ) -> pd.DataFrame:
