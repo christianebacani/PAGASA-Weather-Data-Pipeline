@@ -9,10 +9,10 @@ import pandas as pd
 from etl.transform.transform_daily_weather_forecast import create_subdir
 from etl.transform.transform_daily_weather_forecast import transform_issued_datetime_dataframe
 from etl.transform.transform_daily_weather_forecast import transform_synopsis_dataframe
-from etl.transform.transform_daily_weather_forecast import enrich_synopsis_dataframe_with_issued_datetime
+from etl.transform.transform_daily_weather_forecast import enrich_synopsis_with_issued_datetime
 from etl.transform.transform_daily_weather_forecast import save_synopsis_with_issued_datetime_to_processed_subdir
 from etl.transform.transform_daily_weather_forecast import transform_forecast_weather_conditions_dataframe
-from etl.transform.transform_daily_weather_forecast import enrich_forecast_weather_conditions_dataframe_with_issued_datetime
+from etl.transform.transform_daily_weather_forecast import enrich_forecast_weather_conditions_with_issued_datetime
 
 def transform_daily_weather_forecast(
 ) -> None:
@@ -40,12 +40,12 @@ def transform_daily_weather_forecast(
         synopsis_dataframe
     )
 
-    synopsis_dataframe_with_issued_datetime_dataframe = enrich_synopsis_dataframe_with_issued_datetime(
+    synopsis_with_issued_datetime_dataframe = enrich_synopsis_with_issued_datetime(
         transformed_synopsis_dataframe,
         transformed_issued_datetime_dataframe
     )
     save_synopsis_with_issued_datetime_to_processed_subdir(
-        synopsis_dataframe_with_issued_datetime_dataframe
+        synopsis_with_issued_datetime_dataframe        
     )
 
     forecast_weather_conditions_filepath = 'data/stage/daily_weather_forecast/forecast_weather_conditions.csv'
@@ -54,7 +54,7 @@ def transform_daily_weather_forecast(
         forecast_weather_conditions_dataframe
     )
 
-    forecast_weather_conditions_with_issued_datetime_dataframe = enrich_forecast_weather_conditions_dataframe_with_issued_datetime(
+    forecast_weather_conditions_with_issued_datetime = enrich_forecast_weather_conditions_with_issued_datetime(
         transformed_forecast_weather_conditions_dataframe,
         transformed_issued_datetime_dataframe
     )
