@@ -260,7 +260,7 @@ def enrich_forecast_weather_conditions_dataframe_with_issued_datetime(
         weather_conditions = row['weather_conditions']
         causes_by = row['causes_by']
         impacts = row['impacts']
-        issued_datetime = issued_datetime['issued_datetime'][0]
+        issued_datetime = issued_datetime_dataframe['issued_datetime'][0]
 
         forecast_weather_conditions_with_issued_datetime_dataframe = pd.concat([
             forecast_weather_conditions_with_issued_datetime_dataframe,
