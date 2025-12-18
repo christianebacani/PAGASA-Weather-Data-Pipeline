@@ -154,7 +154,7 @@ def save_synopsis_with_issued_datetime_to_processed_subdir(
 ) -> None:
     """
     Save the synopsis with issued datetime DataFrame object to
-    a a CSV file in the `data/processed/daily_weather_forecast`
+    a CSV file in the `data/processed/daily_weather_forecast`
     subdirectory on the local machine.
 
     :param synopsis_with_issued_datetime_dataframe: Transformed
@@ -292,8 +292,15 @@ def save_forecast_weather_conditions_with_issued_datetime_to_processed_subdir(
         forecast_weather_conditions_with_issued_datetime_dataframe: pd.DataFrame
 ) -> None:
     """
-    Docstring for save_forecast_weather_conditions_with_issued_datetime_to_processed_subdir
-    
-    :param forecast_weather_conditions_with_issued_datetime_dataframe: Description
+    Save the forecast weather conditions with issued datetime DataFrame object
+    to a CSV file in the `data/processed/daily_weather_forecast` subdirectory on
+    the local machine.
+
+    :param forecast_weather_conditions_with_issued_datetime_dataframe: Transformed
+        DataFrame containing the forecast weather conditions and issued datetime of
+        the daily weather forecast
     :type forecast_weather_conditions_with_issued_datetime_dataframe: pd.DataFrame
     """
+    # Store the forecast weather conditions with issued DataFrame object to the target filepath
+    target_filepath = 'data/processed/daily_weather_forecast/forecast_weather_conditions.csv'
+    forecast_weather_conditions_with_issued_datetime_dataframe.to_csv(target_filepath, index=False)
