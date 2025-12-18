@@ -14,6 +14,7 @@ from etl.transform.transform_daily_weather_forecast import save_synopsis_with_is
 from etl.transform.transform_daily_weather_forecast import transform_forecast_weather_conditions_dataframe
 from etl.transform.transform_daily_weather_forecast import enrich_forecast_weather_conditions_with_issued_datetime
 from etl.transform.transform_daily_weather_forecast import save_forecast_weather_conditions_with_issued_datetime_to_processed_subdir
+from etl.transform.transform_daily_weather_forecast import transform_forecast_wind_and_coastal_water_conditions_dataframe
 
 def transform_daily_weather_forecast(
 ) -> None:
@@ -61,4 +62,10 @@ def transform_daily_weather_forecast(
     )
     save_forecast_weather_conditions_with_issued_datetime_to_processed_subdir(
         forecast_weather_conditions_with_issued_datetime_dataframe
+    )
+
+    forecast_wind_and_coastal_water_conditions_filepath = 'data/stage/daily_weather_forecast/forecast_wind_and_coastal_water_conditions.csv'    
+    forecast_wind_and_coastal_water_conditions_dataframe = pd.read_csv(forecast_wind_and_coastal_water_conditions_filepath)
+    transform_forecast_wind_and_coastal_water_conditions_dataframe(
+        forecast_wind_and_coastal_water_conditions_dataframe
     )
