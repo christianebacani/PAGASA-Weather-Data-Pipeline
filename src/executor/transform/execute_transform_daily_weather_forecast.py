@@ -31,13 +31,17 @@ def transform_daily_weather_forecast(
     create_subdir()
 
     issued_datetime_filepath = 'data/stage/daily_weather_forecast/issued_datetime.csv'
-    issued_datetime_dataframe = pd.read_csv(issued_datetime_filepath)
+    issued_datetime_dataframe = pd.read_csv(
+        issued_datetime_filepath
+    )
     transformed_issued_datetime_dataframe = transform_issued_datetime_dataframe(
         issued_datetime_dataframe
     )
 
     synopsis_filepath = 'data/stage/daily_weather_forecast/synopsis.csv'
-    synopsis_dataframe = pd.read_csv(synopsis_filepath)
+    synopsis_dataframe = pd.read_csv(
+        synopsis_filepath
+    )
     transformed_synopsis_dataframe = transform_synopsis_dataframe(
         synopsis_dataframe
     )
@@ -51,7 +55,9 @@ def transform_daily_weather_forecast(
     )
 
     forecast_weather_conditions_filepath = 'data/stage/daily_weather_forecast/forecast_weather_conditions.csv'
-    forecast_weather_conditions_dataframe = pd.read_csv(forecast_weather_conditions_filepath)
+    forecast_weather_conditions_dataframe = pd.read_csv(
+        forecast_weather_conditions_filepath
+    )
     transformed_forecast_weather_conditions_dataframe = transform_forecast_weather_conditions_dataframe(
         forecast_weather_conditions_dataframe
     )
@@ -65,7 +71,9 @@ def transform_daily_weather_forecast(
     )
 
     forecast_wind_and_coastal_water_conditions_filepath = 'data/stage/daily_weather_forecast/forecast_wind_and_coastal_water_conditions.csv'    
-    forecast_wind_and_coastal_water_conditions_dataframe = pd.read_csv(forecast_wind_and_coastal_water_conditions_filepath)
-    transform_forecast_wind_and_coastal_water_conditions_dataframe(
+    forecast_wind_and_coastal_water_conditions_dataframe = pd.read_csv(
+        forecast_wind_and_coastal_water_conditions_filepath
+    )
+    transformed_forecast_wind_and_coastal_water_conditions_dataframe = transform_forecast_wind_and_coastal_water_conditions_dataframe(
         forecast_wind_and_coastal_water_conditions_dataframe
     )
