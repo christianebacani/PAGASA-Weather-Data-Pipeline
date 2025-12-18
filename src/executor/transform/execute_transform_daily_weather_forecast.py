@@ -54,7 +54,8 @@ def transform_daily_weather_forecast(
         forecast_weather_conditions_dataframe
     )
 
-    forecast_weather_conditions_with_issued_datetime = enrich_forecast_weather_conditions_with_issued_datetime(
+    forecast_weather_conditions_with_issued_datetime_dataframe = enrich_forecast_weather_conditions_with_issued_datetime(
         transformed_forecast_weather_conditions_dataframe,
         transformed_issued_datetime_dataframe
     )
+    print(forecast_weather_conditions_with_issued_datetime)
