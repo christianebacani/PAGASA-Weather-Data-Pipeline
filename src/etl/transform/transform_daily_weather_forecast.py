@@ -304,3 +304,15 @@ def save_forecast_weather_conditions_with_issued_datetime_to_processed_subdir(
     # Store the forecast weather conditions with issued DataFrame object to the target filepath
     target_filepath = 'data/processed/daily_weather_forecast/forecast_weather_conditions.csv'
     forecast_weather_conditions_with_issued_datetime_dataframe.to_csv(target_filepath, index=False)
+
+def transform_forecast_wind_and_coastal_water_conditions_dataframe(
+        forecast_wind_and_coastal_water_conditions_dataframe: pd.DataFrame
+) -> pd.DataFrame:
+    """
+    Docstring for transform_forecast_wind_and_coastal_water_conditions_dataframe
+    
+    :param forecast_wind_and_coastal_water_conditions_dataframe: Description
+    :type forecast_wind_and_coastal_water_conditions_dataframe: pd.DataFrame
+    :return: Description
+    :rtype: DataFrame
+    """
