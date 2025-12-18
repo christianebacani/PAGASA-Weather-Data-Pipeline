@@ -309,10 +309,16 @@ def transform_forecast_wind_and_coastal_water_conditions_dataframe(
         forecast_wind_and_coastal_water_conditions_dataframe: pd.DataFrame
 ) -> pd.DataFrame:
     """
-    Docstring for transform_forecast_wind_and_coastal_water_conditions_dataframe
-    
-    :param forecast_wind_and_coastal_water_conditions_dataframe: Description
+    Transform the forecast wind and coastal water conditions DataFrame object
+    located in the `data/stage/daily_weather_forecast` subdirectory on the
+    local machine.
+
+    :param forecast_wind_and_coastal_water_conditions_dataframe: DataFrame
+        containing the forecast wind and coastal water conditions of the daily
+        weather forecast
     :type forecast_wind_and_coastal_water_conditions_dataframe: pd.DataFrame
-    :return: Description
+
+    :return: Transformed DataFrame containing the cleaned forecast wind and
+        coastal water conditions of the daily weather forecast
     :rtype: DataFrame
     """
