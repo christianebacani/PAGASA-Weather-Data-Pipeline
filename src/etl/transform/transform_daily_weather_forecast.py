@@ -329,3 +329,32 @@ def transform_forecast_wind_and_coastal_water_conditions_dataframe(
     # Loop through the forecast wind and coastal water conditions DataFrame object to transform its data
     for _, row in forecast_wind_and_coastal_water_conditions_dataframe.iterrows():
         places = row['places']
+        speeds = row['speeds']
+        directions = row['directions']
+        coastal_waters = row['coastal_waters']
+
+        places = str(places).strip()
+        speeds = str(speeds).strip()
+        directions = str(directions).strip()
+        coastal_waters = str(coastal_waters).strip()
+
+        # Concatenate the transformed data to the initialized DataFrame
+        transformed_dataframe = pd.concat([
+            transformed_dataframe,
+            pd.DataFrame({
+                'places': [
+                    places
+                ],
+                'speeds': [
+                    speeds
+                ],
+                'directions': [
+                    directions
+                ],
+                'coastal_waters': [
+                    coastal_waters
+                ]
+            })
+        ], ignore_index=True)
+
+    return transformed_dataframe
