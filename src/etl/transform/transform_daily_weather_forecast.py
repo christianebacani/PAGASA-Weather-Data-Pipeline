@@ -245,3 +245,42 @@ def enrich_forecast_weather_conditions_dataframe_with_issued_datetime(
         daily weather forecast
     :rtype: DataFrame
     """
+    forecast_weather_conditions_with_issued_datetime_dataframe = pd.DataFrame(
+        columns=[
+            'places',
+            'weather_conditions',
+            'causes_by',
+            'impacts',
+            'issued_datetime'
+        ]
+    )
+
+    for _, row in forecast_weather_conditions_dataframe.iterrows():
+        places = row['places']
+        weather_conditions = row['weather_conditions']
+        causes_by = row['causes_by']
+        impacts = row['impacts']
+        issued_datetime = issued_datetime['issued_datetime'][0]
+
+        forecast_weather_conditions_with_issued_datetime_dataframe = pd.concat([
+            forecast_weather_conditions_with_issued_datetime_dataframe,
+            pd.DataFrame({
+                'places': [
+                    places
+                ],
+                'weather_conditions': [
+                    weather_conditions
+                ],
+                'causes_by': [
+                    causes_by
+                ],
+                'impacts': [
+                    impacts
+                ],
+                'issued_datetime': [
+                    issued_datetime
+                ]
+            })
+        ], ignore_index=True)
+
+    return forecast_weather_conditions_with_issued_datetime_dataframe
