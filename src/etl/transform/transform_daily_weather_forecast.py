@@ -322,3 +322,10 @@ def transform_forecast_wind_and_coastal_water_conditions_dataframe(
         coastal water conditions of the daily weather forecast
     :rtype: DataFrame
     """
+    # Initialized DataFrame to store transformed data
+    columns = list(forecast_wind_and_coastal_water_conditions_dataframe.keys())
+    transformed_dataframe = pd.DataFrame(columns=columns)
+
+    # Loop through the forecast wind and coastal water conditions DataFrame object to transform its data
+    for _, row in forecast_wind_and_coastal_water_conditions_dataframe.iterrows():
+        places = row['places']
