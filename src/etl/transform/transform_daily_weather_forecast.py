@@ -287,3 +287,13 @@ def enrich_forecast_weather_conditions_with_issued_datetime(
         ], ignore_index=True)
 
     return forecast_weather_conditions_with_issued_datetime_dataframe
+
+def save_forecast_weather_conditions_with_issued_datetime_to_processed_subdir(
+        forecast_weather_conditions_with_issued_datetime_dataframe: pd.DataFrame
+) -> None:
+    """
+    Docstring for save_forecast_weather_conditions_with_issued_datetime_to_processed_subdir
+    
+    :param forecast_weather_conditions_with_issued_datetime_dataframe: Description
+    :type forecast_weather_conditions_with_issued_datetime_dataframe: pd.DataFrame
+    """
