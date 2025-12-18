@@ -245,7 +245,7 @@ def enrich_forecast_weather_conditions_with_issued_datetime(
         daily weather forecast
     :rtype: DataFrame
     """
-    # Using initialized DataFrame to store forecast weather conditions data with issued datetime
+    # Using initialized DataFrame to store transformed data
     forecast_weather_conditions_with_issued_datetime_dataframe = pd.DataFrame(
         columns=[
             'places',
