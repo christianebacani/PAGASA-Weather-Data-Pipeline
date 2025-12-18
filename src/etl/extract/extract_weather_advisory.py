@@ -56,8 +56,11 @@ def save_weather_advisory_dataframe_to_stage_subdir(
         weather_advisory_dataframe: pd.DataFrame
 ) -> None:
     """
-    Docstring for save_weather_advisory_dataframe_to_stage_subdir
+    Save the weather advisory DataFrame to the staging directory for further processing.
 
-    :param weather_advisory_dataframe: Description
+    :param weather_advisory_dataframe: DataFrame containing the weather advisory
     :type weather_advisory_dataframe: pd.DataFrame
     """
+    # Save the issued datetime DataFrame object to the target filepath
+    target_filepath = 'data/stage/weather_outlook_for_ph_tourist_areas/issued_datetime.csv'
+    issued_datetime_dataframe.to_csv(target_filepath, index=False)
