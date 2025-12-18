@@ -58,4 +58,3 @@ def transform_daily_weather_forecast(
         transformed_forecast_weather_conditions_dataframe,
         transformed_issued_datetime_dataframe
     )
-    print(forecast_weather_conditions_with_issued_datetime)
