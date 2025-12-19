@@ -113,23 +113,23 @@ def transform_synopsis_df(
     return transformed_df
 
 def enrich_synopsis_with_issued_datetime(
-        synopsis_dataframe: pd.DataFrame,
-        issued_datetime_dataframe: pd.DataFrame
+        synopsis_df: pd.DataFrame,
+        issued_datetime_df: pd.DataFrame
 ) -> pd.DataFrame:
     """
     Enrich synopsis DataFrame object with issued datetime
     to produce an analysis-ready dataset for downstream
     processing and consumption.
 
-    :param synopsis_dataframe: Transformed DataFrame
+    :param synopsis_df: Transformed DataFrame
         containing the cleaned synopsis of the daily
         weather forecast
-    :type synopsis_dataframe: pd.DataFrame
+    :type synopsis_df: pd.DataFrame
 
-    :param issued_datetime_dataframe: Transformed
+    :param issued_datetime_df: Transformed
         DataFrame containing the cleaned issued
         datetime of the daily weather forecast
-    :type issued_datetime_dataframe: pd.DataFrame
+    :type issued_datetime_df: pd.DataFrame
 
     :return: Transformed DataFrame containing the
         synopsis with issued datetime of the daily
@@ -139,10 +139,10 @@ def enrich_synopsis_with_issued_datetime(
     # Using initialized DataFrame to store enrich synopsis data with issued datetime
     synopsis_with_issued_datetime_df = pd.DataFrame({
         'synopses': [
-            synopsis_dataframe['synopses'][0]
+            synopsis_df['synopses'][0]
         ],
         'issued_datetimes': [
-            issued_datetime_dataframe['issued_datetimes'][0]
+            issued_datetime_df['issued_datetimes'][0]
         ]
     })
 
