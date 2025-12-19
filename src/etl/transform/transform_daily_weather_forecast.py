@@ -167,16 +167,16 @@ def save_synopsis_with_issued_datetime_to_processed_subdir(
     synopsis_with_issued_datetime_df.to_csv(target_filepath, index=False)
 
 def transform_tc_information_dataframe(
-        tc_information_dataframe: pd.DataFrame
+        tc_information_df: pd.DataFrame
 ) -> pd.DataFrame:
     """
     Transform the tropical cyclone information DataFrame
     object located in the `data/stage/daily_weather_forecast`
     subdirectory on the local machine.
 
-    :param tc_information_dataframe: DataFrame containing the
+    :param tc_information_df: DataFrame containing the
         tropical cyclone information of the daily weather forecast
-    :type tc_information_dataframe: pd.DataFrame
+    :type tc_information_df: pd.DataFrame
 
     :return: Transformed DataFrame containing the cleaned and standardized
         tropical cyclone information of the daily weather forecast
