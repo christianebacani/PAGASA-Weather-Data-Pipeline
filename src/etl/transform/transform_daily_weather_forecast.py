@@ -398,3 +398,13 @@ def enrich_forecast_wind_and_coastal_water_conditions_with_issued_datetime(
         conditions with issued datetime of the daily weather forecast
     :rtype: DataFrame
     """
+    # Using initialized DataFrame to store transformed data
+    forecast_wind_and_coastal_water_conditions_with_issued_datetime_dataframe = pd.DataFrame(
+        columns=[
+            'places',
+            'speeds',
+            'directions',
+            'coastal_waters',
+            'issued_datetimes'
+        ]
+    )
