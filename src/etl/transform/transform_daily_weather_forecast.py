@@ -238,23 +238,23 @@ def transform_forecast_weather_conditions_df(
 
 def enrich_forecast_weather_conditions_with_issued_datetime(
         forecast_weather_conditions_df: pd.DataFrame,
-        issued_datetime_dataframe: pd.DataFrame
+        issued_datetime_df: pd.DataFrame
 ) -> pd.DataFrame:
     """
     Enrich forecast weather conditions DataFrame object 
     with issued datetime to produce an analysis-ready
     dataset for downstream processing and consumption.
 
-    :param forecast_weather_conditions_dataframe:
+    :param forecast_weather_conditions_df:
         Transformed DataFrame containing the cleaned
         forecast weather conditions of the daily weather
         forecast
-    :type forecast_weather_conditions_dataframe: pd.DataFrame
+    :type forecast_weather_conditions_df: pd.DataFrame
 
-    :param issued_datetime_dataframe: Transformed DataFrame
+    :param issued_datetime_df: Transformed DataFrame
         containing the cleaned issued datetime of the daily
         weather forecast
-    :type issued_datetime_dataframe: pd.DataFrame
+    :type issued_datetime_df: pd.DataFrame
 
     :return: Transformed DataFrame containing the forecast
         weather conditions with issued datetime of the
@@ -262,7 +262,7 @@ def enrich_forecast_weather_conditions_with_issued_datetime(
     :rtype: DataFrame
     """
     # Using initialized DataFrame to store transformed data
-    forecast_weather_conditions_with_issued_datetime_dataframe = pd.DataFrame(
+    forecast_weather_conditions_with_issued_datetime_df = pd.DataFrame(
         columns=[
             'places',
             'weather_conditions',
@@ -273,16 +273,16 @@ def enrich_forecast_weather_conditions_with_issued_datetime(
     )
 
     # Loop through the forecast weather conditions DataFrame object to map its value to the initialize DataFrame
-    for _, row in forecast_weather_conditions_dataframe.iterrows():
+    for _, row in forecast_weather_conditions_df.iterrows():
         places = row['places']
         weather_conditions = row['weather_conditions']
         causes_by = row['causes_by']
         impacts = row['impacts']
-        issued_datetime = issued_datetime_dataframe['issued_datetimes'][0]
+        issued_datetime = issued_datetime_df['issued_datetimes'][0]
 
         # Concatenate the forecast weather conditions data to the initialized DataFrame
-        forecast_weather_conditions_with_issued_datetime_dataframe = pd.concat([
-            forecast_weather_conditions_with_issued_datetime_dataframe,
+        forecast_weather_conditions_with_issued_datetime_df = pd.concat([
+            forecast_weather_conditions_with_issued_datetime_df,
             pd.DataFrame({
                 'places': [
                     places
@@ -301,8 +301,8 @@ def enrich_forecast_weather_conditions_with_issued_datetime(
                 ]
             })
         ], ignore_index=True)
-
-    return forecast_weather_conditions_with_issued_datetime_dataframe
+    
+    return forecast_weather_conditions_with_issued_datetime_df
 
 def save_forecast_weather_conditions_with_issued_datetime_to_processed_subdir(
         forecast_weather_conditions_with_issued_datetime_dataframe: pd.DataFrame
