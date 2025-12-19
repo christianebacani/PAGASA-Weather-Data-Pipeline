@@ -35,18 +35,18 @@ def create_subdir(
     if not os.path.exists('data/processed/daily_weather_forecast'):
         os.makedirs('data/processed/daily_weather_forecast')
 
-def transform_issued_datetime_dataframe(
-        issued_datetime_dataframe: pd.DataFrame
+def transform_issued_datetime_df(
+        issued_datetime_df: pd.DataFrame
 ) -> pd.DataFrame:
     """
     Transform the issued datetime DataFrame object
     located in the `data/stage/daily_weather_forecast`
     subdirectory on the local machine.
 
-    :param issued_datetime_dataframe: DataFrame
+    :param issued_datetime_df: DataFrame
         containing the issued datetime of the daily
         weather forecast
-    :type issued_datetime_dataframe: pd.DataFrame
+    :type issued_datetime_df: pd.DataFrame
 
     :return: Transformed DataFrame containing the
         cleaned issued datetime of
@@ -54,25 +54,25 @@ def transform_issued_datetime_dataframe(
     :rtype: DataFrame
     """
     # Using initialized DataFrame to store transformed data
-    columns = list(issued_datetime_dataframe.keys())
-    transformed_dataframe = pd.DataFrame(columns=columns)
+    columns = list(issued_datetime_df.keys())
+    transformed_df = pd.DataFrame(columns=columns)
 
     # Loop through the issued datetime DataFrame object to transform its data
-    for _, row in issued_datetime_dataframe.iterrows():
+    for _, row in issued_datetime_df.iterrows():
         issued_datetime = row['issued_datetimes']
         issued_datetime = str(issued_datetime).strip()
 
         # Concatenate the transformed data to the initialized DataFrame
-        transformed_dataframe = pd.concat([
-            transformed_dataframe,
+        transformed_df = pd.concat([
+            transformed_df,
             pd.DataFrame({
                 'issued_datetimes': [
                     issued_datetime
                 ]
             })
         ], ignore_index=True)
-
-    return transformed_dataframe
+    
+    return transformed_df
 
 def transform_synopsis_dataframe(
         synopsis_dataframe: pd.DataFrame
