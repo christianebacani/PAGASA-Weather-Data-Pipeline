@@ -376,22 +376,22 @@ def transform_forecast_wind_and_coastal_water_conditions_df(
     return transformed_df
 
 def enrich_forecast_wind_and_coastal_water_conditions_with_issued_datetime(
-        forecast_wind_and_coastal_water_conditions_dataframe: pd.DataFrame,
-        issued_datetime_dataframe: pd.DataFrame
+        forecast_wind_and_coastal_water_conditions_df: pd.DataFrame,
+        issued_datetime_df: pd.DataFrame
 ) -> pd.DataFrame:
     """
     Enrich forecast wind and coastal water conditions with issued datetime
     to produce an analysis-ready dataset for downstream
     processing and consumption.
 
-    :param forecast_wind_and_coastal_water_conditions_dataframe: Transformed
+    :param forecast_wind_and_coastal_water_conditions_df: Transformed
         DataFrame containing the cleaned forecast wind and coastal water
         conditions of the daily weather forecast
-    :type forecast_wind_and_coastal_water_conditions_dataframe: pd.DataFrame
+    :type forecast_wind_and_coastal_water_conditions_df: pd.DataFrame
 
-    :param issued_datetime_dataframe: Transformed DataFrame containing the
+    :param issued_datetime_df: Transformed DataFrame containing the
         cleaned issued datetime of the daily weather forecast
-    :type issued_datetime_dataframe: pd.DataFrame
+    :type issued_datetime_df: pd.DataFrame
 
     :return: Transformed DataFrame containing the forecast wind and coastal water
         conditions with issued datetime of the daily weather forecast
