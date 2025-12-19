@@ -133,7 +133,7 @@ def enrich_synopsis_with_issued_datetime(
     :type issued_datetime_dataframe: pd.DataFrame
 
     :return: Transformed DataFrame containing the
-        synopsis and issued datetime of the daily
+        synopsis with issued datetime of the daily
         weather forecast
     :rtype: DataFrame
     """
@@ -258,7 +258,7 @@ def enrich_forecast_weather_conditions_with_issued_datetime(
     :type issued_datetime_dataframe: pd.DataFrame
 
     :return: Transformed DataFrame containing the forecast
-        weather conditions and issued datetime of the
+        weather conditions with issued datetime of the
         daily weather forecast
     :rtype: DataFrame
     """
