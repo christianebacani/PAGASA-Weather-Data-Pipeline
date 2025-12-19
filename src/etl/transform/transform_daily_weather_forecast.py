@@ -321,29 +321,29 @@ def save_forecast_weather_conditions_with_issued_datetime_to_processed_subdir(
     target_filepath = 'data/processed/daily_weather_forecast/forecast_weather_conditions.csv'
     forecast_weather_conditions_with_issued_datetime_df.to_csv(target_filepath, index=False)
 
-def transform_forecast_wind_and_coastal_water_conditions_dataframe(
-        forecast_wind_and_coastal_water_conditions_dataframe: pd.DataFrame
+def transform_forecast_wind_and_coastal_water_conditions_df(
+        forecast_wind_and_coastal_water_conditions_df: pd.DataFrame
 ) -> pd.DataFrame:
     """
     Transform the forecast wind and coastal water conditions DataFrame object
     located in the `data/stage/daily_weather_forecast` subdirectory on the
     local machine.
 
-    :param forecast_wind_and_coastal_water_conditions_dataframe: DataFrame
+    :param forecast_wind_and_coastal_water_conditions_df: DataFrame
         containing the forecast wind and coastal water conditions of the daily
         weather forecast
-    :type forecast_wind_and_coastal_water_conditions_dataframe: pd.DataFrame
+    :type forecast_wind_and_coastal_water_conditions_df: pd.DataFrame
 
     :return: Transformed DataFrame containing the cleaned forecast wind and
         coastal water conditions of the daily weather forecast
     :rtype: DataFrame
     """
     # Initialized DataFrame to store transformed data
-    columns = list(forecast_wind_and_coastal_water_conditions_dataframe.keys())
-    transformed_dataframe = pd.DataFrame(columns=columns)
+    columns = list(forecast_wind_and_coastal_water_conditions_df.keys())
+    transformed_df = pd.DataFrame(columns=columns)
 
     # Loop through the forecast wind and coastal water conditions DataFrame object to transform its data
-    for _, row in forecast_wind_and_coastal_water_conditions_dataframe.iterrows():
+    for _, row in forecast_wind_and_coastal_water_conditions_df.iterrows():
         places = row['places']
         speeds = row['speeds']
         directions = row['directions']
@@ -355,8 +355,8 @@ def transform_forecast_wind_and_coastal_water_conditions_dataframe(
         coastal_waters = str(coastal_waters).strip()
 
         # Concatenate the transformed data to the initialized DataFrame
-        transformed_dataframe = pd.concat([
-            transformed_dataframe,
+        transformed_df = pd.concat([
+            transformed_df,
             pd.DataFrame({
                 'places': [
                     places
@@ -373,7 +373,7 @@ def transform_forecast_wind_and_coastal_water_conditions_dataframe(
             })
         ], ignore_index=True)
 
-    return transformed_dataframe
+    return transformed_df
 
 def enrich_forecast_wind_and_coastal_water_conditions_with_issued_datetime(
         forecast_wind_and_coastal_water_conditions_dataframe: pd.DataFrame,
