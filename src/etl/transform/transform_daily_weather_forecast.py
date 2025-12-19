@@ -150,21 +150,21 @@ def enrich_synopsis_with_issued_datetime(
     return synopsis_with_issued_datetime_df
 
 def save_synopsis_with_issued_datetime_to_processed_subdir(
-        synopsis_with_issued_datetime_dataframe: pd.DataFrame
+        synopsis_with_issued_datetime_df: pd.DataFrame
 ) -> None:
     """
     Save the synopsis with issued datetime DataFrame object to
     a CSV file in the `data/processed/daily_weather_forecast`
     subdirectory on the local machine.
 
-    :param synopsis_with_issued_datetime_dataframe: Transformed
+    :param synopsis_with_issued_datetime_df: Transformed
         DataFrame containing the synopsis and issued datetime of
         the daily weather forecast
-    :type synopsis_with_issued_datetime_dataframe: pd.DataFrame
+    :type synopsis_with_issued_datetime_df: pd.DataFrame
     """
     # Store the synopsis with issued datetime DataFrame object to the target filepath
     target_filepath = 'data/processed/daily_weather_forecast/synopsis.csv'
-    synopsis_with_issued_datetime_dataframe.to_csv(target_filepath, index=False)
+    synopsis_with_issued_datetime_df.to_csv(target_filepath, index=False)
 
 def transform_tc_information_dataframe(
         tc_information_dataframe: pd.DataFrame
