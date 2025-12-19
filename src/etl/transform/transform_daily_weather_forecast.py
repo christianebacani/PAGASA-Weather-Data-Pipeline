@@ -375,3 +375,18 @@ def transform_forecast_wind_and_coastal_water_conditions_dataframe(
         ], ignore_index=True)
 
     return transformed_dataframe
+
+def enrich_forecast_wind_and_coastal_water_conditions_with_issued_datetime(
+        forecast_wind_and_coastal_water_conditions_dataframe: pd.DataFrame,
+        issued_datetime_dataframe: pd.DataFrame
+) -> pd.DataFrame:
+    """
+    Docstring for enrich_forecast_wind_and_coastal_water_conditions_with_issued_datetime
+    
+    :param forecast_wind_and_coastal_water_conditions_dataframe: Description
+    :type forecast_wind_and_coastal_water_conditions_dataframe: pd.DataFrame
+    :param issued_datetime_dataframe: Description
+    :type issued_datetime_dataframe: pd.DataFrame
+    :return: Description
+    :rtype: DataFrame
+    """
