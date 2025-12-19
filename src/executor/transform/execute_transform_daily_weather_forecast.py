@@ -11,6 +11,7 @@ from etl.transform.transform_daily_weather_forecast import transform_issued_date
 from etl.transform.transform_daily_weather_forecast import transform_synopsis_dataframe
 from etl.transform.transform_daily_weather_forecast import enrich_synopsis_with_issued_datetime
 from etl.transform.transform_daily_weather_forecast import save_synopsis_with_issued_datetime_to_processed_subdir
+from etl.transform.transform_daily_weather_forecast import transform_tc_information_dataframe
 from etl.transform.transform_daily_weather_forecast import transform_forecast_weather_conditions_dataframe
 from etl.transform.transform_daily_weather_forecast import enrich_forecast_weather_conditions_with_issued_datetime
 from etl.transform.transform_daily_weather_forecast import save_forecast_weather_conditions_with_issued_datetime_to_processed_subdir
@@ -52,6 +53,14 @@ def transform_daily_weather_forecast(
     )
     save_synopsis_with_issued_datetime_to_processed_subdir(
         synopsis_with_issued_datetime_dataframe        
+    )
+
+    tc_information_filepath = 'data/stage/daily_weather_forecast/tropical_cyclone_information.csv'
+    tc_information_dataframe = pd.read_csv(
+        tc_information_filepath
+    )
+    transform_tc_information_dataframe(
+        tc_information_dataframe
     )
 
     forecast_weather_conditions_filepath = 'data/stage/daily_weather_forecast/forecast_weather_conditions.csv'
