@@ -74,18 +74,17 @@ def transform_issued_datetime_df(
     
     return transformed_df
 
-def transform_synopsis_dataframe(
-        synopsis_dataframe: pd.DataFrame
+def transform_synopsis_df(
+        synopsis_df: pd.DataFrame
 ) -> pd.DataFrame:
     """
     Transform the synopsis DataFrame object
     located in the `data/stage/daily_weather_forecast`
     subdirectory on the local machine.
 
-    :param issued_datetime_dataframe: DataFrame
-        containing the synopsis of the daily
-        weather forecast
-    :type issued_datetime_dataframe: pd.DataFrame
+    :param synopsis_df: DataFrame containing the
+        synopsis of the daily weather forecast
+    :type synopsis_df: pd.DataFrame
 
     :return: Transformed DataFrame containing the
         cleaned synopsis of the
@@ -93,17 +92,17 @@ def transform_synopsis_dataframe(
     :rtype: DataFrame
     """
     # Using initialized DataFrame to store transformed data
-    columns = list(synopsis_dataframe.keys())
-    transformed_dataframe = pd.DataFrame(columns=columns)
+    columns = list(synopsis_df.keys())
+    transformed_df = pd.DataFrame(columns=columns)
 
     # Loop through the synopsis DataFrame object to transform its data
-    for _, row in synopsis_dataframe.iterrows():
+    for _, row in synopsis_df.iterrows():
         synopsis = row['synopses']
         synopsis = str(synopsis).strip()
 
         # Concatenate the transformed data to the initialized DataFrame
-        transformed_dataframe = pd.concat([
-            transformed_dataframe,
+        transformed_df = pd.concat([
+            transformed_df,
             pd.DataFrame({
                 'synopses': [
                     synopsis
@@ -111,7 +110,7 @@ def transform_synopsis_dataframe(
             })
         ], ignore_index=True)
 
-    return transformed_dataframe
+    return transformed_df
 
 def enrich_synopsis_with_issued_datetime(
         synopsis_dataframe: pd.DataFrame,
