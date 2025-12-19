@@ -138,7 +138,7 @@ def enrich_synopsis_with_issued_datetime(
     :rtype: DataFrame
     """
     # Using initialized DataFrame to store enrich synopsis data with issued datetime
-    synopsis_with_issued_datetime_dataframe = pd.DataFrame({
+    synopsis_with_issued_datetime_df = pd.DataFrame({
         'synopses': [
             synopsis_dataframe['synopses'][0]
         ],
@@ -147,7 +147,7 @@ def enrich_synopsis_with_issued_datetime(
         ]
     })
 
-    return synopsis_with_issued_datetime_dataframe
+    return synopsis_dataframe
 
 def save_synopsis_with_issued_datetime_to_processed_subdir(
         synopsis_with_issued_datetime_dataframe: pd.DataFrame
