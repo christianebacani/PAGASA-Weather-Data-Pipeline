@@ -165,7 +165,7 @@ def save_synopsis_with_issued_datetime_to_processed_subdir(
     target_filepath = 'data/processed/daily_weather_forecast/synopsis.csv'
     synopsis_with_issued_datetime_df.to_csv(target_filepath, index=False)
 
-def transform_tc_information_dataframe(
+def transform_tc_information_df(
         tc_information_df: pd.DataFrame
 ) -> pd.DataFrame:
     """
