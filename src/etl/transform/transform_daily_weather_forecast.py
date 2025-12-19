@@ -182,29 +182,29 @@ def transform_tc_information_df(
     :rtype: DataFrame
     """
 
-def transform_forecast_weather_conditions_dataframe(
-        forecast_weather_conditions_dataframe: pd.DataFrame
+def transform_forecast_weather_conditions_df(
+        forecast_weather_conditions_df: pd.DataFrame
 ) -> pd.DataFrame:
     """
     Transform the forecast weather conditions DataFrame object
     located in the `data/stage/daily_weather_forecast` subdirectory
     on the local machine.
 
-    :param forecast_weather_conditions_dataframe: DataFrame
+    :param forecast_weather_conditions_df: DataFrame
         containing the forecast weather conditions of the daily
         weather forecast
-    :type forecast_weather_conditions_dataframe: pd.DataFrame
+    :type forecast_weather_conditions_df: pd.DataFrame
 
     :return: Transformed DataFrame containing the cleaned forecast
         weather conditions of the daily weather forecast
     :rtype: DataFrame
     """
     # Using initialized DataFrame to store transformed data
-    columns = list(forecast_weather_conditions_dataframe.keys())
-    transformed_dataframe = pd.DataFrame(columns=columns)
+    columns = list(forecast_weather_conditions_df.keys())
+    transformed_df = pd.DataFrame(columns=columns)
 
     # Loop through the synopsis DataFrame object to transform its data
-    for _, row in forecast_weather_conditions_dataframe.iterrows():
+    for _, row in forecast_weather_conditions_df.iterrows():
         places = row['places']
         weather_conditions = row['weather_conditions']
         causes_by = row['causes_by']
@@ -216,8 +216,8 @@ def transform_forecast_weather_conditions_dataframe(
         impacts = str(impacts).strip()
 
         # Concatenate the transformed data to the initialized DataFrame
-        transformed_dataframe = pd.concat([
-            transformed_dataframe,
+        transformed_df = pd.concat([
+            transformed_df,
             pd.DataFrame({
                 'places': [
                     places
@@ -233,11 +233,11 @@ def transform_forecast_weather_conditions_dataframe(
                 ]
             })
         ], ignore_index=True)
-
-    return transformed_dataframe
+    
+    return transformed_df
 
 def enrich_forecast_weather_conditions_with_issued_datetime(
-        forecast_weather_conditions_dataframe: pd.DataFrame,
+        forecast_weather_conditions_df: pd.DataFrame,
         issued_datetime_dataframe: pd.DataFrame
 ) -> pd.DataFrame:
     """
