@@ -305,21 +305,21 @@ def enrich_forecast_weather_conditions_with_issued_datetime(
     return forecast_weather_conditions_with_issued_datetime_df
 
 def save_forecast_weather_conditions_with_issued_datetime_to_processed_subdir(
-        forecast_weather_conditions_with_issued_datetime_dataframe: pd.DataFrame
+        forecast_weather_conditions_with_issued_datetime_df: pd.DataFrame
 ) -> None:
     """
     Save the forecast weather conditions with issued datetime DataFrame object
     to a CSV file in the `data/processed/daily_weather_forecast` subdirectory on
     the local machine.
 
-    :param forecast_weather_conditions_with_issued_datetime_dataframe: Transformed
+    :param forecast_weather_conditions_with_issued_datetime_df: Transformed
         DataFrame containing the forecast weather conditions and issued datetime of
         the daily weather forecast
-    :type forecast_weather_conditions_with_issued_datetime_dataframe: pd.DataFrame
+    :type forecast_weather_conditions_with_issued_datetime_df: pd.DataFrame
     """
     # Store the forecast weather conditions with issued DataFrame object to the target filepath
     target_filepath = 'data/processed/daily_weather_forecast/forecast_weather_conditions.csv'
-    forecast_weather_conditions_with_issued_datetime_dataframe.to_csv(target_filepath, index=False)
+    forecast_weather_conditions_with_issued_datetime_df.to_csv(target_filepath, index=False)
 
 def transform_forecast_wind_and_coastal_water_conditions_dataframe(
         forecast_wind_and_coastal_water_conditions_dataframe: pd.DataFrame
