@@ -147,7 +147,7 @@ def enrich_synopsis_with_issued_datetime(
         ]
     })
 
-    return synopsis_dataframe
+    return synopsis_with_issued_datetime_df
 
 def save_synopsis_with_issued_datetime_to_processed_subdir(
         synopsis_with_issued_datetime_dataframe: pd.DataFrame
