@@ -170,12 +170,16 @@ def transform_tc_information_dataframe(
         tc_information_dataframe: pd.DataFrame
 ) -> pd.DataFrame:
     """
-    Docstring for transform_tc_information_dataframe
+    Transform the tropical cyclone information DataFrame
+    object located in the `data/stage/daily_weather_forecast`
+    subdirectory on the local machine.
 
-    :param tc_information_dataframe: Description
+    :param tc_information_dataframe: DataFrame containing the
+        tropical cyclone information of the daily weather forecast
     :type tc_information_dataframe: pd.DataFrame
 
-    :return: Description
+    :return: Transformed DataFrame containing the cleaned and standardized
+        tropical cyclone information of the daily weather forecast
     :rtype: DataFrame
     """
 
