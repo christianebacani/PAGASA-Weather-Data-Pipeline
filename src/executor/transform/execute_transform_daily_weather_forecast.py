@@ -6,6 +6,9 @@ subdirectory on the local machine, serving as the entry point for the daily tran
 """
 import pandas as pd
 
+from etl.transform.transform_daily_weather_forecast import create_subdir
+from etl.transform.transform_daily_weather_forecast import transform_issued_datetime_df
+
 def transform_daily_weather_forecast(
 ) -> None:
     """
@@ -18,3 +21,10 @@ def transform_daily_weather_forecast(
     `src.etl.transform` package.
     """
     # Run all functions to extract tropical cyclone associated rainfall data
+    create_subdir()
+
+    issued_datetime_df = transform_issued_datetime_df(
+        pd.read_csv(
+            'data/stage/daily_weather_forecast/issued_datetime.csv'
+        )
+    )
