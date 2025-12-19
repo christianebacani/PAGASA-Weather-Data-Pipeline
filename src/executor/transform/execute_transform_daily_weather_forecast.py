@@ -9,6 +9,7 @@ import pandas as pd
 from etl.transform.transform_daily_weather_forecast import create_subdir
 from etl.transform.transform_daily_weather_forecast import transform_issued_datetime_df
 from etl.transform.transform_daily_weather_forecast import transform_synopsis_df
+from etl.transform.transform_daily_weather_forecast import enrich_synopsis_with_issued_datetime
 
 def transform_daily_weather_forecast(
 ) -> None:
@@ -34,4 +35,9 @@ def transform_daily_weather_forecast(
         pd.read_csv(
             'data/stage/daily_weather_forecast/synopsis.csv'
         )
+    )
+
+    synopsis_with_issued_datetime_df = enrich_synopsis_with_issued_datetime(
+        synopsis_df,
+        issued_datetime_df
     )
