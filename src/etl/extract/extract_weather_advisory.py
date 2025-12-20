@@ -27,7 +27,7 @@ def create_subdir(
     if not os.path.exists('data/stage/weather_advisory'):
         os.makedirs('data/stage/weather_advisory')
 
-def parse_weather_advisory_to_dataframe(
+def parse_weather_advisory(
         weather_advisory_filepath: str
 ) -> pd.DataFrame:
     """
@@ -52,15 +52,15 @@ def parse_weather_advisory_to_dataframe(
 
     return weather_advisory_dataframe
 
-def save_weather_advisory_dataframe_to_stage_subdir(
-        weather_advisory_dataframe: pd.DataFrame
+def save_raw_weather_advisory(
+        weather_advisory_dataframe: pd.DataFrame       
 ) -> None:
     """
-    Save the weather advisory DataFrame to the staging directory for further processing.
+    Save the raw weather advisory DataFrame to the staging directory for further processing.
 
     :param weather_advisory_dataframe: DataFrame containing the weather advisory
     :type weather_advisory_dataframe: pd.DataFrame
     """
-    # Save the weather advisory DataFrame object to the target filepath
+    # Save the raw weather advisory DataFrame object to the target filepath
     target_filepath = 'data/stage/weather_advisory/weather_advisory.csv'
     weather_advisory_dataframe.to_csv(target_filepath, index=False)
