@@ -27,7 +27,7 @@ def create_subdir(
     if not os.path.exists('data/stage/tropical_cyclone_associated_rainfall'):
         os.makedirs('data/stage/tropical_cyclone_associated_rainfall')
 
-def parse_tc_assoc_rainfall_image_sources_to_dataframe(
+def parse_tc_assoc_rainfall_image_sources(
         tc_assoc_rainfall_image_sources_filepath: str
 ) -> pd.DataFrame:
     """
@@ -50,11 +50,11 @@ def parse_tc_assoc_rainfall_image_sources_to_dataframe(
 
     return tc_assoc_rainfall_image_sources_dataframe
 
-def save_tc_assoc_rainfall_image_sources_dataframe_to_stage_subdir(
-        tc_assoc_rainfall_image_sources_dataframe: pd.DataFrame
+def save_raw_tc_assoc_rainfall_image_sources(
+    tc_assoc_rainfall_image_sources_dataframe: pd.DataFrame
 ) -> None:
     """
-    Save the tropical cyclone associated rainfall image sources
+    Save the raw tropical cyclone associated rainfall image sources
     DataFrame to the staging directory for further processing.
 
     :param tc_assoc_rainfall_image_sources_dataframe: DataFrame
@@ -64,6 +64,6 @@ def save_tc_assoc_rainfall_image_sources_dataframe_to_stage_subdir(
     """
     filename = list(tc_assoc_rainfall_image_sources_dataframe.keys())[0]
 
-    # Save the tc associated rainfall image sources DataFrame object to the target filepath
+    # Save the raw tc associated rainfall image sources DataFrame object to the target filepath
     target_filepath = f'data/stage/tropical_cyclone_associated_rainfall/{filename}.csv'
     tc_assoc_rainfall_image_sources_dataframe.to_csv(target_filepath, index=False)
