@@ -87,18 +87,18 @@ def ingest_issued_datetime(
 
     return issued_datetime
 
-def save_issued_datetime_to_raw_subdir(
-        issued_datetime: str
+def save_ingested_issued_datetime(
+    issued_datetime: str
 ) -> None:
-    """
-    Save the issued datetime of the daily weather forecast to a JSON file
-    in the `data/raw/daily_weather_forecast/` subdirectory on the local
-    machine.
+    """    
+    Save the ingested issued datetime of the daily weather forecast to a
+    JSON file in the `data/raw/daily_weather_forecast/` subdirectory on
+    the local machine.
 
     :param issued_datetime: Issued datetime of the daily weather forecast
     :type issued_datetime: str
     """
-    # Create a dictionary to store issued datetime of the daily weather forecast
+    # Create a dictionary to store the ingested issued datetime
     data = {
         "issued_datetime": issued_datetime
     }
@@ -141,18 +141,18 @@ def ingest_synopsis(
 
     return synopsis
 
-def save_synopsis_to_raw_subdir(
+def save_ingested_synopsis(
         synopsis: str
 ) -> None:
     """
-    Save the synopsis of the daily weather forecast to a JSON file
-    in the `data/raw/daily_weather_forecast/` subdirectory on the
-    local machine.
+    Save the ingested synopsis of the daily weather forecast to
+    a JSON file in the `data/raw/daily_weather_forecast/` subdirectory
+    on the local machine.
 
     :param synopsis: Synopsis of the daily weather forecast
     :type synopsis: str
     """
-    # Create a dictionary to store synopsis of the daily weather forecast
+    # Create a dictionary to store the ingested synopsis
     data = {
         "synopsis": synopsis
     }
@@ -166,8 +166,8 @@ def save_synopsis_to_raw_subdir(
 
     json_file.close()
 
-def ingest_tc_information(
-        soup: BeautifulSoup | None
+def ingest_tropical_cyclone_information(
+    soup: BeautifulSoup | None
 ) -> dict[str, str]:
     """
     Ingest the tropical cyclone information of the daily weather forecast from the PAGASA-DOST website.
@@ -178,7 +178,7 @@ def ingest_tc_information(
     :return: Dictionary containing tropical cyclone information
     :rtype: dict[str, str]
     """
-    tc_information = {
+    tropical_cyclone_information = {
         'current_update': '',
         'tropical_cyclone_name': '',
         'location': '',
@@ -189,7 +189,7 @@ def ingest_tc_information(
 
     # We need to check if the BeautifulSoup object is missing    
     if soup is None:
-        return tc_information
+        return tropical_cyclone_information
 
     # Extract HTML tags for tropical cyclone information from the daily weather forecast
     div_tag_with_row_weather_page_class = soup.find('div', attrs={'class': 'row weather-page'})
@@ -202,12 +202,12 @@ def ingest_tc_information(
 
     # Verify TC info section exists: exactly 5 divs with class 'col-md-12 col-lg-12'
     if len(list_of_all_daily_weather_forecast_tags) == 5:
-        tc_information_tag = list_of_all_daily_weather_forecast_tags[1]
-    
-    else:
-        return tc_information
+        tropical_cyclone_information_tag = list_of_all_daily_weather_forecast_tags[1]
 
-    tbody_tag = tc_information_tag.find('tbody')
+    else:
+        return tropical_cyclone_information
+
+    tbody_tag = tropical_cyclone_information_tag.find('tbody')
     list_of_all_table_data_row_tags = tbody_tag.find_all('tr')
 
     # Iterate rows containing data of tropical cyclone information
@@ -226,33 +226,35 @@ def ingest_tc_information(
         for text_to_remove in list_of_text_to_remove:
             cell = cell.replace(text_to_remove, '').strip()
 
-        # Use the current row index to access the correct key in the tc_information dictionary
-        tc_information_keys = list(tc_information.keys())
-        key = tc_information_keys[row_number]
+        # Use the current row index to access the correct key in the tropical cyclone_information dictionary
+        tropical_cyclone_information_keys = list(tropical_cyclone_information.keys())
+        key = tropical_cyclone_information_keys[row_number]
         value = cell
-        tc_information[key] = value
+        tropical_cyclone_information[key] = value
 
-    return tc_information
+    return tropical_cyclone_information
 
-def save_tc_information_to_raw_subdir(
-        tc_information: dict[str, str]
+def save_ingested_tropical_cyclone_information(
+        tropical_cyclone_information: dict[str, str]
 ) -> None:
     """
-    Save the tropical cyclone information of the daily weather forecast
-    to a JSON file in the `data/raw/daily_weather_forecast/` subdirectory
-    on the local machine.
+    Save the ingested tropical cyclone information of 
+    the daily weather forecast to a JSON file in the
+    `data/raw/daily_weather_forecast/` subdirectory on
+    the local machine.
 
-    :param tc_information: Dictionary containing tropical cyclone information
-    :type tc_information: dict[str, str]
+    :param tropical_cyclone_information: Dictionary containing
+        tropical cyclone information
+    :type tropical_cyclone_information: dict[str, str]
     """
-    # Create a dictionary to store tropical cyclone information from the daily weather forecast
+    # Create a dictionary to store the ingested tropical cyclone information
     data = {
-        "current_update": tc_information['current_update'],
-        "tropical_cyclone_name": tc_information['tropical_cyclone_name'],
-        "location": tc_information['location'],
-        "maximum_sustained_winds": tc_information['maximum_sustained_winds'],
-        "gustiness": tc_information['gustiness'],
-        "movement": tc_information['movement']
+        "current_update": tropical_cyclone_information['current_update'],
+        "tropical_cyclone_name": tropical_cyclone_information['tropical_cyclone_name'],
+        "location": tropical_cyclone_information['location'],
+        "maximum_sustained_winds": tropical_cyclone_information['maximum_sustained_winds'],
+        "gustiness": tropical_cyclone_information['gustiness'],
+        "movement": tropical_cyclone_information['movement']
     }
 
     # Save the dictionary to a json file using open() method and json module
@@ -261,7 +263,7 @@ def save_tc_information_to_raw_subdir(
         'w'
     ) as json_file:
         json.dump(data, json_file, indent=4)
-    
+
     json_file.close()
 
 def ingest_forecast_weather_conditions(
@@ -330,18 +332,18 @@ def ingest_forecast_weather_conditions(
 
     return forecast_weather_conditions
 
-def save_forecast_weather_conditions_to_raw_subdir(
-    forecast_weather_conditions: dict[str, list]
+def save_ingested_forecast_weather_conditions(
+        forecast_weather_conditions: dict[str, list]
 ) -> None:
     """
-    Save the forecast weather conditions of the daily weather forecast
-    to a JSON file in the `data/raw/daily_weather_forecast/` subdirectory
-    on the local machine.
+    Save the ingested forecast weather conditions of the 
+    daily weather forecast to a JSON file in the
+    `data/raw/daily_weather_forecast/` subdirectory on the local machine.
 
     :param forecast_weather_conditions: Dictionary containing forecast weather conditions
     :type forecast_weather_conditions: dict[str, list]
     """
-    # Create a dictionary to store forecast weather conditions from the daily weather forecast
+    # Create a dictionary to store the ingested forecast weather conditions
     data = {
         "place": forecast_weather_conditions['place'],
         "weather_condition": forecast_weather_conditions['weather_condition'],
@@ -425,19 +427,19 @@ def ingest_forecast_wind_and_coastal_water_conditions(
 
     return forecast_wind_and_coastal_water_conditions
 
-def save_forecast_wind_and_coastal_water_conditions_to_raw_subdir(
+def save_ingested_forecast_wind_and_coastal_water_conditions(
     forecast_wind_and_coastal_water_conditions: dict[str, list]
 ) -> None:
     """
-    Save the forecast wind and coastal water conditions to a JSON
-    file in the `data/raw/daily_weather_forecast` subdirectory on
-    the local machine.
+    Save the ingested forecast wind and coastal water conditions
+    to a JSON file in the `data/raw/daily_weather_forecast`
+    subdirectory on the local machine.
 
     :param forecast_wind_and_coastal_water_conditions: Dictionary containing
         forecast wind and coastal water conditions
     :type forecast_wind_and_coastal_water_conditions: dict[str, list]
     """
-    # Create a dictionary to store forecast wind and coastal water conditions from the daily weather forecast
+    # Create a dictionary to store the ingested forecast wind and coastal water conditions
     data = {
         "place": forecast_wind_and_coastal_water_conditions['place'],
         "speed": forecast_wind_and_coastal_water_conditions['speed'],
@@ -542,11 +544,11 @@ def ingest_temperature_and_relative_humidity(
 
     return temperature_and_relative_humidity
 
-def save_temperature_and_relative_humidity_to_raw_subdir(
+def save_ingested_temperature_and_relative_humidity(
         temperature_and_relative_humidity: dict[str, dict]
 ) -> None:
     """
-    Save the tempreature and relative humidity of the daily
+    Save the ingested tempreature and relative humidity of the daily
     weather forecast to a JSON file in the `data/raw/daily_weather_forecast`
     subdirectory on the local machine.
 
@@ -554,7 +556,7 @@ def save_temperature_and_relative_humidity_to_raw_subdir(
         and relative humidity data
     :type temperature_and_relative_humidity: dict[str, dict]
     """
-    # Create a dictionary to store temperature and relative humidity from the daily weather forecast
+    # Create a dictionary to store the ingested temperature and relative humidity
     data = {
         "temperature": {
             "max": temperature_and_relative_humidity['temperature']['max'],
