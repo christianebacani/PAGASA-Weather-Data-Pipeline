@@ -210,7 +210,7 @@ def ingest_tc_information(
     tbody_tag = tc_information_tag.find('tbody')
     list_of_all_table_data_row_tags = tbody_tag.find_all('tr')
 
-    # Loop through rows containing data of tropical cyclone information
+    # Iterate rows containing data of tropical cyclone information
     for row_number, table_row_tag in enumerate(list_of_all_table_data_row_tags):
         cell = str(table_row_tag.text)
 
@@ -222,7 +222,7 @@ def ingest_tc_information(
             'MOVEMENT:'
         ]
 
-        # Loop through the list and remove each string from the tropical cyclone info text
+        # Iterate the list and remove each string from the tropical cyclone info text
         for text_to_remove in list_of_text_to_remove:
             cell = cell.replace(text_to_remove, '').strip()
 
@@ -310,8 +310,8 @@ def ingest_forecast_weather_conditions(
         return forecast_weather_conditions
 
     list_of_all_table_row_tags = tbody_tag.find_all('tr')
-    
-    # Loop through rows containing HTML tags for forecast weather conditions
+
+    # Iterate rows containing HTML tags for forecast weather conditions
     for table_row_tag in list_of_all_table_row_tags:
         # Use find_all() to retrieve all forecast weather conditions data
         list_of_all_table_data_tags = table_row_tag.find_all('td')
@@ -406,7 +406,7 @@ def ingest_forecast_wind_and_coastal_water_conditions(
 
     list_of_all_table_row_tags = tbody_tag.find_all('tr')
 
-    # Loop through rows containing HTML tags for forecast wind and coastal water conditions
+    # Iterate rows containing HTML tags for forecast wind and coastal water conditions
     for table_row_tag in list_of_all_table_row_tags:
         # Use find_all() to retrieve all forecast wind and coastal water conditions data
         list_of_all_table_data_tags = table_row_tag.find_all('td')
@@ -500,7 +500,7 @@ def ingest_temperature_and_relative_humidity(
 
     list_of_all_table_row_tags = tbody_tag.find_all('tr')
 
-    # Loop through rows containing HTML tags for temperature and relative humidity
+    # Iterate rows containing HTML tags for temperature and relative humidity
     for row_number, table_row_tag in enumerate(list_of_all_table_row_tags):
         row_number += 1
         # Use find_all() to retrieve all temperature and relative humidity data
