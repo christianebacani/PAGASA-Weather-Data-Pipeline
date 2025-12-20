@@ -414,5 +414,18 @@ def enrich_forecast_wind_and_coastal_water_conditions_with_issued_datetime(
         speeds = row['speeds']
         directions = row['directions']
         coastal_waters = row['coastal_waters']
+        issued_datetime = issued_datetime_df['issued_datetimes']
 
         # Concatenate the forecast weather conditions data to the initialized DataFrame
+        forecast_wind_and_coastal_water_conditions_with_issued_datetime_df = pd.concat([
+            forecast_wind_and_coastal_water_conditions_with_issued_datetime_df,
+            pd.DataFrame({
+                'places': [places],
+                'speeds': [speeds],
+                'directions': [directions],
+                'coastal_waters': [coastal_waters],
+                'issued_datetimes': [issued_datetime]
+            })
+        ], ignore_index=True)
+
+    return forecast_wind_and_coastal_water_conditions_with_issued_datetime_df
