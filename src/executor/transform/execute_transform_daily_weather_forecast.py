@@ -12,6 +12,7 @@ from etl.transform.transform_daily_weather_forecast import transform_synopsis_df
 from etl.transform.transform_daily_weather_forecast import enrich_synopsis_with_issued_datetime
 from etl.transform.transform_daily_weather_forecast import save_synopsis_with_issued_datetime_to_processed_subdir
 from etl.transform.transform_daily_weather_forecast import transform_forecast_weather_conditions_df
+from etl.transform.transform_daily_weather_forecast import enrich_forecast_weather_conditions_with_issued_datetime
 
 def transform_daily_weather_forecast(
 ) -> None:
@@ -50,5 +51,10 @@ def transform_daily_weather_forecast(
     forecast_weather_conditions_df = transform_forecast_weather_conditions_df(
         pd.read_csv(
             'data/stage/daily_weather_forecast/forecast_weather_conditions.csv'
-        )   
+        )
+    )
+
+    forecast_weather_conditions_with_issued_datetime_df = enrich_forecast_weather_conditions_with_issued_datetime(
+        forecast_weather_conditions_df,
+        issued_datetime_df
     )
