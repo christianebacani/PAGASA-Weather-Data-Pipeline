@@ -247,7 +247,7 @@ def parse_forecast_wind_and_coastal_water_conditions(
 
     return forecast_wind_and_coastal_water_conditions_dataframe
 
-def save_raw_forecast_wind_andd_coastal_water_conditions(
+def save_raw_forecast_wind_and_coastal_water_conditions(
         forecast_wind_and_coastal_water_conditions_dataframe: pd.DataFrame
 ) -> None:
     """
