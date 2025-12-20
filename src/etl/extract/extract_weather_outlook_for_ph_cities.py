@@ -30,7 +30,7 @@ def create_subdir(
     if not os.path.exists('data/stage/weather_outlook_for_ph_cities'):
         os.makedirs('data/stage/weather_outlook_for_ph_cities')
 
-def parse_issued_datetime_to_dataframe(
+def parse_issued_datetime(
         issued_datetime_filepath: str
 ) -> pd.DataFrame:
     """
@@ -58,21 +58,21 @@ def parse_issued_datetime_to_dataframe(
 
     return issued_datetime_dataframe
 
-def save_issued_datetime_dataframe_to_stage_subdir(
+def save_raw_issued_datetime(
         issued_datetime_dataframe: pd.DataFrame
 ) -> None:
     """
-    Save the issued datetime DataFrame to the staging directory for further processing.
+    Save the raw issued datetime DataFrame to the staging directory for further processing.
 
     :param issued_datetime_dataframe: DataFrame containing the issued
         datetime of the weather outlook for selected Philippine cities
     :type issued_datetime_dataframe: pd.DataFrame
     """
-    # Save the issued datetime DataFrame object to the target filepath
+    # Save the raw issued datetime DataFrame object to the target filepath
     target_filepath = 'data/stage/weather_outlook_for_ph_cities/issued_datetime.csv'
     issued_datetime_dataframe.to_csv(target_filepath, index=False)
 
-def parse_valid_period_to_dataframe(
+def parse_valid_period(
         valid_period_filepath: str
 ) -> pd.DataFrame:
     """
@@ -100,22 +100,22 @@ def parse_valid_period_to_dataframe(
 
     return valid_period_dataframe
 
-def save_valid_period_dataframe_to_stage_subdir(
+def save_raw_valid_period(
         valid_period_dataframe: pd.DataFrame
 ) -> None:
     """
-    Save the valid period DataFrame to the staging directory for further
+    Save the raw valid period DataFrame to the staging directory for further
     processing.
 
     :param valid_period_dataframe: DataFrame containing the valid
         period of the weather outlook for selected Philippine cities
     :type valid_period_dataframe: pd.DataFrame
     """
-    # Save the valid period DataFrame object to the target filepath
+    # Save the raw valid period DataFrame object to the target filepath
     target_filepath = 'data/stage/weather_outlook_for_ph_cities/valid_period.csv'
     valid_period_dataframe.to_csv(target_filepath, index=False)
 
-def parse_ph_cities_weather_outlook_to_dataframe(
+def parse_ph_cities_weather_outlook(
         ph_cities_weather_outlook_filepath: str
 ) -> pd.DataFrame:
     """
@@ -176,17 +176,17 @@ def parse_ph_cities_weather_outlook_to_dataframe(
 
     return ph_cities_weather_outlook_dataframe
 
-def save_ph_cities_weather_outlook_dataframe_to_stage_subdir(
-        ph_cities_weather_outlook_dataframe: pd.DataFrame       
+def save_raw_ph_cities_weather_outlook(
+        ph_cities_weather_outlook_dataframe: pd.DataFrame
 ) -> None:
     """
-    Save the weather outlook for selected Philippine cities
+    Save the raw weather outlook for selected Philippine cities
     DataFrame to the staging directory for further processing.
 
     :param ph_cities_weather_outlook_dataframe: DataFrame containing the weather
         outlook for selected Philippine cities
     :type ph_cities_weather_outlook_dataframe: pd.DataFrame
     """
-    # Save the PH cities weather outlook DataFrame object to the target filepath
+    # Save the raw PH cities weather outlook DataFrame object to the target filepath
     target_filepath = 'data/stage/weather_outlook_for_ph_cities/ph_cities_weather_outlook.csv'
     ph_cities_weather_outlook_dataframe.to_csv(target_filepath, index=False)
