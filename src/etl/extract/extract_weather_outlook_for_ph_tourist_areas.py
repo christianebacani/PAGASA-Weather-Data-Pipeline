@@ -143,22 +143,22 @@ def parse_ph_tourist_areas_weather_outlook_to_dataframe(
         'maximum_temperatures': []
     }
 
-    # Loop through the PH tourist areas weather outlook DataFrame to map its value to the initialize dictionary
+    # Iterate the PH tourist areas weather outlook DataFrame to map its value to the initialized dictionary
     for ph_tourist_area, weather_outlook_dict in ph_tourist_areas_weather_outlook_raw_dataframe.items():
-        # Loop 5 times to map PH tourist area name to the initialize dictionary
+        # Iterate 5 times to map PH tourist area name to the initialized dictionary
         for _ in range(5):
-            # We perform loop 5 times because every PH tourist area has 5 instances of weather outlooks per dates
+            # Iterating 5 times because every PH tourist area has 5 instances of weather outlooks per dates
             ph_tourist_areas_weather_outlook_dict['ph_tourist_areas'].append(
                 ph_tourist_area
             )
 
-        # Loop through the weather dates list to map it to the to the initialized dictionary
+        # Iterate the weather dates list to map it to the initialized dictionary
         for weather_date in weather_outlook_dict['weather_dates']:
             ph_tourist_areas_weather_outlook_dict['weather_dates'].append(
                 weather_date
             )
 
-        # Loop through the temperature ranges list to map it to the initialized dictionary
+        # Iterate the temperature ranges list to map it to the initialized dictionary
         for temperatures in weather_outlook_dict['temperature_ranges']:
             minimum_temperature = temperatures[0]
             maximum_temperature = temperatures[1]
