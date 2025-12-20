@@ -70,7 +70,7 @@ def transform_daily_weather_forecast(
             'data/stage/daily_weather_forecast/forecast_wind_and_coastal_water_conditions.csv'
         )
     )
-    enrich_forecast_wind_and_coastal_water_conditions_with_issued_datetime(
+    forecast_wind_and_coastal_water_conditions_with_issued_datetime_df = enrich_forecast_wind_and_coastal_water_conditions_with_issued_datetime(
         forecast_wind_and_coastal_water_conditions_df,
         issued_datetime_df
     )

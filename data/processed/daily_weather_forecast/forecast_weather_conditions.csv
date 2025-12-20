@@ -1,6 +1,6 @@
-places,weather_conditions,causes_by,impacts,issued_datetime
-Zamboanga Peninsula and Palawan,Cloudy skies with scattered rains and thunderstorms,ITCZ,Possible flash floods or landslides due to moderate to at times heavy rains,"Issued at: 4:00 AM, 20 December 2025"
-"Bicol Region, Eastern Visayas, Central Visayas, Caraga, Northern Mindanao, Mainland Cagayan, Isabela, Aurora, Quezon, and Davao Oriental",Cloudy skies with scattered rains and thunderstorms,Easterlies,Possible flash floods or landslides due to moderate to at times heavy rains,"Issued at: 4:00 AM, 20 December 2025"
-Batanes and Babuyan Islands,Cloudy skies with rains,Northeast Monsoon,Possible flash floods or landslides due to moderate to at times heavy rains,"Issued at: 4:00 AM, 20 December 2025"
-The rest of Mindanao,Partly cloudy to cloudy skies with isolated rainshowers or thunderstorms,ITCZ,Possible flash floods or landslides during severe thunderstorms,"Issued at: 4:00 AM, 20 December 2025"
-Metro Manila and the rest of the country,Partly cloudy to cloudy skies with isolated rainshowers or thunderstorms,Easterlies,Possible flash floods or landslides during severe thunderstorms,"Issued at: 4:00 AM, 20 December 2025"
+places,weather_conditions,causes_by,impacts,issued_datetime,issued_datetimes
+Zamboanga Peninsula and Palawan,Cloudy skies with scattered rains and thunderstorms,ITCZ,Possible flash floods or landslides due to moderate to at times heavy rains,,"Issued at: 4:00 AM, 20 December 2025"
+"Bicol Region, Eastern Visayas, Central Visayas, Caraga, Northern Mindanao, Mainland Cagayan, Isabela, Aurora, Quezon, and Davao Oriental",Cloudy skies with scattered rains and thunderstorms,Easterlies,Possible flash floods or landslides due to moderate to at times heavy rains,,"Issued at: 4:00 AM, 20 December 2025"
+Batanes and Babuyan Islands,Cloudy skies with rains,Northeast Monsoon,Possible flash floods or landslides due to moderate to at times heavy rains,,"Issued at: 4:00 AM, 20 December 2025"
+The rest of Mindanao,Partly cloudy to cloudy skies with isolated rainshowers or thunderstorms,ITCZ,Possible flash floods or landslides during severe thunderstorms,,"Issued at: 4:00 AM, 20 December 2025"
+Metro Manila and the rest of the country,Partly cloudy to cloudy skies with isolated rainshowers or thunderstorms,Easterlies,Possible flash floods or landslides during severe thunderstorms,,"Issued at: 4:00 AM, 20 December 2025"
