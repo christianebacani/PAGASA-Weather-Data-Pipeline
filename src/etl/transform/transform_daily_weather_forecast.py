@@ -59,16 +59,14 @@ def transform_issued_datetime_df(
 
     # Iterate the issued datetime DataFrame to transform its data
     for _, row in issued_datetime_df.iterrows():
-        issued_datetime = row['issued_datetimes']
-        issued_datetime = str(issued_datetime).strip()
+        issued_datetimes = row['issued_datetimes']
+        issued_datetimes = str(issued_datetimes).strip()
 
         # Concatenate the transformed data to the initialized DataFrame
         transformed_df = pd.concat([
             transformed_df,
             pd.DataFrame({
-                'issued_datetimes': [
-                    issued_datetime
-                ]
+                'issued_datetimes': [issued_datetimes]
             })
         ], ignore_index=True)
     
@@ -97,16 +95,14 @@ def transform_synopsis_df(
 
     # Iterate the synopsis DataFrame to transform its data
     for _, row in synopsis_df.iterrows():
-        synopsis = row['synopses']
-        synopsis = str(synopsis).strip()
+        synopses = row['synopses']
+        synopses = str(synopses).strip()
 
         # Concatenate the transformed data to the initialized DataFrame
         transformed_df = pd.concat([
             transformed_df,
             pd.DataFrame({
-                'synopses': [
-                    synopsis
-                ]
+                'synopses': [synopses]
             })
         ], ignore_index=True)
 
@@ -219,18 +215,10 @@ def transform_forecast_weather_conditions_df(
         transformed_df = pd.concat([
             transformed_df,
             pd.DataFrame({
-                'places': [
-                    places
-                ],
-                'weather_conditions': [
-                    weather_conditions
-                ],
-                'causes_by': [
-                    causes_by
-                ],
-                'impacts': [
-                    impacts
-                ]
+                'places': [places],
+                'weather_conditions': [weather_conditions],
+                'causes_by': [causes_by],
+                'impacts': [impacts]
             })
         ], ignore_index=True)
     
@@ -278,27 +266,17 @@ def enrich_forecast_weather_conditions_with_issued_datetime(
         weather_conditions = row['weather_conditions']
         causes_by = row['causes_by']
         impacts = row['impacts']
-        issued_datetime = issued_datetime_df['issued_datetimes'][0]
+        issued_datetimes = issued_datetime_df['issued_datetimes'][0]
 
         # Concatenate the forecast weather conditions data to the initialized DataFrame
         forecast_weather_conditions_with_issued_datetime_df = pd.concat([
             forecast_weather_conditions_with_issued_datetime_df,
             pd.DataFrame({
-                'places': [
-                    places
-                ],
-                'weather_conditions': [
-                    weather_conditions
-                ],
-                'causes_by': [
-                    causes_by
-                ],
-                'impacts': [
-                    impacts
-                ],
-                'issued_datetime': [
-                    issued_datetime
-                ]
+                'places': [places],
+                'weather_conditions': [weather_conditions],
+                'causes_by': [causes_by],
+                'impacts': [impacts],
+                'issued_datetimes': [issued_datetimes]
             })
         ], ignore_index=True)
     
@@ -358,18 +336,10 @@ def transform_forecast_wind_and_coastal_water_conditions_df(
         transformed_df = pd.concat([
             transformed_df,
             pd.DataFrame({
-                'places': [
-                    places
-                ],
-                'speeds': [
-                    speeds
-                ],
-                'directions': [
-                    directions
-                ],
-                'coastal_waters': [
-                    coastal_waters
-                ]
+                'places': [places],
+                'speeds': [speeds],
+                'directions': [directions],
+                'coastal_waters': [coastal_waters]
             })
         ], ignore_index=True)
 
@@ -414,7 +384,7 @@ def enrich_forecast_wind_and_coastal_water_conditions_with_issued_datetime(
         speeds = row['speeds']
         directions = row['directions']
         coastal_waters = row['coastal_waters']
-        issued_datetime = issued_datetime_df['issued_datetimes']
+        issued_datetimes = issued_datetime_df['issued_datetimes']
 
         # Concatenate the forecast weather conditions data to the initialized DataFrame
         forecast_wind_and_coastal_water_conditions_with_issued_datetime_df = pd.concat([
@@ -424,7 +394,7 @@ def enrich_forecast_wind_and_coastal_water_conditions_with_issued_datetime(
                 'speeds': [speeds],
                 'directions': [directions],
                 'coastal_waters': [coastal_waters],
-                'issued_datetimes': [issued_datetime]
+                'issued_datetimes': [issued_datetimes]
             })
         ], ignore_index=True)
 
