@@ -94,18 +94,18 @@ def ingest_issued_datetime(
     
     return issued_datetime
 
-def save_issued_datetime_to_raw_subdir(
+def save_ingested_issued_datetime(
         issued_datetime: str
 ) -> None:
     """
-    Save the issued datetime of the weather outlook for selected
+    Save the ingested issued datetime of the weather outlook for selected
     Philippine tourist areas to a JSON file in the `data/raw/weather_outlook_for_ph_tourist_areas/`
     subdirectory on the local machine.
 
     :param issued_datetime: Issued datetime of the weather outlook for selected Philippine tourist areas
     :type issued_datetime: str
     """
-    # Create a dictionary to store issued datetime of the weather outlook for selected PH tourist areas
+    # Create a dictionary to store the ingested issued datetime
     data = {
         "issued_datetime": issued_datetime
     }
@@ -160,18 +160,18 @@ def ingest_valid_period(
 
     return valid_period
 
-def save_valid_period_to_raw_subdir(
-        valid_period: str
+def save_ingested_valid_period(
+    valid_period: str
 ) -> None:
     """
-    Save the valid period of the weather outlook for selected
+    Save the ingested valid period of the weather outlook for selected
     Philippine tourist areas to a JSON file in the `data/raw/weather_outlook_for_ph_tourist_areas/`
     subdirectory on the local machine.
 
     :param issued_datetime: Valid period of the weather outlook for selected Philippine tourist areas
     :type issued_datetime: str
     """
-    # Create a dictionary to store valid period of the weather outlook for selected PH tourist areas
+    # Create a dictionary to store the ingested valid period
     data = {
         "valid_period": valid_period
     }
@@ -414,11 +414,11 @@ def map_temperature_ranges_to_ph_tourist_areas(
 
     return result
 
-def save_ph_tourist_areas_weather_outlook_to_raw_subdir(
+def save_ingested_ph_tourist_areas_weather_outlook(
         ph_tourist_areas_weather_outlook: dict[str, dict]
 ) -> None:
     """
-    Save the weather outlook for selected Philippine tourist areas
+    Save the ingested weather outlook for selected Philippine tourist areas
     to a JSON file in the `data/raw/weather_outlook_for_ph_tourist_areas`
     subdirectory on the local machine.
 
@@ -426,7 +426,7 @@ def save_ph_tourist_areas_weather_outlook_to_raw_subdir(
         and their corresponding temperature ranges
     :type ph_cities_weather_outlook: dict[str, dict]
     """
-    # Create a dictionary to store weather outlook of selected PH tourist areas
+    # Create a dictionary to store the ingested weather outlook of selected PH tourist areas
     data = ph_tourist_areas_weather_outlook
 
     # Save the dictionary to a json file using open() method and json module
