@@ -140,20 +140,20 @@ def parse_ph_cities_weather_outlook_to_dataframe(
         'chance_of_rain_percentages': []
     }
 
-    # Loop through the PH cities weather outlook DataFrame to map its value to the initialized dictionary
+    # Iterate the PH cities weather outlook DataFrame to map its value to the initialized dictionary
     for ph_city, weather_outlook_dict in ph_cities_weather_outlook_raw_dataframe.items():
-        # Loop 5 times to map PH city name to the initialized dictionary
+        # Iterate 5 times to map PH city name to the initialized dictionary
         for _ in range(5):
-            # We perform loop 5 times because every PH city has 5 instances of weather outlooks per dates
+            # Iterating 5 times because every PH city has 5 instances of weather outlooks per dates
             ph_cities_weather_outlook_dict['ph_cities'].append(ph_city)
 
-        # Loop through the weather dates list to map it to the to the initialized dictionary
+        # Iterate the weather dates list to map it to the initialized dictionary
         for weather_date in weather_outlook_dict['weather_dates']:
             ph_cities_weather_outlook_dict['weather_dates'].append(
                 weather_date
             )
 
-        # Loop through the temperature ranges list to map it to the initialized dictionary
+        # Iterate the temperature ranges list to map it to the initialized dictionary
         for temperature_ranges in weather_outlook_dict['temperature_ranges']:
             minimum_temperature = temperature_ranges[0]
             maximum_temperature = temperature_ranges[1]
@@ -165,7 +165,7 @@ def parse_ph_cities_weather_outlook_to_dataframe(
                 maximum_temperature
             )
 
-        # Loop through the rain chance pct list to map it to the initialized dictionary
+        # Iterate the rain chance pct list to map it to the initialized dictionary
         for chance_of_rain_percentage in weather_outlook_dict['chance_of_rain_percentages']:
             ph_cities_weather_outlook_dict['chance_of_rain_percentages'].append(
                 chance_of_rain_percentage
