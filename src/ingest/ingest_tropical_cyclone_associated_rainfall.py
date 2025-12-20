@@ -147,7 +147,7 @@ def ingest_tc_assoc_rainfall_image_sources(
         }
     )
 
-    # Loop through the select HTML tags to ingest tc associated rainfall image source tags
+    # Iterate the select HTMl tags to ingest tc associated rainfall image source tags
     for select_tag_with_form_control_class in select_tag_with_form_control_classes:
         tc_assoc_rainfall_image_source_tags = select_tag_with_form_control_class.find_all(
             'option'
@@ -155,14 +155,14 @@ def ingest_tc_assoc_rainfall_image_sources(
 
         list_of_all_tc_assoc_rainfal_image_sources = []
 
-        # Loop through tags to ingest tc associated rainfall image source
+        # Iterate the tags to ingest tc associated rainfall image source
         for tc_assoc_rainfall_image_source_tag in tc_assoc_rainfall_image_source_tags:
             tc_assoc_rainfall_image_source = str(tc_assoc_rainfall_image_source_tag['value']).strip()
             list_of_all_tc_assoc_rainfal_image_sources.append(
                 tc_assoc_rainfall_image_source
             )
 
-        # Loop through tc associated rainfall image sources dict to map the tc associated rainfall image sources list
+        # Iterate the tc associated rainfall image sources dict to map the tc associated rainfall image sources list
         for key, value in tc_assoc_rainfall_image_sources.items():
             if value == []:
                 # Map the tc associated rainfall image sources list to the correct key (year)

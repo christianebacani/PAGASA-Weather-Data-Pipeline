@@ -255,7 +255,7 @@ def ingest_ph_city_names(
     if list_of_all_ph_city_tags == []:
         return result
 
-    # Loop through rows containing HTML tags to ingest the names of the selected PH cities
+    # Iterate rows containing HTMl tags to ingest the names of the selected PH cities
     for ph_city_tag in list_of_all_ph_city_tags:
         ph_city_name_tag = ph_city_tag.find('a')
         ph_city_name = str(ph_city_name_tag.text).strip()
@@ -288,7 +288,7 @@ def ingest_weather_dates(
     table_tag = ph_city_tag.find('table', attrs={'class': 'table'})
     list_of_all_table_header_tags = table_tag.find_all('th')
 
-    # Loop through rows containing HTML tags to ingest all weather dates of selected PH cities
+    # Iterate rows containing HTML tags to ingest all weather dates of selected PH cities
     for table_header_tag in list_of_all_table_header_tags:
         weather_date = str(table_header_tag.text).strip()
         # Use split() method to remove extra whitespaces in between words
@@ -323,7 +323,7 @@ def map_weather_dates_to_ph_cities(
 
     list_of_all_ph_city_names = list(result.keys())
 
-    # Loop the through the selected PH cities list to map it to the weather dates list
+    # Iterate the selected PH cities list to map it to the weather dates list
     for ph_city_name in list_of_all_ph_city_names:
         # Map weather dates list to the selected PH city
         result[ph_city_name]['weather_dates'] = weather_dates
@@ -349,7 +349,7 @@ def ingest_temperature_ranges(
     if list_of_all_ph_city_tags == []:
         return result
 
-    # Loop through PH city tags to ingest temperature range tags
+    # Iterate the PH city tags to ingest temperature range tags
     for ph_city_tag in list_of_all_ph_city_tags:
         table_tag = ph_city_tag.find('table', attrs={'class': 'table'})
         temperature_ranges_tag = table_tag.find('tr', attrs={'class': 'desktop-view-tr'})
@@ -357,7 +357,7 @@ def ingest_temperature_ranges(
 
         temperature_ranges = []
 
-        # Loop through tags to ingest temperature ranges for selected PH cities
+        # Iterate tags to ingest temperature ranges for selected PH cities        
         for table_data_tag in list_of_all_table_data_tags:
             minimum_temperature_tag = table_data_tag.find('span', attrs={'class': 'min'})
             minimum_temperature = str(minimum_temperature_tag.text).strip()
@@ -398,7 +398,7 @@ def map_temperature_ranges_to_ph_cities(
     list_of_all_temperature_ranges = temperature_ranges
     list_of_all_ph_city_names = list(result.keys())
 
-    # Loop through the temperature ranges list to map it to the selected PH cities list
+    # Iterate the temperature ranges list to map it to the selected PH cities list\
     for index, temperature_ranges in enumerate(list_of_all_temperature_ranges):
         # Use the index of temperature range to get the name of the PH city
         ph_city_name = list_of_all_ph_city_names[index]
@@ -426,7 +426,7 @@ def ingest_chance_of_rain_percentages(
     if list_of_all_ph_city_tags == []:
         return result
 
-    # Loop through the selected Ph city HTML tags list to ingest rain chance pct tags
+    # Iterate through the selected PH city HTML tags list to ingest rain chance pct tags
     for ph_city_tag in list_of_all_ph_city_tags:
         table_tag = ph_city_tag.find('table', attrs={'class': 'table'})
         chance_of_rain_percentages_tag = table_tag.find('tr', attrs={'class': 'desktop-view-tr'})
@@ -434,7 +434,7 @@ def ingest_chance_of_rain_percentages(
 
         chance_of_rain_percentages = []
 
-        # Loop through tags to ingest rain chance pcts for selected PH cities
+        # Iterate tags to ingest rain chance pcts for selected PH cities
         for table_data_tag in list_of_all_table_data_tags:
             chance_of_rain_percentage_tag = table_data_tag.find(
                 'span',
@@ -479,7 +479,7 @@ def map_chance_of_rain_percentages_to_ph_cities(
     list_of_all_chance_of_rain_percentages = chance_of_rain_percentages
     list_of_all_ph_city_names = list(ph_cities_weather_outlook.keys())
 
-    # Loop through the rain chance pcts list to map it to the selected PH cities list
+    # Iterate the rain chance pcts list to map it to the selected PH cities list
     for index, chance_of_rain_percentages in enumerate(list_of_all_chance_of_rain_percentages):
         # Use the index of rain chance pct to get the name of the PH city
         ph_city_name = list_of_all_ph_city_names[index]
