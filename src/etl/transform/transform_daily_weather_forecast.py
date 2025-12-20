@@ -407,3 +407,12 @@ def enrich_forecast_wind_and_coastal_water_conditions_with_issued_datetime(
             'issued_datetimes'
         ]
     )
+
+    # Iterate the forecast wnd and coastal water conditions DataFrame to map its value to the initialized DataFrame
+    for _, row in forecast_wind_and_coastal_water_conditions_df.iterrows():
+        places = row['places']
+        speeds = row['speeds']
+        directions = row['directions']
+        coastal_waters = row['coastal_waters']
+
+        # Concatenate the forecast weather conditions data to the initialized DataFrame
