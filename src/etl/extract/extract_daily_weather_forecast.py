@@ -66,8 +66,6 @@ def save_raw_issued_datetime(
     :param issued_datetime_dataframe: DataFrame containing the issued datetime
         of the daily weather forecast
     :type issued_datetime_dataframe: pd.DataFrame
-
-    :return: None
     """
     # Save the raw issued datetime DataFrame object to the target filepath
     target_filepath = 'data/stage/daily_weather_forecast/issued_datetime.csv'
