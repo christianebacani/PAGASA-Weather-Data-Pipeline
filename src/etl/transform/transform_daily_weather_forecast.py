@@ -57,7 +57,7 @@ def transform_issued_datetime_df(
     columns = list(issued_datetime_df.keys())
     transformed_df = pd.DataFrame(columns=columns)
 
-    # Loop through the issued datetime DataFrame object to transform its data
+    # Iterate the issued datetime DataFrame to transform its data
     for _, row in issued_datetime_df.iterrows():
         issued_datetime = row['issued_datetimes']
         issued_datetime = str(issued_datetime).strip()
@@ -95,7 +95,7 @@ def transform_synopsis_df(
     columns = list(synopsis_df.keys())
     transformed_df = pd.DataFrame(columns=columns)
 
-    # Loop through the synopsis DataFrame object to transform its data
+    # Iterate the synopsis DataFrame to transform its data
     for _, row in synopsis_df.iterrows():
         synopsis = row['synopses']
         synopsis = str(synopsis).strip()
@@ -203,7 +203,7 @@ def transform_forecast_weather_conditions_df(
     columns = list(forecast_weather_conditions_df.keys())
     transformed_df = pd.DataFrame(columns=columns)
 
-    # Loop through the synopsis DataFrame object to transform its data
+    # Iterate the forecast weather conditions DataFrame to transform its data
     for _, row in forecast_weather_conditions_df.iterrows():
         places = row['places']
         weather_conditions = row['weather_conditions']
@@ -272,7 +272,7 @@ def enrich_forecast_weather_conditions_with_issued_datetime(
         ]
     )
 
-    # Loop through the forecast weather conditions DataFrame object to map its value to the initialize DataFrame
+    # Iterate the forecast weather conditions DataFrame to map it s value to the initialized DataFrame
     for _, row in forecast_weather_conditions_df.iterrows():
         places = row['places']
         weather_conditions = row['weather_conditions']
@@ -342,7 +342,7 @@ def transform_forecast_wind_and_coastal_water_conditions_df(
     columns = list(forecast_wind_and_coastal_water_conditions_df.keys())
     transformed_df = pd.DataFrame(columns=columns)
 
-    # Loop through the forecast wind and coastal water conditions DataFrame object to transform its data
+    # Iterate the forecast wind and coastal water conditions DataFrame to transform its data
     for _, row in forecast_wind_and_coastal_water_conditions_df.iterrows():
         places = row['places']
         speeds = row['speeds']
