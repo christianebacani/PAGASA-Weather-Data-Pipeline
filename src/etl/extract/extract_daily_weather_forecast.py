@@ -31,7 +31,7 @@ def create_subdir(
     if not os.path.exists('data/stage/daily_weather_forecast'):
         os.makedirs('data/stage/daily_weather_forecast')
 
-def parse_issued_datetime_to_dataframe(
+def parse_issued_datetime(
         issued_datetime_filepath: str
 ) -> pd.DataFrame:
     """
@@ -56,11 +56,11 @@ def parse_issued_datetime_to_dataframe(
 
     return issued_datetime_dataframe
 
-def save_issued_datetime_dataframe_to_stage_subdir(
+def save_raw_issued_datetime(
         issued_datetime_dataframe: pd.DataFrame
 ) -> None:
     """
-    Save the issued datetime DataFrame to the staging
+    Save the raw issued datetime DataFrame to the staging
     directory for further processing.
 
     :param issued_datetime_dataframe: DataFrame containing the issued datetime
@@ -69,11 +69,11 @@ def save_issued_datetime_dataframe_to_stage_subdir(
 
     :return: None
     """
-    # Save the issued datetime DataFrame object to the target filepath
+    # Save the raw issued datetime DataFrame object to the target filepath
     target_filepath = 'data/stage/daily_weather_forecast/issued_datetime.csv'
     issued_datetime_dataframe.to_csv(target_filepath, index=False)
 
-def parse_synopsis_to_dataframe(
+def parse_synopsis(
         synopsis_filepath: str
 ) -> pd.DataFrame:
     """
@@ -98,79 +98,80 @@ def parse_synopsis_to_dataframe(
 
     return synopsis_dataframe
 
-def save_synopsis_dataframe_to_stage_subdir(
+def save_raw_synopsis(
         synopsis_dataframe: pd.DataFrame
 ) -> None:
     """
-    Save the synopsis DataFrame to the staging directory for further processing.
+    Save the raw synopsis DataFrame to the staging
+    directory for further processing.
 
-    :param synopsis_dataframe: DataFrame containing the synopsis of the daily
-        weather forecast
+    :param synopsis_dataframe: DataFrame containing the
+        synopsis of the daily weather forecast
     :type synopsis_dataframe: pd.DataFrame
     """
-    # Save the synopsis DataFrame object to the target filepath
+    # Save the raw synopsis DataFrame object to the target filepath
     target_filepath = 'data/stage/daily_weather_forecast/synopsis.csv'
     synopsis_dataframe.to_csv(target_filepath, index=False)
 
-def parse_tc_information_to_dataframe(
-        tc_information_filepath: str
+def parse_tropical_cyclone_information(
+        tropical_cyclone_information_filepath: str
 ) -> pd.DataFrame:
     """
     Parse the tropical cyclone information of the daily weather forecast into
     a DataFrame.
 
-    :param tc_information_filepath: Relative filepath of the JSON file
+    :param tropical_cyclone_information_filepath: Relative filepath of the JSON file
         that stores the tropical cyclone information of the daily
         weather forecast
-    :type tc_information_filepath: str
+    :type tropical_cyclone_information_filepath: str
 
     :return: DataFrame containing the tropical cyclone information of the
         daily weather forecast
     :rtype: DataFrame
     """
     # Read the tropical cyclone information JSON file as a Pandas Series
-    tc_information_raw_dataframe = pd.read_json(tc_information_filepath, typ='series')
+    tropical_cyclone_information_raw_dataframe = pd.read_json(tropical_cyclone_information_filepath, typ='series')
 
     # Parse the Pandas Series as a DataFrame object
-    tc_information_dataframe = pd.DataFrame({
+    tropical_cyclone_information_dataframe = pd.DataFrame({
         'current_updates': [
-            tc_information_raw_dataframe['current_update']
+            tropical_cyclone_information_raw_dataframe['current_update']
         ],
         'tropical_cyclone_names': [
-            tc_information_raw_dataframe['tropical_cyclone_name']
+            tropical_cyclone_information_raw_dataframe['tropical_cyclone_name']
         ],
         'locations': [
-            tc_information_raw_dataframe['location']
+            tropical_cyclone_information_raw_dataframe['location']
         ],
         'maximum_sustained_winds': [
-            tc_information_raw_dataframe['maximum_sustained_winds']
+            tropical_cyclone_information_raw_dataframe['maximum_sustained_winds']
         ],
         'gustiness': [
-            tc_information_raw_dataframe['gustiness']
+            tropical_cyclone_information_raw_dataframe['gustiness']
         ],
         'movements': [
-            tc_information_raw_dataframe['movement']
+            tropical_cyclone_information_raw_dataframe['movement']
         ]
     })
 
-    return tc_information_dataframe
+    return tropical_cyclone_information_dataframe
 
-def save_tc_information_dataframe_to_stage_subdir(
-        tc_information_dataframe: pd.DataFrame
+def save_raw_tropical_cyclone_information(
+        tropical_cyclone_information_dataframe: pd.DataFrame
 ) -> None:
     """
-    Save the tropical cyclone information DataFrame to the staging directory for
-    further processing.
+    Save the raw tropical cyclone information DataFrame to the staging
+    directory for further processing.
 
-    :param tc_information_dataframe: DataFrame containing the tropical cyclone information
+    :param tropical_cyclone_information_dataframe: DataFrame containing the tropical cyclone information
         of the daily weather forecast
-    :type tc_information_dataframe: pd.DataFrame
+    :type tropical_cyclone_information_dataframe: pd.DataFrame
     """
-    # Save the tropical cyclone information DataFrame object to the target filepath
+    # Save the raw tropical cyclone information DataFrame object to the target filepath
     target_filepath = 'data/stage/daily_weather_forecast/tropical_cyclone_information.csv'
-    tc_information_dataframe.to_csv(target_filepath, index=False)
+    tropical_cyclone_information_dataframe.to_csv(target_filepath, index=False)
 
-def parse_forecast_weather_conditions_to_dataframe(
+def parse_forecast_weather_conditions(
         forecast_weather_conditions_filepath: str
 ) -> pd.DataFrame:
     """
@@ -200,22 +201,22 @@ def parse_forecast_weather_conditions_to_dataframe(
 
     return forecast_weather_conditions_dataframe
 
-def save_forecast_weather_conditions_dataframe_to_stage_subdir(
+def save_raw_forecast_weather_conditions_dataframe(
         forecast_weather_conditions_dataframe: pd.DataFrame
 ) -> None:
     """
-    Save the forecast weather conditions DataFrame to the staging directory for
-    further processing.
+    Save the raw forecast weather conditions DataFrame to the staging
+    directory for further processing.
 
     :param forecast_weather_conditions_dataframe: DataFrame containing the forecast
         weather conditions of the daily weather forecast
     :type forecast_weather_conditions_dataframe: pd.DataFrame
     """
-    # Save the forecast weather conditions DataFrame object to the target filepath
+    # Save the raw forecast weather conditions DataFrame object to the target filepath
     target_filepath = 'data/stage/daily_weather_forecast/forecast_weather_conditions.csv'
     forecast_weather_conditions_dataframe.to_csv(target_filepath, index=False)
 
-def parse_forecast_wind_and_coastal_water_conditions_to_dataframe(
+def parse_forecast_wind_and_coastal_water_conditions(
         forecast_wind_and_coastal_water_conditions_filepath: str
 ) -> pd.DataFrame:
     """
@@ -246,22 +247,22 @@ def parse_forecast_wind_and_coastal_water_conditions_to_dataframe(
 
     return forecast_wind_and_coastal_water_conditions_dataframe
 
-def save_forecast_wind_and_coastal_water_conditions_dataframe_to_stage_subdir(
+def save_raw_forecast_wind_andd_coastal_water_conditions(
         forecast_wind_and_coastal_water_conditions_dataframe: pd.DataFrame
 ) -> None:
     """
-    Save the foreast wind and coastal water conditions DataFrame to the staging
+    Save the raw foreast wind and coastal water conditions DataFrame to the staging
     directory for further processing.
 
     :param forecast_wind_and_coastal_water_conditions_dataframe: DataFrame containing the
         forecast wind and coastal water conditions of the daily weather forecast
     :type forecast_wind_and_coastal_water_conditions_dataframe: pd.DataFrame
     """
-    # Save the forecast wind and coastal water conditions DataFrame object to the target filepath
+    # Save the raw forecast wind and coastal water conditions DataFrame object to the target filepath
     target_filepath = 'data/stage/daily_weather_forecast/forecast_wind_and_coastal_water_conditions.csv'
     forecast_wind_and_coastal_water_conditions_dataframe.to_csv(target_filepath, index=False)
 
-def parse_temperature_and_relative_humidity_to_dataframe(
+def parse_temperature_and_relative_humidity(
         temperature_and_relative_humidity_filepath: str
 ) -> pd.DataFrame:
     """
@@ -311,17 +312,17 @@ def parse_temperature_and_relative_humidity_to_dataframe(
 
     return temperature_and_relative_humidity_dataframe
 
-def save_temperature_and_relative_humidity_dataframe_to_stage_subdir(
+def save_raw_temperature_and_relative_humidity(
         temperature_and_relative_humidity_dataframe: pd.DataFrame
 ) -> None:
     """
-    Save the temperature and relative humdity DataFrame to the staging directory
+    Save the raw temperature and relative humdity DataFrame to the staging directory
     for further processing.
 
     :param temperature_and_relative_humidity_dataframe: DataFrame containing
         the temperature and relative humidity of the daily weather forecast
     :type temperature_and_relative_humidity_dataframe: pd.DataFrame
     """
-    # Save the temperature and relative humidity to the target filepath
+    # Save the raw temperature and relative humidity to the target filepath
     target_filepath = f'data/stage/daily_weather_forecast/temperature_and_relative_humidity.csv'
     temperature_and_relative_humidity_dataframe.to_csv(target_filepath, index=False)
