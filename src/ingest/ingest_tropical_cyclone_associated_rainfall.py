@@ -171,14 +171,14 @@ def ingest_tc_assoc_rainfall_image_sources(
 
     return tc_assoc_rainfall_image_sources[year]
 
-def save_tc_assoc_rainfall_image_sources_to_raw_subdir(
+def save_ingested_tc_assoc_rainfall_image_sources(
         tc_assoc_rainfall_image_sources: list[str],
         year: int
 ) -> None:
     """
-    Save the tropical cyclone associated rainfall image
-    sources for the specified year to a JSON file in the
-    `data/raw/tropical_cyclone_associated_rainfall/`
+    Save the ingested tropical cyclone associated rainfall
+    image sources for the specified year to a JSON file in
+    the `data/raw/tropical_cyclone_associated_rainfall/`
     subdirectory on the local machine.
 
     :param tc_assoc_rainfall_image_sources: Tropical
@@ -189,7 +189,7 @@ def save_tc_assoc_rainfall_image_sources_to_raw_subdir(
         associated rainfall image sources
     :type year: int
     """
-    # Create a dictionary to store the tc associated rainfall image sources for the specified year
+    # Create a dictionary to store the ingested tc associated rainfall image sources for the specified year
     data = {
         f"tc_associated_rainfall_image_sources_of_{year}": tc_assoc_rainfall_image_sources
     }
