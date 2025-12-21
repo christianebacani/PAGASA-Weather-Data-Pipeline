@@ -7,7 +7,7 @@ This module executes ingestion functions in the
 from ingest.ingest_weather_advisory import create_subdir
 from ingest.ingest_weather_advisory import ingest_beautiful_soup_object
 from ingest.ingest_weather_advisory import ingest_weather_advisory_document_source
-from ingest.ingest_weather_advisory import save_weather_advisory_document_source_to_raw_subdir
+from ingest.ingest_weather_advisory import save_ingested_weather_advisory_document_source
 
 def ingest_weather_advisory(
 ) -> None:
@@ -26,6 +26,6 @@ def ingest_weather_advisory(
     weather_advisory_document_source = ingest_weather_advisory_document_source(
         soup
     )
-    save_weather_advisory_document_source_to_raw_subdir(
+    save_ingested_weather_advisory_document_source(
         weather_advisory_document_source
     )
