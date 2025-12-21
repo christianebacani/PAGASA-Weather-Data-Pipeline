@@ -7,14 +7,14 @@ subdirectory on the local machine, serving as the entry point for the daily tran
 import pandas as pd
 
 from etl.transform.transform_daily_weather_forecast import create_subdir
-from etl.transform.transform_daily_weather_forecast import transform_issued_datetime_df
-from etl.transform.transform_daily_weather_forecast import transform_synopsis_df
+from etl.transform.transform_daily_weather_forecast import transform_issued_datetime
+from etl.transform.transform_daily_weather_forecast import transform_synopsis
 from etl.transform.transform_daily_weather_forecast import enrich_synopsis_with_issued_datetime
-from etl.transform.transform_daily_weather_forecast import save_synopsis_with_issued_datetime_to_processed_subdir
-from etl.transform.transform_daily_weather_forecast import transform_forecast_weather_conditions_df
+from etl.transform.transform_daily_weather_forecast import save_processed_synopsis
+from etl.transform.transform_daily_weather_forecast import transform_forecast_weather_conditions
 from etl.transform.transform_daily_weather_forecast import enrich_forecast_weather_conditions_with_issued_datetime
-from etl.transform.transform_daily_weather_forecast import save_forecast_weather_conditions_with_issued_datetime_to_processed_subdir
-from etl.transform.transform_daily_weather_forecast import transform_forecast_wind_and_coastal_water_conditions_df
+from etl.transform.transform_daily_weather_forecast import save_processed_forecast_weather_conditions
+from etl.transform.transform_daily_weather_forecast import transform_forecast_wind_and_coastal_water_conditions
 from etl.transform.transform_daily_weather_forecast import enrich_forecast_wind_and_coastal_water_conditions_with_issued_datetime
 
 def transform_daily_weather_forecast(
@@ -31,46 +31,19 @@ def transform_daily_weather_forecast(
     # Run all functions to extract tropical cyclone associated rainfall data
     create_subdir()
 
-    issued_datetime_df = transform_issued_datetime_df(
+    issued_datetime_dataframe = transform_issued_datetime(
         pd.read_csv(
             'data/stage/daily_weather_forecast/issued_datetime.csv'
         )
     )
 
-    synopsis_df = transform_synopsis_df(
+    synopsis_dataframe = transform_synopsis(
         pd.read_csv(
             'data/stage/daily_weather_forecast/synopsis.csv'
         )
     )
 
-    synopsis_with_issued_datetime_df = enrich_synopsis_with_issued_datetime(
-        synopsis_df,
-        issued_datetime_df
-    )
-    save_synopsis_with_issued_datetime_to_processed_subdir(
-        synopsis_with_issued_datetime_df
-    )
-
-    forecast_weather_conditions_df = transform_forecast_weather_conditions_df(
-        pd.read_csv(
-            'data/stage/daily_weather_forecast/forecast_weather_conditions.csv'
-        )
-    )
-
-    forecast_weather_conditions_with_issued_datetime_df = enrich_forecast_weather_conditions_with_issued_datetime(
-        forecast_weather_conditions_df,
-        issued_datetime_df
-    )
-    save_forecast_weather_conditions_with_issued_datetime_to_processed_subdir(
-        forecast_weather_conditions_with_issued_datetime_df
-    )
-
-    forecast_wind_and_coastal_water_conditions_df = transform_forecast_wind_and_coastal_water_conditions_df(
-        pd.read_csv(
-            'data/stage/daily_weather_forecast/forecast_wind_and_coastal_water_conditions.csv'
-        )
-    )
-    forecast_wind_and_coastal_water_conditions_with_issued_datetime_df = enrich_forecast_wind_and_coastal_water_conditions_with_issued_datetime(
-        forecast_wind_and_coastal_water_conditions_df,
-        issued_datetime_df
+    enriched_synopsis_dataframe = enrich_synopsis_with_issued_datetime(
+        synopsis_dataframe,
+        issued_datetime_dataframe
     )
