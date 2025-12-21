@@ -8,9 +8,9 @@ package.
 from ingest.ingest_weather_outlook_for_ph_cities import create_subdir
 from ingest.ingest_weather_outlook_for_ph_cities import ingest_beautiful_soup_object
 from ingest.ingest_weather_outlook_for_ph_cities import ingest_issued_datetime
-from ingest.ingest_weather_outlook_for_ph_cities import save_issued_datetime_to_raw_subdir
+from ingest.ingest_weather_outlook_for_ph_cities import save_ingested_issued_datetime
 from ingest.ingest_weather_outlook_for_ph_cities import ingest_valid_period
-from ingest.ingest_weather_outlook_for_ph_cities import save_valid_period_to_raw_subdir
+from ingest.ingest_weather_outlook_for_ph_cities import save_ingested_valid_period
 from ingest.ingest_weather_outlook_for_ph_cities import ingest_ph_city_tags
 from ingest.ingest_weather_outlook_for_ph_cities import ingest_ph_city_names
 from ingest.ingest_weather_outlook_for_ph_cities import ingest_weather_dates
@@ -19,7 +19,7 @@ from ingest.ingest_weather_outlook_for_ph_cities import ingest_temperature_range
 from ingest.ingest_weather_outlook_for_ph_cities import map_temperature_ranges_to_ph_cities
 from ingest.ingest_weather_outlook_for_ph_cities import ingest_chance_of_rain_percentages
 from ingest.ingest_weather_outlook_for_ph_cities import map_chance_of_rain_percentages_to_ph_cities
-from ingest.ingest_weather_outlook_for_ph_cities import save_ph_cities_weather_outlook_to_raw_subdir
+from ingest.ingest_weather_outlook_for_ph_cities import save_ingested_ph_cities_weather_outlook
 
 def ingest_weather_outlook_for_ph_cities(
 ) -> None:
@@ -36,22 +36,38 @@ def ingest_weather_outlook_for_ph_cities(
         'https://www.pagasa.dost.gov.ph/weather/weather-outlook-selected-philippine-cities'
     )
 
-    issued_datetime = ingest_issued_datetime(soup)
-    save_issued_datetime_to_raw_subdir(issued_datetime)
+    issued_datetime = ingest_issued_datetime(
+        soup
+    )
+    save_ingested_issued_datetime(
+        issued_datetime
+    )
 
-    valid_period = ingest_valid_period(soup)
-    save_valid_period_to_raw_subdir(valid_period)
+    valid_period = ingest_valid_period(
+        soup
+    )
+    save_ingested_valid_period(
+        valid_period
+    )
 
-    list_of_all_ph_city_tags = ingest_ph_city_tags(soup)
-    ph_city_names = ingest_ph_city_names(list_of_all_ph_city_tags)
+    list_of_all_ph_city_tags = ingest_ph_city_tags(
+        soup
+    )
+    ph_city_names = ingest_ph_city_names(
+        list_of_all_ph_city_tags
+    )
 
-    weather_dates = ingest_weather_dates(list_of_all_ph_city_tags)
+    weather_dates = ingest_weather_dates(
+        list_of_all_ph_city_tags
+    )
     ph_cities_with_weather_dates = map_weather_dates_to_ph_cities(
         weather_dates,
         ph_city_names
     )
 
-    temperature_ranges = ingest_temperature_ranges(list_of_all_ph_city_tags)
+    temperature_ranges = ingest_temperature_ranges(
+        list_of_all_ph_city_tags
+    )
     ph_cities_weather_outlook = map_temperature_ranges_to_ph_cities(
         temperature_ranges,
         ph_cities_with_weather_dates
@@ -63,4 +79,6 @@ def ingest_weather_outlook_for_ph_cities(
         ph_cities_weather_outlook
     )
 
-    save_ph_cities_weather_outlook_to_raw_subdir(ph_cities_weather_outlook)
+    save_ingested_ph_cities_weather_outlook(
+        ph_cities_weather_outlook
+    )
