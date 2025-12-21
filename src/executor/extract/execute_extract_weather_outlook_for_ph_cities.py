@@ -7,12 +7,12 @@ subdirectory on the local machine, serving as the entry point for the
 daily extraction workflow.
 """
 from etl.extract.extract_weather_outlook_for_ph_cities import create_subdir
-from etl.extract.extract_weather_outlook_for_ph_cities import parse_issued_datetime_to_dataframe
-from etl.extract.extract_weather_outlook_for_ph_cities import save_issued_datetime_dataframe_to_stage_subdir
-from etl.extract.extract_weather_outlook_for_ph_cities import parse_valid_period_to_dataframe
-from etl.extract.extract_weather_outlook_for_ph_cities import save_valid_period_dataframe_to_stage_subdir
-from etl.extract.extract_weather_outlook_for_ph_cities import parse_ph_cities_weather_outlook_to_dataframe
-from etl.extract.extract_weather_outlook_for_ph_cities import save_ph_cities_weather_outlook_dataframe_to_stage_subdir
+from etl.extract.extract_weather_outlook_for_ph_cities import parse_issued_datetime
+from etl.extract.extract_weather_outlook_for_ph_cities import save_raw_issued_datetime
+from etl.extract.extract_weather_outlook_for_ph_cities import parse_valid_period
+from etl.extract.extract_weather_outlook_for_ph_cities import save_raw_valid_period
+from etl.extract.extract_weather_outlook_for_ph_cities import parse_ph_cities_weather_outlook
+from etl.extract.extract_weather_outlook_for_ph_cities import save_raw_ph_cities_weather_outlook
 
 def extract_weather_outlook_for_ph_cities(
 ) -> None:
@@ -28,23 +28,23 @@ def extract_weather_outlook_for_ph_cities(
     # Run all functions to extract weather outlook data for selected Philippine cities
     create_subdir()
 
-    issued_datetime_dataframe = parse_issued_datetime_to_dataframe(
+    issued_datetime_dataframe = parse_issued_datetime(
         'data/raw/weather_outlook_for_ph_cities/issued_datetime.json'
     )
-    save_issued_datetime_dataframe_to_stage_subdir(
+    save_raw_issued_datetime(
         issued_datetime_dataframe
     )
 
-    valid_period_dataframe = parse_valid_period_to_dataframe(
+    valid_period_dataframe = parse_valid_period(
         'data/raw/weather_outlook_for_ph_cities/valid_period.json'
     )
-    save_valid_period_dataframe_to_stage_subdir(
+    save_raw_valid_period(
         valid_period_dataframe
     )
 
-    ph_cities_weather_outlook_dataframe = parse_ph_cities_weather_outlook_to_dataframe(
+    ph_cities_weather_outlook_dataframe = parse_ph_cities_weather_outlook(
         'data/raw/weather_outlook_for_ph_cities/ph_cities_weather_outlook.json'
     )
-    save_ph_cities_weather_outlook_dataframe_to_stage_subdir(
+    save_raw_ph_cities_weather_outlook(
         ph_cities_weather_outlook_dataframe
     )
