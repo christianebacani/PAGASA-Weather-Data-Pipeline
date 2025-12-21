@@ -61,3 +61,6 @@ def transform_daily_weather_forecast(
         forecast_weather_conditions_dataframe,
         issued_datetime_dataframe
     )
+    save_processed_forecast_weather_conditions(
+        enriched_forecast_weather_conditions_dataframe
+    )
