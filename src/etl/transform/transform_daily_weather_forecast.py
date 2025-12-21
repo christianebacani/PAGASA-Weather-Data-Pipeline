@@ -127,3 +127,18 @@ def transform_synopsis(
         ], ignore_index=True)
 
     return transformed_dataframe
+
+def enrich_synopsis_with_issued_datetime(
+        synopsis_dataframe: pd.DataFrame,
+        issued_datetime_dataframe: pd.DataFrame
+) -> pd.DataFrame:
+    """
+    Docstring for enrich_synopsis_with_issued_datetime
+    
+    :param synopsis_dataframe: Description
+    :type synopsis_dataframe: pd.DataFrame
+    :param issued_datetime_dataframe: Description
+    :type issued_datetime_dataframe: pd.DataFrame
+    :return: Description
+    :rtype: DataFrame
+    """
