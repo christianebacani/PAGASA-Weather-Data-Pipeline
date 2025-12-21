@@ -42,7 +42,6 @@ def transform_daily_weather_forecast(
             'data/stage/daily_weather_forecast/synopsis.csv'
         )
     )
-
     enriched_synopsis_dataframe = enrich_synopsis_with_issued_datetime(
         synopsis_dataframe,
         issued_datetime_dataframe
@@ -56,11 +55,16 @@ def transform_daily_weather_forecast(
             'data/stage/daily_weather_forecast/forecast_weather_conditions.csv'
         )
     )
-
     enriched_forecast_weather_conditions_dataframe = enrich_forecast_weather_conditions_with_issued_datetime(
         forecast_weather_conditions_dataframe,
         issued_datetime_dataframe
     )
     save_processed_forecast_weather_conditions(
         enriched_forecast_weather_conditions_dataframe
+    )
+
+    forecast_wind_and_coastal_water_conditions_dataframe = transform_forecast_wind_and_coastal_water_conditions(
+        pd.read_csv(
+            'data/stage/daily_weather_forecast/forecast_wind_and_coastal_water_conditions.csv'
+        )
     )
