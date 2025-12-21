@@ -63,16 +63,18 @@ def transform_issued_datetime(
     # Iterate the issued datetime DataFrame to transform its data
     for _, row in issued_datetime_dataframe.iterrows():
         issued_datetimes = row['issued_datetimes']
-        issued_datetimes = str(issued_datetimes).strip()
+        issued_datetimes = str(issued_datetimes)
         issued_datetimes = issued_datetimes.split(', ')
 
         # Normalize and standardized the data using split() and replace() method
         issued_dates = issued_datetimes[1]
         issued_dates = issued_dates.split()
         issued_dates = issued_dates[1] + ' ' + issued_dates[0] + ', ' + issued_dates[2]
+        issued_dates = issued_dates.strip()
 
         issued_times = issued_datetimes[0]
         issued_times = issued_times.replace('Issued at: ', '')
+        issued_times = issued_times.strip()
 
         # Concatenate the transformed data to the initialized DataFrame
         transformed_dataframe = pd.concat([
