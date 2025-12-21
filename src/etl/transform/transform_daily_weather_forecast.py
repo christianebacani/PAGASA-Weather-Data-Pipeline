@@ -90,3 +90,20 @@ def transform_issued_datetime(
         ], ignore_index=True)
 
     return transformed_dataframe
+
+def transform_synopsis(
+        synopsis_dataframe: pd.DataFrame
+) -> None:
+    """
+    Transform the synopsis DataFrame object
+    located in the `data/stage/daily_weather_forecast`
+    subdirectory on the local machine.
+
+    :param synopsis_dataframe: DataFrame containing
+        the synopsis of the daily weather forecast
+    :type synopsis_dataframe: pd.DataFrame
+
+    :return: Transformed DataFrame containing the
+        cleaned synopsis of the daily weather forecast
+    :rtype: DataFrame
+    """
