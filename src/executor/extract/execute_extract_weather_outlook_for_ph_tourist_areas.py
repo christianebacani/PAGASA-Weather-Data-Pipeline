@@ -6,12 +6,12 @@ This module runs all extraction tasks on files located in the `data/raw/weather_
 subdirectory on the local machine, serving as the entry point for the daily extraction workflow.
 """
 from etl.extract.extract_weather_outlook_for_ph_tourist_areas import create_subdir
-from etl.extract.extract_weather_outlook_for_ph_tourist_areas import parse_issued_datetime_to_dataframe
-from etl.extract.extract_weather_outlook_for_ph_tourist_areas import save_issued_datetime_dataframe_to_stage_subdir
-from etl.extract.extract_weather_outlook_for_ph_tourist_areas import parse_valid_period_to_dataframe
-from etl.extract.extract_weather_outlook_for_ph_tourist_areas import save_valid_period_dataframe_to_stage_subdir
-from etl.extract.extract_weather_outlook_for_ph_tourist_areas import parse_ph_tourist_areas_weather_outlook_to_dataframe
-from etl.extract.extract_weather_outlook_for_ph_tourist_areas import save_ph_tourist_areas_weather_outlook_dataframe_to_stage_subdir
+from etl.extract.extract_weather_outlook_for_ph_tourist_areas import parse_issued_datetime
+from etl.extract.extract_weather_outlook_for_ph_tourist_areas import save_raw_issued_datetime
+from etl.extract.extract_weather_outlook_for_ph_tourist_areas import parse_valid_period
+from etl.extract.extract_weather_outlook_for_ph_tourist_areas import save_raw_valid_period
+from etl.extract.extract_weather_outlook_for_ph_tourist_areas import parse_ph_tourist_areas_weather_outlook
+from etl.extract.extract_weather_outlook_for_ph_tourist_areas import save_raw_ph_tourist_areas_weather_outlook
 
 def extract_weather_outlook_for_ph_tourist_areas(
 ) -> None:
@@ -28,23 +28,23 @@ def extract_weather_outlook_for_ph_tourist_areas(
     # Run all functions to extract weather outlook data for selected Philippine tourist areas
     create_subdir()
 
-    issued_datetime_dataframe = parse_issued_datetime_to_dataframe(
+    issued_datetime_dataframe = parse_issued_datetime(
         'data/raw/weather_outlook_for_ph_tourist_areas/issued_datetime.json'
     )
-    save_issued_datetime_dataframe_to_stage_subdir(
+    save_raw_issued_datetime(
         issued_datetime_dataframe
     )
 
-    valid_period_dataframe = parse_valid_period_to_dataframe(
+    valid_period_dataframe = parse_valid_period(
         'data/raw/weather_outlook_for_ph_tourist_areas/valid_period.json'
     )
-    save_valid_period_dataframe_to_stage_subdir(
+    save_raw_valid_period(
         valid_period_dataframe
     )
 
-    ph_tourist_areas_weather_outlook_to_dataframe = parse_ph_tourist_areas_weather_outlook_to_dataframe(
+    ph_tourist_areas_weather_outlook_to_dataframe = parse_ph_tourist_areas_weather_outlook(
         'data/raw/weather_outlook_for_ph_tourist_areas/ph_tourist_areas_weather_outlook.json'
     )
-    save_ph_tourist_areas_weather_outlook_dataframe_to_stage_subdir(
+    save_raw_ph_tourist_areas_weather_outlook(
         ph_tourist_areas_weather_outlook_to_dataframe
     )
