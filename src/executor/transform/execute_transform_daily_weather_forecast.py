@@ -56,3 +56,8 @@ def transform_daily_weather_forecast(
             'data/stage/daily_weather_forecast/forecast_weather_conditions.csv'
         )
     )
+
+    enriched_forecast_weather_conditions_dataframe = enrich_forecast_weather_conditions_with_issued_datetime(
+        forecast_weather_conditions_dataframe,
+        issued_datetime_dataframe
+    )
