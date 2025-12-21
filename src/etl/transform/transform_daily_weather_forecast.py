@@ -80,8 +80,12 @@ def transform_issued_datetime(
         transformed_dataframe = pd.concat([
             transformed_dataframe,
             pd.DataFrame({
-                'issued_dates': [issued_dates],
-                'issued_times': [issued_times]
+                'issued_dates': [
+                    issued_dates
+                ],
+                'issued_times': [
+                    issued_times
+                ]
             })
         ], ignore_index=True)
 
