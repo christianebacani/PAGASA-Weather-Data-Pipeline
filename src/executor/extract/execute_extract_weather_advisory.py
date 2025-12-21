@@ -5,7 +5,7 @@ This module runs all extraction tasks on files located in the `data/raw/weather_
 subdirectory on the local machine, serving as the entry point for the daily extraction workflow.
 """
 from etl.extract.extract_weather_advisory import create_subdir
-from etl.extract.extract_weather_advisory import parse_weather_advisory_to_dataframe
+from etl.extract.extract_weather_advisory import parse_weather_advisory
 
 def extract_weather_advisory(
 ) -> None:
@@ -21,6 +21,6 @@ def extract_weather_advisory(
     # Run all functions to extract weather advisory data
     create_subdir()
 
-    weather_advisory_dataframe = parse_weather_advisory_to_dataframe(
+    weather_advisory_dataframe = parse_weather_advisory(
         'data/raw/weather_advisory/weather_advisory.json'
     )
