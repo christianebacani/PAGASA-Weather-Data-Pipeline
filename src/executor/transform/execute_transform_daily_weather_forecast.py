@@ -8,14 +8,6 @@ import pandas as pd
 
 from etl.transform.transform_daily_weather_forecast import create_subdir
 from etl.transform.transform_daily_weather_forecast import transform_issued_datetime
-from etl.transform.transform_daily_weather_forecast import transform_synopsis
-from etl.transform.transform_daily_weather_forecast import enrich_synopsis_with_issued_datetime
-from etl.transform.transform_daily_weather_forecast import save_processed_synopsis
-from etl.transform.transform_daily_weather_forecast import transform_forecast_weather_conditions
-from etl.transform.transform_daily_weather_forecast import enrich_forecast_weather_conditions_with_issued_datetime
-from etl.transform.transform_daily_weather_forecast import save_processed_forecast_weather_conditions
-from etl.transform.transform_daily_weather_forecast import transform_forecast_wind_and_coastal_water_conditions
-from etl.transform.transform_daily_weather_forecast import enrich_forecast_wind_and_coastal_water_conditions_with_issued_datetime
 
 def transform_daily_weather_forecast(
 ) -> None:
@@ -35,40 +27,4 @@ def transform_daily_weather_forecast(
         pd.read_csv(
             'data/stage/daily_weather_forecast/issued_datetime.csv'
         )
-    )
-
-    synopsis_dataframe = transform_synopsis(
-        pd.read_csv(
-            'data/stage/daily_weather_forecast/synopsis.csv'
-        )
-    )
-    enriched_synopsis_dataframe = enrich_synopsis_with_issued_datetime(
-        synopsis_dataframe,
-        issued_datetime_dataframe
-    )
-    save_processed_synopsis(
-        enriched_synopsis_dataframe
-    )
-
-    forecast_weather_conditions_dataframe = transform_forecast_weather_conditions(
-        pd.read_csv(
-            'data/stage/daily_weather_forecast/forecast_weather_conditions.csv'
-        )
-    )
-    enriched_forecast_weather_conditions_dataframe = enrich_forecast_weather_conditions_with_issued_datetime(
-        forecast_weather_conditions_dataframe,
-        issued_datetime_dataframe
-    )
-    save_processed_forecast_weather_conditions(
-        enriched_forecast_weather_conditions_dataframe
-    )
-
-    forecast_wind_and_coastal_water_conditions_dataframe = transform_forecast_wind_and_coastal_water_conditions(
-        pd.read_csv(
-            'data/stage/daily_weather_forecast/forecast_wind_and_coastal_water_conditions.csv'
-        )
-    )
-    enriched_forecast_wind_and_coastal_water_conditions_dataframe = enrich_forecast_wind_and_coastal_water_conditions_with_issued_datetime(
-        forecast_wind_and_coastal_water_conditions_dataframe,
-        issued_datetime_dataframe
     )
