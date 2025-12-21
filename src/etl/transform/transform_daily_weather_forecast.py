@@ -107,3 +107,13 @@ def transform_synopsis(
         cleaned synopsis of the daily weather forecast
     :rtype: DataFrame
     """
+    # Using initialized DataFrame to store transformed data
+    columns = list(synopsis_dataframe.keys())
+    transformed_dataframe = pd.DataFrame(columns=columns)
+
+    # Iterate the synopsis DataFrame to transform its data
+    for _, row in synopsis_dataframe.iterrows():
+        synopses = row['synopses']
+        synopses = str(synopses).strip()
+
+        # Concatenate the transformed data to the initialized DataFrame
