@@ -117,3 +117,13 @@ def transform_synopsis(
         synopses = str(synopses).strip()
 
         # Concatenate the transformed data to the initialized DataFrame
+        transformed_dataframe = pd.concat([
+            transformed_dataframe,
+            pd.DataFrame({
+                'synopses': [
+                    synopses
+                ]
+            })
+        ], ignore_index=True)
+
+    return transformed_dataframe
