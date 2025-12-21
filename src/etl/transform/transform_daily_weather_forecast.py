@@ -48,7 +48,7 @@ def transform_issued_datetime(
     :type issued_datetime_dataframe: pd.DataFrame
 
     :return: Transformed DataFrame containing the cleaned,
-        normalized, and standardize issued datetime of the
+        normalized, and standardized issued datetime of the
         daily weather forecast
     :rtype: DataFrame
     """
@@ -133,12 +133,22 @@ def enrich_synopsis_with_issued_datetime(
         issued_datetime_dataframe: pd.DataFrame
 ) -> pd.DataFrame:
     """
-    Docstring for enrich_synopsis_with_issued_datetime
-    
-    :param synopsis_dataframe: Description
+    Enrich the synopsis DataFrame with issued
+    datetime to produce an analysis-ready
+    dataset for further processing or consumption.
+
+    :param synopsis_dataframe: Transformed DataFrame
+        containing the cleaned synopsis of the daily
+        weather forecast
     :type synopsis_dataframe: pd.DataFrame
-    :param issued_datetime_dataframe: Description
+
+    :param issued_datetime_dataframe: Transformed
+        DataFrame containing the cleaned, normalized,
+        and standardize issued datetime of the daily
+        weather forecast
     :type issued_datetime_dataframe: pd.DataFrame
-    :return: Description
+
+    :return: Transformed DataFrame containing the cleaned
+        and enriched synopsis of the daily weather forecast 
     :rtype: DataFrame
     """
