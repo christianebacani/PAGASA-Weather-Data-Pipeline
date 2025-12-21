@@ -398,8 +398,15 @@ def save_processed_forecast_wind_and_coastal_water_conditions(
         enriched_forecast_wind_and_coastal_water_conditions_dataframe: pd.DataFrame
 ) -> None:
     """
-    Docstring for save_processed_forecast_wind_and_coastal_water_conditions
-    
-    :param enriched_forecast_wind_and_coastal_water_conditions_dataframe: Description
-    :type enriched_forecast_wind_and_coastal_water_conditions_dataframe: pd.DataFrame
+    Save the enriched forecast wind and coastal water conditions DataFrame object
+    to a CSV file in the `data/processed/daily_weather_forecast` subdirectory
+    on the local machine.
+
+    :param enriched_forecast_wind_and_coastal_water_conditions_dataframe: Transformed
+        DataFrame containing the enriched forecast wind and coastal water conditions of
+        the daily weather forecast
+   :type enriched_forecast_wind_and_coastal_water_conditions_dataframe: pd.DataFrame
     """
+    # Store the enriched forecast wind and coastal water conditions DataFrame object to the target filepath
+    target_filepath = 'data/processed/daily_weather_forecast/forecast_wind_and_coastal_water_conditions.csv'
+    enriched_forecast_wind_and_coastal_water_conditions_dataframe.to_csv(target_filepath, index=False)
