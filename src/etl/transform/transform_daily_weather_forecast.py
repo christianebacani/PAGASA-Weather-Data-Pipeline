@@ -128,7 +128,7 @@ def enrich_synopsis_with_issued_datetime(
     :type issued_datetime_dataframe: pd.DataFrame
 
     :return: Transformed DataFrame containing the cleaned
-        and enriched synopsis of the daily weather forecast 
+        and enriched synopsis of the daily weather forecast
     :rtype: DataFrame
     """
     # Using initialized DataFrame to store enriched data
@@ -162,8 +162,12 @@ def save_processed_synopsis(
         enriched_synopsis_dataframe: pd.DataFrame
 ) -> None:
     """
-    Docstring for save_processed_synopsis
-    
-    :param enriched_synopsis_dataframe: Description
+    Save the enriched synopsis DataFrame in the
+    `data/processed/daily_weather_forecast/` subdirectory
+    on the local machine.
+
+    :param enriched_synopsis_dataframe: Transformed DataFrame
+        containing the cleaned and enriched synopsis of the
+        daily weather forecast 
     :type enriched_synopsis_dataframe: pd.DataFrame
     """
