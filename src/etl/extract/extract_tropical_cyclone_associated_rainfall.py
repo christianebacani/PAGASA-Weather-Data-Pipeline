@@ -1,9 +1,9 @@
 """
-Extract tropical cyclone associated rainfall from the `data/raw/tropical_cyclone_associated_rainfall`
+Extract tropical cyclone associated rainfall from the `data/raw/tropical_cyclone_associated_rainfall/`
 subdirectory on the local machine.
 
 This module provides functions to parse JSON files from the
-`data/raw/tropical_cyclone_associated_rainfall` subdirectory and convert them into structured DataFrame
+`data/raw/tropical_cyclone_associated_rainfall/` subdirectory and convert them into structured DataFrame
 objects, including:
 
 - Tropical cyclone associated rainfall image source
@@ -18,7 +18,7 @@ import os
 def create_subdir(
 ) -> None:
     """
-    Create the `data/stage/tropical_cyclone_associated_rainfall` subdirectory to store CSV files.
+    Create the `data/stage/tropical_cyclone_associated_rainfall/` subdirectory to store CSV files.
 
     This subdirectory stores the tropical cyclone associated rainfall data, parsed from JSON files
     located in the `data/raw/tropical_cyclone_associated_rainfall` subdirectory on the local machine.
