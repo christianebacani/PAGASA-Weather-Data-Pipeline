@@ -197,10 +197,15 @@ def transform_forecast_weather_conditions(
         forecast_weather_conditions_dataframe: pd.DataFrame
 ) -> pd.DataFrame:
     """
-    Docstring for transform_forecast_weather_conditions
+    Transform the forecast weather conditions DataFrame object
+    located in the `data/stage/daily_weather_forecast/` subdirectory
+    on the local machine.
 
-    :param forecast_weather_conditions_dataframe: Description
+    :param forecast_weather_conditions_dataframe: DataFrame containing
+        the forecast weather conditions of the daily weather forecast
     :type forecast_weather_conditions_dataframe: pd.DataFrame
-    :return: Description
+
+    :return: Transformed DataFrame containing the cleaned forecast weather
+        conditions of the daily weather forecast
     :rtype: DataFrame
     """
