@@ -10,6 +10,7 @@ from etl.transform.transform_daily_weather_forecast import create_subdir
 from etl.transform.transform_daily_weather_forecast import transform_issued_datetime
 from etl.transform.transform_daily_weather_forecast import transform_synopsis
 from etl.transform.transform_daily_weather_forecast import enrich_synopsis_with_issued_datetime
+from etl.transform.transform_daily_weather_forecast import save_processed_synopsis
 
 def transform_daily_weather_forecast(
 ) -> None:
@@ -39,4 +40,7 @@ def transform_daily_weather_forecast(
     enriched_synopsis_dataframe = enrich_synopsis_with_issued_datetime(
         synopsis_dataframe,
         issued_datetime_dataframe
+    )
+    save_processed_synopsis(
+        enriched_synopsis_dataframe
     )
