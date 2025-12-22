@@ -174,3 +174,21 @@ def save_processed_synopsis(
     # Save the processed synopsis DataFrame object to the target filepath
     target_filepath = 'data/processed/daily_weather_forecast/synopsis.csv'
     enriched_synopsis_dataframe.to_csv(target_filepath, index=False)
+
+def transform_tropical_cyclone_information(
+        tropical_cyclone_information_dataframe: pd.DataFrame       
+) -> pd.DataFrame:
+    """
+    Transform the tropical cyclone information DataFrame object
+    located in the `data/stage/daily_weather_forecast/`
+    subdirectory on the local machine.
+
+    :param tropical_cyclone_information_dataframe: DataFrame
+        containing the tropical cyclone information of the daily
+        weather forecast
+    :type tropical_cyclone_information_dataframe: pd.DataFrame
+
+    :return: Transformed DataFrame containing the cleaned
+        tropical cyclone information of the daily weather forecast
+    :rtype: DataFrame
+    """
