@@ -23,7 +23,7 @@ def create_subdir(
     Create the `data/stage/weather_outlook_for_ph_tourist_areas/` subdirectory to store CSV files.
 
     This subdirectory stores the staged weather outlook data for selected Philippine tourist areas,
-    parsed from JSON files located in the `data/raw/weather_outlook_for_ph_tourist_areas` subdirectory
+    parsed from JSON files located in the `data/raw/weather_outlook_for_ph_tourist_areas/` subdirectory
     on the local machine.
     """
     # Create the data/stage/weather_outlook_for_ph_tourist_areas/ subdirectory if it doesn't exist
