@@ -24,8 +24,8 @@ import os
 def create_subdir(
 ) -> None:
     """
-    Create the `data/processed/daily_weather_forecast` subdirectory to store
-    transformed or processed CSV files.
+    Create the `data/processed/daily_weather_forecast/`
+    subdirectory to store transformed or processed CSV files.
 
     This subdirectory stores the daily weather forecast data, transformed or processed
     from CSV files located in the `data/stage/daily_weather_forecast` subdirectory on the
@@ -40,7 +40,7 @@ def transform_issued_datetime(
 ) -> pd.DataFrame:
     """
     Transform the issued datetime DataFrame object
-    located in the `data/stage/daily_weather_forecast`
+    located in the `data/stage/daily_weather_forecast/`
     subdirectory on the local machine.
 
     :param issued_datetime_dataframe: DataFrame containing
@@ -83,7 +83,7 @@ def transform_synopsis(
 ) -> None:
     """
     Transform the synopsis DataFrame object
-    located in the `data/stage/daily_weather_forecast`
+    located in the `data/stage/daily_weather_forecast/`
     subdirectory on the local machine.
 
     :param synopsis_dataframe: DataFrame containing
