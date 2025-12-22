@@ -273,9 +273,8 @@ def enrich_forecast_weather_conditions_with_issued_datetime(
         daily weather forecast
     :type issued_datetime_dataframe: pd.DataFrame
 
-    :return: Transformed DataFrame containing the cleaned and
-        enriched forecast weather conditions of the daily weather
-        forecast
+    :return: Transformed DataFrame containing the cleaned and enriched
+        forecast weather conditions of the daily weather forecast
     :rtype: DataFrame
     """
     # Using initialized DataFrame to store enriched data
@@ -330,8 +329,12 @@ def save_processed_forecast_weather_conditions(
     enriched_forecast_weather_conditions_dataframe: pd.DataFrame
 ) -> None:
     """
-    Docstring for save_processed_forecast_weather_conditions
-    
-    :param enriched_forecast_weather_conditions_dataframe: Description
-    :type enriched_forecast_weather_conditions_dataframe: pd.DataFrame
+    Save the processed forecast weather conditions DataFrame in the
+    `data/processed/daily_weather_forecast/` subdirectory
+    on the local machine.
+
+    :param enriched_forecast_weather_conditions_dataframe: Transformed
+        DataFrame containing the cleaned and enriched forecast weather
+        conditions of the daily weather forecast
+    :type enriched_forecast_weather_conditions_dataframe:
     """
