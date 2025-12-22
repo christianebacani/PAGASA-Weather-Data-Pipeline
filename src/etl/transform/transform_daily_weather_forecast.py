@@ -341,3 +341,15 @@ def save_processed_forecast_weather_conditions(
     # Save the processed forecast weather conditions DataFrame object to the target filepath
     target_filepath = 'data/processed/daily_weather_forecast/forecast_weather_conditions.csv'
     enriched_forecast_weather_conditions_dataframe.to_csv(target_filepath, index=False)
+
+def transform_forecast_wind_and_coastal_water_conditions(
+        forecast_wind_and_coastal_water_conditions_dataframe: pd.DataFrame
+) -> pd.DataFrame:
+    """
+    Docstring for transform_forecast_wind_and_coastal_water_conditions
+    
+    :param forecast_wind_and_coastal_water_conditions_dataframe: Description
+    :type forecast_wind_and_coastal_water_conditions_dataframe: pd.DataFrame
+    :return: Description
+    :rtype: DataFrame
+    """
