@@ -66,7 +66,7 @@ def transform_issued_datetime(
     issued_times = issued_times.replace('Issued at: ', '')
     issued_times = issued_times.strip()
 
-    # Initialized DataFrame to store clened, normalized, and standardized data
+    # Initialized DataFrame to store cleaned, normalized, and standardized data
     transformed_dataframe = pd.DataFrame({
         'issued_dates': [
             issued_dates
@@ -360,3 +360,16 @@ def transform_forecast_wind_and_coastal_water_conditions(
         weather forecast
     :rtype: DataFrame
     """
+    # Initialized DataFrame to store cleaned, normalized, and standardized data
+    transformed_Dataframe = pd.DataFrame(
+        columns=[
+            'place',
+            'speed',
+            'direction',
+            'wave_description',
+            'minimum_wave_height',
+            'maximum_wave_height',
+            'wave_category',
+            'danger_level'
+        ]
+    )
