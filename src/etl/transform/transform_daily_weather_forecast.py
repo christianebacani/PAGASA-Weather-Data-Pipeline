@@ -192,3 +192,15 @@ def transform_tropical_cyclone_information(
         tropical cyclone information of the daily weather forecast
     :rtype: DataFrame
     """
+
+def transform_forecast_weather_conditions(
+        forecast_weather_conditions_dataframe: pd.DataFrame
+) -> pd.DataFrame:
+    """
+    Docstring for transform_forecast_weather_conditions
+
+    :param forecast_weather_conditions_dataframe: Description
+    :type forecast_weather_conditions_dataframe: pd.DataFrame
+    :return: Description
+    :rtype: DataFrame
+    """
