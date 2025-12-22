@@ -48,6 +48,6 @@ def transform_daily_weather_forecast(
 
     forecast_weather_conditions_dataframe = transform_forecast_weather_conditions(
         pd.read_csv(
-            'data/stage/daily_weather_forecast/forecast_weather_conditions/csv'
+            'data/stage/daily_weather_forecast/forecast_weather_conditions.csv'
         )
     )
