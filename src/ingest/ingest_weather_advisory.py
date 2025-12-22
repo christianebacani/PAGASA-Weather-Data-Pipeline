@@ -17,7 +17,7 @@ from bs4 import BeautifulSoup
 def create_subdir(
 ) -> None:
     """
-    Create the `data/raw/weather_advisory` subdirectory to store JSON files.
+    Create the `data/raw/weather_advisory/` subdirectory to store JSON files.
 
     This subdirectory holds the weather advisory data, ingested from the
     PAGASA-DOST website.
