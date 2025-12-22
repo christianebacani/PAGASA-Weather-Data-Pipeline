@@ -17,7 +17,7 @@ from bs4 import BeautifulSoup
 def create_subdir(
 ) -> None:
     """
-    Create the `data/raw/tropical_cyclone_associated_rainfall` subdirectory to store JSON files.
+    Create the `data/raw/tropical_cyclone_associated_rainfall/` subdirectory to store JSON files.
 
     This subdirectory holds the tropical cyclone associated rainfall data, ingested from the
     PAGASA-DOST website.
