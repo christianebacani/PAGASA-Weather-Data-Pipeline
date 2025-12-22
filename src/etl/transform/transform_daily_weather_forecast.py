@@ -171,3 +171,6 @@ def save_processed_synopsis(
         daily weather forecast 
     :type enriched_synopsis_dataframe: pd.DataFrame
     """
+    # Save the processed synopsis DataFrame object to the target filepath
+    target_filepath = 'data/processed/daily_weather_forecast/synopsis.csv'
+    enriched_synopsis_dataframe.to_csv(target_filepath, index=False)
