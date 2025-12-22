@@ -13,6 +13,7 @@ from etl.transform.transform_daily_weather_forecast import enrich_synopsis_with_
 from etl.transform.transform_daily_weather_forecast import save_processed_synopsis
 from etl.transform.transform_daily_weather_forecast import transform_forecast_weather_conditions
 from etl.transform.transform_daily_weather_forecast import enrich_forecast_weather_conditions_with_issued_datetime
+from etl.transform.transform_daily_weather_forecast import save_processed_forecast_weather_conditions
 
 def transform_daily_weather_forecast(
 ) -> None:
@@ -55,4 +56,7 @@ def transform_daily_weather_forecast(
     enriched_forecast_weather_conditions_dataframe = enrich_forecast_weather_conditions_with_issued_datetime(
         forecast_weather_conditions_dataframe,
         issued_datetime_dataframe
+    )
+    save_processed_forecast_weather_conditions(
+        enriched_forecast_weather_conditions_dataframe
     )
