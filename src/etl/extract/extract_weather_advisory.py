@@ -56,7 +56,7 @@ def save_raw_weather_advisory(
         weather_advisory_dataframe: pd.DataFrame       
 ) -> None:
     """
-    Save the raw weather advisory DataFrame in the `data/stage/weather_advisory`
+    Save the raw weather advisory DataFrame in the `data/stage/weather_advisory/`
     subdirectory on the local machine.
 
     :param weather_advisory_dataframe: DataFrame containing the weather advisory
