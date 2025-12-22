@@ -60,8 +60,9 @@ def save_raw_issued_datetime(
         issued_datetime_dataframe: pd.DataFrame
 ) -> None:
     """
-    Save the raw issued datetime DataFrame to the staging
-    directory for further processing.
+    Save the raw issued datetime DataFrame in the
+    `data/stage/daily_weather_forecast/` subdirectory on the
+    local machine.
 
     :param issued_datetime_dataframe: DataFrame containing the issued datetime
         of the daily weather forecast
@@ -100,8 +101,9 @@ def save_raw_synopsis(
         synopsis_dataframe: pd.DataFrame
 ) -> None:
     """
-    Save the raw synopsis DataFrame to the staging
-    directory for further processing.
+    Save the raw synopsis DataFrame in the
+    `data/stage/daily_weather_forecast/` subdirectory
+    on the local machine.
 
     :param synopsis_dataframe: DataFrame containing the
         synopsis of the daily weather forecast
@@ -158,8 +160,9 @@ def save_raw_tropical_cyclone_information(
         tropical_cyclone_information_dataframe: pd.DataFrame
 ) -> None:
     """
-    Save the raw tropical cyclone information DataFrame to the staging
-    directory for further processing.
+    Save the raw tropical cyclone information DataFrame in the
+    `data/stage/daily_weather_forecast/` subdirectory on the
+    local machine.
 
     :param tropical_cyclone_information_dataframe: DataFrame containing the tropical cyclone information
         of the daily weather forecast
@@ -203,8 +206,9 @@ def save_raw_forecast_weather_conditions(
         forecast_weather_conditions_dataframe: pd.DataFrame
 ) -> None:
     """
-    Save the raw forecast weather conditions DataFrame to the staging
-    directory for further processing.
+    Save the raw forecast weather conditions DataFrame in the
+    `data/stage/daily_weather_forecast/` subdirectory on the
+    local machine.
 
     :param forecast_weather_conditions_dataframe: DataFrame containing the forecast
         weather conditions of the daily weather forecast
@@ -249,8 +253,8 @@ def save_raw_forecast_wind_and_coastal_water_conditions(
         forecast_wind_and_coastal_water_conditions_dataframe: pd.DataFrame
 ) -> None:
     """
-    Save the raw foreast wind and coastal water conditions DataFrame to the staging
-    directory for further processing.
+    Save the raw forecast wind and coastal water conditions DataFrame in the
+    `data/stage/daily_weather_forecast/` subdirectory on the local machine.
 
     :param forecast_wind_and_coastal_water_conditions_dataframe: DataFrame containing the
         forecast wind and coastal water conditions of the daily weather forecast
@@ -314,8 +318,8 @@ def save_raw_temperature_and_relative_humidity(
         temperature_and_relative_humidity_dataframe: pd.DataFrame
 ) -> None:
     """
-    Save the raw temperature and relative humdity DataFrame to the staging directory
-    for further processing.
+    Save the raw temperature and relative humidity DataFrame in the
+    `data/stage/daily_weather_forecast/` subdirectory on the local machine.
 
     :param temperature_and_relative_humidity_dataframe: DataFrame containing
         the temperature and relative humidity of the daily weather forecast
