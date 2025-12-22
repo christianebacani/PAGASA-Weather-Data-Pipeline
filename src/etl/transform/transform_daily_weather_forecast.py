@@ -160,3 +160,19 @@ def enrich_synopsis_with_issued_datetime(
             'issued_times'
         ]
     )
+
+    # Concatenate the enriched data to the initialized DataFrame
+    enriched_synopsis_dataframe = pd.concat([
+        enriched_synopsis_dataframe,
+        pd.DataFrame({
+            'synopses': [
+                synopsis_dataframe['synopses'][0]
+            ],
+            'issued_dates': [
+                issued_datetime_dataframe['issued_dates'][0]
+            ],
+            'issued_times': [
+                issued_datetime_dataframe['issued_times'][0]
+            ]
+        })
+    ], ignore_index=True)
