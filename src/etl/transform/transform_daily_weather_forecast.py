@@ -52,42 +52,29 @@ def transform_issued_datetime(
         daily weather forecast
     :rtype: DataFrame
     """
-    # Using initialized DataFrame to store transformed data
-    transformed_dataframe = pd.DataFrame(
-        columns=[
-            'issued_dates',
-            'issued_times'
+    # Clean, normalize, standardize the data using split() and replace() method
+    issued_datetimes = issued_datetime_dataframe['issued_datetimes'][0]
+    issued_datetimes = str(issued_datetimes)
+    issued_datetimes = issued_datetimes.split(', ')
+
+    issued_dates = issued_datetimes[1]
+    issued_dates = issued_dates.split()
+    issued_dates = issued_dates[1] + ' ' + issued_dates[0] + ', ' + issued_dates[2]
+    issued_dates = issued_dates.strip()
+
+    issued_times = issued_datetimes[0]
+    issued_times = issued_times.replace('Issued at: ', '')
+    issued_times = issued_times.strip()
+
+    # Initialized DataFrame to store clened, normalized, and standardized data
+    transformed_dataframe = pd.DataFrame({
+        'issued_dates': [
+            issued_dates
+        ],
+        'issued_times': [
+            issued_times
         ]
-    )
-
-    # Iterate the issued datetime DataFrame to transform its data
-    for _, row in issued_datetime_dataframe.iterrows():
-        issued_datetimes = row['issued_datetimes']
-        issued_datetimes = str(issued_datetimes)
-        issued_datetimes = issued_datetimes.split(', ')
-
-        # Normalize and standardized the data using split() and replace() method
-        issued_dates = issued_datetimes[1]
-        issued_dates = issued_dates.split()
-        issued_dates = issued_dates[1] + ' ' + issued_dates[0] + ', ' + issued_dates[2]
-        issued_dates = issued_dates.strip()
-
-        issued_times = issued_datetimes[0]
-        issued_times = issued_times.replace('Issued at: ', '')
-        issued_times = issued_times.strip()
-
-        # Concatenate the transformed data to the initialized DataFrame
-        transformed_dataframe = pd.concat([
-            transformed_dataframe,
-            pd.DataFrame({
-                'issued_dates': [
-                    issued_dates
-                ],
-                'issued_times': [
-                    issued_times
-                ]
-            })
-        ], ignore_index=True)
+    })
 
     return transformed_dataframe
 
@@ -107,24 +94,16 @@ def transform_synopsis(
         cleaned synopsis of the daily weather forecast
     :rtype: DataFrame
     """
-    # Using initialized DataFrame to store transformed data
-    columns = list(synopsis_dataframe.keys())
-    transformed_dataframe = pd.DataFrame(columns=columns)
+    # Clean the data using strip() method
+    synopses = synopsis_dataframe['synopses'][0]
+    synopses = str(synopses).strip()
 
-    # Iterate the synopsis DataFrame to transform its data
-    for _, row in synopsis_dataframe.iterrows():
-        synopses = row['synopses']
-        synopses = str(synopses).strip()
-
-        # Concatenate the transformed data to the initialized DataFrame
-        transformed_dataframe = pd.concat([
-            transformed_dataframe,
-            pd.DataFrame({
-                'synopses': [
-                    synopses
-                ]
-            })
-        ], ignore_index=True)
+    # Initialized DataFrame to store cleaned data
+    transformed_dataframe = pd.DataFrame({
+        'synopses': [
+            synopses
+        ]
+    })
 
     return transformed_dataframe
 
