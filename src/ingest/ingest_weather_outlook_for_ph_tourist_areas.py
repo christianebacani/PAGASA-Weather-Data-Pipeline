@@ -21,7 +21,7 @@ from bs4 import BeautifulSoup
 def create_subdir(
 ) -> None:
     """
-    Create the `data/raw/weather_outlook_for_ph_tourist_areas` subdirectory to store JSON files.
+    Create the `data/raw/weather_outlook_for_ph_tourist_areas/` subdirectory to store JSON files.
 
     This subdirectory holds the weather outlook for selected Philippine tourist areas data, ingested
     from the PAGASA-DOST website.
@@ -419,7 +419,7 @@ def save_ingested_ph_tourist_areas_weather_outlook(
 ) -> None:
     """
     Save the ingested weather outlook for selected Philippine tourist areas
-    to a JSON file in the `data/raw/weather_outlook_for_ph_tourist_areas`
+    to a JSON file in the `data/raw/weather_outlook_for_ph_tourist_areas/`
     subdirectory on the local machine.
 
     :param ph_cities_weather_outlook: Dictionary of tourist area names with weather dates
