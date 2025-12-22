@@ -162,7 +162,7 @@ def save_processed_synopsis(
         enriched_synopsis_dataframe: pd.DataFrame
 ) -> None:
     """
-    Save the enriched synopsis DataFrame in the
+    Save the processed synopsis DataFrame in the
     `data/processed/daily_weather_forecast/` subdirectory
     on the local machine.
 
