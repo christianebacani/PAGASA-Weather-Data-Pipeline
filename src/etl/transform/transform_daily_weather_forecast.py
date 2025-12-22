@@ -152,3 +152,11 @@ def enrich_synopsis_with_issued_datetime(
         and enriched synopsis of the daily weather forecast 
     :rtype: DataFrame
     """
+    # Using initialized DataFrame to store enriched data
+    enriched_synopsis_dataframe = pd.DataFrame(
+        columns=[
+            'synopses',
+            'issued_dates',
+            'issued_times'
+        ]
+    )
