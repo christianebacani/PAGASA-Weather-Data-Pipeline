@@ -1,9 +1,9 @@
 """
 Extract weather outlook for selected Philippine cities from the 
-`data/raw/weather_outlook_for_ph_cities` subdirectory on the local machine.
+`data/raw/weather_outlook_for_ph_cities/` subdirectory on the local machine.
 
 This module provides functions to parse JSON files from the
-`data/raw/weather_outlook_for_ph_cities` subdirectory and convert them into structured DataFrame
+`data/raw/weather_outlook_for_ph_cities/` subdirectory and convert them into structured DataFrame
 objects, including:
 
 - Issued datetime
@@ -20,7 +20,7 @@ import os
 def create_subdir(
 ) -> None:
     """
-    Create the `data/stage/weather_outlook_for_ph_cities` subdirectory to store CSV files.
+    Create the `data/stage/weather_outlook_for_ph_cities/` subdirectory to store CSV files.
 
     This subdirectory stores the staged weather outlook data for selected Philippine cities,
     parsed from JSON files located in the `data/raw/weather_outlook_for_ph_cities` subdirectory
