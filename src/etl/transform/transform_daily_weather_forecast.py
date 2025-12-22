@@ -96,7 +96,8 @@ def transform_synopsis(
     """
     # Clean the data using strip() method
     synopses = synopsis_dataframe['synopses'][0]
-    synopses = str(synopses).strip()
+    synopses = str(synopses)
+    synopses = synopses.strip()
 
     # Initialized DataFrame to store cleaned data
     transformed_dataframe = pd.DataFrame({
@@ -209,3 +210,11 @@ def transform_forecast_weather_conditions(
         conditions of the daily weather forecast
     :rtype: DataFrame
     """
+    # Using initialized DataFrame to store cleaned data
+    columns = list(forecast_weather_conditions_dataframe.keys())
+    transformed_dataframe = pd.DataFrame(columns=columns)
+
+    for _, row in forecast_weather_conditions_dataframe.iterrows():
+        places = row['places']
+        places = str(places)
+        places = places.strip()
