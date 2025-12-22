@@ -326,7 +326,8 @@ def map_weather_dates_to_ph_tourist_areas(
 
     result = ph_tourist_area_names
 
-    list_of_all_ph_tourist_area_names = list(result.keys())
+    list_of_all_ph_tourist_area_names = result.keys()
+    list_of_all_ph_tourist_area_names = list(list_of_all_ph_tourist_area_names)
 
     # Iterate the selected PH tourist areas list to map it to the weather dates list
     for ph_tourist_area_name in list_of_all_ph_tourist_area_names:
@@ -403,7 +404,9 @@ def map_temperature_ranges_to_ph_tourist_areas(
     result = ph_tourist_areas_with_weather_dates
 
     list_of_all_temperature_ranges = temperature_ranges
-    list_of_all_ph_tourist_area_names = list(result.keys())
+
+    list_of_all_ph_tourist_area_names = result.keys()
+    list_of_all_ph_tourist_area_names = list(list_of_all_ph_tourist_area_names)
 
     # Iterate the temperature ranges list to map it to the selected PH tourist area
     for index, temperature_ranges in enumerate(list_of_all_temperature_ranges):
@@ -419,7 +422,7 @@ def save_ingested_ph_tourist_areas_weather_outlook(
 ) -> None:
     """
     Save the ingested weather outlook for selected Philippine tourist areas
-    to a JSON file in the `data/raw/weather_outlook_for_ph_tourist_areas/`
+    to a JSON file in the `data/raw/weather_outlook_for_ph_tourist_areas`
     subdirectory on the local machine.
 
     :param ph_cities_weather_outlook: Dictionary of tourist area names with weather dates
