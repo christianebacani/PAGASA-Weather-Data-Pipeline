@@ -338,3 +338,6 @@ def save_processed_forecast_weather_conditions(
         conditions of the daily weather forecast
     :type enriched_forecast_weather_conditions_dataframe:
     """
+    # Save the processed forecast weather conditions DataFrame object to the target filepath
+    target_filepath = 'data/processed/daily_weather_forecast/forecast_weather_conditions.csv'
+    enriched_forecast_weather_conditions_dataframe.to_csv(target_filepath, index=False)
