@@ -63,7 +63,9 @@ def save_raw_tc_assoc_rainfall_image_sources(
         sources
     :type tc_assoc_rainfall_image_sources_dataframe: pd.DataFrame
     """
-    filename = list(tc_assoc_rainfall_image_sources_dataframe.keys())[0]
+    filename = tc_assoc_rainfall_image_sources_dataframe.keys()
+    filename = list(filename)
+    filename = filename[0]
 
     # Save the raw tc associated rainfall image sources DataFrame object to the target filepath
     target_filepath = f'data/stage/tropical_cyclone_associated_rainfall/{filename}.csv'
