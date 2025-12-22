@@ -278,3 +278,48 @@ def enrich_forecast_weather_conditions_with_issued_datetime(
         forecast
     :rtype: DataFrame
     """
+    # Using initialized DataFrame to store enriched data
+    enriched_forecast_weather_conditions_dataframe = pd.DataFrame(
+        columns=[
+            'places',
+            'weather_conditions',
+            'causes_by',
+            'impacts',
+            'issued_dates',
+            'issued_times'
+        ]
+    )
+
+    # Iterate the forecast weather conditions DataFrame to enrich the data
+    for _, row in forecast_weather_conditions_dataframe.iterrows():
+        places = row['places']
+        weather_conditions = row['weather_conditions']
+        causes_by = row['causes_by']
+        impacts = row['impacts']
+        issued_dates = issued_datetime_dataframe['issued_dates'][0]
+        issued_times = issued_datetime_dataframe['issued_times'][0]
+
+        # Concatenate the enriched data to the initialized DataFrame
+        enriched_forecast_weather_conditions_dataframe = pd.concat([
+            enriched_forecast_weather_conditions_dataframe,
+            pd.DataFrame({
+                'places': [
+                    places
+                ],
+                'weather_conditions': [
+                    weather_conditions
+                ],
+                'causes_by': [
+                    causes_by
+                ],
+                'impacts': [
+                    impacts
+                ],
+                'issued_dates': [
+                    issued_dates
+                ],
+                'issued_times': [
+                    issued_times
+                ]
+            })
+        ], ignore_index=True)
