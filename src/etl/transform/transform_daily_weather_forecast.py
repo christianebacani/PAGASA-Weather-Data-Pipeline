@@ -28,7 +28,7 @@ def create_subdir(
     subdirectory to store transformed or processed CSV files.
 
     This subdirectory stores the daily weather forecast data, transformed or processed
-    from CSV files located in the `data/stage/daily_weather_forecast` subdirectory on the
+    from CSV files located in the `data/stage/daily_weather_forecast/` subdirectory on the
     local machine.
     """
     # Create the data/processed/daily_weather_forecast/ subdirectory if it doesn't exist
