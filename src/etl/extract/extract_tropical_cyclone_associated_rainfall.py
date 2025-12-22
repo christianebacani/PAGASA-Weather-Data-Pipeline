@@ -55,7 +55,8 @@ def save_raw_tc_assoc_rainfall_image_sources(
 ) -> None:
     """
     Save the raw tropical cyclone associated rainfall image sources
-    DataFrame to the staging directory for further processing.
+    DataFrame in the `data/stage/daily_weather_forecast` subdirectory
+    on the local machine.
 
     :param tc_assoc_rainfall_image_sources_dataframe: DataFrame
         containing the tropical cyclone associated rainfall image
