@@ -176,3 +176,5 @@ def enrich_synopsis_with_issued_datetime(
             ]
         })
     ], ignore_index=True)
+
+    return enriched_synopsis_dataframe
