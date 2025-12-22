@@ -157,3 +157,13 @@ def enrich_synopsis_with_issued_datetime(
     ], ignore_index=True)
 
     return enriched_synopsis_dataframe
+
+def save_processed_synopsis(
+        enriched_synopsis_dataframe: pd.DataFrame
+) -> None:
+    """
+    Docstring for save_processed_synopsis
+    
+    :param enriched_synopsis_dataframe: Description
+    :type enriched_synopsis_dataframe: pd.DataFrame
+    """
