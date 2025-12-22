@@ -323,3 +323,5 @@ def enrich_forecast_weather_conditions_with_issued_datetime(
                 ]
             })
         ], ignore_index=True)
+
+    return enriched_forecast_weather_conditions_dataframe
