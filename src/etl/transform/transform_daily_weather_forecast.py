@@ -232,3 +232,24 @@ def transform_forecast_weather_conditions(
         impacts = row['impacts']
         impacts = str(impacts)
         impacts = impacts.strip()
+
+        # Concatenate the cleaned data to the initialized DataFrame
+        transformed_dataframe = pd.concat([
+            transformed_dataframe,
+            pd.DataFrame({
+                'places': [
+                    places
+                ],
+                'weather_conditions': [
+                    weather_conditions
+                ],
+                'causes_by': [
+                    causes_by
+                ],
+                'impacts': [
+                    impacts
+                ]
+            })
+        ], ignore_index=True)
+
+    return transformed_dataframe
