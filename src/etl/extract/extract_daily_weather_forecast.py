@@ -1,8 +1,8 @@
 """
-Extract daily weather forecast from the `data/raw/daily_weather_forecast`
+Extract daily weather forecast from the `data/raw/daily_weather_forecast/`
 subdirectory on the local machine.
 
-This module provides functions to parse JSON files from the `data/raw/daily_weather_forecast`
+This module provides functions to parse JSON files from the `data/raw/daily_weather_forecast/`
 subdirectory and convert them into structured DataFrame objects, including:
 
 - Issued datetime
@@ -22,10 +22,10 @@ import os
 def create_subdir(
 ) -> None:
     """
-    Create the `data/stage/daily_weather_forecast` subdirectory to store CSV files.
+    Create the `data/stage/daily_weather_forecast/` subdirectory to store CSV files.
 
     This subdirectory stores the staged daily weather forecasts, parsed from JSON files
-    located in the `data/raw/daily_weather_forecast` subdirectory on the local machine.
+    located in the `data/raw/daily_weather_forecast/` subdirectory on the local machine.
     """
     # Create the data/stage/daily_weather_forecast/ subdirectory if it doesn't exist
     if not os.path.exists('data/stage/daily_weather_forecast'):
