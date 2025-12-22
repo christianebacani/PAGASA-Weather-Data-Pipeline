@@ -1,9 +1,9 @@
 """
-Extract tropical cyclone advisory from the `data/raw/tropical_cyclone_advisory`
+Extract tropical cyclone advisory from the `data/raw/tropical_cyclone_advisory/`
 subdirectory on the local machine.
 
 This module provides functions to parse JSON files from the
-`data/raw/tropical_cyclone_advisory` subdirectory and convert them into structured DataFrame
+`data/raw/tropical_cyclone_advisory/` subdirectory and convert them into structured DataFrame
 objects, including:
 
 - TBD
@@ -18,10 +18,10 @@ import os
 def create_subdir(
 ) -> None:
     """
-    Create the `data/stage/tropical_cyclone_advisory` subdirectory to store CSV files.
+    Create the `data/stage/tropical_cyclone_advisory/` subdirectory to store CSV files.
 
     This subdirectory stores the tropical cyclone advisory data, parsed from JSON files
-    located in the `data/raw/tropical_cyclone_advisory` subdirectory on the local machine.
+    located in the `data/raw/tropical_cyclone_advisory/` subdirectory on the local machine.
     """
     # Create the data/stage/tropical_cyclone_advisory/ subdirectory if it doesn't exist
     if not os.path.exists('data/stage/tropical_cyclone_advisory'):
