@@ -62,7 +62,9 @@ def save_raw_issued_datetime(
         issued_datetime_dataframe: pd.DataFrame
 ) -> None:
     """
-    Save the raw issued datetime DataFrame to the staging directory for further processing.
+    Save the raw issued datetime DataFrame in the
+    `data/stage/weather_outlook_for_ph_cities/`
+    subdirectory on the local machine.
 
     :param issued_datetime_dataframe: DataFrame containing the issued
         datetime of the weather outlook for selected Philippine cities
@@ -104,8 +106,9 @@ def save_raw_valid_period(
         valid_period_dataframe: pd.DataFrame
 ) -> None:
     """
-    Save the raw valid period DataFrame to the staging directory for further
-    processing.
+    Save the raw valid period DataFrame in the
+    `data/stage/weather_outlook_for_ph_cities/`
+    subdirectory on the local machine.
 
     :param valid_period_dataframe: DataFrame containing the valid
         period of the weather outlook for selected Philippine cities
@@ -181,7 +184,8 @@ def save_raw_ph_cities_weather_outlook(
 ) -> None:
     """
     Save the raw weather outlook for selected Philippine cities
-    DataFrame to the staging directory for further processing.
+    DataFrame in the `data/stage/weather_outlook_for_ph_cities/`
+    subdirectory on the local machine.
 
     :param ph_cities_weather_outlook_dataframe: DataFrame containing the weather
         outlook for selected Philippine cities
