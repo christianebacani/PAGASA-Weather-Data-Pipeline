@@ -211,10 +211,24 @@ def transform_forecast_weather_conditions(
     :rtype: DataFrame
     """
     # Using initialized DataFrame to store cleaned data
-    columns = list(forecast_weather_conditions_dataframe.keys())
+    columns = forecast_weather_conditions_dataframe.keys()
+    columns = list(columns)
     transformed_dataframe = pd.DataFrame(columns=columns)
 
+    # Iterate the forecast weather conditions DataFrame to clean the data
     for _, row in forecast_weather_conditions_dataframe.iterrows():
         places = row['places']
         places = str(places)
         places = places.strip()
+
+        weather_conditions = row['weather_conditions']
+        weather_conditions = str(weather_conditions)
+        weather_conditions = weather_conditions.strip()
+
+        causes_by = row['causes_by']
+        causes_by = str(causes_by)
+        causes_by.strip()
+
+        impacts = row['impacts']
+        impacts = str(impacts)
+        impacts = impacts.strip()
