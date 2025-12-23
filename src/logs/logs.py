@@ -12,6 +12,8 @@ sys.path.insert(0, os.path.abspath('src'))
 import pandas as pd
 from datetime import datetime
 
+from executor.ingest.execute_ingest_daily_weather_forecasts import ingest_daily_weather_forecasts
+
 def generate_logs(
     log_message: str
 ) -> None:
@@ -36,3 +38,6 @@ def generate_logs(
         })
     ], ignore_index=True)
     logs.to_csv('src/logs/logs.csv', index=False)
+
+if __name__ == '__main__':
+    ingest_daily_weather_forecasts()
