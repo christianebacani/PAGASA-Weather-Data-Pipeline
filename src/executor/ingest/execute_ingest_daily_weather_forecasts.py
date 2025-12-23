@@ -1,7 +1,7 @@
 """
 Docstring for executor.ingest.execute_ingest_daily_weather_forecasts
 """
-from src.ingest.ingest_daily_weather_forecasts import create_subdir
+from ingest.ingest_daily_weather_forecasts import create_subdir
 
 def ingest_daily_weather_forecasts(
 ) -> None:
