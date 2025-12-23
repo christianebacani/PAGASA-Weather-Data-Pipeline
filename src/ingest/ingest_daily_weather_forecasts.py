@@ -1,5 +1,5 @@
 """
-Docstring of the ingest_daily_weather_forecasts.py
+Docstring of the src.ingest.ingest_daily_weather_forecasts
 """
 import os
 
