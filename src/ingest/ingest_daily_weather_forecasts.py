@@ -14,6 +14,10 @@ def create_subdir(
     if not os.path.exists('data/raw/daily_weather_forecasts'):
         os.makedirs('data/raw/daily_weather_forecasts')
 
+# TODO:
+# - Fix the docstring content for every function to make it consistent
+# - Fix the docsring content for every module to make it consistent
+
 def ingest_beautiful_soup_object(
         url: str
 ) -> BeautifulSoup:
