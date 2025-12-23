@@ -41,3 +41,6 @@ def generate_logs(
 
 if __name__ == '__main__':
     ingest_daily_weather_forecasts()
+    generate_logs(
+        '(DEV): Ingests data of daily weather forecasts.'
+    )
