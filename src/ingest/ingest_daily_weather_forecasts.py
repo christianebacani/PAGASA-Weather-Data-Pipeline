@@ -8,7 +8,7 @@ def create_subdir(
     """
     Creates a subdirectory path `data/raw/daily_weather_forecasts/`
     to store ingested data as a JSON file from the daily weather
-    forecast page of PAGAASA-DOST website.
+    forecast page of PAGASA-DOST website.
     """
     if not os.path.exists('data/raw/daily_weather_forecasts'):
         os.makedirs('data/raw/daily_weather_forecasts')
