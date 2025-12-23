@@ -18,10 +18,16 @@ def ingest_beautiful_soup_object(
         url: str
 ) -> BeautifulSoup:
     """
-    Docstring for ingest_beautiful_soup_object
-    
-    :param url: Description
+    Ingests BeautifulSoup object from the
+    URL of the daily weather forecast page
+    of PAGASA-DOST website.
+
+    :param url: URL of the daily weather forecast
+        page from the PAGASA-DOST website
     :type url: str
-    :return: Description
+
+    :return: BeautifulSoup object for navigating and
+        manipulating content of the daily weather
+        forecast page from the PAGASA-DOST website
     :rtype: BeautifulSoup
     """
