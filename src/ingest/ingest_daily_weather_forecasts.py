@@ -322,3 +322,20 @@ def ingest_forecast_wind_and_coastal_water_conditions(
 
     if soup is None:
         return forecast_wind_and_coastal_water_conditions
+
+    list_of_all_daily_weather_forecasts_tags = soup.find_all(
+        'div',
+        attrs={
+            'class': 'col-md-12 col-lg-12'
+        }
+    )
+
+    # Use if statement to check if there's 4 or 5 instances of a certain div tag.
+    # If 5 instances are present, it means the tropical cyclone information tag is present
+    if len(list_of_all_daily_weather_forecasts_tags) == 4:
+        forecast_wind_and_coastal_water_conditions_tag = list_of_all_daily_weather_forecasts_tags[2]
+
+    else:
+        forecast_wind_and_coastal_water_conditions_tag = list_of_all_daily_weather_forecasts_tags[3]
+
+    print(forecast_wind_and_coastal_water_conditions_tag)
