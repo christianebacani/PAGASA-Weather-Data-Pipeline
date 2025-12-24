@@ -379,3 +379,16 @@ def ingest_forecast_wind_and_coastal_water_conditions(
         )
 
     return forecast_wind_and_coastal_water_conditions
+
+def save_ingested_forecast_wind_and_coastal_water_conditions(
+        forecast_wind_and_coastal_water_conditions: dict[str, list]
+) -> None:
+    """
+    Save ingested forecast wind and coastal water conditions of the daily
+    weather forecast page from the PAGASA-DOST website.
+
+    :param forecast_wind_and_coastal_water_conditions: Forecast wind and
+        coastal water conditions of the daily weather forecast page from the
+        PAGASA-DOST website
+    :type forecast_wind_and_coastal_water_conditions: dict[str, list]
+    """
