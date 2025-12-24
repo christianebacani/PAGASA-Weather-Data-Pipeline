@@ -6,6 +6,7 @@ from ingest.ingest_daily_weather_forecasts import ingest_and_parse_soup_from_url
 from ingest.ingest_daily_weather_forecasts import ingest_issued_datetimes
 from ingest.ingest_daily_weather_forecasts import save_ingested_issued_datetimes
 from ingest.ingest_daily_weather_forecasts import ingest_synopses
+from ingest.ingest_daily_weather_forecasts import save_ingested_synopses
 
 def ingest_daily_weather_forecasts(
 ) -> None:
@@ -29,4 +30,7 @@ def ingest_daily_weather_forecasts(
 
     synopsis = ingest_synopses(
         soup
+    )
+    save_ingested_synopses(
+        synopsis
     )
