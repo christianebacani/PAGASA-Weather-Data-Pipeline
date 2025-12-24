@@ -2,6 +2,7 @@
 Docstring of the src.ingest.ingest_daily_weather_forecasts
 """
 import os
+import requests
 from bs4 import BeautifulSoup
 
 def create_subdir(
@@ -16,7 +17,7 @@ def create_subdir(
 
 def ingest_beautiful_soup_object(
         url: str
-) -> BeautifulSoup:
+) -> BeautifulSoup | None:
     """
     Ingest and parse a daily weather forecast
     page into a BeautifulSoup object.
@@ -29,3 +30,7 @@ def ingest_beautiful_soup_object(
         the parsed HTML of the page
     :rtype: BeautifulSoup
     """
+    response = requests.get(url)
+
+    if response.status_code != 200:
+        return None
