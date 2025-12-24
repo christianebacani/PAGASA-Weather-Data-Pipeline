@@ -337,5 +337,13 @@ def ingest_forecast_wind_and_coastal_water_conditions(
 
     else:
         forecast_wind_and_coastal_water_conditions_tag = list_of_all_daily_weather_forecasts_tags[3]
+    
+    tbody_tag = forecast_wind_and_coastal_water_conditions_tag.find(
+        'tbody'
+    )
+    list_of_all_table_row_tags = tbody_tag.find_all('tr')
 
-    print(forecast_wind_and_coastal_water_conditions_tag)
+    for table_row_tag in list_of_all_table_row_tags:
+        list_of_all_table_data_tags = table_row_tag.find_all(
+            'td'
+        )
