@@ -234,3 +234,5 @@ def ingest_forecast_weather_conditions(
 
     else:
         forecast_weather_conditions_tag = list_of_all_daily_weather_forecasts_tags[2]
+
+    print(forecast_weather_conditions_tag)
