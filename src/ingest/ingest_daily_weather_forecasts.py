@@ -27,8 +27,9 @@ def ingest_beautiful_soup_object(
     :type url: str
 
     :return: A BeautifulSoup object representing
-        the parsed HTML of the page
-    :rtype: BeautifulSoup
+        the parsed HTML of the page, or NoneType
+        if the page does not allow scraping
+    :rtype: BeautifulSoup | None
     """
     response = requests.get(url)
 
@@ -38,3 +39,20 @@ def ingest_beautiful_soup_object(
     soup = BeautifulSoup(response.text, 'html.parser')
 
     return soup
+
+def ingest_issued_datetimes(
+        soup: BeautifulSoup | None
+) -> str:
+    """
+    Ingest the issued datetimes of the daily weather
+    forecast page from the PAGASA-DOST website.
+
+    :param soup: A BeautifulSoup object representing
+        the parsed HTML of the page, or NoneType
+        if the page does not allow scraping
+    :type soup: BeautifulSoup | None
+
+    :return: Issued datetimes of the daily weather forecast
+        page from the PAGASA-DOST website
+    :rtype: str
+    """
