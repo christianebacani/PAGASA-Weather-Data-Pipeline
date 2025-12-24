@@ -54,6 +54,6 @@ def ingest_daily_weather_forecasts(
         forecast_weather_conditions
     )
 
-    ingest_forecast_wind_and_coastal_water_conditions(
+    forecast_wind_and_coastal_water_conditions = ingest_forecast_wind_and_coastal_water_conditions(
         soup
     )
