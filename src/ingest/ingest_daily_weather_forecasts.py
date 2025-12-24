@@ -81,7 +81,7 @@ def save_ingested_issued_datetimes(
     """
     Save ingested issued datetimes of the daily
     weather forecast page from the PAGASA-DOST
-    website
+    website.
 
     :param issued_datetime: Issued datetimes of
         the daily weather forecast page from the
@@ -136,3 +136,16 @@ def ingest_synopses(
     synopsis = synopsis.strip()
 
     return synopsis
+
+def save_ingested_synopses(
+        synopsis: str
+) -> None:
+    """
+    Save ingested synopses of the daily
+    weather forecast page from the PAGASA-DOST
+    website.
+
+    :param synopsis: Synopses of the daily weather
+        forecast page from the PAGASA-DOST website
+    :type synopsis: str
+    """
