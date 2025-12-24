@@ -3,6 +3,7 @@ Docstring for executor.ingest.execute_ingest_daily_weather_forecasts
 """
 from ingest.ingest_daily_weather_forecasts import create_subdir
 from ingest.ingest_daily_weather_forecasts import ingest_and_parse_soup_from_url
+from ingest.ingest_daily_weather_forecasts import ingest_issued_datetimes
 
 def ingest_daily_weather_forecasts(
 ) -> None:
@@ -15,4 +16,8 @@ def ingest_daily_weather_forecasts(
     create_subdir()
     soup = ingest_and_parse_soup_from_url(
         'https://www.pagasa.dost.gov.ph/weather#daily-weather-forecast'
+    )
+
+    issued_datetime = ingest_issued_datetimes(
+        soup
     )
