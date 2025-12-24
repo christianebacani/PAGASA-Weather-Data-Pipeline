@@ -407,10 +407,16 @@ def ingest_temperatures_and_relative_humidities(
         soup: BeautifulSoup | None
 ) -> dict[str, dict]:
     """
-    Docstring for ingest_temperatures_and_relative_humidities
+    Ingest the temperatures and relative humidities
+    of the daily weather forecast page from the PAGASA-DOST
+    website.
     
-    :param soup: Description
+    :param soup: A BeautifulSoup object representing the parsed
+        HTML of the page, or NoneType if the page does not allow
+        scraping
     :type soup: BeautifulSoup | None
-    :return: Description
+
+    :return: Temperatures and relative humidities of the daily
+        weather forecast page from the PAGASA-DOST website
     :rtype: dict[str, dict]
     """
