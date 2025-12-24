@@ -179,3 +179,16 @@ def ingest_tropical_cyclone_informations(
         weather forecast page from the PAGASA-DOST website
     :rtype: dict[str, str]
     """
+
+def save_ingested_tropical_cyclone_informations(
+        tropical_cyclone_informations: dict[str, str]
+) -> None:
+    """
+    Save ingested tropical cyclone informations of the daily
+    weather forecast page from the PAGASA-DOST website.
+
+    :param tropical_cyclone_informations: Tropical cyclone
+        informations of the daily weather forecast page from
+        the PAGASA-DOST website 
+    :type tropical_cyclone_informations: dict[str, str]
+    """
