@@ -210,3 +210,19 @@ def ingest_forecast_weather_conditions(
         forecast page from the PAGASA-DOST website
     :rtype: dict[str, list]
     """
+    forecast_weather_conditions = {
+        'place': [],
+        'weather_condition': [],
+        'caused_by': [],
+        'impact': []
+    }
+
+    if soup is None:
+        return forecast_weather_conditions
+
+    list_of_all_daily_weather_forecasts_tags = soup.find_all(
+        'div',
+        attrs={
+            'class': 'col-md-12 col-lg-12'
+        }
+    )
