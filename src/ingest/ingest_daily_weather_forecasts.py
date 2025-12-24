@@ -272,3 +272,16 @@ def ingest_forecast_weather_conditions(
         )
 
     return forecast_weather_conditions
+
+def save_ingested_forecast_weather_conditions(
+        forecast_weather_conditions: dict[str, list]
+) -> None:
+    """
+    Save ingested forecast weather conditions of the daily
+    weather forecast page from the PAGASA-DOST website.
+
+    :param forecast_weather_conditions: Forecast weather
+        conditions of the daily weather forecast page from
+        the PAGASA-DOST website
+    :type forecast_weather_conditions: dict[str, list]
+    """
