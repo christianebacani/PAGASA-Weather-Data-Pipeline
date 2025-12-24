@@ -235,4 +235,16 @@ def ingest_forecast_weather_conditions(
     else:
         forecast_weather_conditions_tag = list_of_all_daily_weather_forecasts_tags[2]
 
-    print(forecast_weather_conditions_tag)
+    tbody_tag = forecast_weather_conditions_tag.find(
+        'tbody'
+    )
+    list_of_all_table_row_tags = tbody_tag.find_all(
+        'tr'
+    )
+
+    for table_row_tag in list_of_all_table_row_tags:
+        list_of_all_table_data_tags = table_row_tag.find_all('td')
+
+        place = list_of_all_table_data_tags[0]
+        place = place.text
+        place = str(place)
