@@ -15,12 +15,13 @@ def create_subdir(
     if not os.path.exists('data/raw/daily_weather_forecasts'):
         os.makedirs('data/raw/daily_weather_forecasts')
 
-def ingest_beautiful_soup_object(
-        url: str
+def ingest_and_parse_soup_from_url(
+        url: str       
 ) -> BeautifulSoup | None:
     """
-    Ingest and parse a daily weather forecast
-    page into a BeautifulSoup object.
+    Ingest and parse BeatifulSoup object
+    from the URL of the daily weather forecast
+    page of the PAGASA-DOST website.
 
     :param url: URL of the daily weather forecast
         page to ingest and parse
