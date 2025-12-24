@@ -246,3 +246,29 @@ def ingest_forecast_weather_conditions(
         place = list_of_all_table_data_tags[0]
         place = place.text
         place = str(place)
+        forecast_weather_conditions['place'].append(
+            place
+        )
+
+        weather_condition = list_of_all_table_data_tags[1]
+        weather_condition = weather_condition.text
+        weather_condition = str(weather_condition)
+        forecast_weather_conditions['weather_condition'].append(
+            weather_condition
+        )
+
+        caused_by = list_of_all_table_data_tags[2]
+        caused_by = caused_by.text
+        caused_by = str(caused_by)
+        forecast_weather_conditions['caused_by'].append(
+            caused_by
+        )
+
+        impact = list_of_all_table_data_tags[3]
+        impact = impact.text
+        impact = str(impact)
+        forecast_weather_conditions['impact'].append(
+            impact
+        )
+
+    return forecast_weather_conditions
