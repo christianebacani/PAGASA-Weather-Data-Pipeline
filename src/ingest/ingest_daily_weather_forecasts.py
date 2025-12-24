@@ -450,3 +450,12 @@ def ingest_temperatures_and_relative_humidities(
     tbody_tag = temperatures_and_relative_humidities_tag.find(
         'tbody'
     )
+    list_of_all_table_rows_tag = tbody_tag.find_all(
+        'tr'
+    )
+
+    temperatures_tag = list_of_all_table_rows_tag[0]
+    list_of_all_table_data_tag = temperatures_tag.find_all(
+        'td'
+    )
+    list_of_all_table_data_tag = list_of_all_table_data_tag[1:]
