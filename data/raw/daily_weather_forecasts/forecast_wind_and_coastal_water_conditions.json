@@ -1,0 +1,18 @@
+{
+    "place": [
+        "Extreme Northern Luzon and the eastern section of the country",
+        "The rest of the country"
+    ],
+    "speed": [
+        "Moderate to Strong",
+        "Light to Moderate"
+    ],
+    "direction": [
+        "Northeast",
+        "Northeast"
+    ],
+    "coastal_water": [
+        "Moderate to Rough / (1.5 to 2.8 meters)",
+        "Slight to Moderate / (0.6 to 1.8 meters)"
+    ]
+}
