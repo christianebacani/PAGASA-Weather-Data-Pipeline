@@ -349,3 +349,33 @@ def ingest_forecast_wind_and_coastal_water_conditions(
         list_of_all_table_data_tags = table_row_tag.find_all(
             'td'
         )
+
+        place = list_of_all_table_data_tags[0]
+        place = place.text
+        place = str(place)
+        forecast_wind_and_coastal_water_conditions['place'].append(
+            place
+        )
+
+        speed = list_of_all_table_data_tags[1]
+        speed = speed.text
+        speed = str(speed)
+        forecast_wind_and_coastal_water_conditions['speed'].append(
+            speed
+        )
+
+        direction = list_of_all_table_data_tags[2]
+        direction = direction.text
+        direction = str(direction)
+        forecast_wind_and_coastal_water_conditions_tag['direction'].append(
+            direction
+        )
+
+        coastal_water = list_of_all_table_data_tags[3]
+        coastal_water = coastal_water.text
+        coastal_water = str(coastal_water)
+        forecast_wind_and_coastal_water_conditions['coastal_water'].append(
+            coastal_water
+        )
+
+    return forecast_wind_and_coastal_water_conditions
