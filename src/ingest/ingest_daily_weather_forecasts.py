@@ -241,7 +241,9 @@ def ingest_forecast_weather_conditions(
     )
 
     for table_row_tag in list_of_all_table_row_tags:
-        list_of_all_table_data_tags = table_row_tag.find_all('td')
+        list_of_all_table_data_tags = table_row_tag.find_all(
+            'td'
+        )
 
         place = list_of_all_table_data_tags[0]
         place = place.text
