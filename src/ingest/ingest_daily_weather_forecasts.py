@@ -71,7 +71,6 @@ def ingest_issued_datetimes(
     )
     issued_datetime = issued_datetimes_tag.text
     issued_datetime = str(issued_datetime)
-    issued_datetime = issued_datetime.strip()
 
     return issued_datetime
 
