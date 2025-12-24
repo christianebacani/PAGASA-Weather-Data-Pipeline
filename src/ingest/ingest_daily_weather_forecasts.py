@@ -100,3 +100,20 @@ def save_ingested_issued_datetimes(
         json.dump(ingested_data, json_file, indent=4)
 
     json_file.close()
+
+def ingest_synopses(
+        soup: BeautifulSoup | None
+) -> str:
+    """
+    Ingest the synopses of the daily weather
+    forecast page from the PAGASA-DOST website.
+
+    :param soup: A BeautifulSoup object representing
+        the parsed HTML of the page, or NoneType
+        if the page does not allow scraping
+    :type soup: BeautifulSoup | None
+
+    :return: Synopses of the daily weather forecast
+        page from the PAGASA-DOST website
+    :rtype: str
+    """
