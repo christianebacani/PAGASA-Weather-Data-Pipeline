@@ -452,12 +452,20 @@ def ingest_temperatures_and_relative_humidities(
     tbody_tag = temperatures_and_relative_humidities_tag.find(
         'tbody'
     )
-    list_of_all_table_rows_tag = tbody_tag.find_all(
+    list_of_all_table_row_tags = tbody_tag.find_all(
         'tr'
     )
 
-    temperatures_tag = list_of_all_table_rows_tag[0]
-    list_of_all_table_data_tag = temperatures_tag.find_all(
+    temperatures_tag = list_of_all_table_row_tags[0]
+    list_of_all_table_data_tags = temperatures_tag.find_all(
         'td'
     )
-    list_of_all_table_data_tag = list_of_all_table_data_tag[1:]
+    list_of_all_table_data_tags = list_of_all_table_data_tags[1:]
+
+    # Iterate the first half of the list_of_all_table_data_tags containg max and time of max temperature
+    for table_data_tag in list_of_all_table_data_tags[:2]:
+        data = table_data_tag.text
+        data = str(data)
+        temperatures_and_relative_humidities['temperature']['max'].append(
+            data
+        )
