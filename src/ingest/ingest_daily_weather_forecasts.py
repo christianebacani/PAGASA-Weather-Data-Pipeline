@@ -392,3 +392,13 @@ def save_ingested_forecast_wind_and_coastal_water_conditions(
         PAGASA-DOST website
     :type forecast_wind_and_coastal_water_conditions: dict[str, list]
     """
+    ingested_data = forecast_wind_and_coastal_water_conditions
+
+    # Using with open() method to save the ingested data to the target filepath
+    with open(
+        'data/raw/daily_weather_forecasts/forecast_wind_and_coastal_water_conditions.json',
+        'w'
+    ) as json_file:
+        json.dump(ingested_data, json_file, indent=4)
+
+    json_file.close()
