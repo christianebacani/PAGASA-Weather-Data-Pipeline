@@ -3,6 +3,7 @@ Docstring of the src.ingest.ingest_daily_weather_forecasts
 """
 import os
 import requests
+import json
 from bs4 import BeautifulSoup
 
 def create_subdir(
@@ -87,3 +88,15 @@ def save_ingested_issued_datetimes(
         PAGASA-DOST website
     :type issued_datetime: str
     """
+    ingested_data = {
+        "issue_datetime": issued_datetime
+    }
+
+    # Using with open() method to save the ingested data to the target filepath
+    with open(
+        'data/raw/daily_weather_forecasts/issued_datetimes.json',
+        'w'
+    ) as json_file:
+        json.dump(ingested_data, json_file, indent=4)
+
+    json_file.close()
