@@ -456,13 +456,16 @@ def ingest_temperatures_and_relative_humidities(
         'tr'
     )
 
+    # The first instance of the list_of_all_table_row_tags is the temperature row
+    # Temperature row contains max and time of max temperature, and min and time of min temperature
     temperatures_tag = list_of_all_table_row_tags[0]
     list_of_all_table_data_tags = temperatures_tag.find_all(
         'td'
     )
     list_of_all_table_data_tags = list_of_all_table_data_tags[1:]
 
-    # Iterate the first half of the list_of_all_table_data_tags containg max and time of max temperature
+    # Iterate the first half of the list_of_all_table_data_tags from temperature row
+    # The first half of the list_of_all_table_data_tags contains max and time of max 
     for table_data_tag in list_of_all_table_data_tags[:2]:
         data = table_data_tag.text
         data = str(data)
