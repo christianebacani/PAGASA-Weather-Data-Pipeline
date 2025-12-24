@@ -13,4 +13,6 @@ def ingest_daily_weather_forecasts(
     weather forecast page of PAGASA-DOST website.
     """
     create_subdir()
-    soup = ingest_beautiful_soup_object()
+    soup = ingest_beautiful_soup_object(
+        'https://www.pagasa.dost.gov.ph/weather#daily-weather-forecast'
+    )
