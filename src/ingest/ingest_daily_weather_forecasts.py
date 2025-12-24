@@ -441,6 +441,8 @@ def ingest_temperatures_and_relative_humidities(
         }
     )
 
+    # Use if statement to check if there's 4 or 5 instances of a certain div tag.
+    # If 5 instances are present, it means the tropical cyclone information tag is present
     if len(list_of_all_daily_weather_forecasts_tags) == 4:
         temperatures_and_relative_humidities_tag = list_of_all_daily_weather_forecasts_tags[3]
     
