@@ -45,6 +45,6 @@ def ingest_daily_weather_forecasts(
         tropical_cyclone_informations
     )
 
-    forecast_weather_conditions = ingest_forecast_weather_conditions(
+    ingest_forecast_weather_conditions(
         soup
     )
