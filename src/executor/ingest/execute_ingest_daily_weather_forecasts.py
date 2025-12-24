@@ -13,6 +13,7 @@ from ingest.ingest_daily_weather_forecasts import ingest_forecast_weather_condit
 from ingest.ingest_daily_weather_forecasts import save_ingested_forecast_weather_conditions
 from ingest.ingest_daily_weather_forecasts import ingest_forecast_wind_and_coastal_water_conditions
 from ingest.ingest_daily_weather_forecasts import save_ingested_forecast_wind_and_coastal_water_conditions
+from ingest.ingest_daily_weather_forecasts import ingest_temperatures_and_relative_humidities
 
 def ingest_daily_weather_forecasts(
 ) -> None:
@@ -60,4 +61,8 @@ def ingest_daily_weather_forecasts(
     )
     save_ingested_forecast_wind_and_coastal_water_conditions(
         forecast_wind_and_coastal_water_conditions
+    )
+
+    ingest_temperatures_and_relative_humidities(
+        soup
     )
