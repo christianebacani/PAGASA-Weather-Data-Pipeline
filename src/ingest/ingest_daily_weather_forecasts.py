@@ -313,3 +313,12 @@ def ingest_forecast_wind_and_coastal_water_conditions(
         weather forecast page from the PAGASA-DOST website
     :rtype: dict[str, list]
     """
+    forecast_wind_and_coastal_water_conditions = {
+        'place': [],
+        'speed': [],
+        'direction': [],
+        'coastal_water': []
+    }
+
+    if soup is None:
+        return forecast_wind_and_coastal_water_conditions
