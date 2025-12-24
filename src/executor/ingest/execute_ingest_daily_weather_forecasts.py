@@ -2,6 +2,7 @@
 Docstring for executor.ingest.execute_ingest_daily_weather_forecasts
 """
 from ingest.ingest_daily_weather_forecasts import create_subdir
+from ingest.ingest_daily_weather_forecasts import ingest_beautiful_soup_object
 
 def ingest_daily_weather_forecasts(
 ) -> None:
@@ -12,3 +13,4 @@ def ingest_daily_weather_forecasts(
     weather forecast page of PAGASA-DOST website.
     """
     create_subdir()
+    soup = ingest_beautiful_soup_object()
