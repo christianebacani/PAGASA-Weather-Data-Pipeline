@@ -226,3 +226,11 @@ def ingest_forecast_weather_conditions(
             'class': 'col-md-12 col-lg-12'
         }
     )
+
+    # Use if statement to check if there's 4 or 5 instances of a certain div tag.
+    # If 5 instances are present, it means the tropical cyclone information tag is present
+    if len(list_of_all_daily_weather_forecasts_tags) == 4:
+        forecast_weather_conditions_tag = list_of_all_daily_weather_forecasts_tags[1]
+
+    else:
+        forecast_weather_conditions_tag = list_of_all_daily_weather_forecasts_tags[2]
