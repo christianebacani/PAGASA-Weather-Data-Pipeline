@@ -402,3 +402,15 @@ def save_ingested_forecast_wind_and_coastal_water_conditions(
         json.dump(ingested_data, json_file, indent=4)
 
     json_file.close()
+
+def ingest_temperatures_and_relative_humidities(
+        soup: BeautifulSoup | None
+) -> dict[str, dict]:
+    """
+    Docstring for ingest_temperatures_and_relative_humidities
+    
+    :param soup: Description
+    :type soup: BeautifulSoup | None
+    :return: Description
+    :rtype: dict[str, dict]
+    """
