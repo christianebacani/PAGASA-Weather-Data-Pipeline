@@ -295,3 +295,21 @@ def save_ingested_forecast_weather_conditions(
         json.dump(ingested_data, json_file, indent=4)
 
     json_file.close()
+
+def ingest_forecast_wind_and_coastal_water_conditions(
+        soup: BeautifulSoup | None
+) -> dict[str, list]:
+    """
+    Ingest the forecast wind and coastal water conditions
+    of the daily weather forecast page from the PAGASA-DOST
+    website.
+
+    :param soup: A BeautifulSoup object representing the parsed
+        HTML of the page, or NoneType if the page does not allow
+        scraping
+    :type soup: BeautifulSoup | None
+
+    :return: Forecast wind and coastal water conditions of the daily
+        weather forecast page from the PAGASA-DOST website
+    :rtype: dict[str, list]
+    """
