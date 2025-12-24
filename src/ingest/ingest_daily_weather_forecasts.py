@@ -457,7 +457,6 @@ def ingest_temperatures_and_relative_humidities(
     )
 
     # The first instance of the list_of_all_table_row_tags is the temperature row
-    # Temperature row contains max and time of max temperature, and min and time of min temperature
     temperatures_tag = list_of_all_table_row_tags[0]
     list_of_all_table_data_tags = temperatures_tag.find_all(
         'td'
