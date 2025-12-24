@@ -367,7 +367,7 @@ def ingest_forecast_wind_and_coastal_water_conditions(
         direction = list_of_all_table_data_tags[2]
         direction = direction.text
         direction = str(direction)
-        forecast_wind_and_coastal_water_conditions_tag['direction'].append(
+        forecast_wind_and_coastal_water_conditions['direction'].append(
             direction
         )
 
