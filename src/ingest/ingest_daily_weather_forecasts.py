@@ -34,3 +34,7 @@ def ingest_beautiful_soup_object(
 
     if response.status_code != 200:
         return None
+
+    soup = BeautifulSoup(response.text, 'html.parser')
+
+    return soup
