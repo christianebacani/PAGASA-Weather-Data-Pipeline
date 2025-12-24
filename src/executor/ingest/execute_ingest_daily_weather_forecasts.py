@@ -12,6 +12,7 @@ from ingest.ingest_daily_weather_forecasts import save_ingested_tropical_cyclone
 from ingest.ingest_daily_weather_forecasts import ingest_forecast_weather_conditions
 from ingest.ingest_daily_weather_forecasts import save_ingested_forecast_weather_conditions
 from ingest.ingest_daily_weather_forecasts import ingest_forecast_wind_and_coastal_water_conditions
+from ingest.ingest_daily_weather_forecasts import save_ingested_forecast_wind_and_coastal_water_conditions
 
 def ingest_daily_weather_forecasts(
 ) -> None:
@@ -56,4 +57,7 @@ def ingest_daily_weather_forecasts(
 
     forecast_wind_and_coastal_water_conditions = ingest_forecast_wind_and_coastal_water_conditions(
         soup
+    )
+    save_ingested_forecast_wind_and_coastal_water_conditions(
+        forecast_wind_and_coastal_water_conditions
     )
