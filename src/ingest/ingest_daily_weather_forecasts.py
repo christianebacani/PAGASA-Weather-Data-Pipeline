@@ -57,3 +57,19 @@ def ingest_issued_datetimes(
         page from the PAGASA-DOST website
     :rtype: str
     """
+    issued_datetime = ''
+
+    if soup is None:
+        return issued_datetime
+
+    issued_datetimes_tag = soup.find(
+        'div',
+        attrs={
+            'class': 'col-md-12 col-lg-12 issue'
+        }
+    )
+    issued_datetime = issued_datetimes_tag.text
+    issued_datetime = str(issued_datetime)
+    issued_datetime = issued_datetime.strip()
+
+    return issued_datetime
