@@ -117,3 +117,22 @@ def ingest_synopses(
         page from the PAGASA-DOST website
     :rtype: str
     """
+    synopsis = ''
+
+    if soup is None:
+        return synopsis
+
+    synopses_tag = soup.find(
+        'div',
+        attrs={
+            'class': 'col-md-12 col-lg-12'
+        }
+    )
+    paragraph_tag = synopses_tag.find(
+        'p'
+    )
+    synopsis = paragraph_tag.text
+    synopsis = str(synopsis)
+    synopsis = synopsis.strip()
+
+    return synopsis
