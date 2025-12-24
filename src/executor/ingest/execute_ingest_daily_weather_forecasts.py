@@ -4,6 +4,7 @@ Docstring for executor.ingest.execute_ingest_daily_weather_forecasts
 from ingest.ingest_daily_weather_forecasts import create_subdir
 from ingest.ingest_daily_weather_forecasts import ingest_and_parse_soup_from_url
 from ingest.ingest_daily_weather_forecasts import ingest_issued_datetimes
+from ingest.ingest_daily_weather_forecasts import save_ingested_issued_datetimes
 
 def ingest_daily_weather_forecasts(
 ) -> None:
@@ -20,4 +21,7 @@ def ingest_daily_weather_forecasts(
 
     issued_datetime = ingest_issued_datetimes(
         soup
+    )
+    save_ingested_issued_datetimes(
+        issued_datetime
     )
