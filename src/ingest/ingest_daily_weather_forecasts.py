@@ -420,3 +420,33 @@ def ingest_temperatures_and_relative_humidities(
         weather forecast page from the PAGASA-DOST website
     :rtype: dict[str, dict]
     """
+    temperatures_and_relative_humidities = {
+        'temperature': {
+            'max': [],
+            'min': []
+        },
+        'relative_humidity': {
+            'max': [],
+            'min': []
+        }
+    }
+
+    if soup is None:
+        return temperatures_and_relative_humidities
+
+    list_of_all_daily_weather_forecasts_tags = soup.find_all(
+        'div',
+        attrs={
+            'class': 'col-md-12 col-lg-12'
+        }
+    )
+
+    if len(list_of_all_daily_weather_forecasts_tags) == 4:
+        temperatures_and_relative_humidities_tag = list_of_all_daily_weather_forecasts_tags[3]
+    
+    else:
+        temperatures_and_relative_humidities_tag = list_of_all_daily_weather_forecasts_tags[4]
+
+    tbody_tag = temperatures_and_relative_humidities_tag.find(
+        'tbody'
+    )
