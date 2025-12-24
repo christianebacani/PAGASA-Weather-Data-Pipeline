@@ -9,6 +9,7 @@ from ingest.ingest_daily_weather_forecasts import ingest_synopses
 from ingest.ingest_daily_weather_forecasts import save_ingested_synopses
 from ingest.ingest_daily_weather_forecasts import ingest_tropical_cyclone_informations
 from ingest.ingest_daily_weather_forecasts import save_ingested_tropical_cyclone_informations
+from ingest.ingest_daily_weather_forecasts import ingest_forecast_weather_conditions
 
 def ingest_daily_weather_forecasts(
 ) -> None:
@@ -42,4 +43,8 @@ def ingest_daily_weather_forecasts(
     )
     save_ingested_tropical_cyclone_informations(
         tropical_cyclone_informations
+    )
+
+    forecast_weather_conditions = ingest_forecast_weather_conditions(
+        soup
     )
