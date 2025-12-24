@@ -8,6 +8,7 @@ from ingest.ingest_daily_weather_forecasts import save_ingested_issued_datetimes
 from ingest.ingest_daily_weather_forecasts import ingest_synopses
 from ingest.ingest_daily_weather_forecasts import save_ingested_synopses
 from ingest.ingest_daily_weather_forecasts import ingest_tropical_cyclone_informations
+from ingest.ingest_daily_weather_forecasts import save_ingested_tropical_cyclone_informations
 
 def ingest_daily_weather_forecasts(
 ) -> None:
@@ -36,6 +37,9 @@ def ingest_daily_weather_forecasts(
         synopsis
     )
 
-    ingest_tropical_cyclone_informations(
+    tropical_cyclone_informations = ingest_tropical_cyclone_informations(
         soup
+    )
+    save_ingested_tropical_cyclone_informations(
+        tropical_cyclone_informations
     )
