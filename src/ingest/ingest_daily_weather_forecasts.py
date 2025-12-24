@@ -289,7 +289,7 @@ def save_ingested_forecast_weather_conditions(
 
     # Using with open() method to save the ingested data to the target filepath
     with open(
-        'data/raw/daily_weather_forecasts/issued_datetimes.json',
+        'data/raw/daily_weather_forecasts/forecast_weather_conditions.json',
         'w'
     ) as json_file:
         json.dump(ingested_data, json_file, indent=4)
