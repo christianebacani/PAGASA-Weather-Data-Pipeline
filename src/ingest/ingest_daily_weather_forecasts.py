@@ -73,3 +73,17 @@ def ingest_issued_datetimes(
     issued_datetime = issued_datetime.strip()
 
     return issued_datetime
+
+def save_ingested_issued_datetimes(
+        issued_datetime: str
+) -> None:
+    """
+    Save ingested issued datetimes of the daily
+    weather forecast page from the PAGASA-DOST
+    website
+
+    :param issued_datetime: Issued datetimes of
+        the daily weather forecast page from the
+        PAGASA-DOST website
+    :type issued_datetime: str
+    """
