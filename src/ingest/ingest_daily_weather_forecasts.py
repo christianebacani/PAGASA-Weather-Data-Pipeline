@@ -149,3 +149,15 @@ def save_ingested_synopses(
         forecast page from the PAGASA-DOST website
     :type synopsis: str
     """
+    ingested_data = {
+        "synopsis": synopsis
+    }
+
+    # Using with open() method to save the ingested data to the target filepath
+    with open(
+        'data/raw/daily_weather_forecasts/synopses.json',
+        'w'
+    ) as json_file:
+        json.dump(ingested_data, json_file, indent=4)
+
+    json_file.close()
