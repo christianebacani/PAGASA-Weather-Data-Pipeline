@@ -133,7 +133,6 @@ def ingest_synopses(
     )
     synopsis = paragraph_tag.text
     synopsis = str(synopsis)
-    synopsis = synopsis.strip()
 
     return synopsis
 
