@@ -192,3 +192,21 @@ def save_ingested_tropical_cyclone_informations(
         the PAGASA-DOST website 
     :type tropical_cyclone_informations: dict[str, str]
     """
+
+def ingest_forecast_weather_conditions(
+        soup: BeautifulSoup | None
+) -> dict[str, list]:
+    """
+    Ingest the forecast weather conditions
+    of the daily weather forecast page from
+    the PAGASA-DOST website.
+
+    :param soup: A BeautifulSoup object representing
+        the parsed HTML of the page, or NoneType if the
+        page does not allow scraping
+    :type soup: BeautifulSoup | None
+
+    :return: Forecast weather conditions of the daily weather
+        forecast page from the PAGASA-DOST website
+    :rtype: dict[str, list]
+    """
