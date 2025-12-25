@@ -471,7 +471,9 @@ def ingest_temperatures_and_relative_humidities(
         temperatures_and_relative_humidities['temperature']['max'].append(
             data
         )
-    
+
+    # Iterate the last half of the list_of_all_table_data_tags from temperature row
+    # The last half of the list_of_all_table_data_tags contains min and time of min temperature
     for table_data_tag in list_of_all_table_data_tags[2:]:
         data = table_data_tag.text
         data = str(data)
