@@ -484,3 +484,13 @@ def save_ingested_temperatures_and_relative_humidities(
         the PAGASA-DOST website
     :type temperatures_and_relative_humidities: dict[str, dict]
     """
+    ingested_data = temperatures_and_relative_humidities
+
+    # Using with open() method to save the ingested data to the target filepath
+    with open(
+        'data/raw/daily_weather_forecasts/temperatures_and_relative_humidities.json',
+        'w'
+    ) as json_file:
+        json.dump(ingested_data, json_file, indent=4)
+
+    json_file.close()
