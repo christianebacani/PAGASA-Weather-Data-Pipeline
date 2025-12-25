@@ -476,8 +476,11 @@ def save_ingested_temperatures_and_relative_humidities(
         temperatures_and_relative_humidities: dict[str, dict]
 ) -> None:
     """
-    Docstring for save_ingested_temperatures_and_relative_humidities
-    
-    :param temperatures_and_relative_humidities: Description
+    Save ingested temperatures and relative humidities of the daily
+    weather forecast page from the PAGASA-DOST website.
+
+    :param temperatures_and_relative_humidities: Temperatures and
+        relative humidities of the daily weather forecast page from
+        the PAGASA-DOST website
     :type temperatures_and_relative_humidities: dict[str, dict]
     """
