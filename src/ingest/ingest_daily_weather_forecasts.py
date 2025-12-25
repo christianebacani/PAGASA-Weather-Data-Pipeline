@@ -2,15 +2,15 @@
 Ingest daily weather forecasts data from the PAGASA-DOST website.
 
 This module contains functions used by the ETL pipeline to ingest
-data from the daily weather forecast page of PAGASA-DOST website
-and store the ingested artifacts as a JSON files under the
-`data/raw/daily_weather_forecasts/` subdirectory path for further
+data from the PAGASA-DOST daily weather forecast page and store the
+ingested artifacts as JSON files under the
+`data/raw/daily_weather_forecasts/` subdirectory for further
 processing.
 
-Ingested Data:
-- Issued Datetimes
+Ingested data:
+- Issued datetimes
 - Synopses
-- Tropical cyclone informations
+- Tropical cyclone information
 - Forecast weather conditions
 - Forecast wind and coastal water conditions
 - Temperatures and relative humidities
