@@ -1,22 +1,22 @@
 {
     "place": [
-        "Cagayan, Isabela, Aurora, and Quezon",
-        "Metro Manila, Ilocos Region, Cordillera Administrative Region, the rest of Cagayan Valley, the rest of Central Luzon, and the rest of CALABARZON",
-        "The rest of the country"
+        "Batanes, Cagayan, Isabela, and Apayao",
+        "Visayas, Mindanao, and Palawan",
+        "Metro Manila and the rest of the Luzon"
     ],
     "weather_condition": [
         "Cloudy skies with light rains",
-        "Partly cloudy to cloudy skies with isolated light rains",
-        "Partly cloudy to cloudy skies with isolated rainshowers or thunderstorms"
+        "Partly cloudy to cloudy skies with isolated rainshowers or thunderstorms",
+        "Partly cloudy to cloudy skies with isolated light rains"
     ],
     "caused_by": [
         "Northeast Monsoon",
-        "Northeast Monsoon",
-        "Easterlies"
+        "Easterlies",
+        "Northeast Monsoon"
     ],
     "impact": [
         "No significant impact",
-        "No significant impact",
-        "Possible flash floods or landslides during severe thunderstorms"
+        "Possible flash floods or landslides during severe thunderstorms",
+        "No significant impact"
     ]
 }
