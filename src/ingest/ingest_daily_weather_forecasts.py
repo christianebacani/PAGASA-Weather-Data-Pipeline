@@ -1,10 +1,11 @@
 """
 Ingest daily weather forecasts data from the PAGASA-DOST website.
 
-This module contains function used by the ETL to ingest data from
-the daily weather forecast page of PAGASA-DOST website and stores
-the ingested data to the subdirectory path `data/raw/daily_weather_forecasts/`
-as a JSON file for further processing.
+This module contains functions used by the ETL pipeline to ingest
+data from the daily weather forecast page of PAGASA-DOST website
+and store the ingested artifacts as a JSON files under the
+`data/raw/daily_weather_forecasts/` subdirectory path for further
+processing.
 
 Ingested Data:
 - Issued Datetimes
