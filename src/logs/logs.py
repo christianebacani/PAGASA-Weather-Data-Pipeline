@@ -1,9 +1,12 @@
 """
-Provide functions for generating logs during ETL pipeline execution.
+Generate logs during ETL pipeline execution.
 
 These utilities generate log messages while processing data
 from the PAGASA-DOST website. They are intended to support
 monitoring and troubleshooting of ETL jobs.
+
+Main function:
+- `generate_logs()` - Generate logs for ETL pipeline jobs
 """
 import sys
 import os
