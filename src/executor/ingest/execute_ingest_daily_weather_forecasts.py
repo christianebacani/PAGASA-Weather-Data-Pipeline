@@ -64,6 +64,6 @@ def ingest_daily_weather_forecasts(
         forecast_wind_and_coastal_water_conditions
     )
 
-    ingest_temperatures_and_relative_humidities(
+    temperatures_and_relative_humidities = ingest_temperatures_and_relative_humidities(
         soup
     )
