@@ -464,7 +464,7 @@ def ingest_temperatures_and_relative_humidities(
     list_of_all_table_data_tags = list_of_all_table_data_tags[1:]
 
     # Iterate the first half of the list_of_all_table_data_tags from temperature row
-    # The first half of the list_of_all_table_data_tags contains max and time of max 
+    # The first half of the list_of_all_table_data_tags contains max and time of max temperature
     for table_data_tag in list_of_all_table_data_tags[:2]:
         data = table_data_tag.text
         data = str(data)
