@@ -481,6 +481,9 @@ def ingest_temperatures_and_relative_humidities(
             data
         )
 
+    # The last instance of the list_of_all_table_row_tags is the relative humidity row
+    relative_humidities_tag = list_of_all_table_row_tags[1]
+    
 def save_ingested_temperatures_and_relative_humidities(
         temperatures_and_relative_humidities: dict[str, dict]
 ) -> None:
