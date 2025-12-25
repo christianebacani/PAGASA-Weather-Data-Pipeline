@@ -67,3 +67,6 @@ def ingest_daily_weather_forecasts(
     temperatures_and_relative_humidities = ingest_temperatures_and_relative_humidities(
         soup
     )
+    save_ingested_temperatures_and_relative_humidities(
+        temperatures_and_relative_humidities
+    )
