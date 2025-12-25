@@ -471,6 +471,8 @@ def ingest_temperatures_and_relative_humidities(
         temperatures_and_relative_humidities['temperature']['max'].append(
             data
         )
+    
+    return temperatures_and_relative_humidities
 
 def save_ingested_temperatures_and_relative_humidities(
         temperatures_and_relative_humidities: dict[str, dict]
