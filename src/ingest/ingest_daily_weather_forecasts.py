@@ -471,3 +471,13 @@ def ingest_temperatures_and_relative_humidities(
         temperatures_and_relative_humidities['temperature']['max'].append(
             data
         )
+
+def save_ingested_temperatures_and_relative_humidities(
+        temperatures_and_relative_humidities: dict[str, dict]
+) -> None:
+    """
+    Docstring for save_ingested_temperatures_and_relative_humidities
+    
+    :param temperatures_and_relative_humidities: Description
+    :type temperatures_and_relative_humidities: dict[str, dict]
+    """
