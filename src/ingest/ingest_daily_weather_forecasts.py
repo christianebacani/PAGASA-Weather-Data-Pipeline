@@ -472,7 +472,12 @@ def ingest_temperatures_and_relative_humidities(
             data
         )
     
-    return temperatures_and_relative_humidities
+    for table_data_tag in list_of_all_table_data_tags[2:]:
+        data = table_data_tag.text
+        data = str(data)
+        temperatures_and_relative_humidities['temperature']['min'].append(
+            data
+        )
 
 def save_ingested_temperatures_and_relative_humidities(
         temperatures_and_relative_humidities: dict[str, dict]
