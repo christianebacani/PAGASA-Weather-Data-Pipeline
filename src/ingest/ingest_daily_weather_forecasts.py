@@ -1,5 +1,18 @@
 """
-Docstring of the src.ingest.ingest_daily_weather_forecasts
+Ingest daily weather forecasts data from the PAGASA-DOST website.
+
+This module contains function used by the ETL to ingest data from
+the daily weather forecast page of PAGASA-DOST website and stores
+the ingested data to the subdirectory path `data/raw/daily_weather_forecasts/`
+as a JSON file for further processing.
+
+Ingested Data:
+- Issued Datetimes
+- Synopses
+- Tropical cyclone informations
+- Forecast weather conditions
+- Forecast wind and coastal water conditions
+- Temperatures and relative humidities
 """
 import os
 import requests
