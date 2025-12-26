@@ -13,3 +13,5 @@ def create_subdir(
     for ingested data from the weather outlook for selected Philippine Cities
     page of PAGASA-DOST website.
     """
+    if not os.path.exists('data/raw/weather_outlooks_for_ph_cities'):
+        os.makedirs('data/raw/weather_outlooks_for_ph_cities')
