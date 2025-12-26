@@ -4,6 +4,7 @@ Docstring for executor.ingest.execute_ingest_weather_outlooks_for_ph_cities
 from ingest.ingest_weather_outlooks_for_ph_cities import create_subdir
 from ingest.ingest_weather_outlooks_for_ph_cities import ingest_and_parse_from_url
 from ingest.ingest_weather_outlooks_for_ph_cities import ingest_issued_datetimes
+from ingest.ingest_weather_outlooks_for_ph_cities import save_ingested_issued_datetimes
 from ingest.ingest_weather_outlooks_for_ph_cities import ingest_time_validities
 
 def ingest_weather_outlooks_for_ph_cities(
@@ -22,6 +23,9 @@ def ingest_weather_outlooks_for_ph_cities(
 
     issued_datetime = ingest_issued_datetimes(
         soup
+    )
+    save_ingested_issued_datetimes(
+        issued_datetime
     )
 
     time_validity = ingest_time_validities(
