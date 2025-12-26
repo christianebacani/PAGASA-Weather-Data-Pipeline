@@ -16,6 +16,7 @@ import pandas as pd
 from datetime import datetime
 
 from executor.ingest.execute_ingest_daily_weather_forecasts import ingest_daily_weather_forecasts
+from executor.ingest.execute_ingest_weather_outlooks_for_ph_cities import ingest_weather_outlooks_for_ph_cities
 
 def generate_logs(
     log_message: str
@@ -45,5 +46,10 @@ def generate_logs(
 if __name__ == '__main__':
     ingest_daily_weather_forecasts()
     generate_logs(
-        '(DEV): Ingests data of daily weather forecasts.'
+        '(DEV): Ingest the daily weather forecasts data.'
+    )
+
+    ingest_weather_outlooks_for_ph_cities()
+    generate_logs(
+        '(DEV): Ingest the weather outlook for selected Philippine cities data.'
     )
