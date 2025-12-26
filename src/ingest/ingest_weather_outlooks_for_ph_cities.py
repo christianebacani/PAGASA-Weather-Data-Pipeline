@@ -87,6 +87,12 @@ def ingest_issued_datetimes(
 
     return issued_datetime
 
+def save_ingested_issued_datetimes(
+        issued_datetime: str
+) -> None:
+    """
+    """
+
 def ingest_time_validities(
         soup: BeautifulSoup | None
 ) -> str:
