@@ -93,7 +93,7 @@ def save_ingested_issued_datetimes(
     """
     Save ingested issued datetimes of the
     weather outlook for selected Philippine
-    cities from the PAGASA-DOST website.
+    cities page from the PAGASA-DOST website.
 
     :param issued_datetime: Issued datetimes
         of the weather outlook for selected
@@ -160,4 +160,12 @@ def save_ingested_time_validities(
         time_validity: str
 ) -> None:
     """
+    Save ingested time validities of the weather
+    outlook for selected Philippine cities page from
+    the PAGASA-DOST website.
+
+    :param time_validity: Time of validities of thea
+        weather outlook for selected Philippine cities
+        page from the PAGASA-DOST website
+    :type time_validity: str
     """
