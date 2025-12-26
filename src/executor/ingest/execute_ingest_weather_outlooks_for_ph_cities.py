@@ -12,3 +12,4 @@ def ingest_weather_outlooks_for_ph_cities(
     for selected Philippine cities page of PAGASA-DOST
     website.
     """
+    create_subdir()
