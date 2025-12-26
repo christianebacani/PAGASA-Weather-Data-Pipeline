@@ -180,3 +180,15 @@ def save_ingested_time_validities(
         json.dump(ingested_data, json_file, indent=4)
 
     json_file.close()
+
+def ingest_and_parse_ph_city_tags(
+        soup: BeautifulSoup | None
+) -> list[BeautifulSoup]:
+    """
+    Docstring for ingest_and_parse_ph_city_tags
+    
+    :param soup: Description
+    :type soup: BeautifulSoup | None
+    :return: Description
+    :rtype: list[BeautifulSoup]
+    """
