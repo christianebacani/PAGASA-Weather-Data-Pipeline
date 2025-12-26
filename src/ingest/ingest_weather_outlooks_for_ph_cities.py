@@ -20,4 +20,18 @@ def ingest_and_parse_from_url(
         url: str
 ) -> BeautifulSoup | None:
     """
+    Ingest and parse BeautifulSoup object
+    from the URL of the weather outlook for
+    selected Philippine cities page of the
+    PAGASA-DOST website.
+
+    :param url: URL of the weather outlook for
+        selected Philippine cities page to ingest
+        and parse
+    :type url: str
+
+    :return: A BeautifulSoup object representing the
+        parsed HTML of the page, or NoneType if the page
+        does not allow scraping
+    :rtype: BeautifulSoup | None
     """
