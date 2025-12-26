@@ -190,9 +190,13 @@ def ingest_and_parse_ph_city_tags(
     for selected Philippine cities page of the
     PAGASA-DOST website.
 
-    :param soup: Description
+    :param soup: A BeautifulSoup object representing
+        the parsed HTML of the page, or NoneType if the
+        page does not allow scraping
     :type soup: BeautifulSoup | None
 
-    :return: Description
+    :return: HTML tags of selected Philippine cities from
+        the weather outlook for selected Philippine cities
+        page of the PAGASA-DOST website
     :rtype: list[BeautifulSoup]
     """
