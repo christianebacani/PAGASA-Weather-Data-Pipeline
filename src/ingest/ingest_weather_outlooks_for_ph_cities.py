@@ -169,3 +169,14 @@ def save_ingested_time_validities(
         page from the PAGASA-DOST website
     :type time_validity: str
     """
+    ingested_data = {
+        "time_validity": time_validity
+    }
+
+    with open(
+        'data/raw/daily_weather_forecasts/time_validity.json',
+        'w'
+    ) as json_file:
+        json.dump(ingested_data, json_file, indent=4)
+
+    json_file.close()
