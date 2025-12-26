@@ -1,20 +1,24 @@
 {
     "place": [
-        "Batanes, Cagayan, Isabela, and Apayao",
+        "Batanes and Babuyan Islands",
+        "Mainland Cagayan, Isabela, and Apayao",
         "Visayas, Mindanao, and Palawan",
         "Metro Manila and the rest of the Luzon"
     ],
     "weather_condition": [
+        "Cloudy skies with rains",
         "Cloudy skies with light rains",
         "Partly cloudy to cloudy skies with isolated rainshowers or thunderstorms",
         "Partly cloudy to cloudy skies with isolated light rains"
     ],
     "caused_by": [
         "Northeast Monsoon",
+        "Northeast Monsoon",
         "Easterlies",
         "Northeast Monsoon"
     ],
     "impact": [
+        "Possible flash floods or landslides due to moderate to at times heavy rains",
         "No significant impact",
         "Possible flash floods or landslides during severe thunderstorms",
         "No significant impact"
