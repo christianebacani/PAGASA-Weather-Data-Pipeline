@@ -155,3 +155,9 @@ def ingest_time_validities(
     time_validity = str(time_validity)
 
     return time_validity
+
+def save_ingested_time_validities(
+        time_validity: str
+) -> None:
+    """
+    """
