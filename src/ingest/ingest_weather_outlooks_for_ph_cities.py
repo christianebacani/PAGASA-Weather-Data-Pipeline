@@ -185,7 +185,10 @@ def ingest_and_parse_ph_city_tags(
         soup: BeautifulSoup | None
 ) -> list[BeautifulSoup]:
     """
-    Docstring for ingest_and_parse_ph_city_tags
+    Ingest and parse HTML tags of selected
+    Philippine cities from the weather outlook
+    for selected Philippine cities page of the
+    PAGASA-DOST website.
 
     :param soup: Description
     :type soup: BeautifulSoup | None
