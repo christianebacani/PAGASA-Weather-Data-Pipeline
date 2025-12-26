@@ -43,3 +43,22 @@ def ingest_and_parse_from_url(
     soup = BeautifulSoup(response.text, 'html.parser')
 
     return soup
+
+def ingest_issued_datetimes(
+        soup: BeautifulSoup | None
+) -> str:
+    """
+    Ingest the issued datetimes of the weather
+    outlook for selected Philippine cities page
+    from the PAGASA-DOST website.
+
+    :param soup: A BeautifulSoup object representing
+        the parsed HTML of the page, or NoneType if the
+        page does not allow scraping
+    :type soup: BeautifulSoup | None
+
+    :return: Issued datetimes of the weather outlook for
+        selected Philippine cities page from the PAGASA-DOST
+        website.
+    :rtype: str
+    """
