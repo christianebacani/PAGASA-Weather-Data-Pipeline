@@ -86,3 +86,22 @@ def ingest_issued_datetimes(
     issued_datetime = str(issued_datetime)
 
     return issued_datetime
+
+def ingest_time_validities(
+        soup: BeautifulSoup | None
+) -> str:
+    """
+    Ingest the time validities of the
+    weather outlook for selected Philippine
+    cities page from the PAGASA-DOST website.
+
+    :param soup: A BeautifulSoup object representing
+        the parsed HTML of the page, or NoneType if the
+        page does not allow scraping
+    :type soup: BeautifulSoup | None
+
+    :return: Time validities of the weather outlook
+        for selected Philippine cities page from the
+        PAGASA-DOST website.
+    :rtype: str
+    """
