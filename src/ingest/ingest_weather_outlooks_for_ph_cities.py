@@ -91,7 +91,27 @@ def save_ingested_issued_datetimes(
         issued_datetime: str
 ) -> None:
     """
+    Save ingested issued datetimes of the
+    weather outlook for selected Philippine
+    cities from the PAGASA-DOST website.
+
+    :param issued_datetime: Issued datetimes
+        of the weather outlook for selected
+        Philippine cities page from the PAGASA-
+        DOST website
+    :type issued_datetime: str
     """
+    ingested_data = {
+        "issued_datetime": issued_datetime
+    }
+
+    with open(
+        'data/raw/daily_weather_forecasts/issued_datetimes.json',
+        'w'
+    ) as json_file:
+        json.dump(ingested_data, json_file, indent=4)
+
+    json_file.close()
 
 def ingest_time_validities(
         soup: BeautifulSoup | None
