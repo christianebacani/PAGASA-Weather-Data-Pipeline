@@ -200,3 +200,18 @@ def ingest_and_parse_ph_city_tags(
         page of the PAGASA-DOST website
     :rtype: list[BeautifulSoup]
     """
+    if soup is None:
+        return None
+
+    div_tag_with_row_weather_page_class = soup.find(
+        'div',
+        attrs={
+            'class': 'row weather-page'
+        }
+    )
+    weather_outlooks_for_ph_cities_tag = div_tag_with_row_weather_page_class.find(
+        'div',
+        attrs={
+            'class': 'col-md-12 col-lg-12'
+        }
+    )
