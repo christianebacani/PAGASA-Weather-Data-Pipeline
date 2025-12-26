@@ -1,7 +1,7 @@
 {
     "place": [
-        "Extreme Northern Luzon",
-        "The rest of Northern Luzon",
+        "Northern Luzon",
+        "The rest of Luzon and the eastern section of Visayas",
         "The rest of the country"
     ],
     "speed": [
@@ -16,7 +16,7 @@
     ],
     "coastal_water": [
         "Rough to Very Rough / (2.8 to 4.5 meters)",
-        "Moderate to Rough / (2.5 to 4.0 meters)",
-        "Slight to Moderate / (0.6 to 2.5 meters)"
+        "Moderate to Rough / (1.5 to 3.1 meters)",
+        "Slight to Moderate / (0.6 to 2.1 meters)"
     ]
 }
