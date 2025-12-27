@@ -181,8 +181,8 @@ def save_ingested_time_validities(
 
     json_file.close()
 
-def ingest_and_parse_ph_city_tags(
-        soup: BeautifulSoup | None
+def ingest_and_parse_list_of_all_ph_city_tags(
+    soup: BeautifulSoup | None
 ) -> list[BeautifulSoup]:
     """
     Ingest and parse HTML tags of selected
