@@ -215,3 +215,11 @@ def ingest_and_parse_ph_city_tags(
             'class': 'col-md-12 col-lg-12'
         }
     )
+    list_of_all_ph_city_tags = weather_outlooks_for_ph_cities_tag.find_all(
+        'div',
+        attrs={
+            'class': 'panel panel-default panel-pagasa'
+        }
+    )
+
+    return list_of_all_ph_city_tags
