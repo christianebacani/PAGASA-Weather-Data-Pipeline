@@ -1,26 +1,26 @@
 {
     "place": [
-        "Batanes and Babuyan Islands",
-        "Mainland Cagayan, Isabela, and Apayao",
-        "Visayas, Mindanao, and Palawan",
-        "Metro Manila and the rest of the Luzon"
+        "Catanduanes, Albay, Sorsogon, Northern Samar, Eastern Samar, and Samar",
+        "Caraga, the rest of Eastern Visayas, Palawan, and Davao Oriental",
+        "Metro Manila, Ilocos Region, Cordillera Administrative Region, Cagayan Valley, Central Luzon, and CALABARZON",
+        "The rest of the country"
     ],
     "weather_condition": [
-        "Cloudy skies with rains",
-        "Cloudy skies with light rains",
-        "Partly cloudy to cloudy skies with isolated rainshowers or thunderstorms",
-        "Partly cloudy to cloudy skies with isolated light rains"
+        "Cloudy skies with scattered rains and isolated thunderstorms",
+        "Cloudy skies with scattered rains and thunderstorms",
+        "Partly cloudy to cloudy skies with isolated light rains",
+        "Partly cloudy to cloudy skies with isolated rainshowers or thunderstorms"
     ],
     "caused_by": [
-        "Northeast Monsoon",
-        "Northeast Monsoon",
+        "Shear Line",
         "Easterlies",
-        "Northeast Monsoon"
+        "Northeast Monsoon",
+        "Easterlies"
     ],
     "impact": [
         "Possible flash floods or landslides due to moderate to at times heavy rains",
+        "Possible flash floods or landslides due to moderate to at times heavy rains",
         "No significant impact",
-        "Possible flash floods or landslides during severe thunderstorms",
-        "No significant impact"
+        "Possible flash floods or landslides during severe thunderstorms"
     ]
 }
