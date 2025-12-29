@@ -223,7 +223,7 @@ def ingest_and_parse_list_of_all_ph_city_tags(
 
     return list_of_all_ph_city_tags
 
-def ingest_ph_city_names(
+def ingest_and_parse_list_of_all_ph_city_names(
         list_of_all_ph_city_tags: list[BeautifulSoup]
 ) -> dict[str, dict]:
     """
