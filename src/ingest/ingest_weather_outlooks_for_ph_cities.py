@@ -186,9 +186,8 @@ def ingest_and_parse_list_of_all_ph_city_tags(
 ) -> list[BeautifulSoup]:
     """
     Ingest and parse HTML tags of selected
-    Philippine cities from the weather outlook
-    for selected Philippine cities page of the
-    PAGASA-DOST website.
+    Philippine cities to get their weather
+    outlooks from the PAGASA-DOST website.
 
     :param soup: A BeautifulSoup object representing
         the parsed HTML of the page, or NoneType if the
