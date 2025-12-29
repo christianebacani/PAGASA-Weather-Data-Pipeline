@@ -223,3 +223,15 @@ def ingest_and_parse_list_of_all_ph_city_tags(
     )
 
     return list_of_all_ph_city_tags
+
+def ingest_ph_city_names(
+        list_of_all_ph_city_tags: list[BeautifulSoup]
+) -> dict[str, dict]:
+    """
+    Docstring for ingest_ph_city_names
+    
+    :param list_of_all_ph_city_tags: Description
+    :type list_of_all_ph_city_tags: list[BeautifulSoup]
+    :return: Description
+    :rtype: dict[str, dict]
+    """
