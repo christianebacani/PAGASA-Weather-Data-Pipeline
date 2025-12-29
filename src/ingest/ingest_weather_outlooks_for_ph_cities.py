@@ -194,9 +194,9 @@ def ingest_and_parse_list_of_all_ph_city_tags(
         page does not allow scraping
     :type soup: BeautifulSoup | None
 
-    :return: HTML tags of selected Philippine cities from
-        the weather outlook for selected Philippine cities
-        page of the PAGASA-DOST website
+    :return: HTML tags of selected Philippine cities to
+        get their weather outlooks from the PAGASA-DOST
+        website
     :rtype: list[BeautifulSoup]
     """
     if soup is None:
