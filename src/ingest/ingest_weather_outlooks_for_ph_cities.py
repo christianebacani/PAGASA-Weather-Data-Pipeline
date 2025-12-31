@@ -224,7 +224,7 @@ def ingest_and_parse_list_of_all_ph_city_tags(
     return list_of_all_ph_city_tags
 
 def ingest_and_parse_list_of_all_ph_city_names(
-        list_of_all_ph_city_tags: list[BeautifulSoup] | None
+        list_of_all_ph_city_tags: list[BeautifulSoup]
 ) -> dict[str, dict]:
     """
     Ingest and parse selected Philippine city names
@@ -235,7 +235,7 @@ def ingest_and_parse_list_of_all_ph_city_names(
     :param list_of_all_ph_city_tags: HTML tags of selected
         Philippine cities to get their weather outlooks
         from the PAGASA-DOST website
-    :type list_of_all_ph_city_tags: list[BeautifulSoup] | None
+    :type list_of_all_ph_city_tags: list[BeautifulSoup]
 
     :return: Selected Philippine city names dictionary
     :rtype: dict[str, dict]
