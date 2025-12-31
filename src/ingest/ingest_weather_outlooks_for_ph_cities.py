@@ -240,5 +240,17 @@ def ingest_and_parse_list_of_all_ph_city_names(
     :return: Selected Philippine city names dictionary
     :rtype: dict[str, dict]
     """
+    result = {}
+
     if list_of_all_ph_city_tags == []:
-        return {}
+        return result
+
+    for ph_city_tag in list_of_all_ph_city_tags:
+        ph_city_name_tag = ph_city_tag.find(
+            'a'
+        )
+        ph_city_name = ph_city_name_tag.text
+        ph_city_name = str(ph_city_name)
+        result[ph_city_name] = {}
+
+    return result
