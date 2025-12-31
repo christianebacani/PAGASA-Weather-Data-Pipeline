@@ -200,7 +200,7 @@ def ingest_and_parse_list_of_all_ph_city_tags(
     :rtype: list[BeautifulSoup]
     """
     if soup is None:
-        return None
+        return []
 
     div_tag_with_row_weather_page_class = soup.find(
         'div',
