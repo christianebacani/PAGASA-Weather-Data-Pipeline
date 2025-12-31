@@ -8,6 +8,7 @@ from ingest.ingest_weather_outlooks_for_ph_cities import save_ingested_issued_da
 from ingest.ingest_weather_outlooks_for_ph_cities import ingest_time_validities
 from ingest.ingest_weather_outlooks_for_ph_cities import save_ingested_time_validities
 from ingest.ingest_weather_outlooks_for_ph_cities import ingest_and_parse_list_of_all_ph_city_tags
+from ingest.ingest_weather_outlooks_for_ph_cities import ingest_and_parse_list_of_all_ph_city_names
 
 def ingest_weather_outlooks_for_ph_cities(
 ) -> None:
@@ -39,4 +40,8 @@ def ingest_weather_outlooks_for_ph_cities(
 
     list_of_all_ph_city_tags = ingest_and_parse_list_of_all_ph_city_tags(
         soup
+    )
+
+    ph_city_names_dict = ingest_and_parse_list_of_all_ph_city_names(
+        list_of_all_ph_city_tags
     )
