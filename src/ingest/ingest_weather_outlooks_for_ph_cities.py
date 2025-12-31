@@ -196,7 +196,8 @@ def ingest_and_parse_list_of_all_ph_city_tags(
 
     :return: HTML tags of selected Philippine cities to
         get their weather outlooks from the PAGASA-DOST
-        website
+        website, or NoneType if the BeautifulSoup object
+
     :rtype: list[BeautifulSoup] | None
     """
     if soup is None:
@@ -240,3 +241,5 @@ def ingest_and_parse_list_of_all_ph_city_names(
     :return: Selected Philippine city names dictionary
     :rtype: dict[str, dict]
     """
+    if list_of_all_ph_city_tags == []:
+        return {}
