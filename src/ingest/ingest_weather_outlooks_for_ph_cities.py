@@ -183,7 +183,7 @@ def save_ingested_time_validities(
 
 def ingest_and_parse_list_of_all_ph_city_tags(
     soup: BeautifulSoup | None
-) -> list[BeautifulSoup] | None:
+) -> list[BeautifulSoup]:
     """
     Ingest and parse HTML tags of selected
     Philippine cities to get their weather
@@ -196,9 +196,8 @@ def ingest_and_parse_list_of_all_ph_city_tags(
 
     :return: HTML tags of selected Philippine cities to
         get their weather outlooks from the PAGASA-DOST
-        website, or NoneType if the BeautifulSoup object
-
-    :rtype: list[BeautifulSoup] | None
+        website
+    :rtype: list[BeautifulSoup]
     """
     if soup is None:
         return None
