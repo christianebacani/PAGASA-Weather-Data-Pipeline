@@ -1,22 +1,22 @@
 {
     "place": [
-        "Northern and Central Luzon",
-        "The eastern sections of Southern Luzon and Visayas",
+        "The northern section of Luzon",
+        "The rest of Luzon",
         "The rest of the country"
     ],
     "speed": [
         "Moderate to Strong",
-        "Moderate to Strong",
+        "Light to Moderate",
         "Light to Moderate"
     ],
     "direction": [
-        "Northeast",
-        "East to Northeast",
-        "East to Northeast "
+        "North to Northeast",
+        "North to Northeast",
+        "East to Southeast"
     ],
     "coastal_water": [
-        "Moderate to Rough / (1.5 to 3.4 meters)",
-        "Moderate to Rough / (1.5 to 2.8 meters)",
-        "Slight to Moderate / (0.6 to 2.5 meters)"
+        "Moderate to Rough  / (2.1 to 4.0 meters)",
+        "Slight to Moderate / (0.6 to 2.5 meters)",
+        "Slight to Moderate / (0.6 to 2.1 meters)"
     ]
 }

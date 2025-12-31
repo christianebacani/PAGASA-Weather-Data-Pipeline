@@ -1,26 +1,26 @@
 {
     "place": [
-        "Catanduanes, Albay, Sorsogon, Northern Samar, Eastern Samar, and Samar",
-        "Caraga, the rest of Eastern Visayas, Palawan, and Davao Oriental",
-        "Metro Manila, Ilocos Region, Cordillera Administrative Region, Cagayan Valley, Central Luzon, and CALABARZON",
-        "The rest of the country"
+        "Camarines Norte, Camarines Sur, and Catanduanes",
+        "Visayas, Palawan, and the rest of Bicol Region",
+        "Mindanao and the rest of MIMAROPA",
+        "Metro Manila and the rest of Luzon"
     ],
     "weather_condition": [
         "Cloudy skies with scattered rains and isolated thunderstorms",
         "Cloudy skies with scattered rains and thunderstorms",
-        "Partly cloudy to cloudy skies with isolated light rains",
-        "Partly cloudy to cloudy skies with isolated rainshowers or thunderstorms"
+        "Partly cloudy to cloudy skies with isolated rainshowers or thunderstorms",
+        "Partly cloudy to cloudy skies with isolated light rains"
     ],
     "caused_by": [
         "Shear Line",
         "Easterlies",
-        "Northeast Monsoon",
-        "Easterlies"
+        "Easterlies",
+        "Northeast Monsoon"
     ],
     "impact": [
         "Possible flash floods or landslides due to moderate to at times heavy rains",
         "Possible flash floods or landslides due to moderate to at times heavy rains",
-        "No significant impact",
-        "Possible flash floods or landslides during severe thunderstorms"
+        "Possible flash floods or landslides during severe thunderstorms",
+        "No significant impact"
     ]
 }
