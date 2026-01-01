@@ -254,3 +254,15 @@ def ingest_and_parse_list_of_all_ph_city_names(
         result[ph_city_name] = {}
 
     return result
+
+def ingest_and_parse_list_of_all_weather_dates(
+        list_of_all_ph_city_tags: list[BeautifulSoup]
+) -> list[str]:
+    """
+    Docstring for ingest_and_parse_list_of_all_weather_dates
+    
+    :param list_of_all_ph_city_tags: Description
+    :type list_of_all_ph_city_tags: list[BeautifulSoup]
+    :return: Description
+    :rtype: list[str]
+    """
