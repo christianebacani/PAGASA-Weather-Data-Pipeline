@@ -263,8 +263,11 @@ def ingest_and_parse_list_of_all_weather_dates(
     of selected Philippine cities to get their weather
     outlooks from the PAGASA-DOST website.
 
-    :param list_of_all_ph_city_tags: Description
+    :param list_of_all_ph_city_tags: HTML tags of selected
+        Philippine cities to get their weather outlooks
+        from the PAGASA-DOST website
     :type list_of_all_ph_city_tags: list[BeautifulSoup]
-    :return: Description
+
+    :return: List of all weather dates
     :rtype: list[str]
     """
