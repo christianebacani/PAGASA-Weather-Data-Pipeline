@@ -259,8 +259,10 @@ def ingest_and_parse_list_of_all_weather_dates(
         list_of_all_ph_city_tags: list[BeautifulSoup]
 ) -> list[str]:
     """
-    Docstring for ingest_and_parse_list_of_all_weather_dates
-    
+    Ingest and parse weather dates from the HTML tags
+    of selected Philippine cities to get their weather
+    outlooks from the PAGASA-DOST website.
+
     :param list_of_all_ph_city_tags: Description
     :type list_of_all_ph_city_tags: list[BeautifulSoup]
     :return: Description
