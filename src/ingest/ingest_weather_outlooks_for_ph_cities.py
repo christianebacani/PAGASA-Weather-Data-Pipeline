@@ -274,4 +274,4 @@ def ingest_and_parse_list_of_all_weather_dates(
     list_of_all_weather_dates = []
 
     if list_of_all_ph_city_tags == []:
-        return list_of_all_weather_dates        
+        return list_of_all_weather_dates
