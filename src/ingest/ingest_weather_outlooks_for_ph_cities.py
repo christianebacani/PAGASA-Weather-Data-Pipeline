@@ -275,3 +275,8 @@ def ingest_and_parse_list_of_all_weather_dates(
 
     if list_of_all_ph_city_tags == []:
         return list_of_all_weather_dates
+
+    for ph_city_tag in list_of_all_ph_city_tags:
+        table_tag = ph_city_tag.find(
+            'table'
+        )
