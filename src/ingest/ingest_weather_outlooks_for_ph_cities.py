@@ -286,7 +286,7 @@ def ingest_and_parse_list_of_all_weather_dates(
                 'class': 'desktop-view-thead'
             }
         )
-        thead_tag.find_all(
+        list_of_all_table_header_tags = thead_tag.find_all(
             'th',
             attrs={
                 'class': 'text-center'
