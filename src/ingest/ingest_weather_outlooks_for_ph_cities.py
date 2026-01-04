@@ -292,3 +292,12 @@ def ingest_and_parse_list_of_all_weather_dates(
                 'class': 'text-center'
             }
         )
+
+        for table_header_tag in list_of_all_table_header_tags:
+            weather_date = table_header_tag.text
+            weather_date = str(weather_date)
+            list_of_all_weather_dates.append(
+                weather_date
+            )
+
+    return list_of_all_weather_dates
