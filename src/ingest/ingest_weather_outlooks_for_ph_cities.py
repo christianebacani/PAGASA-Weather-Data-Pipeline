@@ -280,3 +280,15 @@ def ingest_and_parse_list_of_all_weather_dates(
         table_tag = ph_city_tag.find(
             'table'
         )
+        thead_tag = table_tag.find(
+            'thead',
+            attrs={
+                'class': 'desktop-view-thead'
+            }
+        )
+        thead_tag.find_all(
+            'th',
+            attrs={
+                'class': 'text-center'
+            }
+        )
