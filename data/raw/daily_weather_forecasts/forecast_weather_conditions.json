@@ -1,26 +1,34 @@
 {
     "place": [
-        "Camarines Norte, Camarines Sur, and Catanduanes",
-        "Visayas, Palawan, and the rest of Bicol Region",
-        "Mindanao and the rest of MIMAROPA",
-        "Metro Manila and the rest of Luzon"
+        "Visayas, Camarines Sur, Catanduanes, Albay, Sorsogon, Masbate, and Romblon",
+        "Caraga, Palawan, Camiguin, Misamis Occidental, Misamis Oriental, and Zamboanga del Norte",
+        "Cagayan, Isabela, Quezon, Laguna, Batangas, Marinduque, Oriental Mindoro, and Camarines Norte",
+        "Cordillera Administrative Region and the rest of Cagayan Valley",
+        "Metro Manila and the rest of Luzon",
+        "The rest of Mindanao"
     ],
     "weather_condition": [
         "Cloudy skies with scattered rains and isolated thunderstorms",
         "Cloudy skies with scattered rains and thunderstorms",
-        "Partly cloudy to cloudy skies with isolated rainshowers or thunderstorms",
-        "Partly cloudy to cloudy skies with isolated light rains"
+        "Cloudy skies with rains",
+        "Cloudy skies with light rains",
+        "Partly cloudy to cloudy skies with isolated light rains",
+        "Partly cloudy to cloudy skies with isolated rainshowers or thunderstorms"
     ],
     "caused_by": [
         "Shear Line",
         "Easterlies",
-        "Easterlies",
-        "Northeast Monsoon"
+        "Northeast Monsoon",
+        "Northeast Monsoon",
+        "Northeast Monsoon",
+        "Easterlies"
     ],
     "impact": [
+        "Possible flashfloods or landslides due to moderate to heavy rains",
         "Possible flash floods or landslides due to moderate to at times heavy rains",
-        "Possible flash floods or landslides due to moderate to at times heavy rains",
-        "Possible flash floods or landslides during severe thunderstorms",
-        "No significant impact"
+        "Possible flash floods or landslides due to light to moderate with at times heavy rains",
+        "No significant impact",
+        "No significant impact",
+        "Possible flash floods or landslides during severe thunderstorms"
     ]
 }
