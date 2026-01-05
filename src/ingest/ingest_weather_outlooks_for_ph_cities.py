@@ -303,7 +303,7 @@ def ingest_and_parse_list_of_all_weather_dates(
     return list_of_all_weather_dates
 
 def map_ph_city_names_to_weather_dates(
-        ph_city_names: dict[str, dict],
+        ph_city_names_dict: dict[str, dict],
         list_of_all_weather_dates: list[str]
 ) -> dict[str, dict]:
     """
@@ -311,9 +311,9 @@ def map_ph_city_names_to_weather_dates(
     corresponding weather dates to get their
     weather outlooks from the PAGASA-DOST website.
 
-    :param ph_city_names: Selected Philippine city
+    :param ph_city_names_dict: Selected Philippine city
         names dictionary
-    :type ph_city_names: dict[str, dict]
+    :type ph_city_names_dict: dict[str, dict]
 
     :param list_of_all_weather_dates: List of all
         weather dates
