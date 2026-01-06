@@ -1,24 +1,24 @@
 {
     "place": [
-        "Visayas, Camarines Sur, Catanduanes, Albay, Sorsogon, Masbate, and Romblon",
-        "Caraga, Palawan, Camiguin, Misamis Occidental, Misamis Oriental, and Zamboanga del Norte",
-        "Cagayan, Isabela, Quezon, Laguna, Batangas, Marinduque, Oriental Mindoro, and Camarines Norte",
-        "Cordillera Administrative Region and the rest of Cagayan Valley",
+        "Bicol Region, Quezon, Oriental Mindoro, Marinduque, Romblon, and Northern Samar",
+        "Basilan, Sulu, Tawi-Tawi, and Palawan ",
+        "The rest of Eastern Visayas",
+        "Cordillera Administrative Region, Cagayan Valley, and Aurora",
         "Metro Manila and the rest of Luzon",
-        "The rest of Mindanao"
+        "The rest of the country"
     ],
     "weather_condition": [
         "Cloudy skies with scattered rains and isolated thunderstorms",
         "Cloudy skies with scattered rains and thunderstorms",
-        "Cloudy skies with rains",
+        "Cloudy skies with scattered rains and thunderstorms",
         "Cloudy skies with light rains",
         "Partly cloudy to cloudy skies with isolated light rains",
         "Partly cloudy to cloudy skies with isolated rainshowers or thunderstorms"
     ],
     "caused_by": [
         "Shear Line",
+        "Trough of LPA",
         "Easterlies",
-        "Northeast Monsoon",
         "Northeast Monsoon",
         "Northeast Monsoon",
         "Easterlies"
@@ -26,7 +26,7 @@
     "impact": [
         "Possible flashfloods or landslides due to moderate to heavy rains",
         "Possible flash floods or landslides due to moderate to at times heavy rains",
-        "Possible flash floods or landslides due to light to moderate with at times heavy rains",
+        "Possible flash floods or landslides due to moderate to at times heavy rains",
         "No significant impact",
         "No significant impact",
         "Possible flash floods or landslides during severe thunderstorms"
