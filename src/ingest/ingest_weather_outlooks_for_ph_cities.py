@@ -322,7 +322,7 @@ def map_ph_city_names_to_weather_dates(
         corresponding list of all weather dates
     :rtype: dict[str, dict]
     """
-    result = {}
+    result = ph_city_names_dict
 
     list_of_all_ph_city_names = list(ph_city_names_dict.keys())
 
