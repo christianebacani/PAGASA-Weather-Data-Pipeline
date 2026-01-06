@@ -324,6 +324,3 @@ def map_ph_city_names_to_weather_dates(
     :rtype: dict[str, dict]
     """
     result = {}
-
-# TODO
-# - Fix the function name from `ingest_and_parse` to `ingest`
