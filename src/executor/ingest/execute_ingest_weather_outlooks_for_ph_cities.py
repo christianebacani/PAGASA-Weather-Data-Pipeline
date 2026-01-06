@@ -10,6 +10,7 @@ from ingest.ingest_weather_outlooks_for_ph_cities import save_ingested_time_vali
 from ingest.ingest_weather_outlooks_for_ph_cities import ingest_and_parse_list_of_all_ph_city_tags
 from ingest.ingest_weather_outlooks_for_ph_cities import ingest_ph_city_names
 from ingest.ingest_weather_outlooks_for_ph_cities import ingest_weather_dates
+from ingest.ingest_weather_outlooks_for_ph_cities import map_ph_city_names_to_weather_dates
 
 def ingest_weather_outlooks_for_ph_cities(
 ) -> None:
@@ -49,4 +50,8 @@ def ingest_weather_outlooks_for_ph_cities(
 
     list_of_all_weather_dates = ingest_weather_dates(
         list_of_all_ph_city_tags
+    )
+    ph_city_names_with_weather_dates = map_ph_city_names_to_weather_dates(
+        ph_city_names_dict,
+        list_of_all_weather_dates
     )
