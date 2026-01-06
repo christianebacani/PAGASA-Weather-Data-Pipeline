@@ -275,32 +275,21 @@ def ingest_weather_dates(
     if list_of_all_ph_city_tags == []:
         return list_of_all_weather_dates
 
-    for ph_city_tag in list_of_all_ph_city_tags:
-        table_tag = ph_city_tag.find(
-            'table'
-        )
-        thead_tag = table_tag.find(
-            'thead',
-            attrs={
-                'class': 'desktop-view-thead'
-            }
-        )
-        list_of_all_table_header_tags = thead_tag.find_all(
-            'th',
-            attrs={
-                'class': 'text-center'
-            }
-        )
-
-        for table_header_tag in list_of_all_table_header_tags:
-            weather_date = table_header_tag.text
-            weather_date = str(weather_date)
-            list_of_all_weather_dates.append(
-                weather_date
-            )
-
-    return list_of_all_weather_dates
-
+    # Access only the first instance of selected PH city tag since weather dates are consistent across all cities
+    first_instance_of_ph_city_tag = list_of_all_ph_city_tags[0]
+    table_tag = first_instance_of_ph_city_tag.find(
+        'table',
+        attrs={
+            'class': 'table'
+        }
+    )
+    thead_tag = table_tag.find(
+        'thead',
+        attrs={
+            'class': 'desktop-view-thead'
+        }
+    )
+    
 def map_ph_city_names_to_weather_dates(
         ph_city_names_dict: dict[str, dict],
         list_of_all_weather_dates: list[str]
