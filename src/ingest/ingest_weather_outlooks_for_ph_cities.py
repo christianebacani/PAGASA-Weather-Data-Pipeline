@@ -337,10 +337,16 @@ def ingest_temperature_ranges(
         list_of_all_ph_city_tags: list[BeautifulSoup]
 ) -> list[list]:
     """
-    Docstring for ingest_temperature_ranges
+    Ingest temperature ranges from the HTML tags of selected
+    Philippine cities to get their weather outlooks from the
+    PAGASA-DOST website.
 
-    :param list_of_all_ph_city_tags: Description
+    :param list_of_all_ph_city_tags: HTML tags of selected
+        Philippine cities to get their weather outlooks
+        from the PAGASA-DOST website
     :type list_of_all_ph_city_tags: list[BeautifulSoup]
-    :return: Description
+
+    :return: List of all temperature ranges per selected
+        Philippine cities
     :rtype: list[list]
     """
