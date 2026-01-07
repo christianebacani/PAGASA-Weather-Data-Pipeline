@@ -320,8 +320,8 @@ def map_ph_city_names_to_weather_dates(
         weather dates
     :type list_of_all_weather_dates: list[str]
 
-    :return: Selected Philippine city names with their
-        corresponding list of all weather dates
+    :return: Selected Philippine city names with weather
+        dates
     :rtype: dict[str, dict]
     """
     result = ph_city_names_dict
