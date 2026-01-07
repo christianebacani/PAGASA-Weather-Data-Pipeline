@@ -353,7 +353,7 @@ def ingest_temperature_ranges(
         Philippine cities
     :rtype: list[list]
     """
-    temperature_ranges = []
+    list_of_all_temperature_ranges = []
 
     if list_of_all_ph_city_tags == []:
         return temperature_ranges
@@ -374,3 +374,34 @@ def ingest_temperature_ranges(
         list_of_all_table_data_tags = table_row_tag.find_all(
             'td'
         )
+
+        temperature_ranges = []
+
+        for table_data_tag in list_of_all_table_data_tags:
+            minimum_temperature_tag = table_data_tag.find(
+                'span',
+                attrs={
+                    'class': 'min'
+                }
+            )
+            minimum_temperature = minimum_temperature_tag.text
+            minimum_temperature = str(minimum_temperature)
+
+            maximum_temperature_tag = table_data_tag.find(
+                'span',
+                attrs={
+                    'class': 'max'
+                }
+            )
+            maximum_temperature = maximum_temperature_tag.text
+            maximum_temperature = str(maximum_temperature)
+
+            temperature_ranges.append(
+                [minimum_temperature, maximum_temperature]
+            )
+
+        list_of_all_temperature_ranges.append(
+            temperature_ranges
+        )
+
+    return list_of_all_temperature_ranges
