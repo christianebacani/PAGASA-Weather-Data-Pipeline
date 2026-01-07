@@ -357,3 +357,20 @@ def ingest_temperature_ranges(
 
     if list_of_all_ph_city_tags == []:
         return temperature_ranges
+
+    for ph_city_tag in list_of_all_ph_city_tags:
+        table_tag = ph_city_tag.find(
+            'table',
+            attrs={
+                'class': 'table'
+            }
+        )
+        table_row_tag = table_tag.find(
+            'tr',
+            attrs={
+                'class': 'desktop-view-tr'
+            }
+        )
+        list_of_all_table_data_tags = table_row_tag.find_all(
+            'td'
+        )
