@@ -428,3 +428,4 @@ def map_ph_city_names_to_temperature_ranges(
         weather dates and temperature ranges
     :rtype: dict[str, dict]
     """
+    result = ph_city_names_with_weather_dates
