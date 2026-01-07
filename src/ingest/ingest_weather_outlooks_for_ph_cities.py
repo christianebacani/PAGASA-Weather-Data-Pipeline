@@ -289,8 +289,19 @@ def ingest_weather_dates(
             'class': 'desktop-view-thead'
         }
     )
+    list_of_all_table_header_tags = thead_tag.find_all(
+        'th',
+        attrs={
+            'class': 'text-center'
+        }
+    )
 
-    # TODO: Add more content to this function
+    for table_header_tag in list_of_all_table_header_tags:
+        weather_date = table_header_tag.text
+        weather_date = str(weather_date)
+        list_of_all_weather_dates.append(weather_date)
+
+    return list_of_all_weather_dates
 
 def map_ph_city_names_to_weather_dates(
         ph_city_names_dict: dict[str, dict],
