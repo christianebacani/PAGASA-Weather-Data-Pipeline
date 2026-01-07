@@ -326,6 +326,9 @@ def map_ph_city_names_to_weather_dates(
     """
     result = ph_city_names_dict
 
+    if ph_city_names_dict == {} or list_of_all_weather_dates == []:
+        return result
+
     list_of_all_ph_city_names = list(ph_city_names_dict.keys())
 
     for ph_city_name in list_of_all_ph_city_names:
@@ -350,3 +353,7 @@ def ingest_temperature_ranges(
         Philippine cities
     :rtype: list[list]
     """
+    temperature_ranges = []
+
+    if list_of_all_ph_city_tags == []:
+        return temperature_ranges
