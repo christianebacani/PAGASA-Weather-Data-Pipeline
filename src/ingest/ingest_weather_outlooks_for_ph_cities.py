@@ -408,15 +408,23 @@ def ingest_temperature_ranges(
 
 def map_ph_city_names_to_temperature_ranges(
         ph_city_names_with_weather_dates: dict[str, dict],
-        list_of_all_weather_dates: list[list]
+        list_of_all_temperature_ranges: list[list]
 ) -> dict[str, dict]:
     """
-    Docstring for map_ph_city_names_to_temperature_ranges
+    Map selected Philippine city names with weather dates to their
+    corresponding temperature ranges to get their weather outlooks
+    from the PAGASA-DOST website.
 
-    :param ph_city_names_with_weather_dates: Description
+    :param ph_city_names_with_weather_dates: Selected Philippine
+        city names with their corresponding list of all weather
+        dates
     :type ph_city_names_with_weather_dates: dict[str, dict]
-    :param list_of_all_weather_dates: Description
-    :type list_of_all_weather_dates: list[list]
-    :return: Description
+
+    :param list_of_all_temperature_ranges: List of all temperature
+        ranges per selected Philippine cities
+    :type list_of_all_temperature_ranges: list[list]
+
+    :return: Selected Philippine city names with their corresponding
+        weather dates and temperature ranges
     :rtype: dict[str, dict]
     """
