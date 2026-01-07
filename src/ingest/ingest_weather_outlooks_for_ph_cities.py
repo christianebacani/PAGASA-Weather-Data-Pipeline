@@ -429,3 +429,6 @@ def map_ph_city_names_to_temperature_ranges(
     :rtype: dict[str, dict]
     """
     result = ph_city_names_with_weather_dates
+
+    if ph_city_names_with_weather_dates == {} or list_of_all_temperature_ranges == []:
+        return result
