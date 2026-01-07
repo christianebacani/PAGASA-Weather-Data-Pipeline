@@ -405,3 +405,18 @@ def ingest_temperature_ranges(
         )
 
     return list_of_all_temperature_ranges
+
+def map_ph_city_names_to_temperature_ranges(
+        ph_city_names_with_weather_dates: dict[str, dict],
+        list_of_all_weather_dates: list[list]
+) -> dict[str, dict]:
+    """
+    Docstring for map_ph_city_names_to_temperature_ranges
+
+    :param ph_city_names_with_weather_dates: Description
+    :type ph_city_names_with_weather_dates: dict[str, dict]
+    :param list_of_all_weather_dates: Description
+    :type list_of_all_weather_dates: list[list]
+    :return: Description
+    :rtype: dict[str, dict]
+    """
