@@ -430,5 +430,7 @@ def map_ph_city_names_to_temperature_ranges(
     """
     result = ph_city_names_with_weather_dates
 
+    list_of_all_ph_city_names = list(ph_city_names_with_weather_dates.keys())
+
     if ph_city_names_with_weather_dates == {} or list_of_all_temperature_ranges == []:
         return result
