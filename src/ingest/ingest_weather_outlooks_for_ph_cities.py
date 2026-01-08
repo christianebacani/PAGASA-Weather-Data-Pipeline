@@ -434,3 +434,15 @@ def map_ph_city_names_to_temperature_ranges(
 
     if ph_city_names_with_weather_dates == {} or list_of_all_temperature_ranges == []:
         return result
+
+    # Map temperature ranges to cities in sequential order (1-to-1 mapping)
+    # The ingested temperature ranges maintain the same order as the city names in the HTML structure
+    for temperature_ranges in list_of_all_temperature_ranges:
+        for ph_city_name in list_of_all_ph_city_names:
+            if 'temperature_ranges' in result[ph_city_name]:
+                continue
+
+            result[ph_city_name]['temperature_ranges'] = temperature_ranges
+            break
+
+    return result
