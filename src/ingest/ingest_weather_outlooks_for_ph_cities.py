@@ -439,6 +439,7 @@ def map_ph_city_names_to_temperature_ranges(
     # The ingested temperature ranges maintain the same order as the city names in the HTML structure
     for temperature_ranges in list_of_all_temperature_ranges:
         for ph_city_name in list_of_all_ph_city_names:
+            # Map selected Philippine city name to it's corresponding temperature ranges if its missing
             if 'temperature_ranges' in result[ph_city_name]:
                 continue
 
