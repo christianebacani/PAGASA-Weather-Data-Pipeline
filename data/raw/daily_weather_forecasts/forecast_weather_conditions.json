@@ -1,8 +1,8 @@
 {
     "place": [
-        "Bicol Region, Quezon, Oriental Mindoro, Marinduque, Romblon, Palawan, and Northern Samar",
+        "Bicol Region, Rizal, Laguna, Quezon, Oriental Mindoro, Marinduque, Palawan, and Northern Samar",
         "Cordillera Administrative Region, Cagayan Valley, and Aurora",
-        "Metro Manila and the rest of Luzon",
+        "Metro Manila, Ilocos Region, the rest of Central Luzon, and the rest of CALABARZON",
         "The rest of the country"
     ],
     "weather_condition": [
@@ -18,7 +18,7 @@
         "Easterlies"
     ],
     "impact": [
-        "Possible flashfloods or landslides due to moderate to heavy rains",
+        "Possible flashfloods or landslides due to moderate to at times heavy rains",
         "No significant impact",
         "No significant impact",
         "Possible flash floods or landslides during severe thunderstorms"
