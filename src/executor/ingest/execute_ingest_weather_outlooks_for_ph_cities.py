@@ -12,6 +12,7 @@ from ingest.ingest_weather_outlooks_for_ph_cities import ingest_ph_city_names
 from ingest.ingest_weather_outlooks_for_ph_cities import ingest_weather_dates
 from ingest.ingest_weather_outlooks_for_ph_cities import map_ph_city_names_to_weather_dates
 from ingest.ingest_weather_outlooks_for_ph_cities import ingest_temperature_ranges
+from ingest.ingest_weather_outlooks_for_ph_cities import map_ph_city_names_to_temperature_ranges
 
 def ingest_weather_outlooks_for_ph_cities(
 ) -> None:
@@ -59,4 +60,8 @@ def ingest_weather_outlooks_for_ph_cities(
 
     list_of_all_temperature_ranges = ingest_temperature_ranges(
         list_of_all_ph_city_tags
+    )
+    map_ph_city_names_to_temperature_ranges(
+        ph_city_names_with_weather_dates,
+        list_of_all_temperature_ranges
     )
