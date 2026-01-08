@@ -61,7 +61,7 @@ def ingest_weather_outlooks_for_ph_cities(
     list_of_all_temperature_ranges = ingest_temperature_ranges(
         list_of_all_ph_city_tags
     )
-    map_ph_city_names_to_temperature_ranges(
+    weather_outlooks_for_ph_cities = map_ph_city_names_to_temperature_ranges(
         ph_city_names_with_weather_dates,
-        list_of_all_temperature_ranges
+        list_of_all_temperature_ranges   
     )
