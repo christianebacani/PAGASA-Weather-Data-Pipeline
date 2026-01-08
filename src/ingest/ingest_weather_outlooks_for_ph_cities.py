@@ -447,3 +447,15 @@ def map_ph_city_names_to_temperature_ranges(
             break
 
     return result
+
+def ingest_chance_of_rain_percentages(
+        list_of_all_ph_city_tags: list[BeautifulSoup]
+) -> list[list]:
+    """
+    Docstring for ingest_chance_of_rain_percentages
+    
+    :param list_of_all_ph_city_tags: Description
+    :type list_of_all_ph_city_tags: list[BeautifulSoup]
+    :return: Description
+    :rtype: list[list]
+    """
