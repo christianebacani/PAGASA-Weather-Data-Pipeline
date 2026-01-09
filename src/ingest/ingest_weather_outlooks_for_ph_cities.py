@@ -442,10 +442,10 @@ def map_ph_city_names_to_temperature_ranges(
     for temperature_ranges in list_of_all_temperature_ranges:
         for ph_city_name in list_of_all_ph_city_names:
             # Map selected Philippine city name to it's corresponding temperature ranges if its missing
-            if 'temperature_ranges' in result[ph_city_name]:
+            if 'temperature_range' in result[ph_city_name]:
                 continue
 
-            result[ph_city_name]['temperature_ranges'] = temperature_ranges
+            result[ph_city_name]['temperature_range'] = temperature_ranges
             break
 
     return result
