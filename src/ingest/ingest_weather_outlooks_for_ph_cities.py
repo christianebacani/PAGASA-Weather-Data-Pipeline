@@ -518,3 +518,20 @@ def map_ph_city_names_to_chance_of_rain_percentages(
     :return: Description
     :rtype: dict[str, dict]
     """
+    result = weather_outlooks_for_ph_cities
+
+    list_of_all_ph_city_names = list(weather_outlooks_for_ph_cities.keys())
+
+    if weather_outlooks_for_ph_cities == {} or list_of_all_chance_of_rain_percentages
+        return result
+
+    # Map chance of rain percentages to cities in sequential order (1-to-1 mapping)
+    # The ingested chance of rain percentages maintain the same order as the city names in the HTML structure
+    for chance_of_rain_percentages in list_of_all_chance_of_rain_percentages:
+        for ph_city_name in list_of_all_ph_city_names:
+            # Map selected Philippine city name to it's corresponding temperature ranges if its missing
+            if 'chance_of_rain_percentage' not in result[ph_city_name]:
+                result[ph_city_name]['chance_of_rain_percentage'] = chance_of_rain_percentages
+                break
+
+    return result
