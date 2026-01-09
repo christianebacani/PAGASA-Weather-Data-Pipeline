@@ -455,11 +455,17 @@ def ingest_chance_of_rain_percentages(
         list_of_all_ph_city_tags: list[BeautifulSoup]
 ) -> list[list]:
     """
-    Docstring for ingest_chance_of_rain_percentages
-    
-    :param list_of_all_ph_city_tags: Description
+    Ingest chance of rain percentages from the HTML tags
+    of selected Philippine cities to get their weather
+    outlooks from the PAGASA-DOST website.
+
+    :param list_of_all_ph_city_tags: HTML tags of selected
+        Philippine cities to get their weather outlooks from
+        the PAGASA-DOST website
     :type list_of_all_ph_city_tags: list[BeautifulSoup]
-    :return: Description
+
+    :return: List of all chance of rain percentages per selected
+        Philippine cities
     :rtype: list[list]
     """
     list_of_all_chance_of_rain_percentages = []
@@ -510,13 +516,21 @@ def map_ph_city_names_to_chance_of_rain_percentages(
         list_of_all_chance_of_rain_percentages: list[list]
 ) -> dict[str, dict]:
     """
-    Docstring for map_ph_city_names_to_chance_of_rain_percentages
+    Map selected Philippine city names with weather dates and
+    temperature ranges to their corresponding chance of rain
+    percentages to get their weather outlooks from the PAGASA-
+    DOST website.
     
-    :param weather_outlooks_for_ph_cities: Description
+    :param weather_outlooks_for_ph_cities: Selected Philippine
+        city names with their corresponding weather dates and
+        temperature ranges
     :type weather_outlooks_for_ph_cities: dict[str, dict]
-    :param list_of_all_chance_of_rain_percentages: Description
+
+    :param list_of_all_chance_of_rain_percentages: List of all
+        chance of rain percentages per selected Philippine cities
     :type list_of_all_chance_of_rain_percentages: list[list]
-    :return: Description
+
+    :return: Weather outlooks for selected Philippine cities
     :rtype: dict[str, dict]
     """
     result = weather_outlooks_for_ph_cities
