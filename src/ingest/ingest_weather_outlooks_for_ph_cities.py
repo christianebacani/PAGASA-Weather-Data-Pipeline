@@ -555,8 +555,10 @@ def save_weather_outlooks_for_ph_cities(
         weather_outlooks_for_ph_cities: dict[str, dict]
 ) -> None:
     """
-    Docstring for save_weather_outlooks_for_ph_cities
-    
-    :param weather_outlooks_for_ph_cities: Description
+    Save ingested weather outlooks for selected Philippine
+    cities page from the PAGASA-DOST website.
+
+    :param weather_outlooks_for_ph_cities: Weather outlooks
+        for selected Philippine cities
     :type weather_outlooks_for_ph_cities: dict[str, dict]
     """
