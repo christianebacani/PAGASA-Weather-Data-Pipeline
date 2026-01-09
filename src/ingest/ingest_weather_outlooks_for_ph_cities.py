@@ -333,6 +333,7 @@ def map_ph_city_names_to_weather_dates(
 
     list_of_all_ph_city_names = list(ph_city_names_dict.keys())
 
+    # Map selected  Philippine city name to it's corresponding weather dates
     for ph_city_name in list_of_all_ph_city_names:
         result[ph_city_name]['weather_date'] = list_of_all_weather_dates
 
@@ -522,7 +523,7 @@ def map_ph_city_names_to_chance_of_rain_percentages(
 
     list_of_all_ph_city_names = list(weather_outlooks_for_ph_cities.keys())
 
-    if weather_outlooks_for_ph_cities == {} or list_of_all_chance_of_rain_percentages
+    if weather_outlooks_for_ph_cities == {} or list_of_all_chance_of_rain_percentages == []:
         return result
 
     # Map chance of rain percentages to cities in sequential order (1-to-1 mapping)
