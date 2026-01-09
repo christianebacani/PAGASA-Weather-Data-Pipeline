@@ -562,3 +562,4 @@ def save_weather_outlooks_for_ph_cities(
         for selected Philippine cities
     :type weather_outlooks_for_ph_cities: dict[str, dict]
     """
+    ingested_data = weather_outlooks_for_ph_cities
