@@ -480,3 +480,24 @@ def ingest_chance_of_rain_percentages(
         list_of_all_table_data_tags = table_row_tag.find_all(
             'td'
         )
+
+        chance_of_rain_percentages = []
+
+        for table_data_tag in list_of_all_table_data_tags:
+            span_tag = table_data_tag.find(
+                'span',
+                attrs={
+                    'style': 'font-weight:bold; color: rgb(9, 73, 156);'
+                }
+            )
+            chance_of_rain_percentage = span_tag.text
+            chance_of_rain_percentage = str(chance_of_rain_percentage)
+            chance_of_rain_percentages.append(
+                chance_of_rain_percentage
+            )
+
+        list_of_all_chance_of_rain_percentages.append(
+            chance_of_rain_percentages
+        )
+
+    return list_of_all_chance_of_rain_percentages
