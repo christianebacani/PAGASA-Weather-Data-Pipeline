@@ -1,23 +1,27 @@
 {
     "place": [
-        "Bicol Region, Rizal, Laguna, Quezon, Oriental Mindoro, Marinduque, Palawan, and Northern Samar",
-        "Cordillera Administrative Region, Cagayan Valley, and Aurora",
-        "Metro Manila, Ilocos Region, the rest of Central Luzon, and the rest of CALABARZON",
+        "Bicol Region, Aurora, Quezon, Rizal, Laguna, Marinduque, Romblon, and Northern Samar",
+        "The rest of Eastern Visayas, Dinagat Islands, and Surigao del Norte",
+        "Metro Manila, Cagayan Valley, Cordillera Administrative Region, Nueva Ecija, and Bulacan",
+        "The rest of Luzon",
         "The rest of the country"
     ],
     "weather_condition": [
         "Cloudy skies with scattered rains and isolated thunderstorms",
+        "Cloudy skies with scattered rains and thunderstorms",
         "Cloudy skies with light rains",
         "Partly cloudy to cloudy skies with isolated light rains",
         "Partly cloudy to cloudy skies with isolated rainshowers or thunderstorms"
     ],
     "caused_by": [
         "Shear Line",
+        "Easterlies",
         "Northeast Monsoon",
         "Northeast Monsoon",
         "Easterlies"
     ],
     "impact": [
+        "Possible flashfloods or landslides due to moderate to heavy rains",
         "Possible flashfloods or landslides due to moderate to at times heavy rains",
         "No significant impact",
         "No significant impact",
