@@ -550,3 +550,13 @@ def map_ph_city_names_to_chance_of_rain_percentages(
                 break
 
     return result
+
+def save_weather_outlooks_for_ph_cities(
+        weather_outlooks_for_ph_cities: dict[str, dict]
+) -> None:
+    """
+    Docstring for save_weather_outlooks_for_ph_cities
+    
+    :param weather_outlooks_for_ph_cities: Description
+    :type weather_outlooks_for_ph_cities: dict[str, dict]
+    """
