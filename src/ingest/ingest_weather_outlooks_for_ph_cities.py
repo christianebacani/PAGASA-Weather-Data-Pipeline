@@ -459,3 +459,7 @@ def ingest_chance_of_rain_percentages(
     :return: Description
     :rtype: list[list]
     """
+    list_of_all_chance_of_rain_percentages = []
+
+    if list_of_all_ph_city_tags == []:
+        return list_of_all_chance_of_rain_percentages
