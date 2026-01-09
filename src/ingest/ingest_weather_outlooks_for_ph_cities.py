@@ -506,16 +506,16 @@ def ingest_chance_of_rain_percentages(
     return list_of_all_chance_of_rain_percentages
 
 def map_ph_city_names_to_chance_of_rain_percentages(
-        list_of_all_chance_of_rain_percentages: list[list],
-        weather_outlooks_for_ph_cities: dict[str, dict]
+        weather_outlooks_for_ph_cities: dict[str, dict],
+        list_of_all_chance_of_rain_percentages: list[list]
 ) -> dict[str, dict]:
     """
     Docstring for map_ph_city_names_to_chance_of_rain_percentages
     
-    :param list_of_all_chance_of_rain_percentages: Description
-    :type list_of_all_chance_of_rain_percentages: list[list]
     :param weather_outlooks_for_ph_cities: Description
     :type weather_outlooks_for_ph_cities: dict[str, dict]
+    :param list_of_all_chance_of_rain_percentages: Description
+    :type list_of_all_chance_of_rain_percentages: list[list]
     :return: Description
     :rtype: dict[str, dict]
     """
