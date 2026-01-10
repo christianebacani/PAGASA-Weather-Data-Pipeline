@@ -64,3 +64,27 @@ def ingest_issued_datetimes(
         areas page from the PAGASA-DOST website.
     :rtype: str
     """
+    issued_datetime = ''
+
+    if soup is None:
+        return issued_datetime
+
+    div_tag_with_row_weather_page_class = soup.find(
+        'div',
+        attrs={
+            'class': 'row weather-page'
+        }
+    )
+    issued_datetimes_and_time_validities_tag = div_tag_with_row_weather_page_class.find(
+        'div',
+        attrs={
+            'class': 'col-md-12 col-lg-12 issue'
+        }
+    )
+    bold_tag = issued_datetimes_and_time_validities_tag.find(
+        'b'
+    )
+    issued_datetime = bold_tag.text
+    issued_datetime = str(issued_datetime)
+
+    return issued_datetime
