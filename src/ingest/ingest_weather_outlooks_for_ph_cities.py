@@ -174,7 +174,7 @@ def save_ingested_time_validities(
     }
 
     with open(
-        'data/raw/daily_weather_forecasts/time_validity.json',
+        'data/raw/weather_outlooks_for_ph_cities/time_validities.json',
         'w'
     ) as json_file:
         json.dump(ingested_data, json_file, indent=4)
