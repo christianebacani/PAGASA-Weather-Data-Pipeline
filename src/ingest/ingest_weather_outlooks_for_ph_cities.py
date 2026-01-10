@@ -563,3 +563,11 @@ def save_weather_outlooks_for_ph_cities(
     :type weather_outlooks_for_ph_cities: dict[str, dict]
     """
     ingested_data = weather_outlooks_for_ph_cities
+
+    with open(
+        'data/raw/weather_outlooks_for_ph_cities/weather_outlooks_for_ph_cities.json',
+        'w'
+    ) as json_file:
+        json.dump(ingested_data, json_file, indent=4)
+
+    json_file.close()
