@@ -1,5 +1,13 @@
 """
-Docstring for executor.ingest.execute_ingest_weather_outlooks_for_ph_cities
+Execute ingest workflow for weather outlooks for selected Philippine cities data from
+the PAGASA-DOST website.
+
+This module orchestrates the ingest helpers in `ingest_weather_outlooks_for_ph_cities` to
+ingest artifacts and store them as JSON files under `data/raw/weather_outlooks_for_ph_cities/`
+subdirectory for further processing.
+
+Main function:
+- `ingest_weather_outlooks_for_ph_cities` - Runs the end-to-end ingest workflow
 """
 from ingest.ingest_weather_outlooks_for_ph_cities import create_subdir
 from ingest.ingest_weather_outlooks_for_ph_cities import ingest_and_parse_from_url
