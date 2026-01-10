@@ -1,5 +1,20 @@
 """
-Docstring for ingest.ingest_weather_outlooks_for_ph_cities
+Ingest weather outlooks for selected Philippine cities data from the PAGASA-DOST website.
+
+This module contains functions used by the ETL pipeline to ingest
+data from the PAGASA-DOST weather outlook for selected Philippine cities
+page and store the ingested artifacts as JSON files under the
+`data/raw/weather_outlooks_for_ph_cities/` subdirectory for further
+processing.
+
+Ingested data:
+- Issued datetimes
+- Time validities
+- Philippine city names
+- Weather dates
+- Temperature ranges
+- Chance of rain percentages
+- Weather outlooks for Philippine cities
 """
 import os
 import requests
