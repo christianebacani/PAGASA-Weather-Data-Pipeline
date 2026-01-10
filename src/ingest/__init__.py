@@ -1,2 +1,3 @@
 from . import ingest_daily_weather_forecasts
 from . import ingest_weather_outlooks_for_ph_cities
+from . import ingest_weather_outlooks_for_ph_tourist_areas
