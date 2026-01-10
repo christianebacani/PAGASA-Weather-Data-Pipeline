@@ -1,9 +1,9 @@
 {
     "place": [
-        "Bicol Region, Aurora, Quezon, Rizal, Laguna, Marinduque, Romblon, and Northern Samar",
-        "The rest of Eastern Visayas, Dinagat Islands, and Surigao del Norte",
-        "Metro Manila, Cagayan Valley, Cordillera Administrative Region, Nueva Ecija, and Bulacan",
-        "The rest of Luzon",
+        "Cagayan, Isabela, Quirino, Aurora, Quezon, and Rizal",
+        "Bicol Region, Eastern Visayas, Dinagat Islands, and Surigao del Norte",
+        "Cordillera Administrative Region, the rest of Cagayan Valley, Nueva Ecija, and Bulacan",
+        "Metro Manila, Ilocos Region, and the rest of Central Luzon ",
         "The rest of the country"
     ],
     "weather_condition": [
@@ -21,7 +21,7 @@
         "Easterlies"
     ],
     "impact": [
-        "Possible flashfloods or landslides due to moderate to heavy rains",
+        "Possible flashfloods or landslides due to moderate to at times heavy rains",
         "Possible flashfloods or landslides due to moderate to at times heavy rains",
         "No significant impact",
         "No significant impact",
