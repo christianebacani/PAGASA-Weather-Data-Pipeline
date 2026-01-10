@@ -1,6 +1,10 @@
 """
 Docstring for ingest.ingest_weather_outlooks_for_ph_tourist_areas
 """
+import os
+import requests
+import json
+from bs4 import BeautifulSoup
 
 def create_subdir(
 ) -> None:
