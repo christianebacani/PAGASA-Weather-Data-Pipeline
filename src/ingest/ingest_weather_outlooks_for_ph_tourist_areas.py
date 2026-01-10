@@ -15,3 +15,15 @@ def create_subdir(
     """
     if not os.path.exists('data/raw/weather_outlooks_for_ph_tourist_areas'):
         os.makedirs('data/raw/weather_outlooks_for_ph_tourist_areas')
+
+def ingest_and_parse_from_url(
+        url: str
+) -> BeautifulSoup | None:
+    """
+    Docstring for ingest_and_parse_from_url
+    
+    :param url: Description
+    :type url: str
+    :return: Description
+    :rtype: BeautifulSoup | None
+    """
