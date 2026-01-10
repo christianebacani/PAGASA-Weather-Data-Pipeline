@@ -3,6 +3,7 @@ Docstring for executor.ingest.execute_ingest_weather_outlooks_for_ph_tourist_are
 """
 from ingest.ingest_weather_outlooks_for_ph_tourist_areas import create_subdir
 from ingest.ingest_weather_outlooks_for_ph_tourist_areas import ingest_and_parse_from_url
+from ingest.ingest_weather_outlooks_for_ph_tourist_areas import ingest_issued_datetimes
 
 def ingest_weather_outlooks_for_ph_tourist_areas(
 ) -> None:
@@ -16,4 +17,8 @@ def ingest_weather_outlooks_for_ph_tourist_areas(
     create_subdir()
     soup = ingest_and_parse_from_url(
         'https://www.pagasa.dost.gov.ph/weather/weather-outlook-selected-tourist-areas'
+    )
+
+    issued_datetime = ingest_issued_datetimes(
+        soup
     )
