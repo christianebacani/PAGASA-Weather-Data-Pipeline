@@ -35,3 +35,11 @@ def ingest_and_parse_from_url(
         the page does not allow scraping
     :rtype: BeautifulSoup | None
     """
+    response = requests.get(url)
+
+    if response.status_code != 200:
+        return None
+
+    soup = BeautifulSoup(response.text, 'html.parser')
+
+    return soup
