@@ -1,6 +1,7 @@
 """
 Docstring for executor.ingest.execute_ingest_weather_outlooks_for_ph_tourist_areas
 """
+from ingest.ingest_weather_outlooks_for_ph_tourist_areas import create_subdir
 
 def ingest_weather_outlooks_for_ph_tourist_areas(
 ) -> None:
@@ -11,3 +12,4 @@ def ingest_weather_outlooks_for_ph_tourist_areas(
     for selected Philippine tourist areas page of PAGASA-DOST
     website.
     """
+    create_subdir()
