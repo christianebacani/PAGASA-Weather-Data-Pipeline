@@ -113,3 +113,5 @@ def save_ingested_issued_datetimes(
         'w'
     ) as json_file:
         json.dump(ingested_data, json_file, indent=4)
+
+    json_file.close()

@@ -4,6 +4,7 @@ Docstring for executor.ingest.execute_ingest_weather_outlooks_for_ph_tourist_are
 from ingest.ingest_weather_outlooks_for_ph_tourist_areas import create_subdir
 from ingest.ingest_weather_outlooks_for_ph_tourist_areas import ingest_and_parse_from_url
 from ingest.ingest_weather_outlooks_for_ph_tourist_areas import ingest_issued_datetimes
+from ingest.ingest_weather_outlooks_for_ph_tourist_areas import save_ingested_issued_datetimes
 
 def ingest_weather_outlooks_for_ph_tourist_areas(
 ) -> None:
@@ -21,4 +22,7 @@ def ingest_weather_outlooks_for_ph_tourist_areas(
 
     issued_datetime = ingest_issued_datetimes(
         soup
+    )
+    save_ingested_issued_datetimes(
+        issued_datetime
     )
