@@ -104,3 +104,6 @@ def save_ingested_issued_datetimes(
         the PAGASA-DOST website.
     :type issued_datetime: str
     """
+    ingested_data = {
+        "issued_datetime": issued_datetime
+    }
