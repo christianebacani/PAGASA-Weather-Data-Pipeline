@@ -23,7 +23,7 @@ from ingest.ingest_weather_outlooks_for_ph_cities import ingest_temperature_rang
 from ingest.ingest_weather_outlooks_for_ph_cities import map_ph_city_names_to_temperature_ranges
 from ingest.ingest_weather_outlooks_for_ph_cities import ingest_chance_of_rain_percentages
 from ingest.ingest_weather_outlooks_for_ph_cities import map_ph_city_names_to_chance_of_rain_percentages
-from ingest.ingest_weather_outlooks_for_ph_cities import save_weather_outlooks_for_ph_cities
+from ingest.ingest_weather_outlooks_for_ph_cities import save_ingested_weather_outlooks_for_ph_cities
 
 def ingest_weather_outlooks_for_ph_cities(
 ) -> None:
@@ -85,6 +85,6 @@ def ingest_weather_outlooks_for_ph_cities(
         list_of_all_chance_of_rain_percentages
     )
 
-    save_weather_outlooks_for_ph_cities(
+    save_ingested_weather_outlooks_for_ph_cities(
         weather_outlooks_for_ph_cities
     )
