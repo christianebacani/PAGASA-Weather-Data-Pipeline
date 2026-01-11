@@ -136,3 +136,7 @@ def ingest_time_validities(
         the PAGASA-DOST website.
     :rtype: str
     """
+    time_validity = ''
+
+    if soup is None:
+        return time_validity
