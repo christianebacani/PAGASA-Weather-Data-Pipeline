@@ -175,3 +175,14 @@ def save_ingested_time_validities(
         website
     :type time_validity: str
     """
+    ingested_data = {
+        "time_validity": time_validity
+    }
+
+    with open(
+        'data/raw/weather_outlooks_for_ph_tourist_areas/time_validities.json',
+        'w'
+    ) as json_file:
+        json.dump(ingested_data, json_file, indent=4)
+
+    json_file.close()
