@@ -165,8 +165,13 @@ def save_ingested_time_validities(
         time_validity: str
 ) -> None:
     """
-    Docstring for save_ingested_time_validities
-    
-    :param time_validity: Description
+    Save ingested time validities of the weather
+    outlook for selected Philippine tourist areas
+    page from the PAGASA-DOST website.
+
+    :param time_validity: Time validities of the
+        weather outlook for selected Philippine
+        tourist areas page from the PAGASA-DOST
+        website
     :type time_validity: str
     """
