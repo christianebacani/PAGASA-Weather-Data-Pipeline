@@ -120,10 +120,19 @@ def ingest_time_validities(
         soup: BeautifulSoup | None
 ) -> str:
     """
-    Docstring for ingest_time_validities
-    
-    :param soup: Description
+    Ingest the time validities of the
+    weather outlook for selected Philippine
+    tourist areas page from the PAGASA-DOST
+    website.
+
+    :param soup: A BeautifulSoup object
+        representing the parsed HTML of the page,
+        or NoneType if the page does not allow
+        scraping
     :type soup: BeautifulSoup | None
-    :return: Description
+
+    :return: Time validities of the weather outlook
+        for selected Philippine tourist areas page from
+        the PAGASA-DOST website.
     :rtype: str
     """
