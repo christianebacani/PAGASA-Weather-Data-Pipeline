@@ -115,3 +115,15 @@ def save_ingested_issued_datetimes(
         json.dump(ingested_data, json_file, indent=4)
 
     json_file.close()
+
+def ingest_time_validities(
+        soup: BeautifulSoup | None
+) -> str:
+    """
+    Docstring for ingest_time_validities
+    
+    :param soup: Description
+    :type soup: BeautifulSoup | None
+    :return: Description
+    :rtype: str
+    """
