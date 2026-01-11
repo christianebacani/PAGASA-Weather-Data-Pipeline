@@ -179,9 +179,9 @@ def save_ingested_time_validities(
     outlook for selected Philippine cities page from
     the PAGASA-DOST website.
 
-    :param time_validity: Time of validities of thea
-        weather outlook for selected Philippine cities
-        page from the PAGASA-DOST website
+    :param time_validity: Time validities of the weather
+        outlook for selected Philippine cities page from
+        the PAGASA-DOST website.
     :type time_validity: str
     """
     ingested_data = {
