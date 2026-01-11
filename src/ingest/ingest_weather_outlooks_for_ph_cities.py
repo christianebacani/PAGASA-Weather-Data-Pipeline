@@ -566,8 +566,8 @@ def map_ph_city_names_to_chance_of_rain_percentages(
 
     return result
 
-def save_weather_outlooks_for_ph_cities(
-        weather_outlooks_for_ph_cities: dict[str, dict]
+def save_ingested_weather_outlooks_for_ph_cities(
+        weather_outlooks_for_ph_cities: dict[str, dict ]
 ) -> None:
     """
     Save ingested weather outlooks for selected Philippine
