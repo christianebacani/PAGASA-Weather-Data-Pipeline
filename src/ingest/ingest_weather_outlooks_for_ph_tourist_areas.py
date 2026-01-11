@@ -88,3 +88,13 @@ def ingest_issued_datetimes(
     issued_datetime = str(issued_datetime)
 
     return issued_datetime
+
+def save_ingested_issued_datetimes(
+        issued_datetime: str
+) -> None:
+    """
+    Docstring for save_ingested_issued_datetimes
+    
+    :param issued_datetime: Description
+    :type issued_datetime: str
+    """
