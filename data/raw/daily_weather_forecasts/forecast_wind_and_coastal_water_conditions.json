@@ -12,11 +12,11 @@
     "direction": [
         "Northeast",
         "East to Northeast ",
-        "Northeast to East"
+        "Northeast to North"
     ],
     "coastal_water": [
         "Moderate to Rough / (2.5 to 4.0 meters)",
         "Moderate to Rough / (1.5 to 2.8 meters)",
-        "Slight to Moderate / (0.6 to 2.5 meters)"
+        "Slight to Moderate / (0.6 to 1.8 meters)"
     ]
 }
