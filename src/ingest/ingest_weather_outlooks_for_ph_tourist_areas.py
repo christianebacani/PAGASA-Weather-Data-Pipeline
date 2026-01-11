@@ -93,8 +93,14 @@ def save_ingested_issued_datetimes(
         issued_datetime: str
 ) -> None:
     """
-    Docstring for save_ingested_issued_datetimes
-    
-    :param issued_datetime: Description
+    Save ingested issued datetimes of the
+    weather outlook for selected Philippine
+    tourist areas page from the PAGASA-DOST
+    website.
+
+    :param issued_datetime: Issued datetimes
+        of the weather outlook for selected
+        Philippine tourist areas page from
+        the PAGASA-DOST website.
     :type issued_datetime: str
     """
