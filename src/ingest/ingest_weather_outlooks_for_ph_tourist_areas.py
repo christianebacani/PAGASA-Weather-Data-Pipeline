@@ -140,3 +140,23 @@ def ingest_time_validities(
 
     if soup is None:
         return time_validity
+
+    div_tag_with_row_weather_page_class = soup.find(
+        'div',
+        attrs={
+            'class': 'row weather-page'
+        }
+    )
+    issued_datetimes_and_time_validities_tag = div_tag_with_row_weather_page_class.find(
+        'div',
+        attrs={
+            'class': 'col-md-12 col-lg-12 issue'
+        }
+    )
+    bold_tag = issued_datetimes_and_time_validities_tag.find_all(
+        'b'
+    )[1]
+    time_validity = bold_tag.text
+    time_validity = str(time_validity)
+
+    return time_validity
