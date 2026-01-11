@@ -107,3 +107,9 @@ def save_ingested_issued_datetimes(
     ingested_data = {
         "issued_datetime": issued_datetime
     }
+
+    with open(
+        'data/raw/weather_outlooks_for_ph_tourist_areas/issued_datetimes.json',
+        'w'
+    ) as json_file:
+        json.dump(ingested_data, json_file, indent=4)
