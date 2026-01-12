@@ -197,9 +197,11 @@ def ingest_weather_dates(
     to get their weather outlooks from the PAGASA-DOST
     website.
 
-    :param soup: Description
+    :param soup: A BeautifulSoup object representing the
+        parsed HTML of the page, or NoneType if the page
+        does not allow scraping
     :type soup: BeautifulSoup | None
 
-    :return: Description
+    :return: List of all weather dates
     :rtype: list[str]
     """
