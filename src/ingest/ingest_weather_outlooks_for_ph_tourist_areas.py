@@ -205,3 +205,7 @@ def ingest_weather_dates(
     :return: List of all weather dates
     :rtype: list[str]
     """
+    list_of_all_weather_dates = []
+
+    if soup is None:
+        return list_of_all_weather_dates
