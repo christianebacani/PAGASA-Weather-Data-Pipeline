@@ -186,3 +186,15 @@ def save_ingested_time_validities(
         json.dump(ingested_data, json_file, indent=4)
 
     json_file.close()
+
+def ingest_weather_dates(
+        soup: BeautifulSoup | None
+) -> list[str]:
+    """
+    Docstring for ingest_weather_dates
+    
+    :param soup: Description
+    :type soup: BeautifulSoup | None
+    :return: Description
+    :rtype: list[str]
+    """
