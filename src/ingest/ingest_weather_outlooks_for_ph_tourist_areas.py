@@ -191,10 +191,15 @@ def ingest_weather_dates(
         soup: BeautifulSoup | None
 ) -> list[str]:
     """
-    Docstring for ingest_weather_dates
-    
+    Ingest weather dates from the BeautifulSoup
+    object representing the parsed HTML of the page
+    consisting the selected Philippine tourist areas
+    to get their weather outlooks from the PAGASA-DOST
+    website.
+
     :param soup: Description
     :type soup: BeautifulSoup | None
+
     :return: Description
     :rtype: list[str]
     """
