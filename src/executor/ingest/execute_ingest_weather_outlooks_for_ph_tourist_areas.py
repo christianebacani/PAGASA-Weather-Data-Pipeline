@@ -7,6 +7,7 @@ from ingest.ingest_weather_outlooks_for_ph_tourist_areas import ingest_issued_da
 from ingest.ingest_weather_outlooks_for_ph_tourist_areas import save_ingested_issued_datetimes
 from ingest.ingest_weather_outlooks_for_ph_tourist_areas import ingest_time_validities
 from ingest.ingest_weather_outlooks_for_ph_tourist_areas import save_ingested_time_validities
+from ingest.ingest_weather_outlooks_for_ph_tourist_areas import ingest_weather_dates
 
 def ingest_weather_outlooks_for_ph_tourist_areas(
 ) -> None:
@@ -34,4 +35,8 @@ def ingest_weather_outlooks_for_ph_tourist_areas(
     )
     save_ingested_time_validities(
         time_validity
+    )
+
+    ingest_weather_dates(
+        soup
     )
