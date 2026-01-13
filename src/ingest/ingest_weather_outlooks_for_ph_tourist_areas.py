@@ -241,3 +241,15 @@ def ingest_weather_dates(
         list_of_all_weather_dates.append(weather_date)
 
     return list_of_all_weather_dates
+
+def ingest_ph_tourist_area_names(
+        soup: BeautifulSoup | None       
+) -> dict[str, dict]:
+    """
+    Docstring for ingest_ph_tourist_area_names
+    
+    :param soup: Description
+    :type soup: BeautifulSoup | None
+    :return: Description
+    :rtype: dict[str, dict]
+    """
