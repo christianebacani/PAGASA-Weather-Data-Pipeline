@@ -37,6 +37,6 @@ def ingest_weather_outlooks_for_ph_tourist_areas(
         time_validity
     )
 
-    ingest_weather_dates(
+    list_of_all_weather_dates = ingest_weather_dates(
         soup
     )
