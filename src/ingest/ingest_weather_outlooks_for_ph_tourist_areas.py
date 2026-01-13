@@ -216,3 +216,6 @@ def ingest_weather_dates(
             'class': 'row weather-page'
         }
     )
+    div_tag_with_row_weather_page_class.find(
+        ''
+    )
