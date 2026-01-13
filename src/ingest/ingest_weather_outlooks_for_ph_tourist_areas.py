@@ -209,3 +209,10 @@ def ingest_weather_dates(
 
     if soup is None:
         return list_of_all_weather_dates
+
+    div_tag_with_row_weather_page_class = soup.find(
+        'div',
+        attrs={
+            'class': 'row weather-page'
+        }
+    )
