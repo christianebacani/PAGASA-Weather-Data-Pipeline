@@ -46,6 +46,7 @@ def ingest_weather_outlooks_for_ph_tourist_areas(
     list_of_all_weather_dates = ingest_weather_dates(
         soup
     )
+
     map_ph_tourist_area_names_to_weather_dates(
         ph_tourist_area_names_dict,
         list_of_all_weather_dates
