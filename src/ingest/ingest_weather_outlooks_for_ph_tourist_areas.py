@@ -187,61 +187,6 @@ def save_ingested_time_validities(
 
     json_file.close()
 
-def ingest_weather_dates(
-        soup: BeautifulSoup | None
-) -> list[str]:
-    """
-    Ingest weather dates from the BeautifulSoup
-    object representing the parsed HTML of the page
-    consisting the selected Philippine tourist areas
-    to get their weather outlooks from the PAGASA-DOST
-    website.
-
-    :param soup: A BeautifulSoup object representing the
-        parsed HTML of the page, or NoneType if the page
-        does not allow scraping
-    :type soup: BeautifulSoup | None
-
-    :return: List of all weather dates
-    :rtype: list[str]
-    """
-    list_of_all_weather_dates = []
-
-    if soup is None:
-        return list_of_all_weather_dates
-
-    div_tag_with_row_weather_page_class = soup.find(
-        'div',
-        attrs={
-            'class': 'row weather-page'
-        }
-    )
-    weather_outlooks_for_ph_tourist_areas_tag = div_tag_with_row_weather_page_class.find(
-        'div',
-        attrs={
-            'class': 'col-md-12 col-lg-12'
-        }
-    )
-    table_with_table_desktop_class = weather_outlooks_for_ph_tourist_areas_tag.find(
-        'table',
-        attrs={
-            'class': 'table desktop'
-        }
-    )
-    thead_tag = table_with_table_desktop_class.find(
-        'thead'
-    )
-    list_of_all_table_header_tags = thead_tag.find_all(
-        'th'
-    )[1:]
-
-    for table_header_tag in list_of_all_table_header_tags:
-        weather_date = table_header_tag.text
-        weather_date = str(weather_date)
-        list_of_all_weather_dates.append(weather_date)
-
-    return list_of_all_weather_dates
-
 def ingest_ph_tourist_area_names(
         soup: BeautifulSoup | None       
 ) -> dict[str, dict]:
@@ -300,3 +245,59 @@ def ingest_ph_tourist_area_names(
         result[ph_tourist_area_name] = {}
 
     return result
+
+
+def ingest_weather_dates(
+        soup: BeautifulSoup | None
+) -> list[str]:
+    """
+    Ingest weather dates from the BeautifulSoup
+    object representing the parsed HTML of the page
+    consisting the selected Philippine tourist areas
+    to get their weather outlooks from the PAGASA-DOST
+    website.
+
+    :param soup: A BeautifulSoup object representing the
+        parsed HTML of the page, or NoneType if the page
+        does not allow scraping
+    :type soup: BeautifulSoup | None
+
+    :return: List of all weather dates
+    :rtype: list[str]
+    """
+    list_of_all_weather_dates = []
+
+    if soup is None:
+        return list_of_all_weather_dates
+
+    div_tag_with_row_weather_page_class = soup.find(
+        'div',
+        attrs={
+            'class': 'row weather-page'
+        }
+    )
+    weather_outlooks_for_ph_tourist_areas_tag = div_tag_with_row_weather_page_class.find(
+        'div',
+        attrs={
+            'class': 'col-md-12 col-lg-12'
+        }
+    )
+    table_with_table_desktop_class = weather_outlooks_for_ph_tourist_areas_tag.find(
+        'table',
+        attrs={
+            'class': 'table desktop'
+        }
+    )
+    thead_tag = table_with_table_desktop_class.find(
+        'thead'
+    )
+    list_of_all_table_header_tags = thead_tag.find_all(
+        'th'
+    )[1:]
+
+    for table_header_tag in list_of_all_table_header_tags:
+        weather_date = table_header_tag.text
+        weather_date = str(weather_date)
+        list_of_all_weather_dates.append(weather_date)
+
+    return list_of_all_weather_dates
