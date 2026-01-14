@@ -300,3 +300,18 @@ def ingest_weather_dates(
         list_of_all_weather_dates.append(weather_date)
 
     return list_of_all_weather_dates
+
+def map_ph_tourist_area_names_to_weather_dates(
+        ph_tourist_area_names_dict: dict[str, dict],
+        list_of_all_weather_dates: list[str]
+) -> dict[str, dict]:
+    """
+    Docstring for map_ph_tourist_area_names_to_weather_dates
+    
+    :param ph_tourist_area_names_dict: Description
+    :type ph_tourist_area_names_dict: dict[str, dict]
+    :param list_of_all_weather_dates: Description
+    :type list_of_all_weather_dates: list[str]
+    :return: Description
+    :rtype: dict[str, dict]
+    """
