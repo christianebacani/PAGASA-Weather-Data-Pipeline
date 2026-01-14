@@ -284,3 +284,17 @@ def ingest_ph_tourist_area_names(
             'class': 'table desktop'
         }
     )
+    tbody_tag = table_with_table_desktop_class.find(
+        'tbody'
+    )
+    list_of_all_table_row_tags = tbody_tag.find_all(
+        'tr'
+    )
+
+    for table_row_tag in list_of_all_table_row_tags:
+        table_data_tag = table_row_tag.find(
+            'td'
+        )
+        ph_tourist_area_name = table_data_tag.text
+        ph_tourist_area_name = str(ph_tourist_area_name)
+        print(ph_tourist_area_name)
