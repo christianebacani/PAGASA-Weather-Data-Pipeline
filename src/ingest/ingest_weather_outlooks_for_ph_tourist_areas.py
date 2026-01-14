@@ -272,3 +272,15 @@ def ingest_ph_tourist_area_names(
             'class': 'row weather-page'
         }
     )
+    weather_outlooks_for_ph_tourist_areas_tag = div_tag_with_row_weather_page_class.find(
+        'div',
+        attrs={
+            'class': 'col-md-12 col-lg-12'
+        }
+    )
+    table_with_table_desktop_class = weather_outlooks_for_ph_tourist_areas_tag.find(
+        'table',
+        attrs={
+            'class': 'table desktop'
+        }
+    )
