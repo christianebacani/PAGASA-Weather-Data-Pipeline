@@ -261,3 +261,7 @@ def ingest_ph_tourist_area_names(
         dictionary
     :rtype: dict[str, dict]
     """
+    result = {}
+
+    if soup is None:
+        return result
