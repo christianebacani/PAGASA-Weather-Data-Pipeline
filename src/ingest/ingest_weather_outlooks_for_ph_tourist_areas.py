@@ -192,7 +192,7 @@ def ingest_ph_tourist_area_names(
 ) -> dict[str, dict]:
     """
     Ingest selected Philippine tourist area names
-    from the BeautifulSoup object representing the
+    using the BeautifulSoup object representing the
     parsed HTML of the page consisting the selected
     Philippine tourist tourist areas to get their
     weather outlooks from the PAGASA-DOST website.
@@ -246,12 +246,11 @@ def ingest_ph_tourist_area_names(
 
     return result
 
-
 def ingest_weather_dates(
         soup: BeautifulSoup | None
 ) -> list[str]:
     """
-    Ingest weather dates from the BeautifulSoup
+    Ingest weather dates using the BeautifulSoup
     object representing the parsed HTML of the page
     consisting the selected Philippine tourist areas
     to get their weather outlooks from the PAGASA-DOST
