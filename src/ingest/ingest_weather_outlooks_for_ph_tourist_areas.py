@@ -297,4 +297,6 @@ def ingest_ph_tourist_area_names(
         )
         ph_tourist_area_name = table_data_tag.text
         ph_tourist_area_name = str(ph_tourist_area_name)
-        print(ph_tourist_area_name)
+        result[ph_tourist_area_name] = {}
+
+    return result
