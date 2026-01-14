@@ -246,10 +246,18 @@ def ingest_ph_tourist_area_names(
         soup: BeautifulSoup | None       
 ) -> dict[str, dict]:
     """
-    Docstring for ingest_ph_tourist_area_names
-    
-    :param soup: Description
+    Ingest selected Philippine tourist area names
+    from the BeautifulSoup object representing the
+    parsed HTML of the page consisting the selected
+    Philippine tourist tourist areas to get their
+    weather outlooks from the PAGASA-DOST website.
+
+    :param soup: A BeautifulSoup object representing
+        the parsed HTML of the page, or NoneType if
+        the page does not allow scraping
     :type soup: BeautifulSoup | None
-    :return: Description
+
+    :return: Selected Philippine tourist area names
+        dictionary
     :rtype: dict[str, dict]
     """
