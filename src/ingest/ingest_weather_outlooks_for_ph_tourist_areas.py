@@ -265,3 +265,10 @@ def ingest_ph_tourist_area_names(
 
     if soup is None:
         return result
+
+    div_tag_with_row_weather_page_class = soup.find(
+        'div',
+        attrs={
+            'class': 'row weather-page'
+        }
+    )
