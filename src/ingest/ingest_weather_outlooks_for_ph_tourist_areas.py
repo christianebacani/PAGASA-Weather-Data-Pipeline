@@ -356,3 +356,10 @@ def ingest_temperature_ranges(
 
     if soup is None:
         return list_of_all_temperature_ranges
+
+    div_tag_with_row_weather_page_class = soup.find(
+        'div',
+        attrs={
+            'class': 'row weather-page'
+        }
+    )
