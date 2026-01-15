@@ -352,3 +352,7 @@ def ingest_temperature_ranges(
         Philippine tourist areas
     :rtype: list[list]
     """
+    list_of_all_temperature_ranges = []
+
+    if soup is None:
+        return list_of_all_temperature_ranges
