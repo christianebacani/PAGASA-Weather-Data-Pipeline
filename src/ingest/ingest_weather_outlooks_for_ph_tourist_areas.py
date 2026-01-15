@@ -320,3 +320,14 @@ def map_ph_tourist_area_names_to_weather_dates(
     :return: Selected Philippine city names with weather dates
     :rtype: dict[str, dict]
     """
+    result = ph_tourist_area_names_dict
+
+    if ph_tourist_area_names_dict == {} or list_of_all_weather_dates == []:
+        return result
+
+    list_of_all_ph_tourist_area_names = list(ph_tourist_area_names_dict.keys())
+
+    for ph_tourist_area_name in list_of_all_ph_tourist_area_names:
+        result[ph_tourist_area_name]['weather_date'] = list_of_all_weather_dates
+
+    return result
