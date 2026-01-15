@@ -332,3 +332,15 @@ def map_ph_tourist_area_names_to_weather_dates(
         result[ph_tourist_area_name]['weather_date'] = list_of_all_weather_dates
 
     return result
+
+def ingest_temperature_ranges(
+        soup: BeautifulSoup | None
+) -> list[list]:
+    """
+    Docstring for ingest_temperature_ranges
+    
+    :param soup: Description
+    :type soup: BeautifulSoup | None
+    :return: Description
+    :rtype: list[list]
+    """
