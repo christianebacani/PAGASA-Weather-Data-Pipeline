@@ -337,10 +337,18 @@ def ingest_temperature_ranges(
         soup: BeautifulSoup | None
 ) -> list[list]:
     """
-    Docstring for ingest_temperature_ranges
-    
-    :param soup: Description
+    Ingest temperature ranges using the BeautifulSoup
+    object representing the parsed HTML of the page
+    consisting the selected Philippine tourist areas
+    to get their weather outlooks from the PAGASA-DOST
+    website.
+
+    :param soup: A BeautifulSoup object representing the
+        parsed HTML of the page, or NoneType if the page
+        does not allow scraping
     :type soup: BeautifulSoup | None
-    :return: Description
+
+    :return: List of all temperature ranges per selected
+        Philippine tourist areas
     :rtype: list[list]
     """
