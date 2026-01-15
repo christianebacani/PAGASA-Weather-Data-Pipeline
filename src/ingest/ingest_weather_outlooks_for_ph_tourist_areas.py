@@ -306,12 +306,17 @@ def map_ph_tourist_area_names_to_weather_dates(
         list_of_all_weather_dates: list[str]
 ) -> dict[str, dict]:
     """
-    Docstring for map_ph_tourist_area_names_to_weather_dates
-    
-    :param ph_tourist_area_names_dict: Description
+    Map selected Philippine tourist area names to their
+    corresponding weather dates to get their weather outlooks
+    from the PAGASA-DOST website.
+
+    :param ph_tourist_area_names_dict: Selected Philippine
+        tourist area names dictionary
     :type ph_tourist_area_names_dict: dict[str, dict]
-    :param list_of_all_weather_dates: Description
+
+    :param list_of_all_weather_dates: List of all weather dates
     :type list_of_all_weather_dates: list[str]
-    :return: Description
+
+    :return: Selected Philippine city names with weather dates
     :rtype: dict[str, dict]
     """
