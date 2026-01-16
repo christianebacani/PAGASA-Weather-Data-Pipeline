@@ -223,13 +223,13 @@ def ingest_ph_tourist_area_names(
             'class': 'col-md-12 col-lg-12'
         }
     )
-    table_with_table_desktop_class = weather_outlooks_for_ph_tourist_areas_tag.find(
+    table_tag_with_table_desktop_class = weather_outlooks_for_ph_tourist_areas_tag.find(
         'table',
         attrs={
             'class': 'table desktop'
         }
     )
-    tbody_tag = table_with_table_desktop_class.find(
+    tbody_tag = table_tag_with_table_desktop_class.find(
         'tbody'
     )
     list_of_all_table_row_tags = tbody_tag.find_all(
