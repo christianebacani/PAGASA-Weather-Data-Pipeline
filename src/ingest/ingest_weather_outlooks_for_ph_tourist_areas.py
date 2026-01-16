@@ -363,3 +363,57 @@ def ingest_temperature_ranges(
             'class': 'row weather-page'
         }
     )
+    weather_outlooks_for_ph_tourist_areas_tag = div_tag_with_row_weather_page_class.find(
+        'div',
+        attrs={
+            'class': 'col-md-12 col-lg-12'
+        }
+    )
+    table_tag_with_table_desktop_class = weather_outlooks_for_ph_tourist_areas_tag.find(
+        'table',
+        attrs={
+            'class': 'table desktop'
+        }
+    )
+    tbody_tag = table_tag_with_table_desktop_class.find(
+        'tbody'
+    )
+    list_of_all_table_row_tags = tbody_tag.find_all(
+        'tr'
+    )
+
+    for table_row_tag in list_of_all_table_row_tags:
+        list_of_all_table_data_tags = table_row_tag.find_all(
+            'td'
+        )[1:]
+
+        temperature_ranges = []
+
+        for table_data_tag in list_of_all_table_data_tags:
+            minimum_temperature_tag = table_data_tag.find(
+                'span',
+                attrs={
+                    'class': 'min'
+                }
+            )
+            minimum_temperature = minimum_temperature_tag.text
+            minimum_temperature = str(minimum_temperature)
+
+            maximum_temperature = table_data_tag.find(
+                'span',
+                attrs={
+                    'class': 'max'
+                }
+            )
+            maximum_temperature = maximum_temperature.text
+            maximum_temperature = str(maximum_temperature)
+
+            temperature_ranges.append(
+                [minimum_temperature, maximum_temperature]
+            )
+
+        list_of_all_temperature_ranges.append(
+            temperature_ranges
+        )
+
+    return list_of_all_temperature_ranges
