@@ -126,8 +126,6 @@ def save_ingested_issued_datetimes(
     ) as json_file:
         json.dump(ingested_data, json_file, indent=4)
 
-    json_file.close()
-
 def ingest_time_validities(
         soup: BeautifulSoup | None
 ) -> str:
@@ -193,8 +191,6 @@ def save_ingested_time_validities(
         'w'
     ) as json_file:
         json.dump(ingested_data, json_file, indent=4)
-
-    json_file.close()
 
 def ingest_and_parse_list_of_all_ph_city_tags(
     soup: BeautifulSoup | None
@@ -584,5 +580,3 @@ def save_ingested_weather_outlooks_for_ph_cities(
         'w'
     ) as json_file:
         json.dump(ingested_data, json_file, indent=4)
-
-    json_file.close()
