@@ -436,8 +436,7 @@ def map_ph_tourist_area_names_to_temperature_ranges(
         per selected Philippine tourist areas
     :type list_of_all_temperature_ranges: list[list]
 
-    :return: Selected Philippine tourist area names with their
-        corresponding weather dates and temperature ranges
+    :return: Weather outlooks for selected Philippine tourist areas
     :rtype: dict[str, dict]
     """
     result = ph_tourist_area_names_with_weather_dates
