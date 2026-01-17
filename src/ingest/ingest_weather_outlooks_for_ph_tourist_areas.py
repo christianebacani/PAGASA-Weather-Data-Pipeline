@@ -472,3 +472,10 @@ def save_ingested_weather_outlooks_for_ph_tourist_areas(
         for selected Philippine tourist areas
     :type weather_outlooks_for_ph_tourist_areas: dict[str, dict]
     """
+    ingested_data = weather_outlooks_for_ph_tourist_areas
+
+    with open(
+        'data/raw/weather_outlooks_for_ph_tourist_areas/weather_outlook_for_ph_tourist_areas.json',
+        'w'
+    ) as json_file:
+        json.dump(ingested_data, json_file, indent=4)
