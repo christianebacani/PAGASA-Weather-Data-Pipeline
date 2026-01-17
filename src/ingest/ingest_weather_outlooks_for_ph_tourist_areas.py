@@ -461,3 +461,15 @@ def map_ph_tourist_area_names_to_temperature_ranges(
                 break
 
     return result
+
+def save_ingested_weather_outlooks_for_ph_tourist_areas(
+        weather_outlooks_for_ph_tourist_areas: dict[str, dict]
+) -> None:
+    """
+    Save ingested weather outlooks for selected Philippine
+    tourist areas page from the PAGASA-DOST website.
+
+    :param weather_outlooks_for_ph_tourist_areas: Weather outlooks
+        for selected Philippine tourist areas
+    :type weather_outlooks_for_ph_tourist_areas: dict[str, dict]
+    """
