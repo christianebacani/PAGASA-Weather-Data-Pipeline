@@ -440,3 +440,9 @@ def map_ph_tourist_area_names_to_temperature_ranges(
         corresponding weather dates and temperature ranges
     :rtype: dict[str, dict]
     """
+    result = ph_tourist_area_names_with_weather_dates
+
+    list_of_all_ph_tourist_area_names = list(ph_tourist_area_names_with_weather_dates.keys())
+
+    if ph_tourist_area_names_with_weather_dates == {} or list_of_all_temperature_ranges == []:
+        return result
