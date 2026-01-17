@@ -446,3 +446,18 @@ def map_ph_tourist_area_names_to_temperature_ranges(
 
     if ph_tourist_area_names_with_weather_dates == {} or list_of_all_temperature_ranges == []:
         return result
+
+    # Map temperature ranges to cities in sequential order (1-to-1 mapping)
+    # Map temperature ranges to tourist areas in sequential order (1-to-1 mapping)
+    # The ingested temperature ranges maintain the same order as the tourist area names in the HTML structure
+    for temperature_ranges in list_of_all_temperature_ranges:
+        for ph_tourist_area_name in list_of_all_ph_tourist_area_names:
+            # Map selected Philippine tourist area name to it's corresponding temperature ranges if its missing
+            if 'temperature_range' in result[ph_tourist_area_name]:
+                continue
+
+            else:
+                result[ph_tourist_area_name]['temperature_range'] = temperature_ranges
+                break
+
+    return result
