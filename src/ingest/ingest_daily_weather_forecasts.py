@@ -112,8 +112,6 @@ def save_ingested_issued_datetimes(
     ) as json_file:
         json.dump(ingested_data, json_file, indent=4)
 
-    json_file.close()
-
 def ingest_synopses(
         soup: BeautifulSoup | None
 ) -> str:
@@ -171,8 +169,6 @@ def save_ingested_synopses(
         'w'
     ) as json_file:
         json.dump(ingested_data, json_file, indent=4)
-
-    json_file.close()
 
 def ingest_tropical_cyclone_informations(
         soup: BeautifulSoup | None
@@ -310,8 +306,6 @@ def save_ingested_forecast_weather_conditions(
     ) as json_file:
         json.dump(ingested_data, json_file, indent=4)
 
-    json_file.close()
-
 def ingest_forecast_wind_and_coastal_water_conditions(
         soup: BeautifulSoup | None
 ) -> dict[str, list]:
@@ -414,8 +408,6 @@ def save_ingested_forecast_wind_and_coastal_water_conditions(
         'w'
     ) as json_file:
         json.dump(ingested_data, json_file, indent=4)
-
-    json_file.close()
 
 def ingest_temperatures_and_relative_humidities(
         soup: BeautifulSoup | None
@@ -542,5 +534,3 @@ def save_ingested_temperatures_and_relative_humidities(
         'w'
     ) as json_file:
         json.dump(ingested_data, json_file, indent=4)
-
-    json_file.close()
