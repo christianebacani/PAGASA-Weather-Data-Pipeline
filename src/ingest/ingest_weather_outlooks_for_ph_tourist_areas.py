@@ -317,7 +317,8 @@ def map_ph_tourist_area_names_to_weather_dates(
     :param list_of_all_weather_dates: List of all weather dates
     :type list_of_all_weather_dates: list[str]
 
-    :return: Selected Philippine city names with weather dates
+    :return: Selected Philippine tourist area names with weather
+        dates
     :rtype: dict[str, dict]
     """
     result = ph_tourist_area_names_dict
@@ -417,3 +418,25 @@ def ingest_temperature_ranges(
         )
 
     return list_of_all_temperature_ranges
+
+def map_ph_tourist_area_names_to_temperature_ranges(
+    ph_tourist_area_names_with_weather_dates: dict[str, dict],
+    list_of_all_temperature_ranges: list[list]
+) -> dict[str, dict]:
+    """
+    Map selected Philippine tourist area names to their corresponding
+    temperature ranges to get their weather outlooks
+    from the PAGASA-DOST website.
+
+    :param ph_tourist_area_names_with_weather_dates: Selected Philippine
+        tourist area names with weather dates
+    :type ph_tourist_area_names_with_weather_dates: dict[str, dict]
+    
+    :param list_of_all_temperature_ranges: List of all temperature ranges
+        per selected Philippine tourist areas
+    :type list_of_all_temperature_ranges: list[list]
+
+    :return: Selected Philippine tourist area names with their
+        corresponding weather dates and temperature ranges
+    :rtype: dict[str, dict]
+    """
