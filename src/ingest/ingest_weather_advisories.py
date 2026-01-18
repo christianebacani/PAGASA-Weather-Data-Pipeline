@@ -13,3 +13,5 @@ def create_subdir(
     for ingested data from the weather advisories page of PAGASA-
     DOST website.
     """
+    if not os.path.exists('data/raw/weather_advisories'):
+        os.makedirs('data/raw/weather_advisories')
