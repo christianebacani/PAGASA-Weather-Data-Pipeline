@@ -9,6 +9,7 @@ Main function:
 - `ingest_weather_advisories` - Runs the end-to-end ingest workflow
 """
 from ingest.ingest_weather_advisories import create_subdir
+from ingest.ingest_weather_advisories import ingest_and_parse_soup_from_url
 
 def ingest_weather_advisories(
 ) -> None:
@@ -19,3 +20,6 @@ def ingest_weather_advisories(
     page of PAGASA-DOST website.
     """
     create_subdir()
+    soup = ingest_and_parse_soup_from_url(
+        'https://www.pagasa.dost.gov.ph/weather/weather-advisory'
+    )
