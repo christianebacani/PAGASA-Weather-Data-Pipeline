@@ -10,7 +10,7 @@ Main function:
 - `ingest_weather_outlooks_for_ph_cities` - Runs the end-to-end ingest workflow
 """
 from ingest.ingest_weather_outlooks_for_ph_cities import create_subdir
-from ingest.ingest_weather_outlooks_for_ph_cities import ingest_and_parse_from_url
+from ingest.ingest_weather_outlooks_for_ph_cities import ingest_and_parse_soup_from_url
 from ingest.ingest_weather_outlooks_for_ph_cities import ingest_issued_datetimes
 from ingest.ingest_weather_outlooks_for_ph_cities import save_ingested_issued_datetimes
 from ingest.ingest_weather_outlooks_for_ph_cities import ingest_time_validities
@@ -35,7 +35,7 @@ def ingest_weather_outlooks_for_ph_cities(
     website.
     """
     create_subdir()
-    soup = ingest_and_parse_from_url(
+    soup = ingest_and_parse_soup_from_url(
         'https://www.pagasa.dost.gov.ph/weather/weather-outlook-selected-philippine-cities'
     )
 

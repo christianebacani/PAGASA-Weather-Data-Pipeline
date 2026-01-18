@@ -10,7 +10,7 @@ Main function:
 - `ingest_weather_outlooks_for_ph_tourist_areas` - Runs the end-to-end ingest workflow
 """
 from ingest.ingest_weather_outlooks_for_ph_tourist_areas import create_subdir
-from ingest.ingest_weather_outlooks_for_ph_tourist_areas import ingest_and_parse_from_url
+from ingest.ingest_weather_outlooks_for_ph_tourist_areas import ingest_and_parse_soup_from_url
 from ingest.ingest_weather_outlooks_for_ph_tourist_areas import ingest_issued_datetimes
 from ingest.ingest_weather_outlooks_for_ph_tourist_areas import save_ingested_issued_datetimes
 from ingest.ingest_weather_outlooks_for_ph_tourist_areas import ingest_time_validities
@@ -31,7 +31,7 @@ def ingest_weather_outlooks_for_ph_tourist_areas(
     website.
     """
     create_subdir()
-    soup = ingest_and_parse_from_url(
+    soup = ingest_and_parse_soup_from_url(
         'https://www.pagasa.dost.gov.ph/weather/weather-outlook-selected-tourist-areas'
     )
 
