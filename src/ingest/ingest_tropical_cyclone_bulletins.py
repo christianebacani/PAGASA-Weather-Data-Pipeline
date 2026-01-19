@@ -87,3 +87,26 @@ def ingest_tropical_cyclone_names(
     tropical_cyclone_name = str(tropical_cyclone_name)
 
     return tropical_cyclone_name
+
+def save_ingested_tropical_cyclone_names(
+        tropical_cyclone_name: str
+) -> None:
+    """
+    Save ingested tropical cyclone names of the
+    tropical cyclone bulletins page from the
+    PAGASA-DOST website.
+    
+    :param tropical_cyclone_name: Tropical cyclone
+        names of the tropical cyclone bulletins page
+        from the PAGASA-DOST website
+    :type tropical_cyclone_name: str
+    """
+    ingested_data = {
+        "tropical_cyclone_name": tropical_cyclone_name   
+    }
+
+    with open(
+        'data/raw/tropical_cyclone_bulletins/tropical_cyclone_names.json',
+        'w'
+    ) as json_file:
+        json.dump(ingested_data, json_file, indent=4)
