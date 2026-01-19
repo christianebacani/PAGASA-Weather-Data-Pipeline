@@ -9,6 +9,7 @@ Main function:
 - `ingest_tropical_cyclone_bulletins` - Runs the end-to-end ingest workflow
 """
 from ingest.ingest_tropical_cyclone_bulletins import create_subdir
+from ingest.ingest_tropical_cyclone_bulletins import ingest_and_parse_soup_from_url
 
 def ingest_tropical_cyclone_bulletins(
 ) -> None:
@@ -19,3 +20,6 @@ def ingest_tropical_cyclone_bulletins(
     bulletins page of PAGASA-DOST website.
     """
     create_subdir()
+    soup = ingest_and_parse_soup_from_url(
+        'https://www.pagasa.dost.gov.ph/tropical-cyclone/severe-weather-bulletin'
+    )
