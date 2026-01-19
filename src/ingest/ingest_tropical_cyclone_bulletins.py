@@ -209,3 +209,40 @@ def ingest_time_validities(
         DOST website
     :rtype: str
     """
+    time_validity = ''
+
+    if soup is None:
+        return None
+
+    div_tag_with_tropical_cyclone_bulletin_class = soup.find(
+        'div',
+        attrs={
+            'class': 'row tropical-cyclone-weather-bulletin-page'
+        }
+    )
+    div_tag_with_article_content_class = div_tag_with_tropical_cyclone_bulletin_class.find(
+        'div',
+        attrs={
+            'class': 'col-md-12 article-content'
+        }
+    )
+    div_tag_with_tab_pane_class = div_tag_with_article_content_class.find(
+        'div',
+        attrs={
+            'role': 'tabpanel',
+            'class': 'tab-pane active'
+        }
+    )
+    issued_datetimes_and_time_validities_tag  = div_tag_with_tab_pane_class.find_all(
+        'div',
+        attrs={
+            'class': 'row'
+        }
+    )[1]
+    time_validities_tag = issued_datetimes_and_time_validities_tag.find_all(
+        'h5'
+    )[1]
+    time_validity = time_validities_tag.text
+    time_validity = str(time_validity)
+
+    return time_validity
