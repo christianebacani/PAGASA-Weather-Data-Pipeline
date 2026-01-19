@@ -11,6 +11,7 @@ Main function:
 from ingest.ingest_tropical_cyclone_bulletins import create_subdir
 from ingest.ingest_tropical_cyclone_bulletins import ingest_and_parse_soup_from_url
 from ingest.ingest_tropical_cyclone_bulletins import ingest_tropical_cyclone_names
+from ingest.ingest_tropical_cyclone_bulletins import save_ingested_tropical_cyclone_names
 
 def ingest_tropical_cyclone_bulletins(
 ) -> None:
@@ -27,4 +28,7 @@ def ingest_tropical_cyclone_bulletins(
 
     tropical_cyclone_name = ingest_tropical_cyclone_names(
         soup
+    )
+    save_ingested_tropical_cyclone_names(
+        tropical_cyclone_name
     )
