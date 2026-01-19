@@ -1,5 +1,12 @@
 """
-Docstring for ingest.ingest_weather_advisories
+Ingest weather outlooks for weather advisories data from the PAGASA-DOST website.
+
+This module contains functions used by the ETL pipeline to ingest data from the
+PAGASA-DOST weather advisories page page and store the  ingested artifacts as JSON
+files under the `data/raw/weather_advisories/` subdirectory for further processing.
+
+Ingested data:
+- TBA
 """
 import os
 import requests
