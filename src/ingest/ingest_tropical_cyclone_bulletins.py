@@ -269,3 +269,22 @@ def save_ingested_time_validities(
         'w'
     ) as json_file:
         json.dump(ingested_data, json_file, indent=4)
+
+def ingest_tropical_cyclone_summaries(
+        soup: BeautifulSoup | None
+) -> str:
+    """
+    Ingest the tropical cyclone summaries of the
+    tropical cyclone bulletins page from the PAGASA-
+    DOST website.
+
+    :param soup: A BeautifulSoup object representing
+        the parsed HTML of the page, or NoneType if
+        the page does not allow scraping
+    :type soup: BeautifulSoup | None
+
+    :return: Tropical cyclone summaries of the tropical
+        cyclone bulletins page from the PAGASA-DOST
+        website
+    :rtype: str
+    """
