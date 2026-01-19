@@ -60,3 +60,30 @@ def ingest_tropical_cyclone_names(
         website
     :rtype: str
     """
+    tropical_cyclone_name = ''
+
+    if soup is None:
+        return tropical_cyclone_name
+
+    div_tag_with_tropical_cyclone_bulletin_class = soup.find(
+        'div',
+        attrs={
+            'class': 'row tropical-cyclone-weather-bulletin-page'
+        }
+    )
+    div_tag_with_article_content_class = div_tag_with_tropical_cyclone_bulletin_class.find(
+        'div',
+        attrs={
+            'class': 'col-md-12 article-content'
+        }
+    )
+    tropical_cyclone_names_tag = div_tag_with_article_content_class.find(
+        'ul',
+        attrs={
+            'class': 'nav nav-tabs'
+        }
+    )
+    tropical_cyclone_name = tropical_cyclone_names_tag.text
+    tropical_cyclone_name = str(tropical_cyclone_name)
+
+    return tropical_cyclone_name
