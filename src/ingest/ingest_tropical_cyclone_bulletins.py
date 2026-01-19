@@ -175,10 +175,10 @@ def save_ingested_issued_datetimes(
     Save ingested issued datetimes of the tropical
     cyclone bulletins page from the PAGASA-DOST website.
 
-    :param tropical_cyclone_name: Issued datetimes of the
+    :param issued_datetime: Issued datetimes of the
         tropical cyclone bulletins page from the PAGASA-
         DOST website
-    :type tropical_cyclone_name: str
+    :type issued_datetime: str
     """
     ingested_data = {
         "issued_datetime": issued_datetime   
@@ -246,3 +246,26 @@ def ingest_time_validities(
     time_validity = str(time_validity)
 
     return time_validity
+
+def save_ingested_time_validities(
+        time_validity: str
+) -> None:
+    """
+    Save ingested time validities of the tropical
+    cyclone bulletins page from the PAGASA-DOST
+    website.
+
+    :param time_validitity: Time validities
+        of the tropical cyclone bulletins page from
+        the PAGASA-DOST website
+    :type time_validitity: str
+    """
+    ingested_data = {
+        "time_validity": time_validity
+    }
+
+    with open(
+        'data/raw/tropical_cyclone_bulletins/time_validities.json',
+        'w'
+    ) as json_file:
+        json.dump(ingested_data, json_file, indent=4)
