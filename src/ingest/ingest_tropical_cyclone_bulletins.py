@@ -167,3 +167,25 @@ def ingest_issued_datetimes(
     issued_datetime = str(issued_datetime)
 
     return issued_datetime
+
+def save_ingested_issued_datetimes(
+        issued_datetime: str
+) -> None:
+    """
+    Save ingested issued datetimes of the tropical
+    cyclone bulletins page from the PAGASA-DOST website.
+
+    :param tropical_cyclone_name: Issued datetimes of the tropical
+        cyclone bulletins page from the PAGASA-
+        DOST website
+    :type tropical_cyclone_name: str
+    """
+    ingested_data = {
+        "issued_datetime": issued_datetime   
+    }
+
+    with open(
+        'data/raw/tropical_cyclone_bulletins/issued_datetimes.json',
+        'w'
+    ) as json_file:
+        json.dump(ingested_data, json_file, indent=4)
