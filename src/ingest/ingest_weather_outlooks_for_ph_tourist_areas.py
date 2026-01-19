@@ -1,5 +1,4 @@
 """
-Ingest weather outlooks for selected Philippine cities data from the PAGASA-DOST website.
 Ingest weather outlooks for selected Philippine tourist areas data from the PAGASA-DOST website.
 
 This module contains functions used by the ETL pipeline to ingest
