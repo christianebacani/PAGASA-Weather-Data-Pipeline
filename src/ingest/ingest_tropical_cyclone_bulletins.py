@@ -110,3 +110,60 @@ def save_ingested_tropical_cyclone_names(
         'w'
     ) as json_file:
         json.dump(ingested_data, json_file, indent=4)
+
+def ingest_issued_datetimes(
+        soup: BeautifulSoup | None
+) -> str:
+    """
+    Ingest the issued datetimes of the
+    tropical cyclone bulletins page from
+    the PAGASA-DOST website.
+
+    :param soup: A BeautifulSoup object
+        representing the parsed HTML of the
+        page, or NoneType if the page does
+        not allow scraping
+    :type soup: BeautifulSoup | None
+
+    :return: Issued datetimes of the tropical
+        cyclone bulletins page from the PAGASA-
+        DOST website
+    :rtype: str
+    """
+    issued_datetime = ''
+
+    if soup is None:
+        return issued_datetime
+
+    div_tag_with_tropical_cyclone_bulletin_class = soup.find(
+        'div',
+        attrs={
+            'class': 'row tropical-cyclone-weather-bulletin-page'
+        }
+    )
+    div_tag_with_article_content_class = div_tag_with_tropical_cyclone_bulletin_class.find(
+        'div',
+        attrs={
+            'class': 'col-md-12 article-content'
+        }
+    )
+    div_tag_with_tab_pane_class = div_tag_with_article_content_class.find(
+        'div',
+        attrs={
+            'role': 'tabpanel',
+            'class': 'tab-pane active'
+        }
+    )
+    issued_datetimes_and_time_validities_tag = div_tag_with_tab_pane_class.find_all(
+        'div',
+        attrs={
+            'class': 'row'
+        }
+    )[1]
+    issued_datetimes_tag = issued_datetimes_and_time_validities_tag.find(
+        'h5'
+    )
+    issued_datetime = issued_datetimes_tag.text
+    issued_datetime = str(issued_datetime)
+
+    return issued_datetime
