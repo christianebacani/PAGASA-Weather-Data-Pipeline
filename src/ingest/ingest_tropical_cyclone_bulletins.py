@@ -175,8 +175,8 @@ def save_ingested_issued_datetimes(
     Save ingested issued datetimes of the tropical
     cyclone bulletins page from the PAGASA-DOST website.
 
-    :param tropical_cyclone_name: Issued datetimes of the tropical
-        cyclone bulletins page from the PAGASA-
+    :param tropical_cyclone_name: Issued datetimes of the
+        tropical cyclone bulletins page from the PAGASA-
         DOST website
     :type tropical_cyclone_name: str
     """
@@ -189,3 +189,23 @@ def save_ingested_issued_datetimes(
         'w'
     ) as json_file:
         json.dump(ingested_data, json_file, indent=4)
+
+def ingest_time_validities(
+    soup: BeautifulSoup | None
+) -> str:
+    """
+    Ingest the time validities of the
+    tropical cyclone bulletins page from
+    the PAGASA-DOST website.
+
+    :param soup: A BeautifulSoup object
+        representing the parsed HTML of the
+        page, or NoneType if the page does
+        not allow scraping
+    :type soup: BeautifulSoup | None
+
+    :return: Time validities of the tropical
+        cyclone bulletins page from the PAGASA-
+        DOST website
+    :rtype: str
+    """
