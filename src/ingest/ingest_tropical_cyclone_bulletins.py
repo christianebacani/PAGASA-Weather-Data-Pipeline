@@ -41,3 +41,22 @@ def ingest_and_parse_soup_from_url(
     soup = BeautifulSoup(response.text, 'html.parser')
 
     return soup
+
+def ingest_tropical_cyclone_names(
+        soup: BeautifulSoup | None
+) -> str:
+    """
+    Ingest the tropical cyclone names of the
+    tropical cyclone bulletins page from the
+    PAGASA-DOST website.
+
+    :param soup: A BeautifulSoup object representing
+        the parsed HTML of the page, or NoneType if
+        the page does not allow scraping
+    :type soup: BeautifulSoup | None
+
+    :return: Tropical cyclone names of the tropical
+        cyclone bulletins page from the PAGASA-DOST
+        website
+    :rtype: str
+    """
