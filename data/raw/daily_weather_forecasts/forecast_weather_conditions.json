@@ -1,31 +1,23 @@
 {
     "place": [
-        "Camarines Norte, Camarines Sur, Catanduanes, and Albay",
-        "The rest of Bicol Region, Northern Samar, Eastern Samar, Samar, Quezon, and Marinduque",
-        "The rest of Visayas, the rest of MIMAROPA, Aurora, and Dinagat Islands",
+        "Bicol Region, Aurora, Quezon, and Northern Samar",
         "Cordillera Administrative Region and Cagayan Valley",
         "Ilocos Region",
         "Metro Manila and the rest of the country"
     ],
     "weather_condition": [
-        "Stormy",
-        "Rains with gusty winds",
         "Cloudy skies with scattered rains and thunderstorms",
         "Cloudy skies with light rains",
         "Partly cloudy to cloudy skies with isolated light rains",
         "Partly cloudy to cloudy skies with isolated rainshowers and thunderstorms"
     ],
     "caused_by": [
-        "TS ADA",
-        "TS ADA",
-        "TS ADA",
+        "Trough of TD ADA",
         "Northeast Monsoon",
         "Northeast Monsoon",
         "Localized Thunderstorms"
     ],
     "impact": [
-        "Possible flash floods or landslides due to heavy to intense with at times torrential rains. Minor to moderate threat to life and property due to strong to gale-force winds.",
-        "Possible flash floods or landslides due to moderate to heavy with at time intense rains. Minimal to minor threat to life and property due to strong winds.",
         "Possible flash floods or landslides due to moderate to at times heavy rains",
         "No significant impact",
         "No significant impact",
