@@ -74,7 +74,7 @@ def ingest_issued_datetimes(
 
     :return: Issued datetimes of the weather outlook for
         selected Philippine cities page from the PAGASA-DOST
-        website.
+        website
     :rtype: str
     """
     issued_datetime = ''
@@ -141,7 +141,7 @@ def ingest_time_validities(
 
     :return: Time validities of the weather outlook
         for selected Philippine cities page from the
-        PAGASA-DOST website.
+        PAGASA-DOST website
     :rtype: str
     """
     time_validity = ''
@@ -179,7 +179,7 @@ def save_ingested_time_validities(
 
     :param time_validity: Time validities of the weather
         outlook for selected Philippine cities page from
-        the PAGASA-DOST website.
+        the PAGASA-DOST website
     :type time_validity: str
     """
     ingested_data = {
