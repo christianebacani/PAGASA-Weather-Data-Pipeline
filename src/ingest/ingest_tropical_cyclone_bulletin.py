@@ -298,3 +298,36 @@ def ingest_tropical_cyclone_summary(
 
     if soup is None:
         return tropical_cyclone_summary
+
+    div_tag_with_tropical_cyclone_bulletin_page = soup.find(
+        'div',
+        attrs={
+            'class': 'row tropical-cyclone-weather-bulletin-page'
+        }
+    )
+    div_tag_with_article_content_class = div_tag_with_tropical_cyclone_bulletin_page.find(
+        'div',
+        attrs={
+            'class': 'col-md-12 article-content'
+        }
+    )
+    div_tag_with_tab_pane_class = div_tag_with_article_content_class.find(
+        'div',
+        attrs={
+            'role': 'tabpanel',
+            'class': 'tab-pane active'
+        }
+    )
+    tropical_cyclone_summary_and_description_tag = div_tag_with_tab_pane_class.find_all(
+        'div',
+        attrs={
+            'class': 'row'
+        }
+    )[2]
+    tropical_cyclone_summary_tag = tropical_cyclone_summary_and_description_tag.find(
+        'h5'
+    )
+    tropical_cyclone_summary = tropical_cyclone_summary_tag.text
+    tropical_cyclone_summary = str(tropical_cyclone_summary)
+
+    return tropical_cyclone_summary
