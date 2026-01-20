@@ -1,27 +1,27 @@
 """
-Execute ingest workflow for daily weather forecasts data from the PAGASA-DOST website.
+Execute ingest workflow for daily weather forecast data from the PAGASA-DOST website.
 
-This module orchestrates the ingest helpers in `ingest_daily_weather_forecasts.py` to
+This module orchestrates the ingest helpers in `ingest_daily_weather_forecast.py` to
 ingest artifacts and store them as JSON files under `data/raw/daily_weather_forecasts/`
 subdirectory for further processing.
 
 Main function:
-- `ingest_daily_weather_forecasts()` - Runs the end-to-end ingest workflow
+- `ingest_daily_weather_forecast()` - Runs the end-to-end ingest workflow
 """
-from ingest.ingest_daily_weather_forecast import create_subdir
-from ingest.ingest_daily_weather_forecast import ingest_and_parse_soup_from_url
-from ingest.ingest_daily_weather_forecast import ingest_issued_datetimes
-from ingest.ingest_daily_weather_forecast import save_ingested_issued_datetimes
-from ingest.ingest_daily_weather_forecast import ingest_synopses
-from ingest.ingest_daily_weather_forecast import save_ingested_synopses
-from ingest.ingest_daily_weather_forecast import ingest_tropical_cyclone_informations
-from ingest.ingest_daily_weather_forecast import save_ingested_tropical_cyclone_informations
-from ingest.ingest_daily_weather_forecast import ingest_forecast_weather_conditions
-from ingest.ingest_daily_weather_forecast import save_ingested_forecast_weather_conditions
-from ingest.ingest_daily_weather_forecast import ingest_forecast_wind_and_coastal_water_conditions
-from ingest.ingest_daily_weather_forecast import save_ingested_forecast_wind_and_coastal_water_conditions
-from ingest.ingest_daily_weather_forecast import ingest_temperatures_and_relative_humidities
-from ingest.ingest_daily_weather_forecast import save_ingested_temperatures_and_relative_humidities
+from ingest.ingest_daily_weather_forecasts import create_subdir
+from ingest.ingest_daily_weather_forecasts import ingest_and_parse_soup_from_url
+from ingest.ingest_daily_weather_forecasts import ingest_issued_datetime
+from ingest.ingest_daily_weather_forecasts import save_ingested_issued_datetime
+from ingest.ingest_daily_weather_forecasts import ingest_synopsis
+from ingest.ingest_daily_weather_forecasts import save_ingesed_synopsis
+from ingest.ingest_daily_weather_forecasts import ingest_tropical_cyclone_informations
+from ingest.ingest_daily_weather_forecasts import save_ingested_tropical_cyclone_informations
+from ingest.ingest_daily_weather_forecasts import ingest_forecast_weather_conditions
+from ingest.ingest_daily_weather_forecasts import save_ingested_forecast_weather_conditions
+from ingest.ingest_daily_weather_forecasts import ingest_forecast_wind_and_coastal_water_conditions
+from ingest.ingest_daily_weather_forecasts import save_ingested_forecast_wind_and_coastal_water_conditions
+from ingest.ingest_daily_weather_forecasts import ingest_temperature_and_relative_humidity
+from ingest.ingest_daily_weather_forecasts import save_ingested_temperature_and_relative_humidity
 
 def ingest_daily_weather_forecasts(
 ) -> None:
@@ -36,17 +36,17 @@ def ingest_daily_weather_forecasts(
         'https://www.pagasa.dost.gov.ph/weather#daily-weather-forecast'
     )
 
-    issued_datetime = ingest_issued_datetimes(
+    issued_datetime = ingest_issued_datetime(
         soup
     )
-    save_ingested_issued_datetimes(
+    save_ingested_issued_datetime(
         issued_datetime
     )
 
-    synopsis = ingest_synopses(
+    synopsis = ingest_synopsis(
         soup
     )
-    save_ingested_synopses(
+    save_ingesed_synopsis(
         synopsis
     )
 
@@ -71,9 +71,9 @@ def ingest_daily_weather_forecasts(
         forecast_wind_and_coastal_water_conditions
     )
 
-    temperatures_and_relative_humidities = ingest_temperatures_and_relative_humidities(
+    temperature_and_relative_humidity = ingest_temperature_and_relative_humidity(
         soup
     )
-    save_ingested_temperatures_and_relative_humidities(
-        temperatures_and_relative_humidities
+    save_ingested_temperature_and_relative_humidity(
+        temperature_and_relative_humidity
     )
