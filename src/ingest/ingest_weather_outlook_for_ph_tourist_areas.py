@@ -266,7 +266,8 @@ def ingest_weather_dates(
         does not allow scraping
     :type soup: BeautifulSoup | None
 
-    :return: List of all weather dates
+    :return: List of all weather dates for selected
+        Philippine tourist areas
     :rtype: list[str]
     """
     list_of_all_weather_dates = []
@@ -320,6 +321,7 @@ def map_ph_tourist_area_names_to_weather_dates(
     :type ph_tourist_area_names_dict: dict[str, dict]
 
     :param list_of_all_weather_dates: List of all weather dates
+        for selected Philippine tourist areas
     :type list_of_all_weather_dates: list[str]
 
     :return: Selected Philippine tourist area names with weather
@@ -354,7 +356,7 @@ def ingest_temperature_ranges(
         does not allow scraping
     :type soup: BeautifulSoup | None
 
-    :return: List of all temperature ranges per selected
+    :return List of all temperature ranges for selected
         Philippine tourist areas
     :rtype: list[list]
     """
@@ -438,7 +440,7 @@ def map_ph_tourist_area_names_to_temperature_ranges(
     :type ph_tourist_area_names_with_weather_dates: dict[str, dict]
     
     :param list_of_all_temperature_ranges: List of all temperature ranges
-        per selected Philippine tourist areas
+        for selected Philippine tourist areas
     :type list_of_all_temperature_ranges: list[list]
 
     :return: Weather outlook for selected Philippine tourist areas
