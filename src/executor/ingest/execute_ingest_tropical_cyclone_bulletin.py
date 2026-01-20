@@ -16,6 +16,7 @@ from ingest.ingest_tropical_cyclone_bulletin import ingest_issued_datetime
 from ingest.ingest_tropical_cyclone_bulletin import save_ingested_issued_datetime
 from ingest.ingest_tropical_cyclone_bulletin import ingest_time_validity
 from ingest.ingest_tropical_cyclone_bulletin import save_ingested_time_validity
+from ingest.ingest_tropical_cyclone_bulletin import ingest_tropical_cyclone_summary
 
 def ingest_tropical_cyclone_bulletin(
 ) -> None:
@@ -49,4 +50,8 @@ def ingest_tropical_cyclone_bulletin(
     )
     save_ingested_time_validity(
         time_validity
+    )
+
+    tropical_cyclone_summary = ingest_tropical_cyclone_summary(
+        soup
     )
