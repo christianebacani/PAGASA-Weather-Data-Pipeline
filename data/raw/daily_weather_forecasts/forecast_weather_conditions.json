@@ -1,0 +1,22 @@
+{
+    "place": [
+        "Cordillera Administrative Region, Cagayan Valley, Aurora, Quezon, and Marinduque",
+        "Metro Manila, Ilocos Region, Central Luzon, and the rest of CALABARZON",
+        "The rest of the country"
+    ],
+    "weather_condition": [
+        "Cloudy skies with light rains",
+        "Partly cloudy to cloudy skies with isolated light rains",
+        "Partly cloudy to cloudy skies with isolated rainshowers and thunderstorms"
+    ],
+    "caused_by": [
+        "Northeast Monsoon",
+        "Northeast Monsoon",
+        "Localized Thunderstorms"
+    ],
+    "impact": [
+        "No significant impact",
+        "No significant impact",
+        "Possible flash floods or landslides during severe thunderstorms"
+    ]
+}
