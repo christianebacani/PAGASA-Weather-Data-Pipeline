@@ -331,3 +331,26 @@ def ingest_tropical_cyclone_summary(
     tropical_cyclone_summary = str(tropical_cyclone_summary)
 
     return tropical_cyclone_summary
+
+def save_ingested_tropical_cyclone_summary(
+        tropical_cyclone_summary: str
+) -> None:
+    """
+    Save the ingested tropical cyclone summary from the
+    tropical cyclone bulletin page of the PAGASA-DOST
+    website.
+
+    :param tropical_cyclone_summary: Time validity from the
+        tropical cyclone bulletin page of the PAGASA-DOST
+        website
+    :type tropical_cyclone_summary: str
+    """
+    ingested_data = {
+        "tropical_cyclone_summary": tropical_cyclone_summary
+    }
+
+    with open(
+        'data/raw/tropical_cyclone_bulletins/tropical_cyclone_summary.json',
+        'w'
+    ) as json_file:
+        json.dump(ingested_data, json_file, indent=4)
