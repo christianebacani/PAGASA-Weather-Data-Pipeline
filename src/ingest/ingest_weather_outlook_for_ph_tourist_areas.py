@@ -473,11 +473,12 @@ def save_ingested_weather_outlook_for_ph_tourist_areas(
 ) -> None:
     """
     Save the ingested weather outlook for selected Philippine
-    tourist areas page from the PAGASA-DOST website.
+    tourist areas from the weather outlook for selected Philippine
+    tourist areas page of the PAGASA-DOST website.
 
-    :param weather_outlooks_for_ph_tourist_areas: Weather outlook
+    :param weather_outlook_for_ph_tourist_areas: Weather outlook
         for selected Philippine tourist areas
-    :type weather_outlooks_for_ph_tourist_areas: dict[str, dict]
+    :type weather_outlook_for_ph_tourist_areas: dict[str, dict]
     """
     ingested_data = weather_outlook_for_ph_tourist_areas
 
