@@ -1,5 +1,5 @@
 from . import execute_ingest_daily_weather_forecasts
 from . import execute_ingest_weather_outlooks_for_ph_cities
 from . import execute_ingest_weather_outlooks_for_ph_tourist_areas
-from . import execute_ingest_weather_advisories
-from . import execute_ingest_tropical_cyclone_bulletins
+from . import execute_ingest_weather_advisory
+from . import execute_ingest_tropical_cyclone_bulletin
