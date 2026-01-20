@@ -23,11 +23,11 @@ from ingest.ingest_daily_weather_forecasts import save_ingested_forecast_wind_an
 from ingest.ingest_daily_weather_forecasts import ingest_temperature_and_relative_humidity
 from ingest.ingest_daily_weather_forecasts import save_ingested_temperature_and_relative_humidity
 
-def ingest_daily_weather_forecasts(
+def ingest_daily_weather_forecast(
 ) -> None:
     """
     Executes the function in the
-    `src.ingest.ingest_daily_weather_forecasts.py`
+    `src.ingest.ingest_daily_weather_forecast.py`
     module to ingest the data from the daily
     weather forecast page of PAGASA-DOST website.
     """
