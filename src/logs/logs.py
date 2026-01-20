@@ -15,11 +15,11 @@ sys.path.insert(0, os.path.abspath('src'))
 import pandas as pd
 from datetime import datetime
 
-from executor.ingest.execute_ingest_daily_weather_forecasts import ingest_daily_weather_forecasts
-from executor.ingest.execute_ingest_weather_outlooks_for_ph_cities import ingest_weather_outlooks_for_ph_cities
-from executor.ingest.execute_ingest_weather_outlooks_for_ph_tourist_areas import ingest_weather_outlooks_for_ph_tourist_areas
-from executor.ingest.execute_ingest_weather_advisories import ingest_weather_advisories
-from executor.ingest.execute_ingest_tropical_cyclone_bulletins import ingest_tropical_cyclone_bulletins
+from executor.ingest.execute_ingest_daily_weather_forecast import ingest_daily_weather_forecast
+from executor.ingest.execute_ingest_weather_outlook_for_ph_cities import ingest_weather_outlook_for_ph_cities
+from executor.ingest.execute_ingest_weather_outlook_for_ph_tourist_areas import ingest_weather_outlook_for_ph_tourist_areas
+from executor.ingest.execute_ingest_weather_advisory import ingest_weather_advisory
+from executor.ingest.execute_ingest_tropical_cyclone_bulletin import ingest_tropical_cyclone_bulletin
 
 def generate_logs(
     log_message: str
@@ -47,27 +47,27 @@ def generate_logs(
     logs.to_csv('src/logs/logs.csv', index=False)
 
 if __name__ == '__main__':
-    ingest_daily_weather_forecasts()
+    ingest_daily_weather_forecast()
     generate_logs(
         '(DEV): Ingest the daily weather forecasts data.'
     )
 
-    ingest_weather_outlooks_for_ph_cities()
+    ingest_weather_outlook_for_ph_cities()
     generate_logs(
         '(DEV): Ingest the weather outlook for selected Philippine cities data.'
     )
 
-    ingest_weather_outlooks_for_ph_tourist_areas()
+    ingest_weather_outlook_for_ph_tourist_areas()
     generate_logs(
         '(DEV): Ingest the weather outlook for selected Philippine tourist areas data.'
     )
 
-    ingest_weather_advisories()
+    ingest_weather_advisory()
     generate_logs(
         '(DEV): Ingest the weather advisories data.'
     )
 
-    ingest_tropical_cyclone_bulletins()
+    ingest_tropical_cyclone_bulletin()
     generate_logs(
         '(DEV): Ingest tropical cyclone bulletins data.'
     )
