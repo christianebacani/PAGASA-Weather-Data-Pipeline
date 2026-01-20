@@ -1,7 +1,7 @@
 {
     "place": [
-        "Northern Luzon ",
-        "Central Luzon and the eastern section of Southern Luzon",
+        "Northern Luzon and the eastern sections of Central and Southern Luzon",
+        "The rest of Central Luzon",
         "The eastern section of Visayas",
         "The rest of the country"
     ],
@@ -13,9 +13,9 @@
     ],
     "direction": [
         "Northeast",
-        "Northeast to North",
+        "Northeast",
         "North to Northwest",
-        "North to Northwest"
+        "Northeast to Northwest"
     ],
     "coastal_water": [
         "Rough to Very Rough / (2.8 to 4.5 meters)",
