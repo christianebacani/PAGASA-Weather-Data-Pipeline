@@ -22,7 +22,7 @@ from ingest.ingest_weather_outlook_for_ph_tourist_areas import ingest_temperatur
 from ingest.ingest_weather_outlook_for_ph_tourist_areas import map_ph_tourist_area_names_to_temperature_ranges
 from ingest.ingest_weather_outlook_for_ph_tourist_areas import save_ingested_weather_outlook_for_ph_tourist_areas
 
-def ingest_weather_outlooks_for_ph_tourist_areas(
+def ingest_weather_outlook_for_ph_tourist_areas(
 ) -> None:
     """
     Executes the function in the
