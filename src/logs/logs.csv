@@ -2867,3 +2867,8 @@ messages,timestamps
 (DEV): Ingest the weather outlook for selected Philippine tourist areas data.,2026-01-19 10:43:14
 (DEV): Ingest the weather advisories data.,2026-01-19 10:43:15
 (DEV): Ingest tropical cyclone bulletins data.,2026-01-19 10:43:16
+(DEV): Ingest the daily weather forecasts data.,2026-01-21 00:30:20
+(DEV): Ingest the weather outlook for selected Philippine cities data.,2026-01-21 00:30:21
+(DEV): Ingest the weather outlook for selected Philippine tourist areas data.,2026-01-21 00:30:22
+(DEV): Ingest the weather advisories data.,2026-01-21 00:30:23
+(DEV): Ingest tropical cyclone bulletins data.,2026-01-21 00:30:24
