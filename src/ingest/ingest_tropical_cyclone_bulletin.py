@@ -294,3 +294,7 @@ def ingest_tropical_cyclone_summary(
         cyclone bulletin page of the PAGASA-DOST website
     :rtype: str
     """
+    tropical_cyclone_summary = ''
+
+    if soup is None:
+        return tropical_cyclone_summary
