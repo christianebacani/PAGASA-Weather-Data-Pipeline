@@ -496,3 +496,17 @@ def ingest_tropical_cyclone_track_map(
     tropical_cyclone_track_map = str(tropical_cyclone_track_map)
 
     return tropical_cyclone_track_map
+
+def save_ingested_tropical_cyclone_track_map(
+        tropical_cyclone_track_map: str
+) -> None:
+    """
+    Save the ingested tropical cyclone track map from
+    the tropical cyclone bulletin page of the PAGASA-DOST
+    website.
+
+    :param tropical_cyclone_track_map: Tropical cyclone track
+        map from the tropical cyclone bulletin page of the
+        PAGASA-DOST website
+    :type tropical_cyclone_track_map: str
+    """
