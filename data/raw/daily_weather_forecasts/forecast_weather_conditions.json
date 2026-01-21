@@ -1,13 +1,13 @@
 {
     "place": [
-        "Cordillera Administrative Region, Cagayan Valley, Bicol Region, Aurora, and Quezon",
-        "Metro Manila, Ilocos Region, the rest of Central Luzon, the rest of CALABARZON, Oriental Mindoro, Occidental Mindoro, Marinduque, and Romblon",
-        "The rest of the country"
+        "Cordillera Administrative Region, Cagayan Valley, Caraga, Aurora, Quezon, Marinduque, Oriental Mindoro, Camarines Norte, Camarines Sur, Northern Samar, and Eastern Samar",
+        "Metro Manila, the rest of Luzon, the rest of Visayas, and Northern Mindanao",
+        "The rest of Mindanao"
     ],
     "weather_condition": [
         "Cloudy skies with light rains",
         "Partly cloudy to cloudy skies with isolated light rains",
-        "Partly cloudy to cloudy skies with isolated rainshowers and thunderstorms"
+        "Partly cloudy to cloudy skies with isolated rainshowers or thunderstorms"
     ],
     "caused_by": [
         "Northeast Monsoon",
