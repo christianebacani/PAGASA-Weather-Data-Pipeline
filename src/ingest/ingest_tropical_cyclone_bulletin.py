@@ -510,3 +510,12 @@ def save_ingested_tropical_cyclone_track_map(
         PAGASA-DOST website
     :type tropical_cyclone_track_map: str
     """
+    ingested_data = {
+        "tropical_cyclone_track_map": tropical_cyclone_track_map
+    }
+
+    with open(
+        'data/raw/tropical_cyclone_bulletins/tropical_cyclone_track_map.json',
+        'w'
+    ) as json_file:
+        json.dump(ingested_data, json_file, indent=4)
