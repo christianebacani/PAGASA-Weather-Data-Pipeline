@@ -19,7 +19,6 @@ from executor.ingest.execute_ingest_daily_weather_forecast import ingest_daily_w
 from executor.ingest.execute_ingest_weather_outlook_for_ph_cities import ingest_weather_outlook_for_ph_cities
 from executor.ingest.execute_ingest_weather_outlook_for_ph_tourist_areas import ingest_weather_outlook_for_ph_tourist_areas
 from executor.ingest.execute_ingest_weather_advisory import ingest_weather_advisory
-from executor.ingest.execute_ingest_tropical_cyclone_bulletin import ingest_tropical_cyclone_bulletin
 
 def generate_logs(
     log_message: str
@@ -65,9 +64,4 @@ if __name__ == '__main__':
     ingest_weather_advisory()
     generate_logs(
         '(DEV): Ingest the weather advisories data.'
-    )
-
-    ingest_tropical_cyclone_bulletin()
-    generate_logs(
-        '(DEV): Ingest tropical cyclone bulletins data.'
     )
