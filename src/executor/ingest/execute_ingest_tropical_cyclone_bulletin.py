@@ -20,6 +20,7 @@ from ingest.ingest_tropical_cyclone_bulletin import ingest_tropical_cyclone_summ
 from ingest.ingest_tropical_cyclone_bulletin import save_ingested_tropical_cyclone_summary
 from ingest.ingest_tropical_cyclone_bulletin import ingest_tropical_cyclone_descriptions
 from ingest.ingest_tropical_cyclone_bulletin import save_ingested_tropical_cyclone_descriptions
+from ingest.ingest_tropical_cyclone_bulletin import ingest_tropical_cyclone_track_map
 
 def ingest_tropical_cyclone_bulletin(
 ) -> None:
@@ -67,4 +68,8 @@ def ingest_tropical_cyclone_bulletin(
     )
     save_ingested_tropical_cyclone_descriptions(
         tropical_cyclone_descriptions
+    )
+
+    tropical_cyclone_track_map = ingest_tropical_cyclone_track_map(
+        soup
     )
