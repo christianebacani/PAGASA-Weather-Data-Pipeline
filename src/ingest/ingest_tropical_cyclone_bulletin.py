@@ -441,3 +441,58 @@ def save_ingested_tropical_cyclone_descriptions(
         'w'
     ) as json_file:
         json.dump(ingested_data, json_file, indent=4)
+
+def ingest_tropical_cyclone_track_map(
+        soup: BeautifulSoup | None
+) -> str:
+    """
+    Ingest the tropical cyclone track map from
+    the tropical cyclone bulletin page of the PAGASA
+    -DOST website.
+
+    :param soup: A BeautifulSoup object representing
+        the parsed HTML of the page, or NoneType if
+        the page does not allow scraping
+    :type soup: BeautifulSoup | None
+
+    :return: Tropical cyclone track map from the tropical
+        cyclone bulletin page of the PAGASA-DOST website
+    :rtype: str
+    """
+    tropical_cyclone_track_map = ''
+
+    if soup is None:
+        return tropical_cyclone_track_map
+
+    div_tag_with_tropical_cyclone_bulletin_class = soup.find(
+        'div',
+        attrs={
+            'class': 'row tropical-cyclone-weather-bulletin-page'
+        }
+    )
+    div_tag_with_article_content_class = div_tag_with_tropical_cyclone_bulletin_class.find(
+        'div',
+        attrs={
+            'class': 'col-md-12 article-content'
+        }
+    )
+    div_tag_with_tab_pane_class = div_tag_with_article_content_class.find(
+        'div',
+        attrs={
+            'role': 'tabpanel',
+            'class': 'tab-pane active'
+        }
+    )
+    tropical_cyclone_track_map_tag = div_tag_with_tab_pane_class.find_all(
+        'div',
+        attrs={
+            'class': 'row'
+        }
+    )[2]
+    image_tag = tropical_cyclone_track_map_tag.find(
+        'img'
+    )
+    tropical_cyclone_track_map = image_tag['src']
+    tropical_cyclone_track_map = str(tropical_cyclone_track_map)
+
+    return tropical_cyclone_track_map
