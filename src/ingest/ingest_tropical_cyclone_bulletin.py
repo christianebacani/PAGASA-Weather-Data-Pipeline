@@ -403,7 +403,7 @@ def ingest_tropical_cyclone_descriptions(
             'class': 'row'
         }
     )[2]
-    tropical_cyclone_descriptions_tag = tropical_cyclone_descriptions_tag.find(
+    tropical_cyclone_descriptions_tag = tropical_cyclone_summary_and_descriptions_tag.find(
         'ul'
     )
     list_of_all_list_item_tag = tropical_cyclone_descriptions_tag.find_all(
@@ -418,3 +418,26 @@ def ingest_tropical_cyclone_descriptions(
         )
 
     return tropical_cyclone_descriptions
+
+def save_ingested_tropical_cyclone_descriptions(
+        tropical_cyclone_descriptions: list[str]
+) -> None:
+    """
+    Save the ingested tropical cyclone descriptions
+    from the tropical cyclone bulletin page of the
+    PAGASA-DOST website.
+
+    :param tropical_cyclone_descriptions: Tropical
+        cyclone descriptions of the tropical cyclone
+        bulletin page of the PAGASA-DOST website
+    :type tropical_cyclone_descriptions: list[str]
+    """
+    ingested_data = {
+        "tropical_cyclone_descriptions": ingest_tropical_cyclone_descriptions
+    }
+
+    with open(
+        'data/raw/tropical_cyclone_bulletins/tropical_cyclone_descriptions.json',
+        'w'
+    ) as json_file:
+        json.dump(ingested_data, json_file, indent=4)
