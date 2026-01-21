@@ -299,13 +299,13 @@ def ingest_tropical_cyclone_summary(
     if soup is None:
         return tropical_cyclone_summary
 
-    div_tag_with_tropical_cyclone_bulletin_page = soup.find(
+    div_tag_with_tropical_cyclone_bulletin_class = soup.find(
         'div',
         attrs={
             'class': 'row tropical-cyclone-weather-bulletin-page'
         }
     )
-    div_tag_with_article_content_class = div_tag_with_tropical_cyclone_bulletin_page.find(
+    div_tag_with_article_content_class = div_tag_with_tropical_cyclone_bulletin_class.find(
         'div',
         attrs={
             'class': 'col-md-12 article-content'
@@ -318,13 +318,13 @@ def ingest_tropical_cyclone_summary(
             'class': 'tab-pane active'
         }
     )
-    tropical_cyclone_summary_and_description_tag = div_tag_with_tab_pane_class.find_all(
+    tropical_cyclone_summary_and_descriptions_tag = div_tag_with_tab_pane_class.find_all(
         'div',
         attrs={
             'class': 'row'
         }
     )[2]
-    tropical_cyclone_summary_tag = tropical_cyclone_summary_and_description_tag.find(
+    tropical_cyclone_summary_tag = tropical_cyclone_summary_and_descriptions_tag.find(
         'h5'
     )
     tropical_cyclone_summary = tropical_cyclone_summary_tag.text
@@ -354,3 +354,67 @@ def save_ingested_tropical_cyclone_summary(
         'w'
     ) as json_file:
         json.dump(ingested_data, json_file, indent=4)
+
+def ingest_tropical_cyclone_descriptions(
+        soup: BeautifulSoup | None
+) -> list[str]:
+    """
+    Ingest the tropical cyclone descriptions from the
+    tropical cyclone bulletin page of the PAGASA-DOST
+    website.
+
+    :param soup: A BeautifulSoup object representing
+        the parsed HTML of the page, or NoneType if
+        the page does not allow scraping
+    :type soup: BeautifulSoup | None
+
+    :return: Tropical cyclone descriptions from the
+        tropical cyclone bulletin page of the PAGASA-
+        DOST website
+    :rtype: list[str]
+    """
+    tropical_cyclone_descriptions = []
+
+    if soup is None:
+        return ingest_tropical_cyclone_descriptions
+
+    div_tag_with_tropical_cyclone_bulletin_class = soup.find(
+        'div',
+        attrs={
+            'class': 'row tropical-cyclone-weather-bulletin-page'
+        }
+    )
+    div_tag_with_article_content_class = div_tag_with_tropical_cyclone_bulletin_class.find(
+        'div',
+        attrs={
+            'class': 'col-md-12 article-content'
+        }
+    )
+    div_tag_with_tab_pane_class = div_tag_with_article_content_class.find(
+        'div',
+        attrs={
+            'role': 'tabpanel',
+            'class': 'tab-pane active'
+        }
+    )
+    tropical_cyclone_summary_and_descriptions_tag = div_tag_with_tab_pane_class.find_all(
+        'div',
+        attrs={
+            'class': 'row'
+        }
+    )[2]
+    tropical_cyclone_descriptions_tag = tropical_cyclone_descriptions_tag.find(
+        'ul'
+    )
+    list_of_all_list_item_tag = tropical_cyclone_descriptions_tag.find_all(
+        'li'
+    )
+
+    for list_item_tag in list_of_all_list_item_tag:
+        tropical_cyclone_description = list_item_tag.text
+        tropical_cyclone_description = str(tropical_cyclone_description)
+        tropical_cyclone_descriptions.append(
+            tropical_cyclone_description
+        )
+
+    return tropical_cyclone_descriptions
