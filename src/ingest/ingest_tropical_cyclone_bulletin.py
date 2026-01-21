@@ -433,7 +433,7 @@ def save_ingested_tropical_cyclone_descriptions(
     :type tropical_cyclone_descriptions: list[str]
     """
     ingested_data = {
-        "tropical_cyclone_descriptions": ingest_tropical_cyclone_descriptions
+        "tropical_cyclone_descriptions": tropical_cyclone_descriptions
     }
 
     with open(
