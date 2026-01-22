@@ -2,7 +2,7 @@
 Execute ingest workflow for weather advisory data from the PAGASA-DOST website.
 
 This module orchestrates the ingest helpers in `ingest_weather_advisory` to ingest
-artifacts and store them as a JSON files under `data/raw/weather_advisories/` subdirectory
+artifacts and store them as a JSON files under `data/weather_advisories/` subdirectory
 for further processing.
 
 Main function:

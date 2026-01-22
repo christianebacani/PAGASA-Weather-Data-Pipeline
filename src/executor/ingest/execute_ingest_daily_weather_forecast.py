@@ -2,7 +2,7 @@
 Execute ingest workflow for daily weather forecast data from the PAGASA-DOST website.
 
 This module orchestrates the ingest helpers in `ingest_daily_weather_forecast.py` to
-ingest artifacts and store them as JSON files under `data/raw/daily_weather_forecasts/`
+ingest artifacts and store them as JSON files under `data/daily_weather_forecasts/`
 subdirectory for further processing.
 
 Main function:

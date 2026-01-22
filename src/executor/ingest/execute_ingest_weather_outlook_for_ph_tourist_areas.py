@@ -3,7 +3,7 @@ Execute ingest workflow for weather outlook for selected Philippine tourist area
 PAGASA-DOST website.
 
 This module orchestrates the ingest helpers in `ingest_weather_outlook_for_ph_tourist_areas` to
-ingest artifacts and store them as JSON files under `data/raw/weather_outlooks_for_ph_tourist_areas/`
+ingest artifacts and store them as JSON files under `data/weather_outlooks_for_ph_tourist_areas/`
 subdirectory for further processing.
 
 Main function:
