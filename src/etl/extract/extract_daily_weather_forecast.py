@@ -1,10 +1,11 @@
 """
 Docstring for etl.extract.extract_daily_weather_forecast
 """
+import pandas as pd
 
 def extract_issued_datetime(
         issued_datetime_filepath: str        
-) -> None:
+) -> pd.DataFrame:
     """
     Extract the ingested issued datetime of
     daily weather forecast page as a JSON file
@@ -16,3 +17,8 @@ def extract_issued_datetime(
         page as a JSON file
     :type issued_datetime_filepath: str
     """
+    issued_datetime = pd.read_json(
+        issued_datetime_filepath
+    )
+
+    issued_datetime
