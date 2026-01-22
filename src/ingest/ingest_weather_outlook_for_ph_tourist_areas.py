@@ -4,7 +4,7 @@ Ingest weather outlook for selected Philippine tourist areas data from the PAGAS
 This module contains functions used by the ETL pipeline to ingest
 data from the PAGASA-DOST weather outlook for selected Philippine
 tourist areas page and store the ingested artifacts as JSON files under the
-`data/raw/weather_outlooks_for_ph_tourist_areas/` subdirectory for further
+`data/weather_outlooks_for_ph_tourist_areas/` subdirectory for further
 processing.
 
 Ingested data:
@@ -23,12 +23,12 @@ from bs4 import BeautifulSoup
 def create_subdir(
 ) -> None:
     """
-    Creates the subdirectory path `data/raw/weather_outlooks_for_ph_tourist_areas/`
+    Creates the subdirectory path `data/weather_outlooks_for_ph_tourist_areas/`
     for ingested data from the weather outlook for selected Philippine tourist areas
     page of PAGASA-DOST website.
     """
-    if not os.path.exists('data/raw/weather_outlooks_for_ph_tourist_areas'):
-        os.makedirs('data/raw/weather_outlooks_for_ph_tourist_areas')
+    if not os.path.exists('data/weather_outlooks_for_ph_tourist_areas'):
+        os.makedirs('data/weather_outlooks_for_ph_tourist_areas')
 
 def ingest_and_parse_soup_from_url(
         url: str
@@ -120,7 +120,7 @@ def save_ingested_issued_datetime(
     }
 
     with open(
-        'data/raw/weather_outlooks_for_ph_tourist_areas/issued_datetime.json',
+        'data/weather_outlooks_for_ph_tourist_areas/issued_datetime.json',
         'w'
     ) as json_file:
         json.dump(ingested_data, json_file, indent=4)
@@ -187,7 +187,7 @@ def save_ingested_time_validity(
     }
 
     with open(
-        'data/raw/weather_outlooks_for_ph_tourist_areas/time_validity.json',
+        'data/weather_outlooks_for_ph_tourist_areas/time_validity.json',
         'w'
     ) as json_file:
         json.dump(ingested_data, json_file, indent=4)
@@ -483,7 +483,7 @@ def save_ingested_weather_outlook_for_ph_tourist_areas(
     ingested_data = weather_outlook_for_ph_tourist_areas
 
     with open(
-        'data/raw/weather_outlooks_for_ph_tourist_areas/weather_outlook_for_ph_tourist_areas.json',
+        'data/weather_outlooks_for_ph_tourist_areas/weather_outlook_for_ph_tourist_areas.json',
         'w'
     ) as json_file:
         json.dump(ingested_data, json_file, indent=4)
