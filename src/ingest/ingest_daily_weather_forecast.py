@@ -12,7 +12,7 @@ Ingested data:
 - Tropical cyclone informations
 - Forecast weather conditions
 - Forecast wind and coastal water conditions
-- Temperature and Relative Humidity
+- Temperature and relative humidity
 """
 import os
 import requests
