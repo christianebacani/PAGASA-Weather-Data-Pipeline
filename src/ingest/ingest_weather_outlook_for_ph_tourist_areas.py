@@ -115,9 +115,11 @@ def save_ingested_issued_datetime(
         tourist areas page of the PAGASA-DOST website
     :type issued_datetime: str
     """
-    ingested_data = {
-        "issued_datetime": issued_datetime
-    }
+    ingested_data = [
+        {
+            "issued_datetime": issued_datetime
+        }
+    ]
 
     with open(
         'data/weather_outlooks_for_ph_tourist_areas/issued_datetime.json',
@@ -182,9 +184,11 @@ def save_ingested_time_validity(
         tourist areas page of the PAGASA-DOST website
     :type time_validity: str
     """
-    ingested_data = {
-        "time_validity": time_validity
-    }
+    ingested_data = [
+        {
+            "time_validity": time_validity
+        }
+    ]
 
     with open(
         'data/weather_outlooks_for_ph_tourist_areas/time_validity.json',
