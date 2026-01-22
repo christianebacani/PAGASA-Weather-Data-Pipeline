@@ -31,3 +31,11 @@ def connect(
     :return: Active Snowflake connection object
     :rtype: SnowflakeConnection
     """
+    conn = snowflake.connect(
+        user=user,
+        password=password,
+        account=account,
+        warehouse=warehouse   
+    )
+
+    return conn
