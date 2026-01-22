@@ -4,7 +4,7 @@ Ingest weather outlook for selected Philippine cities data from the PAGASA-DOST 
 This module contains functions used by the ETL pipeline to ingest
 data from the PAGASA-DOST weather outlook for selected Philippine cities
 page and store the ingested artifacts as JSON files under the
-`data/raw/weather_outlooks_for_ph_cities/` subdirectory for further
+`data/weather_outlooks_for_ph_cities/` subdirectory for further
 processing.
 
 Ingested data:
@@ -24,12 +24,12 @@ from bs4 import BeautifulSoup
 def create_subdir(
 ) -> None:
     """
-    Creates the subdirectory path `data/raw/weather_outlooks_for_ph_cities/`
+    Creates the subdirectory path `data/weather_outlooks_for_ph_cities/`
     for ingested data from the weather outlook for selected Philippine cities
     page of PAGASA-DOST website.
     """
-    if not os.path.exists('data/raw/weather_outlooks_for_ph_cities'):
-        os.makedirs('data/raw/weather_outlooks_for_ph_cities')
+    if not os.path.exists('data/weather_outlooks_for_ph_cities'):
+        os.makedirs('data/weather_outlooks_for_ph_cities')
 
 def ingest_and_parse_soup_from_url(
         url: str
@@ -120,7 +120,7 @@ def save_ingested_issued_datetime(
     }
 
     with open(
-        'data/raw/weather_outlooks_for_ph_cities/issued_datetime.json',
+        'data/weather_outlooks_for_ph_cities/issued_datetime.json',
         'w'
     ) as json_file:
         json.dump(ingested_data, json_file, indent=4)
@@ -186,7 +186,7 @@ def save_ingested_time_validity(
     }
 
     with open(
-        'data/raw/weather_outlooks_for_ph_cities/time_validity.json',
+        'data/weather_outlooks_for_ph_cities/time_validity.json',
         'w'
     ) as json_file:
         json.dump(ingested_data, json_file, indent=4)
@@ -576,7 +576,7 @@ def save_ingested_weather_outlook_for_ph_cities(
     ingested_data = weather_outlook_for_ph_cities
 
     with open(
-        'data/raw/weather_outlooks_for_ph_cities/weather_outlook_for_ph_cities.json',
+        'data/weather_outlooks_for_ph_cities/weather_outlook_for_ph_cities.json',
         'w'
     ) as json_file:
         json.dump(ingested_data, json_file, indent=4)
