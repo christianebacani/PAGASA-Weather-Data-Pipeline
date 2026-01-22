@@ -30,7 +30,7 @@ def create_subdir(
         os.makedirs('data/daily_weather_forecasts')
 
 def ingest_and_parse_soup_from_url(
-        url: str       
+        url: str
 ) -> BeautifulSoup | None:
     """
     Ingest and parse BeatifulSoup object
