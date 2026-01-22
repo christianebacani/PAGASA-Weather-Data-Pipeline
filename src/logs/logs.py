@@ -50,7 +50,7 @@ def generate_logs(
 if __name__ == '__main__':
     ingest_daily_weather_forecast()
     generate_logs(
-        '(DEV): Ingest the daily weather forecasts data.'
+        '(DEV): Ingest the daily weather forecast data.'
     )
 
     ingest_weather_outlook_for_ph_cities()
@@ -65,7 +65,7 @@ if __name__ == '__main__':
 
     ingest_weather_advisory()
     generate_logs(
-        '(DEV): Ingest the weather advisories data.'
+        '(DEV): Ingest the weather advisory data'
     )
 
     extract_daily_weather_forecast()
