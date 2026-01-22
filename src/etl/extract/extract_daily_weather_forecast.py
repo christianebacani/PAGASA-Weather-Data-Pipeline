@@ -21,4 +21,4 @@ def extract_issued_datetime(
         issued_datetime_filepath
     )
 
-    issued_datetime
+    return issued_datetime
