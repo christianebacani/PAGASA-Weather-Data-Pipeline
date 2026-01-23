@@ -41,3 +41,7 @@ def transform_extracted_issued_datetime(
         object
     :rtype: DataFrame
     """
+    columns = list(issued_datetime.keys())
+    transformed_issued_datetime = pd.DataFrame(
+        columns=columns
+    )
