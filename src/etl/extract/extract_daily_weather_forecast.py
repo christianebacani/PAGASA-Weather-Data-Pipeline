@@ -14,7 +14,7 @@ def extract_issued_datetime(
 
     :param issued_datetime_filepath: Issued
         datetime of the daily weather forecast
-        page as a JSON file
+        page as a DataFrame object
     :type issued_datetime_filepath: str
     """
     issued_datetime = pd.read_json(
