@@ -12,10 +12,16 @@ def extract_issued_datetime(
     from the subdirectory path
     `data/daily_weather_forecasts`.
 
-    :param issued_datetime_filepath: Issued
-        datetime of the daily weather forecast
-        page as a DataFrame object
+    :param issued_datetime_filepath: Filepath
+        of the ingested issued datetime from
+        the daily weather forecast page as a
+        JSON file
     :type issued_datetime_filepath: str
+
+    :return: Transformed issued datetime
+        of the daily weather forecast page
+        as a DataFrame object
+    :rtype: DataFrame
     """
     issued_datetime = pd.read_json(
         issued_datetime_filepath
@@ -58,3 +64,22 @@ def transform_issued_datetime(
     ])
 
     return transformed_issued_datetime
+
+def extract_synopsis(
+        synopsis_filepath: str
+) -> pd.DataFrame:
+    """
+    Extract the ingested synopsis of the
+    daily weather forecast page as a JSON file
+    from the subdirectory path
+    `data/daily_weather_forecasts`.
+
+    :param synopsis_filepath: Filepath of the ingested
+        synopsis from the daily weather forecast page
+        as a JSON file
+    :type synopsis_filepath: str
+
+    :return: Transformed synopsis of the daily weather
+        forecast page as a DataFrame object
+    :rtype: DataFrame
+    """
