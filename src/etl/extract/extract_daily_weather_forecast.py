@@ -45,7 +45,10 @@ def transform_issued_datetime(
         object
     :rtype: DataFrame
     """
-    columns = ['issued_datetime']
+    columns = [
+        'issued_time',
+        'issued_date'
+    ]
     transformed_issued_datetime = pd.DataFrame(
         columns=columns
     )
@@ -53,11 +56,17 @@ def transform_issued_datetime(
     issued_datetime = issued_datetime_dataframe['issued_datetime'][0]
     issued_datetime = str(issued_datetime)
     issued_datetime = issued_datetime.strip()
+    issued_datetime.replace(
+        'Issued at:', ''
+    )
+    issued_time = issued_datetime.split(', ')[0]
+    issued_date = issued_datetime.split(', ')[1]
 
     transformed_issued_datetime = pd.concat([
         transformed_issued_datetime,
         pd.DataFrame({
-            'issued_datetime': [issued_datetime]
+            'issued_time': [issued_time],
+            'issued_date': [issued_date]
         })
     ])
 
