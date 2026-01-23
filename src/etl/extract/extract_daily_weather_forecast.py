@@ -80,3 +80,8 @@ def extract_synopsis(
         page as a DataFrame object
     :rtype: DataFrame
     """
+    synopsis = pd.read_json(
+        synopsis_filepath
+    )
+
+    return synopsis
