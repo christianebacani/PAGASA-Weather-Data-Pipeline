@@ -28,17 +28,17 @@ def extract_issued_datetime(
     return issued_datetime_dataframe
 
 def transform_issued_datetime(
-        issued_datetime: pd.DataFrame
+        issued_datetime_dataframe: pd.DataFrame
 ) -> pd.DataFrame:
     """
     Transform the issued datetime of the
     daily weather forecast page as a
     DataFrame object.
 
-    :param issued_datetime: Issued datetime
+    :param issued_datetime_dataframe: Issued datetime
         of the daily weather forecast page as
         a DataFrame object
-    :type issued_datetime: pd.DataFrame
+    :type issued_datetime_dataframe: pd.DataFrame
 
     :return: Transformed issued datetime of the
         daily weather forecast page as a DataFrame
@@ -50,7 +50,7 @@ def transform_issued_datetime(
         columns=columns
     )
 
-    issued_datetime = issued_datetime['issued_datetime'][0]
+    issued_datetime = issued_datetime_dataframe['issued_datetime'][0]
     issued_datetime = str(issued_datetime)
     issued_datetime = issued_datetime.strip()
 
@@ -80,11 +80,11 @@ def extract_synopsis(
         page as a DataFrame object
     :rtype: DataFrame
     """
-    synopsis = pd.read_json(
+    synopsis_dataframe = pd.read_json(
         synopsis_filepath
     )
 
-    return synopsis
+    return synopsis_dataframe
 
 def transform_synopsis(
         synopsis: pd.DataFrame
