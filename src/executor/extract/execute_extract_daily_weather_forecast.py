@@ -15,6 +15,6 @@ def extract_daily_weather_forecast(
     issued_datetime = extract_issued_datetime(
         'data/daily_weather_forecasts/issued_datetime.json'
     )
-    transform_issued_datetime(
+    transformed_issued_datetime = transform_issued_datetime(
         issued_datetime
     )
