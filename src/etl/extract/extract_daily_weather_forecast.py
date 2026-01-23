@@ -62,3 +62,21 @@ def transform_issued_datetime(
     ])
 
     return transformed_issued_datetime
+
+def extract_synopsis(
+        synopsis_filepath: str
+) -> pd.DataFrame:
+    """
+    Extract the ingested synopsis of the daily
+    weather forecast page from the subdirectory
+    path `data/daily_weather_forecasts`.
+
+    :param synopsis_filepath: Filepath of the
+        ingested synopsis from the subdirectory
+        path `data/daily_weather_forecasts`
+    :type synopsis_filepath: str
+
+    :return: Synopsis of the daily weather forecast
+        page as a DataFrame object
+    :rtype: DataFrame
+    """
