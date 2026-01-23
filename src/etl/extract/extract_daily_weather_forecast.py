@@ -85,3 +85,22 @@ def extract_synopsis(
     )
 
     return synopsis
+
+def transform_synopsis(
+        synopsis: pd.DataFrame
+) -> pd.DataFrame:
+    """
+    Transform the synopsis of the
+    daily weather forecast page as a
+    DataFrame object.
+
+    :param synopsis: Synopsis of the daily
+        weather forecast page as a DataFrame
+        object
+    :type synopsis: pd.DataFrame
+
+    :return: Transformed synopsis of the daily
+        weather forecast page as a DataFrame
+        object
+    :rtype: DataFrame
+    """
