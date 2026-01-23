@@ -45,3 +45,16 @@ def transform_issued_datetime(
     transformed_issued_datetime = pd.DataFrame(
         columns=columns
     )
+
+    issued_datetime = issued_datetime['issued_datetime'][0]
+    issued_datetime = str(issued_datetime)
+    issued_datetime = issued_datetime.strip()
+
+    transformed_issued_datetime = pd.concat([
+        transformed_issued_datetime,
+        pd.DataFrame({
+            'issued_datetime': issued_datetime
+        })
+    ])
+
+    return transformed_issued_datetime
