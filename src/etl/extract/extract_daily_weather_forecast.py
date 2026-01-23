@@ -21,11 +21,11 @@ def extract_issued_datetime(
         forecast page as a DataFrame object
     :rtype: DataFrame
     """
-    issued_datetime = pd.read_json(
+    issued_datetime_dataframe = pd.read_json(
         issued_datetime_filepath
     )
 
-    return issued_datetime
+    return issued_datetime_dataframe
 
 def transform_issued_datetime(
         issued_datetime: pd.DataFrame
