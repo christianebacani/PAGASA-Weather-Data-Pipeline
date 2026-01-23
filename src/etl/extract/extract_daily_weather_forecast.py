@@ -83,3 +83,7 @@ def extract_synopsis(
         forecast page as a DataFrame object
     :rtype: DataFrame
     """
+    columns = ['synopsis']
+    transformed_synopsis = pd.DataFrame(
+        columns=columns
+    )
