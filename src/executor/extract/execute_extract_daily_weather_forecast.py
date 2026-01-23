@@ -13,13 +13,13 @@ def extract_daily_weather_forecast(
     module to extract the data from the `data/daily_weather_forecasts/`
     subdirectory path that consist of ingested artifacts as a JSON file
     """
-    issued_datetime = extract_issued_datetime(
+    issued_datetime_dataframe = extract_issued_datetime(
         'data/daily_weather_forecasts/issued_datetime.json'
     )
     transformed_issued_datetime = transform_issued_datetime(
-        issued_datetime
+        issued_datetime_dataframe
     )
 
-    synopsis = extract_synopsis(
+    synopsis_dataframe = extract_synopsis(
         'data/daily_weather_forecasts/synopsis.json'
     )
