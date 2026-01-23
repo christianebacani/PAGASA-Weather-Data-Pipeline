@@ -100,9 +100,11 @@ def save_ingested_issued_datetime(
         PAGASA-DOST website
     :type issued_datetime: str
     """
-    ingested_data = {
-        "issue_datetime": issued_datetime
-    }
+    ingested_data = [
+        {
+            "issued_datetime": issued_datetime
+        }
+    ]
 
     with open(
         'data/daily_weather_forecasts/issued_datetime.json',
@@ -157,9 +159,11 @@ def save_ingesed_synopsis(
         forecast page of the PAGASA-DOST website
     :type synopsis: str
     """
-    ingested_data = {
-        "synopsis": synopsis
-    }
+    ingested_data = [
+        {
+            "synopsis": synopsis
+        }
+    ]
 
     with open(
         'data/daily_weather_forecasts/synopsis.json',
