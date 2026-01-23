@@ -23,7 +23,6 @@ def extract_issued_datetime(
 
     return issued_datetime
 
-
 def transform_extracted_issued_datetime(
         issued_datetime: pd.DataFrame
 ) -> pd.DataFrame:
