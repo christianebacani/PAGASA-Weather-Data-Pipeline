@@ -53,7 +53,7 @@ def transform_issued_datetime(
     transformed_issued_datetime = pd.concat([
         transformed_issued_datetime,
         pd.DataFrame({
-            'issued_datetime': issued_datetime
+            'issued_datetime': [issued_datetime]
         })
     ])
 
