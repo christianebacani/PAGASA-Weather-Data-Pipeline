@@ -23,13 +23,13 @@ def extract_issued_datetime(
 
     return issued_datetime
 
-def transform_extracted_issued_datetime(
+def transform_issued_datetime(
         issued_datetime: pd.DataFrame
 ) -> pd.DataFrame:
     """
-    Transfrom the extracted issued datetime
-    of the daily weather forecast page as a
-    DataFrame object
+    Transform the issued datetime of the
+    daily weather forecast page as a
+    DataFrame object.
 
     :param issued_datetime: Issued datetime
         of the daily weather forecast page as
