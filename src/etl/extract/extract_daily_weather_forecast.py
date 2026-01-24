@@ -172,3 +172,19 @@ def extract_forecast_weather_conditions(
     )
 
     return forecast_weather_conditions_dataframe
+
+def transform_forecast_weather_conditions(
+        forecast_weather_conditions_dataframe: pd.DataFrame
+) -> pd.DataFrame:
+    """
+    Transform the forecast weather conditions as a DataFrame
+    object.
+
+    :param forecast_weather_conditions_dataframe: Forecast weather
+        conditions as a DataFrame object
+    :type forecast_weather_conditions_dataframe: pd.DataFrame
+
+    :return: Transformed forecast weather conditions as a DataFrame
+        object
+    :rtype: DataFrame
+    """
