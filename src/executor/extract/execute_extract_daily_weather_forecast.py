@@ -41,4 +41,3 @@ def extract_daily_weather_forecast(
     forecast_weather_conditions_dataframe = extract_forecast_weather_conditions(
         'data/daily_weather_forecasts/forecast_weather_conditions.json'
     )
-    print(forecast_weather_conditions_dataframe)
