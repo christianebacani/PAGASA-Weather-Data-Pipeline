@@ -113,3 +113,9 @@ def transform_synopsis(
         object
     :rtype: DataFrame
     """
+    columns = [
+        'synopsis'
+    ]
+    transformed_dataframe = pd.DataFrame(
+        columns=columns
+    )
