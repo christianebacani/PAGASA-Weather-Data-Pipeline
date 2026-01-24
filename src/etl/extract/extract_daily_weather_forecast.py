@@ -229,3 +229,20 @@ def transform_forecast_weather_conditions(
             ], ignore_index=True)
 
     return transformed_dataframe
+
+def extract_forecast_wind_and_coastal_water_conditions(
+        forecast_wind_and_coastal_water_conditions_filepath: str
+) -> pd.DataFrame:
+    """
+    Extract the ingested forecast wind and coastal water conditions
+    from the subdirectory path `data/daily_weather_forecasts`.
+
+    :param forecast_wind_and_coastal_water_conditions_filepath: Filepath
+        of the ingested forecast wind and coastal water conditions from
+        the subdirectory path `data/daily_weather_forecasts`
+    :type forecast_wind_and_coastal_water_conditions_filepath: str
+
+    :return: Forecast wind and coastal water conditions as a DataFrame
+        object
+    :rtype: DataFrame
+    """
