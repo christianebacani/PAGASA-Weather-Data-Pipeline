@@ -7,9 +7,8 @@ def extract_issued_datetime(
         issued_datetime_filepath: str        
 ) -> pd.DataFrame:
     """
-    Extract the ingested issued datetime of
-    daily weather forecast page from the subdirectory
-    path `data/daily_weather_forecasts`.
+    Extract the ingested issued datetime
+    from the subdirectory path `data/daily_weather_forecasts`.
 
     :param issued_datetime_filepath: Filepath
         of the ingested issued datetime from
@@ -17,8 +16,7 @@ def extract_issued_datetime(
         `data/daily_weather_forecasts`
     :type issued_datetime_filepath: str
 
-    :return: Issued datetime of the daily weather
-        forecast page as a DataFrame object
+    :return: Issued datetime as a DataFrame object
     :rtype: DataFrame
     """
     issued_datetime_dataframe = pd.read_json(
@@ -31,17 +29,13 @@ def transform_issued_datetime(
         issued_datetime_dataframe: pd.DataFrame
 ) -> pd.DataFrame:
     """
-    Transform the issued datetime of the
-    daily weather forecast page as a
-    DataFrame object.
+    Transform the issued datetime as a DataFrame object.
 
-    :param issued_datetime_dataframe: Issued datetime
-        of the daily weather forecast page as
+    :param issued_datetime_dataframe: Issued datetime as
         a DataFrame object
     :type issued_datetime_dataframe: pd.DataFrame
 
-    :return: Transformed issued datetime of the
-        daily weather forecast page as a DataFrame
+    :return: Transformed issued datetime as a DataFrame
         object
     :rtype: DataFrame
     """
@@ -76,17 +70,15 @@ def extract_synopsis(
         synopsis_filepath: str
 ) -> pd.DataFrame:
     """
-    Extract the ingested synopsis of the daily
-    weather forecast page from the subdirectory
-    path `data/daily_weather_forecasts`.
+    Extract the ingested synopsis from the
+    subdirectory path `data/daily_weather_forecasts.`
 
     :param synopsis_filepath: Filepath of the
         ingested synopsis from the subdirectory
         path `data/daily_weather_forecasts`
     :type synopsis_filepath: str
 
-    :return: Synopsis of the daily weather forecast
-        page as a DataFrame object
+    :return: Synopsis as a DataFrame object
     :rtype: DataFrame
     """
     synopsis_dataframe = pd.read_json(
@@ -99,18 +91,13 @@ def transform_synopsis(
         synopsis_dataframe: pd.DataFrame
 ) -> pd.DataFrame:
     """
-    Transform the synopsis of the
-    daily weather forecast page as a
-    DataFrame object.
+    Transform the synopsis as a DataFrame object.
 
-    :param synopsis_dataframe: Synopsis of the
-        daily weather forecast page as a DataFrame
+    :param synopsis_dataframe: Synopsis as a DataFrame
         object
     :type synopsis: pd.DataFrame
 
-    :return: Transformed synopsis of the daily
-        weather forecast page as a DataFrame
-        object
+    :return: Transformed synopsis as a DataFrame object
     :rtype: DataFrame
     """
     columns = [
@@ -137,8 +124,8 @@ def extract_tropical_cyclone_informations(
         tropical_cyclone_informations_filepath: str
 ) -> pd.DataFrame:
     """
-    Extract the tropical cyclone information from the subdirectory
-    path `data/daily_weather_forecasts`.
+    Extract the ingested tropical cyclone information
+    from the subdirectory path `data/daily_weather_forecasts`.
 
     :param tropical_cyclone_informations_filepath: Filepath of the
         ingested tropical cyclone informations from the subdirectory
