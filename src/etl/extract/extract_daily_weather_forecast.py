@@ -56,7 +56,7 @@ def transform_issued_datetime(
     issued_datetime = issued_datetime_dataframe['issued_datetime'][0]
     issued_datetime = str(issued_datetime)
     issued_datetime = issued_datetime.strip()
-    issued_datetime.replace(
+    issued_datetime = issued_datetime.replace(
         'Issued at:', ''
     )
     issued_time = issued_datetime.split(', ')[0]
