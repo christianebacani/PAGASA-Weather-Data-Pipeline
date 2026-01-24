@@ -251,3 +251,19 @@ def extract_forecast_wind_and_coastal_water_conditions(
     )
 
     return forecast_wind_and_coastal_water_conditions_dataframe
+
+def transformed_forecast_wind_and_coastal_water_conditions(
+        forecast_wind_and_coastal_water_conditions_dataframe: pd.DataFrame
+) -> pd.DataFrame:
+    """
+    Transform the forecast wind and coastal water conditions as a DataFrame
+    object.
+
+    :param forecast_wind_and_coastal_water_conditions_dataframe: Forecast wind
+        and coastal water conditions as a DataFrame object
+    :type forecast_wind_and_coastal_water_conditions_dataframe:
+
+    :return: Transformed forecast wind and coastal water conditions as a
+        DataFrame object
+    :rtype:
+    """
