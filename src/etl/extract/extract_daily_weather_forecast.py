@@ -167,3 +167,8 @@ def extract_forecast_weather_conditions(
     :return: Forecast weather conditions as a DataFrame object
     :rtype: DataFrame
     """
+    forecast_weather_conditions_dataframe = pd.read_json(
+        forecast_weather_conditions_filepath
+    )
+
+    return forecast_weather_conditions_dataframe
