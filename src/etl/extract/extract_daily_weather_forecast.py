@@ -188,3 +188,44 @@ def transform_forecast_weather_conditions(
         object
     :rtype: DataFrame
     """
+    columns = [
+        'place',
+        'weather_condition',
+        'caused_by',
+        'impact'
+    ]
+    transformed_dataframe = pd.DataFrame(
+        columns=columns
+    )
+
+    for _, row in forecast_weather_conditions_dataframe.iterrows():
+        place = row['place']
+        place = str(place)
+        place = place.strip()
+        place = place.replace('and', '')
+        places = place.split(', ')
+
+        weather_condition = row['weather_condition']
+        weather_condition = str(weather_condition)
+        weather_condition = weather_condition.strip()
+
+        caused_by = row['caused_by']
+        caused_by = str(caused_by)
+        caused_by = caused_by.strip()
+
+        impact = row['impact']
+        impact = str(impact)
+        impact = impact.strip()
+
+        for place in places:
+            transformed_dataframe = pd.concat([
+                transformed_dataframe,
+                pd.DataFrame({
+                    'place': [place],
+                    'weather_condition': [weather_condition],
+                    'caused_by': [caused_by],
+                    'impact': [impact]
+                })
+            ], ignore_index=True)
+
+    return transformed_dataframe
