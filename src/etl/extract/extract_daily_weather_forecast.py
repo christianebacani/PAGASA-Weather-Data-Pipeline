@@ -135,3 +135,19 @@ def extract_tropical_cyclone_informations(
     :return: Tropical cyclone informations as a DataFrame object
     :rtype: DataFrame
     """
+
+def transform_tropical_cyclone_informations(
+        tropical_cyclone_informations_dataframe: pd.DataFrame
+) -> pd.DataFrame:
+    """
+    Transform the tropical cyclone informations as a DataFrame
+    object.
+
+    :param tropical_cyclone_informations_dataframe: Tropical
+        cyclone informations as a DataFrame object
+    :type tropical_cyclone_informations_dataframe: pd.DataFrame
+
+    :return: Transformed tropical cyclone informations as a
+        DataFrame object
+    :rtype: DataFrame
+    """
