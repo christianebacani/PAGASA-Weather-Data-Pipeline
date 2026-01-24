@@ -132,3 +132,19 @@ def transform_synopsis(
     ])
 
     return transformed_dataframe
+
+def extract_tropical_cyclone_informations(
+        tropical_cyclone_informations_filepath: str
+) -> pd.DataFrame:
+    """
+    Extract the tropical cyclone information from the subdirectory
+    path `data/daily_weather_forecasts`.
+
+    :param tropical_cyclone_informations_filepath: Filepath of the
+        ingested tropical cyclone informations from the subdirectory
+        path `data/daily_weather_forecasts`
+    :type tropical_cyclone_informations_filepath: str
+
+    :return: Tropical cyclone informations as a DataFrame object
+    :rtype: DataFrame
+    """
