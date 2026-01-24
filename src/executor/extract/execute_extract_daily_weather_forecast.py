@@ -45,4 +45,3 @@ def extract_daily_weather_forecast(
     transformed_forecast_weather_conditions = transform_forecast_weather_conditions(
         forecast_weather_conditions_dataframe
     )
-    print(transform_forecast_weather_conditions)
