@@ -119,3 +119,16 @@ def transform_synopsis(
     transformed_dataframe = pd.DataFrame(
         columns=columns
     )
+
+    synopsis = synopsis_dataframe['synopsis'][0]
+    synopsis = str(synopsis)
+    synopsis = synopsis.strip()
+
+    transformed_dataframe = pd.concat([
+        transformed_dataframe,
+        pd.DataFrame({
+            'synopsis': [synopsis]
+        })
+    ])
+
+    return transformed_dataframe
