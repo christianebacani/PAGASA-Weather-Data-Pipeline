@@ -8,6 +8,7 @@ from etl.extract.extract_daily_weather_forecast import transform_synopsis
 from etl.extract.extract_daily_weather_forecast import extract_tropical_cyclone_informations
 from etl.extract.extract_daily_weather_forecast import transform_tropical_cyclone_informations
 from etl.extract.extract_daily_weather_forecast import extract_forecast_weather_conditions
+from etl.extract.extract_daily_weather_forecast import transform_forecast_weather_conditions
 
 def extract_daily_weather_forecast(
 ) -> None:
@@ -40,4 +41,7 @@ def extract_daily_weather_forecast(
 
     forecast_weather_conditions_dataframe = extract_forecast_weather_conditions(
         'data/daily_weather_forecasts/forecast_weather_conditions.json'
+    )
+    transform_forecast_weather_conditions(
+        forecast_weather_conditions_dataframe
     )
