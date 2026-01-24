@@ -151,3 +151,19 @@ def transform_tropical_cyclone_informations(
         DataFrame object
     :rtype: DataFrame
     """
+
+def extract_forecast_weather_conditions(
+        forecast_weather_conditions_filepath: str
+) -> pd.DataFrame:
+    """
+    Extract the ingested forecast weather conditions from the
+    subdirectory path `data/daily_weather_forecasts`.
+
+    :param forecast_weather_conditions_filepath: Filepath of the
+        ingested forecast weather conditions from the subdirectory
+        path `data/daily_weather_forecast`
+    :type forecast_weather_conditions_filepath: str
+
+    :return: Forecast weather conditions as a DataFrame object
+    :rtype: DataFrame
+    """
