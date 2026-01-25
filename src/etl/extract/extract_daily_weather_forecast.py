@@ -267,3 +267,22 @@ def transformed_forecast_wind_and_coastal_water_conditions(
         DataFrame object
     :rtype:
     """
+    columns = [
+        'forecast_id',
+        'issued_date',
+        'issued_time',
+        'coastal_area',
+        'wind_speed_raw',
+        'wind_speed_category',
+        'wind_direction_raw',
+        'wind_direction_simplified',
+        'coastal_water_condition_raw',
+        'sea_condition',
+        'wave_height_min_m',
+        'wave_height_max_m',
+        'wave_height_avg_m',
+        'maritime_risk_level',
+        'safe_for_small_vessels',
+        'safe_for_medium_vessels',
+        'risk_score'
+    ]
