@@ -15,10 +15,10 @@ def extract_daily_weather_forecast(
     subdirectory path that consist of ingested artifacts as a JSON file
     """
     conn = connect(
-        'christiane',
-        'Rica_Mae_Flores_1014',
-        'OGDMYJY-KP61910',
-        'COMPUTE_WH'
+        'username',
+        'password',
+        'account_identifier',
+        'warehouse_name'
     )
 
     issued_datetime_dataframe = extract_issued_datetime(
@@ -26,14 +26,4 @@ def extract_daily_weather_forecast(
     )
     cleaned_issued_datetime = clean_issued_datetime(
         issued_datetime_dataframe
-    )
-    database_config(
-        conn,
-        'pagasa-dost_database',
-        'daily_weather_forecasts_schema',
-        'daily_weather_forecasts',
-        {
-            "issued_date": "DATE",
-            "issued_time": "TIME"
-        }
     )
