@@ -1,8 +1,9 @@
 """
 Docstring for etl.extract.extract_daily_weather_forecast
 """
-import snowflake.connector as snowflake
 import pandas as pd
+import snowflake.connector as snowflake
+from datetime import time
 
 def connect(
         username: str,
@@ -134,11 +135,15 @@ def clean_issued_datetime(
         hours = issued_time.split(':')[0]
         hours = int(hours)
         hours = hours + 12
-        issued_time = str(hours) + ':00'
+        issued_time = time(hours, 0)
 
     else:
         issued_time = issued_time.replace('AM', '')
         issued_time = issued_time.strip()
+
+        hours = issued_time.split(':')[0]
+        hours = int(hours)
+        issued_time = time(hours, 0)
 
     issued_date = issued_datetime.split(', ')[1]
 
