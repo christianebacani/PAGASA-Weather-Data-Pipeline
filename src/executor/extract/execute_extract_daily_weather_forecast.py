@@ -1,6 +1,7 @@
 """
 Docstring for src.executor.extract.execute_extract_daily_weather_forecast
 """
+from etl.extract.extract_daily_weather_forecast import connect
 from etl.extract.extract_daily_weather_forecast import extract_issued_datetime
 from etl.extract.extract_daily_weather_forecast import transform_issued_datetime
 
@@ -12,6 +13,13 @@ def extract_daily_weather_forecast(
     module to extract the data from the `data/raw/daily_weather_forecasts/`
     subdirectory path that consist of ingested artifacts as a JSON file
     """
+    conn = connect(
+        'christiane',
+        'Rica_Mae_Flores_1014',
+        'OGDMYJY-KP61910',
+        'COMPUTE_WH'
+    )
+
     issued_datetime_dataframe = extract_issued_datetime(
         'data/raw/daily_weather_forecasts/issued_datetime.json'
     )
