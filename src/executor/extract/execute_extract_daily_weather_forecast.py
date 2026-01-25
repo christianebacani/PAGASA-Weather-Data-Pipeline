@@ -3,7 +3,7 @@ Docstring for src.executor.extract.execute_extract_daily_weather_forecast
 """
 from etl.extract.extract_daily_weather_forecast import connect
 from etl.extract.extract_daily_weather_forecast import extract_issued_datetime
-from etl.extract.extract_daily_weather_forecast import transform_issued_datetime
+from etl.extract.extract_daily_weather_forecast import clean_issued_datetime
 
 def extract_daily_weather_forecast(
 ) -> None:
@@ -23,6 +23,6 @@ def extract_daily_weather_forecast(
     issued_datetime_dataframe = extract_issued_datetime(
         'data/raw/daily_weather_forecasts/issued_datetime.json'
     )
-    transformed_issued_datetime = transform_issued_datetime(
+    cleaned_issued_datetime = clean_issued_datetime(
         issued_datetime_dataframe
     )
