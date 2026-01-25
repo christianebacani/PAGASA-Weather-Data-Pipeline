@@ -123,7 +123,21 @@ def clean_issued_datetime(
     issued_datetime = issued_datetime_dataframe['issued_datetime'][0]
     issued_datetime = str(issued_datetime)
     issued_datetime = issued_datetime.strip()
+
     issued_time = issued_datetime.split(', ')[0]
+    if 'PM' in issued_time:
+        issued_time = issued_time.replace('PM', '')
+        issued_time = issued_time.strip()
+        
+        hours = issued_time.split(':')[0]
+        hours = int(hours)
+        hours = hours + 23
+        issued_time = str(hours) + ':00'
+
+    else:
+        issued_time = issued_time.replace('PM', '')
+        issued_time = issued_time.strip()
+
     issued_date = issued_datetime.split(', ')[1]
 
     cleaned_issued_datetime = pd.concat([
