@@ -286,3 +286,6 @@ def transformed_forecast_wind_and_coastal_water_conditions(
         'safe_for_medium_vessels',
         'risk_score'
     ]
+    transformed_dataframe = pd.DataFrame(
+        columns=columns
+    )
