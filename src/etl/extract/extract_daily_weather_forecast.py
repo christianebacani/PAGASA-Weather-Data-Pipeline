@@ -3,7 +3,7 @@ Docstring for etl.extract.extract_daily_weather_forecast
 """
 import pandas as pd
 import snowflake.connector as snowflake
-from datetime import time
+import datetime
 
 def connect(
         username: str,
@@ -135,7 +135,7 @@ def clean_issued_datetime(
         hours = issued_time.split(':')[0]
         hours = int(hours)
         hours = hours + 12
-        issued_time = time(hours, 0)
+        issued_time = datetime.time(hours, 0)
 
     else:
         issued_time = issued_time.replace('AM', '')
@@ -143,9 +143,39 @@ def clean_issued_datetime(
 
         hours = issued_time.split(':')[0]
         hours = int(hours)
-        issued_time = time(hours, 0)
+        issued_time = datetime.time(hours, 0)
 
     issued_date = issued_datetime.split(', ')[1]
+
+    day = issued_date.split()[0]
+    day = int(day)
+
+    month_dictionary = {
+        'January': '01',
+        'February': '02',
+        'March': '03',
+        'April': '04',
+        'May': '05',
+        'June': '06',
+        'July': '07',
+        'August': '08',
+        'September': '09',
+        'October': '10',
+        'November': '11',
+        'December': '12'
+    }
+    month = issued_date.split()[1]
+    month = month_dictionary[month_dictionary]
+    month = int(month)
+
+    year = issued_date.split()[2]
+    year = int(year)
+
+    issued_date = datetime.datetime(
+        year,
+        month,
+        day
+    )
 
     cleaned_issued_datetime = pd.concat([
         cleaned_issued_datetime,
