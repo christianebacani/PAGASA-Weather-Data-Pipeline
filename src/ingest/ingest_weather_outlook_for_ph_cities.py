@@ -4,7 +4,7 @@ Ingest weather outlook for selected Philippine cities data from the PAGASA-DOST 
 This module contains functions used by the ETL pipeline to ingest
 data from the PAGASA-DOST weather outlook for selected Philippine cities
 page and store the ingested artifacts as JSON files under the
-`data/weather_outlooks_for_ph_cities/` subdirectory for further
+`data/raw/weather_outlooks_for_ph_cities/` subdirectory for further
 processing.
 
 Ingested data:
@@ -122,7 +122,7 @@ def save_ingested_issued_datetime(
     ]
 
     with open(
-        'data/weather_outlooks_for_ph_cities/issued_datetime.json',
+        'data/raw/weather_outlooks_for_ph_cities/issued_datetime.json',
         'w'
     ) as json_file:
         json.dump(ingested_data, json_file, indent=4)
@@ -190,7 +190,7 @@ def save_ingested_time_validity(
     ]
 
     with open(
-        'data/weather_outlooks_for_ph_cities/time_validity.json',
+        'data/raw/weather_outlooks_for_ph_cities/time_validity.json',
         'w'
     ) as json_file:
         json.dump(ingested_data, json_file, indent=4)
@@ -580,7 +580,7 @@ def save_ingested_weather_outlook_for_ph_cities(
     ingested_data = weather_outlook_for_ph_cities
 
     with open(
-        'data/weather_outlooks_for_ph_cities/weather_outlook_for_ph_cities.json',
+        'data/raw/weather_outlooks_for_ph_cities/weather_outlook_for_ph_cities.json',
         'w'
     ) as json_file:
         json.dump(ingested_data, json_file, indent=4)
