@@ -1,0 +1,22 @@
+{
+    "place": [
+        "Caraga, Davao Region, SOCCSKSARGEN, Eastern Samar, Leyte, Southern Leyte, Camiguin, Misamis Oriental, and Bukidnon",
+        "Cagayan Valley, Bicol Region, the rest of Visayas, the rest of Northern Mindanao, Apayao, Kalinga, Mountain Province, Ifugao, Aurora, and Quezon ",
+        "Metro Manila and the rest of the country"
+    ],
+    "weather_condition": [
+        "Cloudy skies with scattered rains and isolated thunderstorms",
+        "Cloudy skies with light rains",
+        "Partly cloudy to cloudy skies with isolated light rains"
+    ],
+    "caused_by": [
+        "Shear Line",
+        "Northeast Monsoon",
+        "Northeast Monsoon"
+    ],
+    "impact": [
+        "Possible flash floods or landslides due to moderate to at times heavy rains",
+        "No significant impact",
+        "No significant impact"
+    ]
+}
