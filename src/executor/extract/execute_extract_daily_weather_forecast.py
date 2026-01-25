@@ -27,3 +27,17 @@ def extract_daily_weather_forecast(
     cleaned_issued_datetime = clean_issued_datetime(
         issued_datetime_dataframe
     )
+    database_config(
+        conn,
+        'daily_weather_forecast_database',
+        'daily_weather_forecast_schema',
+        'daily_weather_forecast',
+        {
+            "forecast_id": "INTEGER",
+            "issued_date": "DATE",
+            "issued_time": "TIME",
+            "coastal_area": "VARCHAR(255)",
+            "wind_speed_raw": "VARCHAR(100)",
+            "wind_speed_category": "VARCHAR(25)"
+        }
+    )
