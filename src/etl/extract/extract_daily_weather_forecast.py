@@ -165,7 +165,7 @@ def clean_issued_datetime(
         'December': '12'
     }
     month = issued_date.split()[1]
-    month = month_dictionary[month_dictionary]
+    month = month_dictionary[month]
     month = int(month)
 
     year = issued_date.split()[2]
