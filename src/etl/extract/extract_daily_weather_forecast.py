@@ -40,6 +40,35 @@ def connect(
 
     return conn
 
+def database_config(
+        conn: snowflake.SnowflakeConnection,
+        database: str,
+        schema: str,
+        table: str,
+        columns: dict[str, str]
+) -> None:
+    """
+    Configure Snowflake database by creating database,
+    schema, and a table for storing cleaned data.
+
+    :param conn: Established Snowflake connection
+    :type conn: snowflake.SnowflakeConnection
+
+    :param database: Name of the Snowflake database
+        to create
+    :type database: str
+
+    :param schema: Name of the Snowflake schema to create
+    :type schema: str
+   
+    :param table: Name of the Snowflake table to create
+    :type table: str
+
+    :param columns: Dictionary containing column names and
+        corresponding datatypes
+    :type columns: dict[str, str]
+    """
+
 def extract_issued_datetime(
         issued_datetime_filepath: str        
 ) -> pd.DataFrame:
