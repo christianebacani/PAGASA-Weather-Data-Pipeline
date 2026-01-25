@@ -24,6 +24,14 @@ def connect(
     :return: Description
     :rtype: SnowflakeConnection
     """
+    conn = snowflake.connect(
+        user=username,
+        password=password,
+        account=account,
+        warehouse=warehouse
+    )
+
+    return conn
 
 def extract_issued_datetime(
         issued_datetime_filepath: str        
