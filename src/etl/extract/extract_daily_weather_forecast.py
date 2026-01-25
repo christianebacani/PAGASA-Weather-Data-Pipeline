@@ -1,7 +1,29 @@
 """
 Docstring for etl.extract.extract_daily_weather_forecast
 """
+import snowflake.connector as snowflake
 import pandas as pd
+
+def connect(
+        username: str,
+        password: str,
+        account: str,
+        warehouse: str               
+) -> snowflake.SnowflakeConnection:
+    """
+    Docstring for connect
+    
+    :param username: Description
+    :type username: str
+    :param password: Description
+    :type password: str
+    :param account: Description
+    :type account: str
+    :param warehouse: Description
+    :type warehouse: str
+    :return: Description
+    :rtype: SnowflakeConnection
+    """
 
 def extract_issued_datetime(
         issued_datetime_filepath: str        
@@ -65,15 +87,3 @@ def transform_issued_datetime(
     ])
 
     return transformed_issued_datetime
-
-def save_cleaned_issued_datetime(
-        issued_datetime_dataframe: pd.DataFrame
-) -> pd.DataFrame:
-    """
-    Docstring for save_cleaned_issued_datetime
-    
-    :param issued_datetime_dataframe: Description
-    :type issued_datetime_dataframe: pd.DataFrame
-    :return: Description
-    :rtype: DataFrame
-    """
