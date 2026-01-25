@@ -3,7 +3,7 @@ Ingest dialy weather forecast data from the PAGASA-DOST website.
 
 This module contains functions used by the ETL pipeline to ingest
 data from the PAGASA-DOST daily weather forecast page and store the
-ingested artifacts as JSON files under the `data/daily_weather_forecasts/`
+ingested artifacts as JSON files under the `data/raw/daily_weather_forecasts/`
 subdirectory for further processing.
 
 Ingested data:
@@ -22,12 +22,12 @@ from bs4 import BeautifulSoup
 def create_subdir(
 ) -> None:
     """
-    Creates the subdirectory path `data/daily_weather_forecasts/`
+    Creates the subdirectory path `data/raw/daily_weather_forecasts/`
     for ingested data from the daily weather forecast page of PAGASA-DOST
     website.
     """
-    if not os.path.exists('data/daily_weather_forecasts'):
-        os.makedirs('data/daily_weather_forecasts')
+    if not os.path.exists('data/raw/daily_weather_forecasts'):
+        os.makedirs('data/raw/daily_weather_forecasts')
 
 def ingest_and_parse_soup_from_url(
         url: str
@@ -107,7 +107,7 @@ def save_ingested_issued_datetime(
     ]
 
     with open(
-        'data/daily_weather_forecasts/issued_datetime.json',
+        'data/raw/daily_weather_forecasts/issued_datetime.json',
         'w'
     ) as json_file:
         json.dump(ingested_data, json_file, indent=4)
@@ -166,7 +166,7 @@ def save_ingesed_synopsis(
     ]
 
     with open(
-        'data/daily_weather_forecasts/synopsis.json',
+        'data/raw/daily_weather_forecasts/synopsis.json',
         'w'
     ) as json_file:
         json.dump(ingested_data, json_file, indent=4)
@@ -302,7 +302,7 @@ def save_ingested_forecast_weather_conditions(
     ingested_data = forecast_weather_conditions
 
     with open(
-        'data/daily_weather_forecasts/forecast_weather_conditions.json',
+        'data/raw/daily_weather_forecasts/forecast_weather_conditions.json',
         'w'
     ) as json_file:
         json.dump(ingested_data, json_file, indent=4)
@@ -404,7 +404,7 @@ def save_ingested_forecast_wind_and_coastal_water_conditions(
     ingested_data = forecast_wind_and_coastal_water_conditions
 
     with open(
-        'data/daily_weather_forecasts/forecast_wind_and_coastal_water_conditions.json',
+        'data/raw/daily_weather_forecasts/forecast_wind_and_coastal_water_conditions.json',
         'w'
     ) as json_file:
         json.dump(ingested_data, json_file, indent=4)
@@ -529,7 +529,7 @@ def save_ingested_temperature_and_relative_humidity(
     ingested_data = temperature_and_relative_humidity
 
     with open(
-        'data/daily_weather_forecasts/temperature_and_relative_humidity.json',
+        'data/raw/daily_weather_forecasts/temperature_and_relative_humidity.json',
         'w'
     ) as json_file:
         json.dump(ingested_data, json_file, indent=4)
