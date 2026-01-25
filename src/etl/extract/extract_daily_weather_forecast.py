@@ -122,6 +122,7 @@ def clean_issued_datetime(
 
     issued_datetime = issued_datetime_dataframe['issued_datetime'][0]
     issued_datetime = str(issued_datetime)
+    issued_datetime = issued_datetime.replace('Issued at:', '')
     issued_datetime = issued_datetime.strip()
 
     issued_time = issued_datetime.split(', ')[0]
