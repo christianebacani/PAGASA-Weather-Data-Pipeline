@@ -125,13 +125,14 @@ def clean_issued_datetime(
     issued_datetime = issued_datetime.strip()
 
     issued_time = issued_datetime.split(', ')[0]
+
     if 'PM' in issued_time:
         issued_time = issued_time.replace('PM', '')
         issued_time = issued_time.strip()
         
         hours = issued_time.split(':')[0]
         hours = int(hours)
-        hours = hours + 23
+        hours = hours + 12
         issued_time = str(hours) + ':00'
 
     else:
