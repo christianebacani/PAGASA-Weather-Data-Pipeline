@@ -3,13 +3,6 @@ Docstring for src.executor.extract.execute_extract_daily_weather_forecast
 """
 from etl.extract.extract_daily_weather_forecast import extract_issued_datetime
 from etl.extract.extract_daily_weather_forecast import transform_issued_datetime
-from etl.extract.extract_daily_weather_forecast import extract_synopsis
-from etl.extract.extract_daily_weather_forecast import transform_synopsis
-from etl.extract.extract_daily_weather_forecast import extract_tropical_cyclone_informations
-from etl.extract.extract_daily_weather_forecast import transform_tropical_cyclone_informations
-from etl.extract.extract_daily_weather_forecast import extract_forecast_weather_conditions
-from etl.extract.extract_daily_weather_forecast import transform_forecast_weather_conditions
-from etl.extract.extract_daily_weather_forecast import extract_forecast_wind_and_coastal_water_conditions
 
 def extract_daily_weather_forecast(
 ) -> None:
@@ -24,29 +17,4 @@ def extract_daily_weather_forecast(
     )
     transformed_issued_datetime = transform_issued_datetime(
         issued_datetime_dataframe
-    )
-
-    synopsis_dataframe = extract_synopsis(
-        'data/raw/daily_weather_forecasts/synopsis.json'
-    )
-    transformed_synopsis = transform_synopsis(
-        synopsis_dataframe
-    )
-
-    tropical_cyclone_informations_dataframe = extract_tropical_cyclone_informations(
-        'data/raw/daily_weather_forecasts/tropical_cyclone_informations.json'
-    )
-    transform_tropical_cyclone_informations(
-        tropical_cyclone_informations_dataframe   
-    )
-
-    forecast_weather_conditions_dataframe = extract_forecast_weather_conditions(
-        'data/raw/daily_weather_forecasts/forecast_weather_conditions.json'
-    )
-    transformed_forecast_weather_conditions = transform_forecast_weather_conditions(
-        forecast_weather_conditions_dataframe
-    )
-
-    forecast_wind_and_coastal_water_conditions_dataframe = extract_forecast_wind_and_coastal_water_conditions(
-        'data/raw/daily_weather_forecasts/forecast_wind_and_coastal_water_conditions.json'
     )
