@@ -126,25 +126,6 @@ def clean_issued_datetime(
     issued_datetime = issued_datetime.replace('Issued at:', '')
     issued_datetime = issued_datetime.strip()
 
-    issued_time = issued_datetime.split(', ')[0]
-
-    if 'PM' in issued_time:
-        issued_time = issued_time.replace('PM', '')
-        issued_time = issued_time.strip()
-        
-        hours = issued_time.split(':')[0]
-        hours = int(hours)
-        hours = hours + 12
-        issued_time = datetime.time(hours, 0)
-
-    else:
-        issued_time = issued_time.replace('AM', '')
-        issued_time = issued_time.strip()
-
-        hours = issued_time.split(':')[0]
-        hours = int(hours)
-        issued_time = datetime.time(hours, 0)
-
     issued_date = issued_datetime.split(', ')[1]
 
     day = issued_date.split()[0]
@@ -176,6 +157,25 @@ def clean_issued_datetime(
         month,
         day
     )
+    
+    issued_time = issued_datetime.split(', ')[0]
+
+    if 'PM' in issued_time:
+        issued_time = issued_time.replace('PM', '')
+        issued_time = issued_time.strip()
+        
+        hours = issued_time.split(':')[0]
+        hours = int(hours)
+        hours = hours + 12
+        issued_time = datetime.time(hours, 0)
+
+    else:
+        issued_time = issued_time.replace('AM', '')
+        issued_time = issued_time.strip()
+
+        hours = issued_time.split(':')[0]
+        hours = int(hours)
+        issued_time = datetime.time(hours, 0)
 
     cleaned_issued_datetime = pd.concat([
         cleaned_issued_datetime,
