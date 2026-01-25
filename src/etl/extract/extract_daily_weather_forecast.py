@@ -129,8 +129,8 @@ def clean_issued_datetime(
     cleaned_issued_datetime = pd.concat([
         cleaned_issued_datetime,
         pd.DataFrame({
-            'issued_date': issued_date,
-            'issued_time': issued_time
+            'issued_date': [issued_date],
+            'issued_time': [issued_time]
         })
     ])
 
