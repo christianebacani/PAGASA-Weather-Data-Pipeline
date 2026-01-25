@@ -3,7 +3,7 @@ Ingest weather advisory data from the PAGASA-DOST website.
 
 This module contains functions used by the ETL pipeline to ingest data from the
 PAGASA-DOST weather advisory page and store the ingested artifacts as JSON
-files under the `data/weather_advisories/` subdirectory for further processing.
+files under the `data/raw/weather_advisories/` subdirectory for further processing.
 
 Ingested data:
 - TBA
@@ -16,12 +16,12 @@ from bs4 import BeautifulSoup
 def create_subdir(
 ) -> None:
     """
-    Creates the subdirectory path `data/weather_advisories/`
+    Creates the subdirectory path `data/raw/weather_advisories/`
     for ingested data from the weather advisories page of PAGASA-
     DOST website.
     """
-    if not os.path.exists('data/weather_advisories'):
-        os.makedirs('data/weather_advisories')
+    if not os.path.exists('data/raw/weather_advisories'):
+        os.makedirs('data/raw/weather_advisories')
 
 def ingest_and_parse_soup_from_url(
         url: str
