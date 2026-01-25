@@ -11,17 +11,24 @@ def connect(
         warehouse: str               
 ) -> snowflake.SnowflakeConnection:
     """
-    Docstring for connect
-    
-    :param username: Description
+    Connect the credentials to the
+    Snowflake Data Warehouse.
+
+    :param username: Snowflake username
     :type username: str
-    :param password: Description
+
+    :param password: Snowflake password
     :type password: str
-    :param account: Description
+
+    :param account: Snowflake account
+        identifier
     :type account: str
-    :param warehouse: Description
+
+    :param warehouse: Name of the Snowflake
+        warehouse to use
     :type warehouse: str
-    :return: Description
+
+    :return: Established Snowflake connection
     :rtype: SnowflakeConnection
     """
     conn = snowflake.connect(
