@@ -68,6 +68,14 @@ def database_config(
         corresponding datatypes
     :type columns: dict[str, str]
     """
+    cursor = conn.cursor()
+
+    cursor.execute(
+        f"CREATE DATABASE IF NOT EXISTS {database}"
+    )
+    cursor.execute(
+        f"CREATE SCHEMA IF NOT EXISTS {schema}"
+    )
 
 def extract_issued_datetime(
         issued_datetime_filepath: str        
