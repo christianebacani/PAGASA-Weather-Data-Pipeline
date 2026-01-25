@@ -65,3 +65,15 @@ def transform_issued_datetime(
     ])
 
     return transformed_issued_datetime
+
+def save_cleaned_issued_datetime(
+        issued_datetime_dataframe: pd.DataFrame
+) -> pd.DataFrame:
+    """
+    Docstring for save_cleaned_issued_datetime
+    
+    :param issued_datetime_dataframe: Description
+    :type issued_datetime_dataframe: pd.DataFrame
+    :return: Description
+    :rtype: DataFrame
+    """
