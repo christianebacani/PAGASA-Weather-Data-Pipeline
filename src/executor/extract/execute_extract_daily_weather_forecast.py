@@ -29,15 +29,11 @@ def extract_daily_weather_forecast(
     )
     database_config(
         conn,
-        'daily_weather_forecast_database',
-        'daily_weather_forecast_schema',
-        'daily_weather_forecast',
+        'pagasa-dost_database',
+        'daily_weather_forecasts_schema',
+        'daily_weather_forecasts',
         {
-            "forecast_id": "INTEGER",
             "issued_date": "DATE",
-            "issued_time": "TIME",
-            "coastal_area": "VARCHAR(255)",
-            "wind_speed_raw": "VARCHAR(100)",
-            "wind_speed_category": "VARCHAR(25)"
+            "issued_time": "TIME"
         }
     )
