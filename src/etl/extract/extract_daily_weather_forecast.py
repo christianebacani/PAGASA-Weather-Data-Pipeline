@@ -136,7 +136,7 @@ def clean_issued_datetime(
         issued_time = str(hours) + ':00'
 
     else:
-        issued_time = issued_time.replace('PM', '')
+        issued_time = issued_time.replace('AM', '')
         issued_time = issued_time.strip()
 
     issued_date = issued_datetime.split(', ')[1]
