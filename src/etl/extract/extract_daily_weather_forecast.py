@@ -75,6 +75,9 @@ def database_config(
         f"CREATE DATABASE IF NOT EXISTS {database}"
     )
     cursor.execute(
+        f"USE DATABASE {database}"
+    )
+    cursor.execute(
         f"CREATE SCHEMA IF NOT EXISTS {schema}"
     )
     command_to_create_table = []
