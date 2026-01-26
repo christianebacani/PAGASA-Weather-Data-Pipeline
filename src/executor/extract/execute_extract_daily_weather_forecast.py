@@ -28,11 +28,11 @@ def extract_daily_weather_forecast(
     )
     database_config(
         conn,
-        'pagasa-dost_database',
+        'pagasa_dost_database',
         'daily_weather_forecasts_schema',
         'daily_weather_forecasts',
         {
-            "issued_date": "TIME",
-            "issued_date": "DATE"
+            "issued_date": "DATE",
+            "issued_time": "TIME"
         }
     )
