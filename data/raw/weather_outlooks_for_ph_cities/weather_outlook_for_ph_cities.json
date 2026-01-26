@@ -1,66 +1,66 @@
 {
     "\n                                                    Bacolod City\n                                                    \u00a0\n                                                    \n": {
         "weather_date": [
-            "\n                                                                        Sunday  January 25, 2026\n                                                                    ",
             "\n                                                                        Monday  January 26, 2026\n                                                                    ",
             "\n                                                                        Tuesday  January 27, 2026\n                                                                    ",
             "\n                                                                        Wednesday  January 28, 2026\n                                                                    ",
-            "\n                                                                        Thursday  January 29, 2026\n                                                                    "
+            "\n                                                                        Thursday  January 29, 2026\n                                                                    ",
+            "\n                                                                        Friday  January 30, 2026\n                                                                    "
         ],
         "temperature_range": [
             [
-                "23\u00b0C",
+                "24\u00b0C",
                 "29\u00b0C"
             ],
             [
+                "24\u00b0C",
+                "29\u00b0C"
+            ],
+            [
+                "24\u00b0C",
+                "30\u00b0C"
+            ],
+            [
                 "23\u00b0C",
                 "30\u00b0C"
             ],
             [
-                "24\u00b0C",
-                "30\u00b0C"
-            ],
-            [
-                "25\u00b0C",
-                "30\u00b0C"
-            ],
-            [
-                "24\u00b0C",
+                "23\u00b0C",
                 "29\u00b0C"
             ]
         ],
         "chance_of_rain_percentage": [
-            "Chance of rain: 40%",
-            "Chance of rain: 60%",
-            "Chance of rain: 70%",
-            "Chance of rain: 60%",
-            "Chance of rain: 70%"
+            "Chance of rain: 90%",
+            "Chance of rain: 90%",
+            "Chance of rain: 30%",
+            "Chance of rain: 20%",
+            "Chance of rain: 60%"
         ]
     },
     "\n                                                    Baguio City\n                                                    \u00a0\n                                                    \n": {
         "weather_date": [
-            "\n                                                                        Sunday  January 25, 2026\n                                                                    ",
             "\n                                                                        Monday  January 26, 2026\n                                                                    ",
             "\n                                                                        Tuesday  January 27, 2026\n                                                                    ",
             "\n                                                                        Wednesday  January 28, 2026\n                                                                    ",
-            "\n                                                                        Thursday  January 29, 2026\n                                                                    "
+            "\n                                                                        Thursday  January 29, 2026\n                                                                    ",
+            "\n                                                                        Friday  January 30, 2026\n                                                                    "
         ],
         "temperature_range": [
             [
-                "11\u00b0C",
+                "12\u00b0C",
+                "22\u00b0C"
+            ],
+            [
+                "13\u00b0C",
+                "22\u00b0C"
+            ],
+            [
+                "13\u00b0C",
                 "21\u00b0C"
             ],
             [
                 "12\u00b0C",
-                "21\u00b0C"
-            ],
-            [
-                "13\u00b0C",
-                "23\u00b0C"
-            ],
-            [
-                "13\u00b0C",
-                "23\u00b0C"
+                "22\u00b0C"
             ],
             [
                 "12\u00b0C",
@@ -69,26 +69,22 @@
         ],
         "chance_of_rain_percentage": [
             "Chance of rain: 20%",
-            "Chance of rain: 10%",
+            "Chance of rain: 30%",
+            "Chance of rain: 60%",
             "Chance of rain: 20%",
-            "Chance of rain: 20%",
-            "Chance of rain: 10%"
+            "Chance of rain: 20%"
         ]
     },
     "\n                                                    Cagayan De Oro City\n                                                    \u00a0\n                                                    \n": {
         "weather_date": [
-            "\n                                                                        Sunday  January 25, 2026\n                                                                    ",
             "\n                                                                        Monday  January 26, 2026\n                                                                    ",
             "\n                                                                        Tuesday  January 27, 2026\n                                                                    ",
             "\n                                                                        Wednesday  January 28, 2026\n                                                                    ",
-            "\n                                                                        Thursday  January 29, 2026\n                                                                    "
+            "\n                                                                        Thursday  January 29, 2026\n                                                                    ",
+            "\n                                                                        Friday  January 30, 2026\n                                                                    "
         ],
         "temperature_range": [
             [
-                "24\u00b0C",
-                "29\u00b0C"
-            ],
-            [
                 "23\u00b0C",
                 "29\u00b0C"
             ],
@@ -97,29 +93,33 @@
                 "30\u00b0C"
             ],
             [
-                "23\u00b0C",
-                "30\u00b0C"
+                "22\u00b0C",
+                "29\u00b0C"
             ],
             [
                 "23\u00b0C",
                 "29\u00b0C"
+            ],
+            [
+                "23\u00b0C",
+                "28\u00b0C"
             ]
         ],
         "chance_of_rain_percentage": [
-            "Chance of rain: 60%",
-            "Chance of rain: 60%",
-            "Chance of rain: 20%",
+            "Chance of rain: 90%",
             "Chance of rain: 40%",
-            "Chance of rain: 60%"
+            "Chance of rain: 60%",
+            "Chance of rain: 60%",
+            "Chance of rain: 70%"
         ]
     },
     "\n                                                    Iloilo City\n                                                    \u00a0\n                                                    \n": {
         "weather_date": [
-            "\n                                                                        Sunday  January 25, 2026\n                                                                    ",
             "\n                                                                        Monday  January 26, 2026\n                                                                    ",
             "\n                                                                        Tuesday  January 27, 2026\n                                                                    ",
             "\n                                                                        Wednesday  January 28, 2026\n                                                                    ",
-            "\n                                                                        Thursday  January 29, 2026\n                                                                    "
+            "\n                                                                        Thursday  January 29, 2026\n                                                                    ",
+            "\n                                                                        Friday  January 30, 2026\n                                                                    "
         ],
         "temperature_range": [
             [
@@ -127,20 +127,20 @@
                 "29\u00b0C"
             ],
             [
-                "23\u00b0C",
-                "30\u00b0C"
-            ],
-            [
                 "24\u00b0C",
-                "30\u00b0C"
-            ],
-            [
-                "24\u00b0C",
-                "30\u00b0C"
-            ],
-            [
-                "23\u00b0C",
                 "29\u00b0C"
+            ],
+            [
+                "24\u00b0C",
+                "31\u00b0C"
+            ],
+            [
+                "23\u00b0C",
+                "30\u00b0C"
+            ],
+            [
+                "23\u00b0C",
+                "30\u00b0C"
             ]
         ],
         "chance_of_rain_percentage": [
@@ -153,31 +153,31 @@
     },
     "\n                                                    Kalayaan Group Of Islands\n                                                    \u00a0\n                                                    \n": {
         "weather_date": [
-            "\n                                                                        Sunday  January 25, 2026\n                                                                    ",
             "\n                                                                        Monday  January 26, 2026\n                                                                    ",
             "\n                                                                        Tuesday  January 27, 2026\n                                                                    ",
             "\n                                                                        Wednesday  January 28, 2026\n                                                                    ",
-            "\n                                                                        Thursday  January 29, 2026\n                                                                    "
+            "\n                                                                        Thursday  January 29, 2026\n                                                                    ",
+            "\n                                                                        Friday  January 30, 2026\n                                                                    "
         ],
         "temperature_range": [
             [
-                "23\u00b0C",
+                "24\u00b0C",
+                "30\u00b0C"
+            ],
+            [
+                "24\u00b0C",
                 "29\u00b0C"
             ],
             [
                 "24\u00b0C",
+                "31\u00b0C"
+            ],
+            [
+                "23\u00b0C",
                 "30\u00b0C"
             ],
             [
-                "25\u00b0C",
-                "30\u00b0C"
-            ],
-            [
-                "25\u00b0C",
-                "30\u00b0C"
-            ],
-            [
-                "24\u00b0C",
+                "23\u00b0C",
                 "30\u00b0C"
             ]
         ],
@@ -191,58 +191,54 @@
     },
     "\n                                                    Laoag City\n                                                    \u00a0\n                                                    \n": {
         "weather_date": [
-            "\n                                                                        Sunday  January 25, 2026\n                                                                    ",
             "\n                                                                        Monday  January 26, 2026\n                                                                    ",
             "\n                                                                        Tuesday  January 27, 2026\n                                                                    ",
             "\n                                                                        Wednesday  January 28, 2026\n                                                                    ",
-            "\n                                                                        Thursday  January 29, 2026\n                                                                    "
+            "\n                                                                        Thursday  January 29, 2026\n                                                                    ",
+            "\n                                                                        Friday  January 30, 2026\n                                                                    "
         ],
         "temperature_range": [
+            [
+                "18\u00b0C",
+                "30\u00b0C"
+            ],
             [
                 "20\u00b0C",
                 "30\u00b0C"
             ],
             [
-                "21\u00b0C",
-                "30\u00b0C"
-            ],
-            [
-                "22\u00b0C",
+                "20\u00b0C",
                 "31\u00b0C"
             ],
             [
-                "22\u00b0C",
+                "19\u00b0C",
                 "31\u00b0C"
             ],
             [
-                "21\u00b0C",
+                "19\u00b0C",
                 "30\u00b0C"
             ]
         ],
         "chance_of_rain_percentage": [
             "Chance of rain: 10%",
-            "Chance of rain: 10%",
-            "Chance of rain: 10%",
-            "Chance of rain: 10%",
-            "Chance of rain: 10%"
+            "Chance of rain: 20%",
+            "Chance of rain: 40%",
+            "Chance of rain: 30%",
+            "Chance of rain: 20%"
         ]
     },
     "\n                                                    Legazpi City\n                                                    \u00a0\n                                                    \n": {
         "weather_date": [
-            "\n                                                                        Sunday  January 25, 2026\n                                                                    ",
             "\n                                                                        Monday  January 26, 2026\n                                                                    ",
             "\n                                                                        Tuesday  January 27, 2026\n                                                                    ",
             "\n                                                                        Wednesday  January 28, 2026\n                                                                    ",
-            "\n                                                                        Thursday  January 29, 2026\n                                                                    "
+            "\n                                                                        Thursday  January 29, 2026\n                                                                    ",
+            "\n                                                                        Friday  January 30, 2026\n                                                                    "
         ],
         "temperature_range": [
             [
-                "23\u00b0C",
-                "28\u00b0C"
-            ],
-            [
-                "23\u00b0C",
-                "29\u00b0C"
+                "24\u00b0C",
+                "30\u00b0C"
             ],
             [
                 "24\u00b0C",
@@ -250,109 +246,113 @@
             ],
             [
                 "25\u00b0C",
-                "30\u00b0C"
+                "31\u00b0C"
+            ],
+            [
+                "25\u00b0C",
+                "31\u00b0C"
             ],
             [
                 "24\u00b0C",
-                "30\u00b0C"
+                "31\u00b0C"
             ]
         ],
         "chance_of_rain_percentage": [
-            "Chance of rain: 70%",
             "Chance of rain: 80%",
-            "Chance of rain: 90%",
             "Chance of rain: 70%",
-            "Chance of rain: 70%"
+            "Chance of rain: 60%",
+            "Chance of rain: 60%",
+            "Chance of rain: 80%"
         ]
     },
     "\n                                                    Lipa City\n                                                    \u00a0\n                                                    \n": {
         "weather_date": [
-            "\n                                                                        Sunday  January 25, 2026\n                                                                    ",
             "\n                                                                        Monday  January 26, 2026\n                                                                    ",
             "\n                                                                        Tuesday  January 27, 2026\n                                                                    ",
             "\n                                                                        Wednesday  January 28, 2026\n                                                                    ",
-            "\n                                                                        Thursday  January 29, 2026\n                                                                    "
+            "\n                                                                        Thursday  January 29, 2026\n                                                                    ",
+            "\n                                                                        Friday  January 30, 2026\n                                                                    "
         ],
         "temperature_range": [
             [
-                "20\u00b0C",
+                "23\u00b0C",
                 "29\u00b0C"
             ],
             [
-                "21\u00b0C",
+                "22\u00b0C",
+                "30\u00b0C"
+            ],
+            [
+                "22\u00b0C",
                 "29\u00b0C"
             ],
             [
-                "21\u00b0C",
-                "30\u00b0C"
+                "23\u00b0C",
+                "29\u00b0C"
             ],
             [
-                "21\u00b0C",
-                "30\u00b0C"
-            ],
-            [
-                "21\u00b0C",
+                "22\u00b0C",
                 "29\u00b0C"
             ]
         ],
         "chance_of_rain_percentage": [
-            "Chance of rain: 10%",
-            "Chance of rain: 10%",
+            "Chance of rain: 30%",
             "Chance of rain: 40%",
-            "Chance of rain: 40%",
+            "Chance of rain: 20%",
+            "Chance of rain: 10%",
             "Chance of rain: 10%"
         ]
     },
     "\n                                                    Metro Cebu\n                                                    \u00a0\n                                                    \n": {
         "weather_date": [
-            "\n                                                                        Sunday  January 25, 2026\n                                                                    ",
             "\n                                                                        Monday  January 26, 2026\n                                                                    ",
             "\n                                                                        Tuesday  January 27, 2026\n                                                                    ",
             "\n                                                                        Wednesday  January 28, 2026\n                                                                    ",
-            "\n                                                                        Thursday  January 29, 2026\n                                                                    "
+            "\n                                                                        Thursday  January 29, 2026\n                                                                    ",
+            "\n                                                                        Friday  January 30, 2026\n                                                                    "
         ],
         "temperature_range": [
             [
-                "24\u00b0C",
+                "25\u00b0C",
                 "29\u00b0C"
             ],
             [
                 "24\u00b0C",
-                "29\u00b0C"
+                "28\u00b0C"
             ],
             [
                 "24\u00b0C",
                 "30\u00b0C"
             ],
             [
-                "24\u00b0C",
+                "25\u00b0C",
                 "30\u00b0C"
             ],
             [
-                "24\u00b0C",
-                "29\u00b0C"
+                "25\u00b0C",
+                "30\u00b0C"
             ]
         ],
         "chance_of_rain_percentage": [
             "Chance of rain: 90%",
-            "Chance of rain: 100%",
             "Chance of rain: 80%",
-            "Chance of rain: 60%",
+            "Chance of rain: 40%",
+            "Chance of rain: 30%",
             "Chance of rain: 60%"
         ]
     },
     "\n                                                    Metro Davao\n                                                    \u00a0\n                                                    \n": {
         "weather_date": [
-            "\n                                                                        Sunday  January 25, 2026\n                                                                    ",
             "\n                                                                        Monday  January 26, 2026\n                                                                    ",
             "\n                                                                        Tuesday  January 27, 2026\n                                                                    ",
             "\n                                                                        Wednesday  January 28, 2026\n                                                                    ",
-            "\n                                                                        Thursday  January 29, 2026\n                                                                    "
+            "\n                                                                        Thursday  January 29, 2026\n                                                                    ",
+            "\n                                                                        Friday  January 30, 2026\n                                                                    "
         ],
         "temperature_range": [
             [
-                "24\u00b0C",
-                "32\u00b0C"
+                "23\u00b0C",
+                "30\u00b0C"
             ],
             [
                 "24\u00b0C",
@@ -372,20 +372,20 @@
             ]
         ],
         "chance_of_rain_percentage": [
+            "Chance of rain: 40%",
+            "Chance of rain: 40%",
             "Chance of rain: 60%",
-            "Chance of rain: 30%",
-            "Chance of rain: 30%",
             "Chance of rain: 70%",
-            "Chance of rain: 60%"
+            "Chance of rain: 40%"
         ]
     },
     "\n                                                    Metro Manila\n                                                    \u00a0\n                                                    \n": {
         "weather_date": [
-            "\n                                                                        Sunday  January 25, 2026\n                                                                    ",
             "\n                                                                        Monday  January 26, 2026\n                                                                    ",
             "\n                                                                        Tuesday  January 27, 2026\n                                                                    ",
             "\n                                                                        Wednesday  January 28, 2026\n                                                                    ",
-            "\n                                                                        Thursday  January 29, 2026\n                                                                    "
+            "\n                                                                        Thursday  January 29, 2026\n                                                                    ",
+            "\n                                                                        Friday  January 30, 2026\n                                                                    "
         ],
         "temperature_range": [
             [
@@ -394,36 +394,36 @@
             ],
             [
                 "22\u00b0C",
-                "30\u00b0C"
+                "28\u00b0C"
             ],
             [
                 "22\u00b0C",
-                "31\u00b0C"
+                "28\u00b0C"
             ],
             [
-                "23\u00b0C",
-                "31\u00b0C"
+                "21\u00b0C",
+                "29\u00b0C"
             ],
             [
-                "24\u00b0C",
+                "21\u00b0C",
                 "30\u00b0C"
             ]
         ],
         "chance_of_rain_percentage": [
+            "Chance of rain: 30%",
+            "Chance of rain: 20%",
             "Chance of rain: 10%",
             "Chance of rain: 10%",
-            "Chance of rain: 10%",
-            "Chance of rain: 40%",
-            "Chance of rain: 20%"
+            "Chance of rain: 10%"
         ]
     },
     "\n                                                    Puerto Princesa City\n                                                    \u00a0\n                                                    \n": {
         "weather_date": [
-            "\n                                                                        Sunday  January 25, 2026\n                                                                    ",
             "\n                                                                        Monday  January 26, 2026\n                                                                    ",
             "\n                                                                        Tuesday  January 27, 2026\n                                                                    ",
             "\n                                                                        Wednesday  January 28, 2026\n                                                                    ",
-            "\n                                                                        Thursday  January 29, 2026\n                                                                    "
+            "\n                                                                        Thursday  January 29, 2026\n                                                                    ",
+            "\n                                                                        Friday  January 30, 2026\n                                                                    "
         ],
         "temperature_range": [
             [
@@ -431,75 +431,75 @@
                 "30\u00b0C"
             ],
             [
-                "23\u00b0C",
-                "30\u00b0C"
-            ],
-            [
                 "24\u00b0C",
-                "30\u00b0C"
-            ],
-            [
-                "24\u00b0C",
-                "31\u00b0C"
+                "29\u00b0C"
             ],
             [
                 "23\u00b0C",
-                "30\u00b0C"
+                "29\u00b0C"
+            ],
+            [
+                "24\u00b0C",
+                "29\u00b0C"
+            ],
+            [
+                "24\u00b0C",
+                "29\u00b0C"
             ]
         ],
         "chance_of_rain_percentage": [
             "Chance of rain: 10%",
-            "Chance of rain: 10%",
-            "Chance of rain: 10%",
-            "Chance of rain: 30%",
-            "Chance of rain: 70%"
+            "Chance of rain: 20%",
+            "Chance of rain: 20%",
+            "Chance of rain: 20%",
+            "Chance of rain: 30%"
         ]
     },
     "\n                                                    Sbma (Olongapo)\n                                                    \u00a0\n                                                    \n": {
         "weather_date": [
-            "\n                                                                        Sunday  January 25, 2026\n                                                                    ",
             "\n                                                                        Monday  January 26, 2026\n                                                                    ",
             "\n                                                                        Tuesday  January 27, 2026\n                                                                    ",
             "\n                                                                        Wednesday  January 28, 2026\n                                                                    ",
-            "\n                                                                        Thursday  January 29, 2026\n                                                                    "
+            "\n                                                                        Thursday  January 29, 2026\n                                                                    ",
+            "\n                                                                        Friday  January 30, 2026\n                                                                    "
         ],
         "temperature_range": [
             [
-                "21\u00b0C",
+                "23\u00b0C",
                 "30\u00b0C"
+            ],
+            [
+                "24\u00b0C",
+                "30\u00b0C"
+            ],
+            [
+                "24\u00b0C",
+                "29\u00b0C"
+            ],
+            [
+                "24\u00b0C",
+                "29\u00b0C"
             ],
             [
                 "22\u00b0C",
-                "30\u00b0C"
-            ],
-            [
-                "23\u00b0C",
-                "31\u00b0C"
-            ],
-            [
-                "23\u00b0C",
-                "31\u00b0C"
-            ],
-            [
-                "22\u00b0C",
-                "30\u00b0C"
+                "29\u00b0C"
             ]
         ],
         "chance_of_rain_percentage": [
-            "Chance of rain: 10%",
-            "Chance of rain: 10%",
-            "Chance of rain: 0%",
-            "Chance of rain: 0%",
-            "Chance of rain: 0%"
+            "Chance of rain: 30%",
+            "Chance of rain: 40%",
+            "Chance of rain: 30%",
+            "Chance of rain: 20%",
+            "Chance of rain: 20%"
         ]
     },
     "\n                                                    Tacloban City\n                                                    \u00a0\n                                                    \n": {
         "weather_date": [
-            "\n                                                                        Sunday  January 25, 2026\n                                                                    ",
             "\n                                                                        Monday  January 26, 2026\n                                                                    ",
             "\n                                                                        Tuesday  January 27, 2026\n                                                                    ",
             "\n                                                                        Wednesday  January 28, 2026\n                                                                    ",
-            "\n                                                                        Thursday  January 29, 2026\n                                                                    "
+            "\n                                                                        Thursday  January 29, 2026\n                                                                    ",
+            "\n                                                                        Friday  January 30, 2026\n                                                                    "
         ],
         "temperature_range": [
             [
@@ -512,32 +512,32 @@
             ],
             [
                 "24\u00b0C",
-                "29\u00b0C"
+                "31\u00b0C"
             ],
             [
-                "24\u00b0C",
-                "29\u00b0C"
+                "23\u00b0C",
+                "30\u00b0C"
             ],
             [
-                "24\u00b0C",
+                "23\u00b0C",
                 "30\u00b0C"
             ]
         ],
         "chance_of_rain_percentage": [
-            "Chance of rain: 100%",
-            "Chance of rain: 100%",
-            "Chance of rain: 80%",
             "Chance of rain: 90%",
-            "Chance of rain: 90%"
+            "Chance of rain: 90%",
+            "Chance of rain: 80%",
+            "Chance of rain: 60%",
+            "Chance of rain: 80%"
         ]
     },
     "\n                                                    Tagaytay City\n                                                    \u00a0\n                                                    \n": {
         "weather_date": [
-            "\n                                                                        Sunday  January 25, 2026\n                                                                    ",
             "\n                                                                        Monday  January 26, 2026\n                                                                    ",
             "\n                                                                        Tuesday  January 27, 2026\n                                                                    ",
             "\n                                                                        Wednesday  January 28, 2026\n                                                                    ",
-            "\n                                                                        Thursday  January 29, 2026\n                                                                    "
+            "\n                                                                        Thursday  January 29, 2026\n                                                                    ",
+            "\n                                                                        Friday  January 30, 2026\n                                                                    "
         ],
         "temperature_range": [
             [
@@ -546,18 +546,18 @@
             ],
             [
                 "19\u00b0C",
+                "28\u00b0C"
+            ],
+            [
+                "19\u00b0C",
                 "27\u00b0C"
             ],
             [
                 "20\u00b0C",
-                "28\u00b0C"
+                "27\u00b0C"
             ],
             [
-                "20\u00b0C",
-                "28\u00b0C"
-            ],
-            [
-                "20\u00b0C",
+                "19\u00b0C",
                 "27\u00b0C"
             ]
         ],
@@ -571,116 +571,116 @@
     },
     "\n                                                    Tuguegarao City\n                                                    \u00a0\n                                                    \n": {
         "weather_date": [
-            "\n                                                                        Sunday  January 25, 2026\n                                                                    ",
             "\n                                                                        Monday  January 26, 2026\n                                                                    ",
             "\n                                                                        Tuesday  January 27, 2026\n                                                                    ",
             "\n                                                                        Wednesday  January 28, 2026\n                                                                    ",
-            "\n                                                                        Thursday  January 29, 2026\n                                                                    "
+            "\n                                                                        Thursday  January 29, 2026\n                                                                    ",
+            "\n                                                                        Friday  January 30, 2026\n                                                                    "
         ],
         "temperature_range": [
             [
-                "18\u00b0C",
+                "20\u00b0C",
+                "27\u00b0C"
+            ],
+            [
+                "21\u00b0C",
+                "28\u00b0C"
+            ],
+            [
+                "21\u00b0C",
+                "27\u00b0C"
+            ],
+            [
+                "20\u00b0C",
+                "28\u00b0C"
+            ],
+            [
+                "19\u00b0C",
                 "26\u00b0C"
+            ]
+        ],
+        "chance_of_rain_percentage": [
+            "Chance of rain: 60%",
+            "Chance of rain: 80%",
+            "Chance of rain: 70%",
+            "Chance of rain: 60%",
+            "Chance of rain: 60%"
+        ]
+    },
+    "\n                                                    Valencia City\n                                                    \u00a0\n                                                    \n": {
+        "weather_date": [
+            "\n                                                                        Monday  January 26, 2026\n                                                                    ",
+            "\n                                                                        Tuesday  January 27, 2026\n                                                                    ",
+            "\n                                                                        Wednesday  January 28, 2026\n                                                                    ",
+            "\n                                                                        Thursday  January 29, 2026\n                                                                    ",
+            "\n                                                                        Friday  January 30, 2026\n                                                                    "
+        ],
+        "temperature_range": [
+            [
+                "20\u00b0C",
+                "29\u00b0C"
+            ],
+            [
+                "20\u00b0C",
+                "29\u00b0C"
             ],
             [
                 "19\u00b0C",
                 "28\u00b0C"
             ],
             [
-                "20\u00b0C",
-                "29\u00b0C"
-            ],
-            [
-                "20\u00b0C",
-                "29\u00b0C"
+                "19\u00b0C",
+                "28\u00b0C"
             ],
             [
                 "19\u00b0C",
-                "27\u00b0C"
+                "28\u00b0C"
             ]
         ],
         "chance_of_rain_percentage": [
-            "Chance of rain: 60%",
-            "Chance of rain: 40%",
             "Chance of rain: 30%",
             "Chance of rain: 30%",
-            "Chance of rain: 60%"
-        ]
-    },
-    "\n                                                    Valencia City\n                                                    \u00a0\n                                                    \n": {
-        "weather_date": [
-            "\n                                                                        Sunday  January 25, 2026\n                                                                    ",
-            "\n                                                                        Monday  January 26, 2026\n                                                                    ",
-            "\n                                                                        Tuesday  January 27, 2026\n                                                                    ",
-            "\n                                                                        Wednesday  January 28, 2026\n                                                                    ",
-            "\n                                                                        Thursday  January 29, 2026\n                                                                    "
-        ],
-        "temperature_range": [
-            [
-                "18\u00b0C",
-                "29\u00b0C"
-            ],
-            [
-                "20\u00b0C",
-                "29\u00b0C"
-            ],
-            [
-                "21\u00b0C",
-                "30\u00b0C"
-            ],
-            [
-                "21\u00b0C",
-                "30\u00b0C"
-            ],
-            [
-                "21\u00b0C",
-                "29\u00b0C"
-            ]
-        ],
-        "chance_of_rain_percentage": [
             "Chance of rain: 60%",
-            "Chance of rain: 30%",
-            "Chance of rain: 60%",
-            "Chance of rain: 60%",
-            "Chance of rain: 40%"
+            "Chance of rain: 70%",
+            "Chance of rain: 70%"
         ]
     },
     "\n                                                    Zamboanga City\n                                                    \u00a0\n                                                    \n": {
         "weather_date": [
-            "\n                                                                        Sunday  January 25, 2026\n                                                                    ",
             "\n                                                                        Monday  January 26, 2026\n                                                                    ",
             "\n                                                                        Tuesday  January 27, 2026\n                                                                    ",
             "\n                                                                        Wednesday  January 28, 2026\n                                                                    ",
-            "\n                                                                        Thursday  January 29, 2026\n                                                                    "
+            "\n                                                                        Thursday  January 29, 2026\n                                                                    ",
+            "\n                                                                        Friday  January 30, 2026\n                                                                    "
         ],
         "temperature_range": [
             [
+                "23\u00b0C",
+                "35\u00b0C"
+            ],
+            [
                 "24\u00b0C",
-                "32\u00b0C"
+                "34\u00b0C"
             ],
             [
                 "24\u00b0C",
                 "33\u00b0C"
             ],
             [
-                "24\u00b0C",
-                "33\u00b0C"
+                "25\u00b0C",
+                "34\u00b0C"
             ],
             [
-                "24\u00b0C",
-                "33\u00b0C"
-            ],
-            [
-                "24\u00b0C",
-                "32\u00b0C"
+                "25\u00b0C",
+                "34\u00b0C"
             ]
         ],
         "chance_of_rain_percentage": [
             "Chance of rain: 20%",
-            "Chance of rain: 20%",
             "Chance of rain: 30%",
-            "Chance of rain: 60%",
-            "Chance of rain: 60%"
+            "Chance of rain: 30%",
+            "Chance of rain: 20%",
+            "Chance of rain: 30%"
         ]
     }
 }
