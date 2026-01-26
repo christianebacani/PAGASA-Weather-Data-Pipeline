@@ -2,8 +2,9 @@
 Docstring for etl.extract.extract_daily_weather_forecast
 """
 import pandas as pd
-import snowflake.connector as snowflake
 import datetime
+import snowflake.connector as snowflake
+from snowflake.connector.pandas_tools import write_pandas
 
 def connect(
         username: str,
@@ -93,6 +94,28 @@ def database_config(
     cursor.execute(
         command_to_create_table
     )
+
+def store_cleaned_data_to_snowflake(
+        conn: snowflake.SnowflakeConnection,
+        data: pd.DataFrame,
+        table: str,
+        database: str,
+        schema: str
+) -> None:
+    """
+    Docstring for store_cleaned_data_to_snowflake
+    
+    :param conn: Description
+    :type conn: snowflake.SnowflakeConnection
+    :param data: Description
+    :type data: pd.DataFrame
+    :param table: Description
+    :type table: str
+    :param database: Description
+    :type database: str
+    :param schema: Description
+    :type schema: str
+    """
 
 def extract_issued_datetime(
         issued_datetime_filepath: str        
