@@ -79,7 +79,7 @@ def database_config(
     )
     command_to_create_table = []
 
-    for column_name, data_type in columns.keys():
+    for column_name, data_type in columns.items():
         command_to_create_table.append(
             column_name + ' ' + data_type
         )
