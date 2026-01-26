@@ -60,7 +60,8 @@ def database_config(
         to create
     :type database: str
 
-    :param schema: Name of the Snowflake schema to create
+    :param schema: Name of the Snowflake table schema
+        to create
     :type schema: str
    
     :param table: Name of the Snowflake table to create
@@ -103,19 +104,33 @@ def store_cleaned_data_to_snowflake(
         schema: str
 ) -> None:
     """
-    Docstring for store_cleaned_data_to_snowflake
-    
-    :param conn: Description
+    Store clean data as a DataFrame
+    object to the Snowflake Database.
+
+    :param conn: Established Snowflake
+        connection
     :type conn: snowflake.SnowflakeConnection
-    :param data: Description
+
+    :param data: Clean data as a DataFrame object
     :type data: pd.DataFrame
-    :param table: Description
+
+    :param table: Name of the Snowflake table to
+        load the clean data
     :type table: str
-    :param database: Description
+
+    :param database: Name of the Snowflake database
     :type database: str
-    :param schema: Description
+
+    :param schema: Name of the Snowflake table schema
     :type schema: str
     """
+    write_pandas(
+        conn=conn,
+        df=data,
+        table_name=table,
+        database=database,
+        schema=schema
+    )
 
 def extract_issued_datetime(
         issued_datetime_filepath: str        
