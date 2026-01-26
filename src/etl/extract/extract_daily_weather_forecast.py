@@ -77,6 +77,19 @@ def database_config(
     cursor.execute(
         f"CREATE SCHEMA IF NOT EXISTS {schema}"
     )
+    command_to_create_table = []
+
+    for column_name, data_type in columns.keys():
+        command_to_create_table.append(
+            column_name + ' ' + data_type
+        )
+
+    command_to_create_table = ', '.join(command_to_create_table)
+    command_to_create_table = '(' + command_to_create_table + ')'
+    command_to_create_table = 'CREATE TABLE IF NOT EXISTS ' + ' ' + table + command_to_create_table
+    cursor.execute(
+        command_to_create_table
+    )
 
 def extract_issued_datetime(
         issued_datetime_filepath: str        
