@@ -1,8 +1,8 @@
 {
     "place": [
-        "Caraga, Eastern Visayas, Central Visayas, Sorsogon, Masbate, Camiguin, and Misamis Oriental",
-        "Cagayan Valley, the rest of Visayas, the rest of Bicol Region, Apayao, Kalinga, Mountain Province, Ifugao, Aurora,  Quezon, Oriental Mindoro, Marinduque, and Romblon",
-        "Metro Manila and the rest of Luzon",
+        "Northern Samar, Eastern Samar, Southern Leyte, Dinagat Islands, and Surigao del Norte",
+        "Metro Manila, Cagayan Valley, Cordillera Administrative Region, Central Luzon, CALABARZON, Bicol Region, Oriental Mindoro, Marinduque, and Romblon",
+        "The rest of Luzon and the rest of Visayas",
         "The rest of Mindanao"
     ],
     "weather_condition": [
@@ -18,7 +18,7 @@
         "Localized Thunderstorms"
     ],
     "impact": [
-        "Possible flash floods or landslides due to moderate to heavy rains",
+        "Possible flash floods or landslides due to moderate to at times heavy rains",
         "No significant impact",
         "No significant impact",
         "Possible flash floods or landslides during severe thunderstorms"
