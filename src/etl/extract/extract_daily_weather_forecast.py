@@ -78,7 +78,7 @@ def database_config(
         f"USE DATABASE {database}"
     )
     cursor.execute(
-        f"CREATE SCHEMA IF NOT EXISTS {schema}"
+        f"CREATE SCHEMA IF NOT EXISTS {database}.{schema}"
     )
     command_to_create_table = []
 
@@ -89,7 +89,7 @@ def database_config(
 
     command_to_create_table = ', '.join(command_to_create_table)
     command_to_create_table = '(' + command_to_create_table + ')'
-    command_to_create_table = 'CREATE TABLE IF NOT EXISTS ' + ' ' + table + command_to_create_table
+    command_to_create_table = 'CREATE TABLE IF NOT EXISTS' + ' ' + schema + '.' + table + command_to_create_table
     cursor.execute(
         command_to_create_table
     )
