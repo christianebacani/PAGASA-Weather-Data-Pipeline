@@ -1,6 +1,8 @@
 """
 Docstring for src.executor.extract.execute_extract_daily_weather_forecast
 """
+import os
+from dotenv import load_dotenv
 from etl.extract.extract_daily_weather_forecast import connect
 from etl.extract.extract_daily_weather_forecast import database_config
 from etl.extract.extract_daily_weather_forecast import extract_issued_datetime
@@ -14,11 +16,13 @@ def extract_daily_weather_forecast(
     module to extract the data from the `data/raw/daily_weather_forecasts/`
     subdirectory path that consist of ingested artifacts as a JSON file
     """
+    # Load environment variables from .env file
+    load_dotenv()
     conn = connect(
-        'username',
-        'password',
-        'account_identifier',
-        'data_warehouse_name'
+        os.getenv('SNOWFLAKE_USERNAME'),
+        os.getenv('SNOWFLAKE_PASSWORD'),
+        os.getenv('SNOWFLAKE_ACCOUNT'),
+        os.getenv('SNOWFLAKE_WAREHOUSE')
     )
     issued_datetime_dataframe = extract_issued_datetime(
         'data/raw/daily_weather_forecasts/issued_datetime.json'
