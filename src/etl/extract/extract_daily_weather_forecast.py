@@ -198,12 +198,12 @@ def clean_issued_datetime(
     year = issued_date.split()[2]
     year = int(year)
 
-    issued_date = datetime.datetime(
+    issued_date = datetime.date(
         year,
         month,
         day
     )
-    
+
     issued_time = issued_datetime.split(', ')[0]
 
     if 'PM' in issued_time:
@@ -224,8 +224,7 @@ def clean_issued_datetime(
         issued_time = datetime.time(hours, 0)
 
     cleaned_issued_datetime = pd.DataFrame({
-        'issued_date': [issued_date],
-        'issued_time': [issued_time]
+        'ISSUED_DATE': [issued_date],
+        'ISSUED_TIME': [issued_time]
     })
-
-    return cleaned_issued_datetime
+    print(cleaned_issued_datetime['ISSUED_DATE'][0])
