@@ -167,14 +167,6 @@ def clean_issued_datetime(
     :return: Cleaned issued datetime as a DataFrame object
     :rtype: DataFrame
     """
-    columns = [
-        'issued_date',
-        'issued_time'
-    ]
-    cleaned_issued_datetime = pd.DataFrame(
-        columns=columns
-    )
-
     issued_datetime = issued_datetime_dataframe['issued_datetime'][0]
     issued_datetime = str(issued_datetime)
     issued_datetime = issued_datetime.replace('Issued at:', '')
@@ -231,12 +223,9 @@ def clean_issued_datetime(
         hours = int(hours)
         issued_time = datetime.time(hours, 0)
 
-    cleaned_issued_datetime = pd.concat([
-        cleaned_issued_datetime,
-        pd.DataFrame({
-            'issued_date': [issued_date],
-            'issued_time': [issued_time]
-        })
-    ])
+    cleaned_issued_datetime = pd.DataFrame({
+        'issued_date': [issued_date],
+        'issued_time': [issued_time]
+    })
 
     return cleaned_issued_datetime
