@@ -1,6 +1,6 @@
 {
     "place": [
-        "The eastern section of the country",
+        "Northern Luzon",
         "The rest of the country"
     ],
     "speed": [
@@ -8,11 +8,11 @@
         "Moderate to Strong"
     ],
     "direction": [
-        "Northeast to North",
-        "East to Northeast"
+        "Northeast",
+        "Northeast to North"
     ],
     "coastal_water": [
-        "Moderate to Rough / (2.1 to 4.0 meters)",
-        "Moderate to Rough / (1.2 to 2.5 meters)"
+        "Moderate to Rough / (2.8 to 4.0 meters)",
+        "Moderate to Rough / (1.2 to 2.8 meters)"
     ]
 }
