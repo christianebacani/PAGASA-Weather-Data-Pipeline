@@ -25,6 +25,7 @@ def extract_daily_weather_forecast(
         os.getenv('SNOWFLAKE_ACCOUNT'),
         os.getenv('SNOWFLAKE_WAREHOUSE')
     )
+
     issued_datetime_dataframe = extract_issued_datetime(
         'data/raw/daily_weather_forecasts/issued_datetime.json'
     )
@@ -37,14 +38,17 @@ def extract_daily_weather_forecast(
         'daily_weather_forecasts_schema',
         'daily_weather_forecasts',
         {
-            "issued_date": "DATE",
-            "issued_time": "TIME"
+            "ISSUED_DATE": "DATE",
+            "ISSUED_TIME": "TIME"
         }
     )
+
+    '''
     store_cleaned_data_to_snowflake(
         conn,
         cleaned_issued_datetime,
-        'pagasa_dost_database',
-        'daily_weather_forecasts_schema',
-        'daily_weather_forecasts'
+        'DAILY_WEATHER_FORECASTS',
+        'PAGASA_DOST_DATABASE',
+        'DAILY_WEATHER_FORECASTS_SCHEMA'
     )
+    '''
