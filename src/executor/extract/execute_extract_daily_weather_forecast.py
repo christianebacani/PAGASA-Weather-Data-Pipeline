@@ -5,6 +5,7 @@ import os
 from dotenv import load_dotenv
 from etl.extract.extract_daily_weather_forecast import connect
 from etl.extract.extract_daily_weather_forecast import database_config
+from etl.extract.extract_daily_weather_forecast import store_cleaned_data_to_snowflake
 from etl.extract.extract_daily_weather_forecast import extract_issued_datetime
 from etl.extract.extract_daily_weather_forecast import clean_issued_datetime
 
@@ -39,4 +40,11 @@ def extract_daily_weather_forecast(
             "issued_date": "DATE",
             "issued_time": "TIME"
         }
+    )
+    store_cleaned_data_to_snowflake(
+        conn,
+        store_cleaned_data_to_snowflake,
+        'pagasa_dost_database',
+        'daily_weather_forecasts_schema',
+        'daily_weather_forecasts'
     )
