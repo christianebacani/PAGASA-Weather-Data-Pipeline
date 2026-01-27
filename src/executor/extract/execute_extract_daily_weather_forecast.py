@@ -43,7 +43,7 @@ def extract_daily_weather_forecast(
     )
     store_cleaned_data_to_snowflake(
         conn,
-        store_cleaned_data_to_snowflake,
+        cleaned_issued_datetime,
         'pagasa_dost_database',
         'daily_weather_forecasts_schema',
         'daily_weather_forecasts'
