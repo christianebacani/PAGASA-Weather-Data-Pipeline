@@ -256,10 +256,12 @@ def clean_synopsis(
         synopsis_dataframe: pd.DataFrame
 ) -> pd.DataFrame:
     """
-    Docstring for clean_synopsis
-    
-    :param synopsis_dataframe: Description
+    Clean the synopsis as a DataFrame object.
+
+    :param synopsis_dataframe: Synopsis as a
+        DataFrame object
     :type synopsis_dataframe: pd.DataFrame
-    :return: Description
+
+    :return: Cleaned synopsis as a DataFrame object
     :rtype: DataFrame
     """
