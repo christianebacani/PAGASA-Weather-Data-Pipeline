@@ -227,4 +227,5 @@ def clean_issued_datetime(
         'ISSUED_DATE': [issued_date],
         'ISSUED_TIME': [issued_time]
     })
-    print(cleaned_issued_datetime['ISSUED_DATE'][0])
+
+    return cleaned_issued_datetime
