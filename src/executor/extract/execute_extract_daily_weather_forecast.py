@@ -55,6 +55,6 @@ def extract_daily_weather_forecast(
     synopsis_dataframe = extract_synopsis(
         'data/raw/daily_weather_forecasts/synopsis.json'
     )
-    clean_synopsis = clean_synopsis(
+    clean_synopsis_dataframe = clean_synopsis(
         synopsis_dataframe
     )
