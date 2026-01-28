@@ -42,13 +42,10 @@ def extract_daily_weather_forecast(
             "ISSUED_TIME": "TIME"
         }
     )
-
-    '''
     store_cleaned_data_to_snowflake(
         conn,
         cleaned_issued_datetime,
         'DAILY_WEATHER_FORECASTS',
         'PAGASA_DOST_DATABASE',
-        'DAILY_WEATHER_FORECASTS_SCHEMA'
+        'DAILY_WEATHER_FORECASTS'
     )
-    '''
