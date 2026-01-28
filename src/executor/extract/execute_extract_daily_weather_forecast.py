@@ -9,6 +9,7 @@ from etl.extract.extract_daily_weather_forecast import store_cleaned_data_to_sno
 from etl.extract.extract_daily_weather_forecast import extract_issued_datetime
 from etl.extract.extract_daily_weather_forecast import clean_issued_datetime
 from etl.extract.extract_daily_weather_forecast import extract_synopsis
+from etl.extract.extract_daily_weather_forecast import clean_synopsis
 
 def extract_daily_weather_forecast(
 ) -> None:
@@ -53,4 +54,7 @@ def extract_daily_weather_forecast(
 
     synopsis_dataframe = extract_synopsis(
         'data/raw/daily_weather_forecasts/synopsis.json'
+    )
+    clean_synopsis = clean_synopsis(
+        synopsis_dataframe
     )
