@@ -1,15 +1,15 @@
 {
     "\nPuerto Galera ( Beach Resort & Diving Areas)\n                                        ": {
         "weather_date": [
-            "\n                                        Tuesday  January 27, 2026\n                                    ",
             "\n                                        Wednesday  January 28, 2026\n                                    ",
             "\n                                        Thursday  January 29, 2026\n                                    ",
             "\n                                        Friday  January 30, 2026\n                                    ",
-            "\n                                        Saturday  January 31, 2026\n                                    "
+            "\n                                        Saturday  January 31, 2026\n                                    ",
+            "\n                                        Sunday  February 01, 2026\n                                    "
         ],
         "temperature_range": [
             [
-                "23\u00b0C",
+                "25\u00b0C",
                 "29\u00b0C"
             ],
             [
@@ -21,27 +21,27 @@
                 "29\u00b0C"
             ],
             [
-                "23\u00b0C",
+                "24\u00b0C",
                 "29\u00b0C"
             ],
             [
                 "23\u00b0C",
-                "29\u00b0C"
+                "30\u00b0C"
             ]
         ]
     },
     "\nAnilao ( Beach Resorts)\n                                        ": {
         "weather_date": [
-            "\n                                        Tuesday  January 27, 2026\n                                    ",
             "\n                                        Wednesday  January 28, 2026\n                                    ",
             "\n                                        Thursday  January 29, 2026\n                                    ",
             "\n                                        Friday  January 30, 2026\n                                    ",
-            "\n                                        Saturday  January 31, 2026\n                                    "
+            "\n                                        Saturday  January 31, 2026\n                                    ",
+            "\n                                        Sunday  February 01, 2026\n                                    "
         ],
         "temperature_range": [
             [
                 "23\u00b0C",
-                "29\u00b0C"
+                "30\u00b0C"
             ],
             [
                 "23\u00b0C",
@@ -49,123 +49,123 @@
             ],
             [
                 "22\u00b0C",
-                "28\u00b0C"
+                "29\u00b0C"
             ],
             [
-                "22\u00b0C",
-                "28\u00b0C"
+                "23\u00b0C",
+                "30\u00b0C"
             ],
             [
-                "22\u00b0C",
-                "28\u00b0C"
+                "24\u00b0C",
+                "31\u00b0C"
             ]
         ]
     },
     "\nBoracay ( Beach Resorts, Diving Areas)\n                                        ": {
         "weather_date": [
-            "\n                                        Tuesday  January 27, 2026\n                                    ",
             "\n                                        Wednesday  January 28, 2026\n                                    ",
             "\n                                        Thursday  January 29, 2026\n                                    ",
             "\n                                        Friday  January 30, 2026\n                                    ",
-            "\n                                        Saturday  January 31, 2026\n                                    "
+            "\n                                        Saturday  January 31, 2026\n                                    ",
+            "\n                                        Sunday  February 01, 2026\n                                    "
         ],
         "temperature_range": [
+            [
+                "26\u00b0C",
+                "31\u00b0C"
+            ],
             [
                 "25\u00b0C",
                 "30\u00b0C"
             ],
             [
                 "24\u00b0C",
-                "30\u00b0C"
+                "31\u00b0C"
             ],
             [
-                "24\u00b0C",
-                "30\u00b0C"
+                "25\u00b0C",
+                "29\u00b0C"
             ],
             [
-                "23\u00b0C",
-                "30\u00b0C"
-            ],
-            [
-                "23\u00b0C",
+                "25\u00b0C",
                 "29\u00b0C"
             ]
         ]
     },
     "\nVigan ( Cathedral & the Old Spanish Houses)\n                                        ": {
         "weather_date": [
-            "\n                                        Tuesday  January 27, 2026\n                                    ",
             "\n                                        Wednesday  January 28, 2026\n                                    ",
             "\n                                        Thursday  January 29, 2026\n                                    ",
             "\n                                        Friday  January 30, 2026\n                                    ",
-            "\n                                        Saturday  January 31, 2026\n                                    "
+            "\n                                        Saturday  January 31, 2026\n                                    ",
+            "\n                                        Sunday  February 01, 2026\n                                    "
         ],
         "temperature_range": [
-            [
-                "23\u00b0C",
-                "30\u00b0C"
-            ],
             [
                 "22\u00b0C",
                 "30\u00b0C"
             ],
             [
                 "21\u00b0C",
-                "29\u00b0C"
+                "30\u00b0C"
+            ],
+            [
+                "21\u00b0C",
+                "30\u00b0C"
             ],
             [
                 "20\u00b0C",
-                "29\u00b0C"
+                "31\u00b0C"
             ],
             [
                 "20\u00b0C",
-                "29\u00b0C"
+                "31\u00b0C"
             ]
         ]
     },
     "\nCebu ( Magellan`s Cross and Lapu - Lapu Shrine)\n                                        ": {
         "weather_date": [
-            "\n                                        Tuesday  January 27, 2026\n                                    ",
             "\n                                        Wednesday  January 28, 2026\n                                    ",
             "\n                                        Thursday  January 29, 2026\n                                    ",
             "\n                                        Friday  January 30, 2026\n                                    ",
-            "\n                                        Saturday  January 31, 2026\n                                    "
+            "\n                                        Saturday  January 31, 2026\n                                    ",
+            "\n                                        Sunday  February 01, 2026\n                                    "
         ],
         "temperature_range": [
             [
-                "25\u00b0C",
-                "30\u00b0C"
+                "24\u00b0C",
+                "31\u00b0C"
             ],
             [
                 "25\u00b0C",
+                "32\u00b0C"
+            ],
+            [
+                "23\u00b0C",
+                "32\u00b0C"
+            ],
+            [
+                "24\u00b0C",
                 "30\u00b0C"
             ],
             [
                 "24\u00b0C",
-                "29\u00b0C"
-            ],
-            [
-                "24\u00b0C",
-                "29\u00b0C"
-            ],
-            [
-                "25\u00b0C",
-                "29\u00b0C"
+                "30\u00b0C"
             ]
         ]
     },
     "\nNaga City ( Malabsay Falls & The Our Lady of Penafrancia)\n                                        ": {
         "weather_date": [
-            "\n                                        Tuesday  January 27, 2026\n                                    ",
             "\n                                        Wednesday  January 28, 2026\n                                    ",
             "\n                                        Thursday  January 29, 2026\n                                    ",
             "\n                                        Friday  January 30, 2026\n                                    ",
-            "\n                                        Saturday  January 31, 2026\n                                    "
+            "\n                                        Saturday  January 31, 2026\n                                    ",
+            "\n                                        Sunday  February 01, 2026\n                                    "
         ],
         "temperature_range": [
             [
-                "24\u00b0C",
-                "30\u00b0C"
+                "23\u00b0C",
+                "31\u00b0C"
             ],
             [
                 "25\u00b0C",
@@ -187,13 +187,17 @@
     },
     "\nBaguio ( Mines View Park, Philippine Military Academy, Etc.)\n                                        ": {
         "weather_date": [
-            "\n                                        Tuesday  January 27, 2026\n                                    ",
             "\n                                        Wednesday  January 28, 2026\n                                    ",
             "\n                                        Thursday  January 29, 2026\n                                    ",
             "\n                                        Friday  January 30, 2026\n                                    ",
-            "\n                                        Saturday  January 31, 2026\n                                    "
+            "\n                                        Saturday  January 31, 2026\n                                    ",
+            "\n                                        Sunday  February 01, 2026\n                                    "
         ],
         "temperature_range": [
+            [
+                "15\u00b0C",
+                "21\u00b0C"
+            ],
             [
                 "14\u00b0C",
                 "22\u00b0C"
@@ -203,43 +207,39 @@
                 "22\u00b0C"
             ],
             [
-                "13\u00b0C",
+                "14\u00b0C",
                 "22\u00b0C"
             ],
             [
-                "12\u00b0C",
-                "21\u00b0C"
-            ],
-            [
-                "12\u00b0C",
-                "21\u00b0C"
+                "14\u00b0C",
+                "22\u00b0C"
             ]
         ]
     },
     "\nDavao ( Mt. Apo)\n                                        ": {
         "weather_date": [
-            "\n                                        Tuesday  January 27, 2026\n                                    ",
             "\n                                        Wednesday  January 28, 2026\n                                    ",
             "\n                                        Thursday  January 29, 2026\n                                    ",
             "\n                                        Friday  January 30, 2026\n                                    ",
-            "\n                                        Saturday  January 31, 2026\n                                    "
+            "\n                                        Saturday  January 31, 2026\n                                    ",
+            "\n                                        Sunday  February 01, 2026\n                                    "
         ],
         "temperature_range": [
+            [
+                "25\u00b0C",
+                "33\u00b0C"
+            ],
             [
                 "25\u00b0C",
                 "32\u00b0C"
             ],
             [
                 "24\u00b0C",
-                "32\u00b0C"
-            ],
-            [
-                "24\u00b0C",
-                "32\u00b0C"
-            ],
-            [
-                "24\u00b0C",
                 "31\u00b0C"
+            ],
+            [
+                "25\u00b0C",
+                "32\u00b0C"
             ],
             [
                 "25\u00b0C",
@@ -249,13 +249,17 @@
     },
     "\nBanaue ( Rice Terraces, Sagada)\n                                        ": {
         "weather_date": [
-            "\n                                        Tuesday  January 27, 2026\n                                    ",
             "\n                                        Wednesday  January 28, 2026\n                                    ",
             "\n                                        Thursday  January 29, 2026\n                                    ",
             "\n                                        Friday  January 30, 2026\n                                    ",
-            "\n                                        Saturday  January 31, 2026\n                                    "
+            "\n                                        Saturday  January 31, 2026\n                                    ",
+            "\n                                        Sunday  February 01, 2026\n                                    "
         ],
         "temperature_range": [
+            [
+                "14\u00b0C",
+                "21\u00b0C"
+            ],
             [
                 "13\u00b0C",
                 "21\u00b0C"
@@ -265,88 +269,115 @@
                 "21\u00b0C"
             ],
             [
-                "12\u00b0C",
-                "21\u00b0C"
-            ],
-            [
-                "11\u00b0C",
+                "13\u00b0C",
                 "20\u00b0C"
             ],
             [
-                "11\u00b0C",
+                "13\u00b0C",
                 "20\u00b0C"
             ]
         ]
     },
     "\nTaal ( Taal Lake & Crater area)\n                                        ": {
         "weather_date": [
-            "\n                                        Tuesday  January 27, 2026\n                                    ",
             "\n                                        Wednesday  January 28, 2026\n                                    ",
             "\n                                        Thursday  January 29, 2026\n                                    ",
             "\n                                        Friday  January 30, 2026\n                                    ",
-            "\n                                        Saturday  January 31, 2026\n                                    "
+            "\n                                        Saturday  January 31, 2026\n                                    ",
+            "\n                                        Sunday  February 01, 2026\n                                    "
         ],
         "temperature_range": [
             [
-                "21\u00b0C",
-                "28\u00b0C"
-            ],
-            [
                 "20\u00b0C",
                 "28\u00b0C"
             ],
             [
                 "20\u00b0C",
-                "27\u00b0C"
+                "28\u00b0C"
             ],
             [
                 "19\u00b0C",
-                "27\u00b0C"
+                "28\u00b0C"
+            ],
+            [
+                "20\u00b0C",
+                "29\u00b0C"
             ],
             [
                 "19\u00b0C",
-                "27\u00b0C"
+                "29\u00b0C"
             ]
         ]
     },
     "\nBohol ( The Chocolate Hills, Beach Resorts)\n                                        ": {
         "weather_date": [
-            "\n                                        Tuesday  January 27, 2026\n                                    ",
             "\n                                        Wednesday  January 28, 2026\n                                    ",
             "\n                                        Thursday  January 29, 2026\n                                    ",
             "\n                                        Friday  January 30, 2026\n                                    ",
-            "\n                                        Saturday  January 31, 2026\n                                    "
+            "\n                                        Saturday  January 31, 2026\n                                    ",
+            "\n                                        Sunday  February 01, 2026\n                                    "
         ],
         "temperature_range": [
-            [
-                "24\u00b0C",
-                "30\u00b0C"
-            ],
-            [
-                "23\u00b0C",
-                "30\u00b0C"
-            ],
-            [
-                "23\u00b0C",
-                "30\u00b0C"
-            ],
             [
                 "23\u00b0C",
                 "31\u00b0C"
             ],
             [
                 "23\u00b0C",
+                "32\u00b0C"
+            ],
+            [
+                "23\u00b0C",
+                "32\u00b0C"
+            ],
+            [
+                "22\u00b0C",
+                "30\u00b0C"
+            ],
+            [
+                "22\u00b0C",
                 "30\u00b0C"
             ]
         ]
     },
     "\nEl Nido ( The Islands of God - Heaven on Earth)\n                                        ": {
         "weather_date": [
-            "\n                                        Tuesday  January 27, 2026\n                                    ",
             "\n                                        Wednesday  January 28, 2026\n                                    ",
             "\n                                        Thursday  January 29, 2026\n                                    ",
             "\n                                        Friday  January 30, 2026\n                                    ",
-            "\n                                        Saturday  January 31, 2026\n                                    "
+            "\n                                        Saturday  January 31, 2026\n                                    ",
+            "\n                                        Sunday  February 01, 2026\n                                    "
+        ],
+        "temperature_range": [
+            [
+                "25\u00b0C",
+                "32\u00b0C"
+            ],
+            [
+                "25\u00b0C",
+                "31\u00b0C"
+            ],
+            [
+                "24\u00b0C",
+                "32\u00b0C"
+            ],
+            [
+                "25\u00b0C",
+                "31\u00b0C"
+            ],
+            [
+                "25\u00b0C",
+                "30\u00b0C"
+            ]
+        ]
+    },
+    "\nCamiguin ( The Philippines Garden of Eden, Mt. Hibok - Hibok)\n                                        ": {
+        "weather_date": [
+            "\n                                        Wednesday  January 28, 2026\n                                    ",
+            "\n                                        Thursday  January 29, 2026\n                                    ",
+            "\n                                        Friday  January 30, 2026\n                                    ",
+            "\n                                        Saturday  January 31, 2026\n                                    ",
+            "\n                                        Sunday  February 01, 2026\n                                    "
         ],
         "temperature_range": [
             [
@@ -354,6 +385,10 @@
                 "31\u00b0C"
             ],
             [
+                "23\u00b0C",
+                "30\u00b0C"
+            ],
+            [
                 "24\u00b0C",
                 "30\u00b0C"
             ],
@@ -362,43 +397,8 @@
                 "29\u00b0C"
             ],
             [
-                "23\u00b0C",
-                "29\u00b0C"
-            ],
-            [
-                "23\u00b0C",
-                "29\u00b0C"
-            ]
-        ]
-    },
-    "\nCamiguin ( The Philippines Garden of Eden, Mt. Hibok - Hibok)\n                                        ": {
-        "weather_date": [
-            "\n                                        Tuesday  January 27, 2026\n                                    ",
-            "\n                                        Wednesday  January 28, 2026\n                                    ",
-            "\n                                        Thursday  January 29, 2026\n                                    ",
-            "\n                                        Friday  January 30, 2026\n                                    ",
-            "\n                                        Saturday  January 31, 2026\n                                    "
-        ],
-        "temperature_range": [
-            [
-                "24\u00b0C",
+                "22\u00b0C",
                 "30\u00b0C"
-            ],
-            [
-                "24\u00b0C",
-                "29\u00b0C"
-            ],
-            [
-                "23\u00b0C",
-                "29\u00b0C"
-            ],
-            [
-                "23\u00b0C",
-                "28\u00b0C"
-            ],
-            [
-                "23\u00b0C",
-                "28\u00b0C"
             ]
         ]
     }
