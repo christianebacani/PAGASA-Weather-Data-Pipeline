@@ -251,3 +251,15 @@ def extract_synopsis(
     )
 
     return synopsis_dataframe
+
+def clean_synopsis(
+        synopsis_dataframe: pd.DataFrame
+) -> pd.DataFrame:
+    """
+    Docstring for clean_synopsis
+    
+    :param synopsis_dataframe: Description
+    :type synopsis_dataframe: pd.DataFrame
+    :return: Description
+    :rtype: DataFrame
+    """
