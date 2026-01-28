@@ -8,6 +8,7 @@ from etl.extract.extract_daily_weather_forecast import database_config
 from etl.extract.extract_daily_weather_forecast import store_cleaned_data_to_snowflake
 from etl.extract.extract_daily_weather_forecast import extract_issued_datetime
 from etl.extract.extract_daily_weather_forecast import clean_issued_datetime
+from etl.extract.extract_daily_weather_forecast import extract_synopsis
 
 def extract_daily_weather_forecast(
 ) -> None:
@@ -48,4 +49,8 @@ def extract_daily_weather_forecast(
         'DAILY_WEATHER_FORECASTS',
         'PAGASA_DOST_DATABASE',
         'DAILY_WEATHER_FORECASTS_SCHEMA'
+    )
+
+    synopsis_dataframe = extract_synopsis(
+        'data/raw/daily_weather_forecasts/synopsis.json'
     )
