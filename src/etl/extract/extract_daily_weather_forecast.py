@@ -224,12 +224,12 @@ def clean_issued_datetime(
         issued_time = datetime.time(hours, 0)
         issued_time = issued_time.strftime('%H:%M:%S')
 
-    cleaned_issued_datetime = pd.DataFrame({
+    clean_issued_datetime = pd.DataFrame({
         'ISSUED_DATE': [issued_date],
         'ISSUED_TIME': [issued_time]
     })
 
-    return cleaned_issued_datetime
+    return clean_issued_datetime
 
 def extract_synopsis(
         synopsis_filepath: str
