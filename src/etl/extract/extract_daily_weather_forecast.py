@@ -230,3 +230,19 @@ def clean_issued_datetime(
     })
 
     return cleaned_issued_datetime
+
+def extract_synopsis(
+        synopsis_filepath: str
+) -> pd.DataFrame:
+    """
+    Extract the ingested synopsis from the subdirectory
+    path `data/raw/daily_weather_forecasts`.
+
+    :param synopsis_filepath: Filepath of the ingested
+        synopsis from the subdirectory path
+        `data/raw/daily_weather_forecasts`
+    :type synopsis_filepath: str
+
+    :return: Synopsis as a DataFrame object
+    :rtype: DataFrame
+    """
