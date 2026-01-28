@@ -1,26 +1,22 @@
 {
     "place": [
-        "Caraga and Southern Leyte",
-        "Cagayan Valley, Cordillera Administrative Region, Aurora, and Quezon",
-        "Metro Manila, the rest of Luzon, and the rest of Visayas",
-        "The rest of Mindanao"
+        "Cagayan Valley, Aurora, and Quezon",
+        "Mindanao, Eastern Samar, Leyte, and Southern Leyte",
+        "Metro Manila and the rest of the country"
     ],
     "weather_condition": [
-        "Cloudy skies with scattered rains and isolated thunderstorms",
         "Cloudy skies with light rains",
-        "Partly cloudy to cloudy skies with isolated light rains",
-        "Partly cloudy to cloudy skies with isolated rainshowers or thunderstorms"
+        "Partly cloudy to cloudy skies with isolated rainshowers or thunderstorms",
+        "Partly cloudy to cloudy skies with isolated light rains"
     ],
     "caused_by": [
-        "Shear Line",
         "Northeast Monsoon",
-        "Northeast Monsoon",
-        "Localized Thunderstorms"
+        "Localized Thunderstorms",
+        "Northeast Monsoon"
     ],
     "impact": [
-        "Possible flash floods or landslides due to moderate to at times heavy rains",
         "No significant impact",
-        "No significant impact",
-        "Possible flash floods or landslides during severe thunderstorms"
+        "Possible flash floods or landslides during severe thunderstorms",
+        "No significant impact"
     ]
 }
