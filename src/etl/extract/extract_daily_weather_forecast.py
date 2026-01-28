@@ -246,3 +246,8 @@ def extract_synopsis(
     :return: Synopsis as a DataFrame object
     :rtype: DataFrame
     """
+    synopsis_dataframe = pd.read_json(
+        synopsis_filepath
+    )
+
+    return synopsis_dataframe
