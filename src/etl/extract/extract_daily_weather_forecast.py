@@ -265,3 +265,12 @@ def clean_synopsis(
     :return: Cleaned synopsis as a DataFrame object
     :rtype: DataFrame
     """
+    synopsis = synopsis_dataframe['synopsis'][0]
+    synopsis = str(synopsis)
+    synopsis = synopsis.strip()
+
+    clean_synopsis = pd.DataFrame({
+        "SYNOPSIS": [synopsis]
+    })
+
+    return clean_synopsis
