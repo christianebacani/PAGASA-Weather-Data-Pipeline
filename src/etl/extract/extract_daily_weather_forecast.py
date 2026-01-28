@@ -219,7 +219,7 @@ def clean_issued_datetime(
         issued_time = issued_time.replace('AM', '')
         issued_time = issued_time.strip()
 
-        hours = issued_time.cls(':')[0]
+        hours = issued_time.split(':')[0]
         hours = int(hours)
         issued_time = datetime.time(hours, 0)
         issued_time = issued_time.strftime('%H:%M:%S')
