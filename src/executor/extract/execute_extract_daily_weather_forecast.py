@@ -31,8 +31,26 @@ def extract_daily_weather_forecast(
     issued_datetime_dataframe = extract_issued_datetime(
         'data/raw/daily_weather_forecasts/issued_datetime.json'
     )
-    cleaned_issued_datetime = clean_issued_datetime(
+    issued_datetime_dataframe = clean_issued_datetime(
         issued_datetime_dataframe
+    )
+    database_config(
+        conn,
+        'SILVER',
+        'DAILY_WEATHER_FORECASTS',
+        'ISSUED_DATETIMES',
+        {
+            'ISSUED_DATE': 'DATE',
+            'ISSUED_TIME': 'TIME'
+        }
+    )
+
+    store_cleaned_data_to_snowflake(
+        conn,
+        issued_datetime_dataframe,
+        'ISSUED_DATETIMES',
+        'PAGASA_DOST_DATABASE',
+        'DAILY_WEATHER_FORECASTS'
     )
 
     synopsis_dataframe = extract_synopsis(
